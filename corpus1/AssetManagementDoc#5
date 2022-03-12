@@ -1,0 +1,259 @@
+ID.AM-4: External information systems are catalogued
+AC-20:
+USE OF EXTERNAL SYSTEMS
+Control:
+a. [Selection (one or more): Establish [Assignment: organization-defined terms and conditions];
+Identify [Assignment: organization-defined controls asserted to be implemented on external
+systems]], consistent with the trust relationships established with other organizations
+owning, operating, and/or maintaining external systems, allowing authorized individuals to:
+1. Access the system from external systems; and
+2. Process, store, or transmit organization-controlled information using external systems;
+or
+b. Prohibit the use of [Assignment: organizationally-defined types of external systems].
+Discussion: External systems are systems that are used by but not part of organizational systems,
+and for which the organization has no direct control over the implementation of required
+controls or the assessment of control effectiveness. External systems include personally owned
+systems, components, or devices; privately owned computing and communications devices in
+commercial or public facilities; systems owned or controlled by nonfederal organizations;
+systems managed by contractors; and federal information systems that are not owned by,
+operated by, or under the direct supervision or authority of the organization. External systems
+also include systems owned or operated by other components within the same organization and
+systems within the organization with different authorization boundaries. Organizations have the
+option to prohibit the use of any type of external system or prohibit the use of specified types of
+external systems, (e.g., prohibit the use of any external system that is not organizationally owned
+or prohibit the use of personally-owned systems).
+For some external systems (i.e., systems operated by other organizations), the trust relationships
+that have been established between those organizations and the originating organization may be
+such that no explicit terms and conditions are required. Systems within these organizations may
+not be considered external. These situations occur when, for example, there are pre-existing
+information exchange agreements (either implicit or explicit) established between organizations
+or components or when such agreements are specified by applicable laws, executive orders,
+directives, regulations, policies, or standards. Authorized individuals include organizational
+personnel, contractors, or other individuals with authorized access to organizational systems and
+over which organizations have the authority to impose specific rules of behavior regarding
+system access. Restrictions that organizations impose on authorized individuals need not be
+uniform, as the restrictions may vary depending on trust relationships between organizations.
+Therefore, organizations may choose to impose different security restrictions on contractors
+than on state, local, or tribal governments.
+External systems used to access public interfaces to organizational systems are outside the scope
+of AC-20. Organizations establish specific terms and conditions for the use of external systems in
+accordance with organizational security policies and procedures. At a minimum, terms and
+conditions address the specific types of applications that can be accessed on organizational
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 54
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+systems from external systems and the highest security category of information that can be
+processed, stored, or transmitted on external systems. If the terms and conditions with the
+owners of the external systems cannot be established, organizations may impose restrictions on
+organizational personnel using those external systems.
+Related Controls: AC-2, AC-3, AC-17, AC-19, CA-3, PL-2, PL-4, SA-9, SC-7.
+Control Enhancements:
+(1) USE OF EXTERNAL SYSTEMS | LIMITS ON AUTHORIZED USE
+Permit authorized individuals to use an external system to access the system or to process,
+store, or transmit organization-controlled information only after:
+(a) Verification of the implementation of controls on the external system as specified in
+the organization’s security and privacy policies and security and privacy plans; or
+(b) Retention of approved system connection or processing agreements with the
+organizational entity hosting the external system.
+Discussion: Limiting authorized use recognizes circumstances where individuals using
+external systems may need to access organizational systems. Organizations need assurance
+that the external systems contain the necessary controls so as not to compromise, damage,
+or otherwise harm organizational systems. Verification that the required controls have been
+implemented can be achieved by external, independent assessments, attestations, or other
+means, depending on the confidence level required by organizations.
+Related Controls: CA-2.
+(2) USE OF EXTERNAL SYSTEMS | PORTABLE STORAGE DEVICES — RESTRICTED USE
+Restrict the use of organization-controlled portable storage devices by authorized
+individuals on external systems using [Assignment: organization-defined restrictions].
+Discussion: Limits on the use of organization-controlled portable storage devices in external
+systems include restrictions on how the devices may be used and under what conditions the
+devices may be used.
+Related Controls: MP-7, SC-41.
+(3) USE OF EXTERNAL SYSTEMS | NON-ORGANIZATIONALLY OWNED SYSTEMS — RESTRICTED USE
+Restrict the use of non-organizationally owned systems or system components to process,
+store, or transmit organizational information using [Assignment: organization-defined
+restrictions].
+Discussion: Non-organizationally owned systems or system components include systems or
+system components owned by other organizations as well as personally owned devices.
+There are potential risks to using non-organizationally owned systems or components. In
+some cases, the risk is sufficiently high as to prohibit such use (see AC-20 b.). In other cases,
+the use of such systems or system components may be allowed but restricted in some way.
+Restrictions include requiring the implementation of approved controls prior to authorizing
+the connection of non-organizationally owned systems and components; limiting access to
+types of information, services, or applications; using virtualization techniques to limit
+processing and storage activities to servers or system components provisioned by the
+organization; and agreeing to the terms and conditions for usage. Organizations consult with
+the Office of the General Counsel regarding legal issues associated with using personally
+owned devices, including requirements for conducting forensic analyses during
+investigations after an incident.
+Related Controls: None.
+(4) USE OF EXTERNAL SYSTEMS | NETWORK ACCESSIBLE STORAGE DEVICES — PROHIBITED USE
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 55
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Prohibit the use of [Assignment: organization-defined network accessible storage devices]
+in external systems.
+Discussion: Network-accessible storage devices in external systems include online storage
+devices in public, hybrid, or community cloud-based systems.
+Related Controls: None.
+(5) USE OF EXTERNAL SYSTEMS | PORTABLE STORAGE DEVICES — PROHIBITED USE
+Prohibit the use of organization-controlled portable storage devices by authorized
+individuals on external systems.
+Discussion: Limits on the use of organization-controlled portable storage devices in external
+systems include a complete prohibition of the use of such devices. Prohibiting such use is
+enforced using technical methods and/or nontechnical (i.e., process-based) methods.
+PM-5:
+SYSTEM INVENTORY
+Control: Develop and update [Assignment: organization-defined frequency] an inventory of
+organizational systems.
+Discussion: [OMB A-130] provides guidance on developing systems inventories and associated
+reporting requirements. System inventory refers to an organization-wide inventory of systems,
+not system components as described in CM-8.
+Related Controls: None.
+Control Enhancements:
+(1) SYSTEM INVENTORY | INVENTORY OF PERSONALLY IDENTIFIABLE INFORMATION
+Establish, maintain, and update [Assignment: organization-defined frequency] an
+inventory of all systems, applications, and projects that process personally identifiable
+information.
+Discussion: An inventory of systems, applications, and projects that process personally
+identifiable information supports the mapping of data actions, providing individuals with
+privacy notices, maintaining accurate personally identifiable information, and limiting the
+processing of personally identifiable information when such information is not needed for
+operational purposes. Organizations may use this inventory to ensure that systems only
+process the personally identifiable information for authorized purposes and that this
+processing is still relevant and necessary for the purpose specified therein.
+SA-9:
+EXTERNAL SYSTEM SERVICES
+Control:
+a. Require that providers of external system services comply with organizational security and
+privacy requirements and employ the following controls: [Assignment: organization-defined
+controls];
+b. Define and document organizational oversight and user roles and responsibilities with regard
+to external system services; and
+c. Employ the following processes, methods, and techniques to monitor control compliance by
+external service providers on an ongoing basis: [Assignment: organization-defined processes,
+methods, and techniques].
+Discussion: External system services are provided by an external provider, and the organization
+has no direct control over the implementation of the required controls or the assessment of
+control effectiveness. Organizations establish relationships with external service providers in a
+variety of ways, including through business partnerships, contracts, interagency agreements,
+lines of business arrangements, licensing agreements, joint ventures, and supply chain
+exchanges. The responsibility for managing risks from the use of external system services
+remains with authorizing officials. For services external to organizations, a chain of trust requires
+that organizations establish and retain a certain level of confidence that each provider in the
+consumer-provider relationship provides adequate protection for the services rendered. The
+extent and nature of this chain of trust vary based on relationships between organizations and
+the external providers. Organizations document the basis for the trust relationships so that the
+relationships can be monitored. External system services documentation includes government,
+service providers, end user security roles and responsibilities, and service-level agreements.
+Service-level agreements define the expectations of performance for implemented controls,
+describe measurable outcomes, and identify remedies and response requirements for identified
+instances of noncompliance.
+Related Controls: AC-20, CA-3, CP-2, IR-4, IR-7, PL-10, PL-11, PS-7, SA-2, SA-4, SR-3, SR-5.
+Control Enhancements:
+(1) EXTERNAL SYSTEM SERVICES | RISK ASSESSMENTS AND ORGANIZATIONAL APPROVALS
+(a) Conduct an organizational assessment of risk prior to the acquisition or outsourcing of
+information security services; and
+(b) Verify that the acquisition or outsourcing of dedicated information security services is
+approved by [Assignment: organization-defined personnel or roles].
+Discussion: Information security services include the operation of security devices, such as
+firewalls or key management services as well as incident monitoring, analysis, and response.
+Risks assessed can include system, mission or business, security, privacy, or supply chain
+risks.
+Related Controls: CA-6, RA-3, RA-8.
+(2) EXTERNAL SYSTEM SERVICES | IDENTIFICATION OF FUNCTIONS, PORTS, PROTOCOLS, AND SERVICES
+Require providers of the following external system services to identify the functions, ports,
+protocols, and other services required for the use of such services: [Assignment:
+organization-defined external system services].
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 272
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: Information from external service providers regarding the specific functions,
+ports, protocols, and services used in the provision of such services can be useful when the
+need arises to understand the trade-offs involved in restricting certain functions and services
+or blocking certain ports and protocols.
+Related Controls: CM-6, CM-7.
+(3) EXTERNAL SYSTEM SERVICES | ESTABLISH AND MAINTAIN TRUST RELATIONSHIP WITH PROVIDERS
+Establish, document, and maintain trust relationships with external service providers
+based on the following requirements, properties, factors, or conditions: [Assignment:
+organization-defined security and privacy requirements, properties, factors, or conditions
+defining acceptable trust relationships].
+Discussion: Trust relationships between organizations and external service providers reflect
+the degree of confidence that the risk from using external services is at an acceptable level.
+Trust relationships can help organizations gain increased levels of confidence that service
+providers are providing adequate protection for the services rendered and can also be useful
+when conducting incident response or when planning for upgrades or obsolescence. Trust
+relationships can be complicated due to the potentially large number of entities participating
+in the consumer-provider interactions, subordinate relationships and levels of trust, and
+types of interactions between the parties. In some cases, the degree of trust is based on the
+level of control that organizations can exert on external service providers regarding the
+controls necessary for the protection of the service, information, or individual privacy and
+the evidence brought forth as to the effectiveness of the implemented controls. The level of
+control is established by the terms and conditions of the contracts or service-level
+agreements.
+Related Controls: SR-2.
+(4) EXTERNAL SYSTEM SERVICES |CONSISTENT INTERESTS OF CONSUMERS AND PROVIDERS
+Take the following actions to verify that the interests of [Assignment: organizationdefined external service providers] are consistent with and reflect organizational interests:
+[Assignment: organization-defined actions].
+Discussion: As organizations increasingly use external service providers, it is possible that
+the interests of the service providers may diverge from organizational interests. In such
+situations, simply having the required technical, management, or operational controls in
+place may not be sufficient if the providers that implement and manage those controls are
+not operating in a manner consistent with the interests of the consuming organizations.
+Actions that organizations take to address such concerns include requiring background
+checks for selected service provider personnel; examining ownership records; employing
+only trustworthy service providers, such as providers with which organizations have had
+successful trust relationships; and conducting routine, periodic, unscheduled visits to service
+provider facilities.
+Related Controls: None.
+(5) EXTERNAL SYSTEM SERVICES | PROCESSING, STORAGE, AND SERVICE LOCATION
+Restrict the location of [Selection (one or more): information processing; information or
+data; system services] to [Assignment: organization-defined locations] based on
+[Assignment: organization-defined requirements or conditions].
+Discussion: The location of information processing, information and data storage, or system
+services can have a direct impact on the ability of organizations to successfully execute their
+mission and business functions. The impact occurs when external providers control the
+location of processing, storage, or services. The criteria that external providers use for the
+selection of processing, storage, or service locations may be different from the criteria that
+organizations use. For example, organizations may desire that data or information storage
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 273
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+locations be restricted to certain locations to help facilitate incident response activities in
+case of information security incidents or breaches. Incident response activities, including
+forensic analyses and after-the-fact investigations, may be adversely affected by the
+governing laws, policies, or protocols in the locations where processing and storage occur
+and/or the locations from which system services emanate.
+Related Controls: SA-5, SR-4.
+(6) EXTERNAL SYSTEM SERVICES | ORGANIZATION-CONTROLLED CRYPTOGRAPHIC KEYS
+Maintain exclusive control of cryptographic keys for encrypted material stored or
+transmitted through an external system.
+Discussion: Maintaining exclusive control of cryptographic keys in an external system
+prevents decryption of organizational data by external system staff. Organizational control
+of cryptographic keys can be implemented by encrypting and decrypting data inside the
+organization as data is sent to and received from the external system or by employing a
+component that permits encryption and decryption functions to be local to the external
+system but allows exclusive organizational access to the encryption keys.
+Related Controls: SC-12, SC-13, SI-4.
+(7) EXTERNAL SYSTEM SERVICES | ORGANIZATION-CONTROLLED INTEGRITY CHECKING
+Provide the capability to check the integrity of information while it resides in the external
+system.
+Discussion: Storage of organizational information in an external system could limit visibility
+into the security status of its data. The ability of the organization to verify and validate the
+integrity of its stored data without transferring it out of the external system provides such
+visibility.
+Related Controls: SI-7.
+(8) EXTERNAL SYSTEM SERVICES | PROCESSING AND STORAGE LOCATION — U.S. JURISDICTION
+Restrict the geographic location of information processing and data storage to facilities
+located within in the legal jurisdictional boundary of the United States.
+Discussion: The geographic location of information processing and data storage can have a
+direct impact on the ability of organizations to successfully execute their mission and
+business functions. A compromise or breach of high impact information and systems can
+have severe or catastrophic adverse impacts on organizational assets and operations,
+individuals, other organizations, and the Nation. Restricting the processing and storage of
+high-impact information to facilities within the legal jurisdictional boundary of the United
+States provides greater control over such processing and storage.

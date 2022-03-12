@@ -1,0 +1,763 @@
+ID.AM-3: Organizational communication and data flows are mapped
+AC-4:
+INFORMATION FLOW ENFORCEMENT
+Control: Enforce approved authorizations for controlling the flow of information within the
+system and between connected systems based on [Assignment: organization-defined
+information flow control policies].
+Discussion: Information flow control regulates where information can travel within a system and
+between systems (in contrast to who is allowed to access the information) and without regard to
+subsequent accesses to that information. Flow control restrictions include blocking external
+traffic that claims to be from within the organization, keeping export-controlled information
+from being transmitted in the clear to the Internet, restricting web requests that are not from
+the internal web proxy server, and limiting information transfers between organizations based
+on data structures and content. Transferring information between organizations may require an
+agreement specifying how the information flow is enforced (see CA-3). Transferring information
+between systems in different security or privacy domains with different security or privacy
+policies introduces the risk that such transfers violate one or more domain security or privacy
+policies. In such situations, information owners/stewards provide guidance at designated policy
+enforcement points between connected systems. Organizations consider mandating specific
+architectural solutions to enforce specific security and privacy policies. Enforcement includes
+prohibiting information transfers between connected systems (i.e., allowing access only),
+verifying write permissions before accepting information from another security or privacy
+domain or connected system, employing hardware mechanisms to enforce one-way information
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 29
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+flows, and implementing trustworthy regrading mechanisms to reassign security or privacy
+attributes and labels.
+Organizations commonly employ information flow control policies and enforcement mechanisms
+to control the flow of information between designated sources and destinations within systems
+and between connected systems. Flow control is based on the characteristics of the information
+and/or the information path. Enforcement occurs, for example, in boundary protection devices
+that employ rule sets or establish configuration settings that restrict system services, provide a
+packet-filtering capability based on header information, or provide a message-filtering capability
+based on message content. Organizations also consider the trustworthiness of filtering and/or
+inspection mechanisms (i.e., hardware, firmware, and software components) that are critical to
+information flow enforcement. Control enhancements 3 through 32 primarily address crossdomain solution needs that focus on more advanced filtering techniques, in-depth analysis, and
+stronger flow enforcement mechanisms implemented in cross-domain products, such as highassurance guards. Such capabilities are generally not available in commercial off-the-shelf
+products. Information flow enforcement also applies to control plane traffic (e.g., routing and
+DNS).
+Control Enhancements:
+(1) INFORMATION FLOW ENFORCEMENT | OBJECT SECURITY AND PRIVACY ATTRIBUTES
+Use [Assignment: organization-defined security and privacy attributes] associated with
+[Assignment: organization-defined information, source, and destination objects] to enforce
+[Assignment: organization-defined information flow control policies] as a basis for flow
+control decisions.
+Discussion: Information flow enforcement mechanisms compare security and privacy
+attributes associated with information (i.e., data content and structure) and source and
+destination objects and respond appropriately when the enforcement mechanisms
+encounter information flows not explicitly allowed by information flow policies. For
+example, an information object labeled Secret would be allowed to flow to a destination
+object labeled Secret, but an information object labeled Top Secret would not be allowed to
+flow to a destination object labeled Secret. A dataset of personally identifiable information
+may be tagged with restrictions against combining with other types of datasets and, thus,
+would not be allowed to flow to the restricted dataset. Security and privacy attributes can
+also include source and destination addresses employed in traffic filter firewalls. Flow
+enforcement using explicit security or privacy attributes can be used, for example, to control
+the release of certain types of information.
+(2) INFORMATION FLOW ENFORCEMENT | PROCESSING DOMAINS
+Use protected processing domains to enforce [Assignment: organization-defined
+information flow control policies] as a basis for flow control decisions.
+Discussion: Protected processing domains within systems are processing spaces that have
+controlled interactions with other processing spaces, enabling control of information flows
+between these spaces and to/from information objects. A protected processing domain can
+be provided, for example, by implementing domain and type enforcement. In domain and
+type enforcement, system processes are assigned to domains, information is identified by
+types, and information flows are controlled based on allowed information accesses (i.e.,
+determined by domain and type), allowed signaling among domains, and allowed process
+transitions to other domains.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+CHAPTER THREE PAGE 30
+(3) INFORMATION FLOW ENFORCEMENT | DYNAMIC INFORMATION FLOW CONTROL
+Enforce [Assignment: organization-defined information flow control policies].
+Discussion: Organizational policies regarding dynamic information flow control include
+allowing or disallowing information flows based on changing conditions or mission or
+operational considerations. Changing conditions include changes in risk tolerance due to
+changes in the immediacy of mission or business needs, changes in the threat environment,
+and detection of potentially harmful or adverse events.
+(4) INFORMATION FLOW ENFORCEMENT | FLOW CONTROL OF ENCRYPTED INFORMATION
+Prevent encrypted information from bypassing [Assignment: organization-defined
+information flow control mechanisms] by [Selection (one or more): decrypting the
+information; blocking the flow of the encrypted information; terminating communications
+sessions attempting to pass encrypted information; [Assignment: organization-defined
+procedure or method]].
+Discussion: Flow control mechanisms include content checking, security policy filters, and
+data type identifiers. The term encryption is extended to cover encoded data not recognized
+by filtering mechanisms.
+(5) INFORMATION FLOW ENFORCEMENT | EMBEDDED DATA TYPES
+Enforce [Assignment: organization-defined limitations] on embedding data types within
+other data types.
+Discussion: Embedding data types within other data types may result in reduced flow
+control effectiveness. Data type embedding includes inserting files as objects within other
+files and using compressed or archived data types that may include multiple embedded data
+types. Limitations on data type embedding consider the levels of embedding and prohibit
+levels of data type embedding that are beyond the capability of the inspection tools.
+(6) INFORMATION FLOW ENFORCEMENT | METADATA
+Enforce information flow control based on [Assignment: organization-defined metadata].
+Discussion: Metadata is information that describes the characteristics of data. Metadata can
+include structural metadata describing data structures or descriptive metadata describing
+data content. Enforcement of allowed information flows based on metadata enables simpler
+and more effective flow control. Organizations consider the trustworthiness of metadata
+regarding data accuracy (i.e., knowledge that the metadata values are correct with respect
+to the data), data integrity (i.e., protecting against unauthorized changes to metadata tags),
+and the binding of metadata to the data payload (i.e., employing sufficiently strong binding
+techniques with appropriate assurance).
+(7) INFORMATION FLOW ENFORCEMENT | ONE-WAY FLOW MECHANISMS
+Enforce one-way information flows through hardware-based flow control mechanisms.
+Discussion: One-way flow mechanisms may also be referred to as a unidirectional network,
+unidirectional security gateway, or data diode. One-way flow mechanisms can be used to
+prevent data from being exported from a higher impact or classified domain or system while
+permitting data from a lower impact or unclassified domain or system to be imported.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+CHAPTER THREE PAGE 31
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(8) INFORMATION FLOW ENFORCEMENT | SECURITY AND PRIVACY POLICY FILTERS
+(a) Enforce information flow control using [Assignment: organization-defined security or
+privacy policy filters] as a basis for flow control decisions for [Assignment:
+organization-defined information flows]; and
+(b) [Selection (one or more): Block; Strip; Modify; Quarantine] data after a filter
+processing failure in accordance with [Assignment: organization-defined security or
+privacy policy].
+Discussion: Organization-defined security or privacy policy filters can address data
+structures and content. For example, security or privacy policy filters for data structures can
+check for maximum file lengths, maximum field sizes, and data/file types (for structured and
+unstructured data). Security or privacy policy filters for data content can check for specific
+words, enumerated values or data value ranges, and hidden content. Structured data
+permits the interpretation of data content by applications. Unstructured data refers to
+digital information without a data structure or with a data structure that does not facilitate
+the development of rule sets to address the impact or classification level of the information
+conveyed by the data or the flow enforcement decisions. Unstructured data consists of
+bitmap objects that are inherently non-language-based (i.e., image, video, or audio files) and
+textual objects that are based on written or printed languages. Organizations can implement
+more than one security or privacy policy filter to meet information flow control objectives.
+(9) INFORMATION FLOW ENFORCEMENT | HUMAN REVIEWS
+Enforce the use of human reviews for [Assignment: organization-defined information
+flows] under the following conditions: [Assignment: organization-defined conditions].
+Discussion: Organizations define security or privacy policy filters for all situations where
+automated flow control decisions are possible. When a fully automated flow control decision
+is not possible, then a human review may be employed in lieu of or as a complement to
+automated security or privacy policy filtering. Human reviews may also be employed as
+deemed necessary by organizations.
+(10)INFORMATION FLOW ENFORCEMENT | ENABLE AND DISABLE SECURITY OR PRIVACY POLICY FILTERS
+Provide the capability for privileged administrators to enable and disable [Assignment:
+organization-defined security or privacy policy filters] under the following conditions:
+[Assignment: organization-defined conditions].
+Discussion: For example, as allowed by the system authorization, administrators can enable
+security or privacy policy filters to accommodate approved data types. Administrators also
+have the capability to select the filters that are executed on a specific data flow based on the
+type of data that is being transferred, the source and destination security domains, and
+other security or privacy relevant features, as needed.
+(11)INFORMATION FLOW ENFORCEMENT | CONFIGURATION OF SECURITY OR PRIVACY POLICY FILTERS
+Provide the capability for privileged administrators to configure [Assignment:
+organization-defined security or privacy policy filters] to support different security or
+privacy policies.
+Discussion: Documentation contains detailed information for configuring security or privacy
+policy filters. For example, administrators can configure security or privacy policy filters to
+include the list of inappropriate words that security or privacy policy mechanisms check in
+accordance with the definitions provided by organizations.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+CHAPTER THREE PAGE 32
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(12)INFORMATION FLOW ENFORCEMENT | DATA TYPE IDENTIFIERS
+When transferring information between different security domains, use [Assignment:
+organization-defined data type identifiers] to validate data essential for information flow
+decisions.
+Discussion: Data type identifiers include filenames, file types, file signatures or tokens, and
+multiple internal file signatures or tokens. Systems only allow transfer of data that is
+compliant with data type format specifications. Identification and validation of data types is
+based on defined specifications associated with each allowed data format. The filename and
+number alone are not used for data type identification. Content is validated syntactically and
+semantically against its specification to ensure that it is the proper data type.
+(13)INFORMATION FLOW ENFORCEMENT | DECOMPOSITION INTO POLICY-RELEVANT SUBCOMPONENTS
+When transferring information between different security domains, decompose
+information into [Assignment: organization-defined policy-relevant subcomponents] for
+submission to policy enforcement mechanisms.
+Discussion: Decomposing information into policy-relevant subcomponents prior to
+information transfer facilitates policy decisions on source, destination, certificates,
+classification, attachments, and other security- or privacy-related component differentiators.
+Policy enforcement mechanisms apply filtering, inspection, and/or sanitization rules to the
+policy-relevant subcomponents of information to facilitate flow enforcement prior to
+transferring such information to different security domains.
+(14)INFORMATION FLOW ENFORCEMENT | SECURITY OR PRIVACY POLICY FILTER CONSTRAINTS
+When transferring information between different security domains, implement
+[Assignment: organization-defined security or privacy policy filters] requiring fully
+enumerated formats that restrict data structure and content.
+Discussion: Data structure and content restrictions reduce the range of potential malicious
+or unsanctioned content in cross-domain transactions. Security or privacy policy filters that
+restrict data structures include restricting file sizes and field lengths. Data content policy
+filters include encoding formats for character sets, restricting character data fields to only
+contain alpha-numeric characters, prohibiting special characters, and validating schema
+structures.
+(15)INFORMATION FLOW ENFORCEMENT | DETECTION OF UNSANCTIONED INFORMATION
+When transferring information between different security domains, examine the
+information for the presence of [Assignment: organization-defined unsanctioned
+information] and prohibit the transfer of such information in accordance with the
+[Assignment: organization-defined security or privacy policy].
+Discussion: Unsanctioned information includes malicious code, information that is
+inappropriate for release from the source network, or executable code that could disrupt or
+harm the services or systems on the destination network.
+(16)INFORMATION FLOW ENFORCEMENT | INFORMATION TRANSFERS ON INTERCONNECTED SYSTEMS
+[Withdrawn: Incorporated into AC-4.]
+(17)INFORMATION FLOW ENFORCEMENT | DOMAIN AUTHENTICATION
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+CHAPTER THREE PAGE 33
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Uniquely identify and authenticate source and destination points by [Selection (one or
+more): organization; system; application; service; individual] for information transfer.
+Discussion: Attribution is a critical component of a security and privacy concept of
+operations. The ability to identify source and destination points for information flowing
+within systems allows the forensic reconstruction of events and encourages policy
+compliance by attributing policy violations to specific organizations or individuals. Successful
+domain authentication requires that system labels distinguish among systems, organizations,
+and individuals involved in preparing, sending, receiving, or disseminating information.
+Attribution also allows organizations to better maintain the lineage of personally identifiable
+information processing as it flows through systems and can facilitate consent tracking, as
+well as correction, deletion, or access requests from individuals.
+(18)INFORMATION FLOW ENFORCEMENT | SECURITY ATTRIBUTE BINDING
+[Withdrawn: Incorporated into AC-16.]
+(19)INFORMATION FLOW ENFORCEMENT | VALIDATION OF METADATA
+When transferring information between different security domains, implement
+[Assignment: organization-defined security or privacy policy filters] on metadata.
+Discussion: All information (including metadata and the data to which the metadata applies)
+is subject to filtering and inspection. Some organizations distinguish between metadata and
+data payloads (i.e., only the data to which the metadata is bound). Other organizations do
+not make such distinctions and consider metadata and the data to which the metadata
+applies to be part of the payload.
+(20)INFORMATION FLOW ENFORCEMENT | APPROVED SOLUTIONS
+Employ [Assignment: organization-defined solutions in approved configurations] to control
+the flow of [Assignment: organization-defined information] across security domains.
+Discussion: Organizations define approved solutions and configurations in cross-domain
+policies and guidance in accordance with the types of information flows across classification
+boundaries. The National Security Agency (NSA) National Cross Domain Strategy and
+Management Office provides a listing of approved cross-domain solutions. Contact
+ncdsmo@nsa.gov for more information.
+(21)INFORMATION FLOW ENFORCEMENT | PHYSICAL OR LOGICAL SEPARATION OF INFORMATION FLOWS
+Separate information flows logically or physically using [Assignment: organization-defined
+mechanisms and/or techniques] to accomplish [Assignment: organization-defined required
+separations by types of information].
+Discussion: Enforcing the separation of information flows associated with defined types of
+data can enhance protection by ensuring that information is not commingled while in transit
+and by enabling flow control by transmission paths that are not otherwise achievable. Types
+of separable information include inbound and outbound communications traffic, service
+requests and responses, and information of differing security impact or classification levels.
+(22)INFORMATION FLOW ENFORCEMENT | ACCESS ONLY
+Provide access from a single device to computing platforms, applications, or data residing
+in multiple different security domains, while preventing information flow between the
+different security domains.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+CHAPTER THREE PAGE 34
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: The system provides a capability for users to access each connected security
+domain without providing any mechanisms to allow users to transfer data or information
+between the different security domains. An example of an access-only solution is a terminal
+that provides a user access to information with different security classifications while
+assuredly keeping the information separate.
+(23)INFORMATION FLOW ENFORCEMENT | MODIFY NON-RELEASABLE INFORMATION
+When transferring information between different security domains, modify non-releasable
+information by implementing [Assignment: organization-defined modification action].
+Discussion: Modifying non-releasable information can help prevent a data spill or attack
+when information is transferred across security domains. Modification actions include
+masking, permutation, alteration, removal, or redaction.
+(24)INFORMATION FLOW ENFORCEMENT | INTERNAL NORMALIZED FORMAT
+When transferring information between different security domains, parse incoming data
+into an internal normalized format and regenerate the data to be consistent with its
+intended specification.
+Discussion: Converting data into normalized forms is one of most of effective mechanisms
+to stop malicious attacks and large classes of data exfiltration.
+(25)INFORMATION FLOW ENFORCEMENT | DATA SANITIZATION
+When transferring information between different security domains, sanitize data to
+minimize [Selection (one or more): delivery of malicious content, command and control of
+malicious code, malicious code augmentation, and steganography encoded data; spillage
+of sensitive information] in accordance with [Assignment: organization-defined policy]].
+Discussion: Data sanitization is the process of irreversibly removing or destroying data
+stored on a memory device (e.g., hard drives, flash memory/solid state drives, mobile
+devices, CDs, and DVDs) or in hard copy form.
+(26)INFORMATION FLOW ENFORCEMENT | AUDIT FILTERING ACTIONS
+When transferring information between different security domains, record and audit
+content filtering actions and results for the information being filtered.
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined policy. Content
+filtering actions and the results of filtering actions are recorded for individual messages to
+ensure that the correct filter actions were applied. Content filter reports are used to assist in
+troubleshooting actions by, for example, determining why message content was modified
+and/or why it failed the filtering process. Audit events are defined in AU-2. Audit records are
+generated in AU-12.
+(27)INFORMATION FLOW ENFORCEMENT | REDUNDANT/INDEPENDENT FILTERING MECHANISMS
+When transferring information between different security domains, implement content
+filtering solutions that provide redundant and independent filtering mechanisms for each
+data type.
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined policy. Redundant
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+CHAPTER THREE PAGE 35
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+and independent content filtering eliminates a single point of failure filtering system.
+Independence is defined as the implementation of a content filter that uses a different code
+base and supporting libraries (e.g., two JPEG filters using different vendors’ JPEG libraries)
+and multiple, independent system processes.
+Related Controls: None.
+(28)INFORMATION FLOW ENFORCEMENT | LINEAR FILTER PIPELINES
+When transferring information between different security domains, implement a linear
+content filter pipeline that is enforced with discretionary and mandatory access controls.
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined policy. The use of
+linear content filter pipelines ensures that filter processes are non-bypassable and always
+invoked. In general, the use of parallel filtering architectures for content filtering of a single
+data type introduces bypass and non-invocation issues.
+Related Controls: None.
+(29)INFORMATION FLOW ENFORCEMENT | FILTER ORCHESTRATION ENGINES
+When transferring information between different security domains, employ content filter
+orchestration engines to ensure that:
+(a) Content filtering mechanisms successfully complete execution without errors; and
+(b) Content filtering actions occur in the correct order and comply with [Assignment:
+organization-defined policy].
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined security policy. An
+orchestration engine coordinates the sequencing of activities (manual and automated) in a
+content filtering process. Errors are defined as either anomalous actions or unexpected
+termination of the content filter process. This is not the same as a filter failing content due
+to non-compliance with policy. Content filter reports are a commonly used mechanism to
+ensure that expected filtering actions are completed successfully.
+Related Controls: None.
+(30)INFORMATION FLOW ENFORCEMENT | FILTER MECHANISMS USING MULTIPLE PROCESSES
+When transferring information between different security domains, implement content
+filtering mechanisms using multiple processes.
+Discussion: The use of multiple processes to implement content filtering mechanisms
+reduces the likelihood of a single point of failure.
+Related Controls: None.
+(31)INFORMATION FLOW ENFORCEMENT | FAILED CONTENT TRANSFER PREVENTION
+When transferring information between different security domains, prevent the transfer
+of failed content to the receiving domain.
+Discussion: Content that failed filtering checks can corrupt the system if transferred to the
+receiving domain.
+Related Controls: None.
+(32)INFORMATION FLOW ENFORCEMENT | PROCESS REQUIREMENTS FOR INFORMATION TRANSFER
+When transferring information between different security domains, the process that
+transfers information between filter pipelines:
+(a) Does not filter message content;
+(b) Validates filtering metadata;
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 36
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(c) Ensures the content associated with the filtering metadata has successfully completed
+filtering; and
+(d) Transfers the content to the destination filter pipeline.
+Discussion: The processes transferring information between filter pipelines have minimum
+complexity and functionality to provide assurance that the processes operate correctly.
+CA-3:
+INFORMATION EXCHANGE
+Control:
+a. Approve and manage the exchange of information between the system and other systems
+using [Selection (one or more): interconnection security agreements; information exchange
+security agreements; memoranda of understanding or agreement; service level agreements;
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 87
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+user agreements; nondisclosure agreements; [Assignment: organization-defined type of
+agreement]];
+b. Document, as part of each exchange agreement, the interface characteristics, security and
+privacy requirements, controls, and responsibilities for each system, and the impact level of
+the information communicated; and
+c. Review and update the agreements [Assignment: organization-defined frequency].
+Discussion: System information exchange requirements apply to information exchanges
+between two or more systems. System information exchanges include connections via leased
+lines or virtual private networks, connections to internet service providers, database sharing or
+exchanges of database transaction information, connections and exchanges with cloud services,
+exchanges via web-based services, or exchanges of files via file transfer protocols, network
+protocols (e.g., IPv4, IPv6), email, or other organization-to-organization communications.
+Organizations consider the risk related to new or increased threats that may be introduced when
+systems exchange information with other systems that may have different security and privacy
+requirements and controls. This includes systems within the same organization and systems that
+are external to the organization. A joint authorization of the systems exchanging information, as
+described in CA-6(1) or CA-6(2), may help to communicate and reduce risk.
+Authorizing officials determine the risk associated with system information exchange and the
+controls needed for appropriate risk mitigation. The types of agreements selected are based on
+factors such as the impact level of the information being exchanged, the relationship between
+the organizations exchanging information (e.g., government to government, government to
+business, business to business, government or business to service provider, government or
+business to individual), or the level of access to the organizational system by users of the other
+system. If systems that exchange information have the same authorizing official, organizations
+need not develop agreements. Instead, the interface characteristics between the systems (e.g.,
+how the information is being exchanged. how the information is protected) are described in the
+respective security and privacy plans. If the systems that exchange information have different
+authorizing officials within the same organization, the organizations can develop agreements or
+provide the same information that would be provided in the appropriate agreement type from
+CA-3a in the respective security and privacy plans for the systems. Organizations may incorporate
+agreement information into formal contracts, especially for information exchanges established
+between federal agencies and nonfederal organizations (including service providers, contractors,
+system developers, and system integrators). Risk considerations include systems that share the
+same networks.
+Related Controls: AC-4, AC-20, AU-16, CA-6, IA-3, IR-4, PL-2, PT-7, RA-3, SA-9, SC-7, SI-12.
+Control Enhancements:
+(1) SYSTEM CONNECTIONS | UNCLASSIFIED NATIONAL SECURITY SYSTEM CONNECTIONS
+[Withdrawn: Moved to SC-7(25).]
+(2) SYSTEM CONNECTIONS | CLASSIFIED NATIONAL SECURITY SYSTEM CONNECTIONS
+[Withdrawn: Moved to SC-7(26).]
+(3) SYSTEM CONNECTIONS | UNCLASSIFIED NON-NATIONAL SECURITY SYSTEM CONNECTIONS
+[Withdrawn: Moved to SC-7(27).]
+(4) SYSTEM CONNECTIONS | CONNECTIONS TO PUBLIC NETWORKS
+[Withdrawn: Moved to SC-7(28).]
+(5) SYSTEM CONNECTIONS | RESTRICTIONS ON EXTERNAL SYSTEM CONNECTIONS
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 88
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+[Withdrawn: Moved to SC-7(5).]
+(6) INFORMATION EXCHANGE | TRANSFER AUTHORIZATIONS
+Verify that individuals or systems transferring data between interconnecting systems have
+the requisite authorizations (i.e., write permissions or privileges) prior to accepting such
+data.
+Discussion: To prevent unauthorized individuals and systems from making information
+transfers to protected systems, the protected system verifies—via independent means—
+whether the individual or system attempting to transfer information is authorized to do so.
+Verification of the authorization to transfer information also applies to control plane traffic
+(e.g., routing and DNS) and services (e.g., authenticated SMTP relays).
+Related Controls: AC-2, AC-3, AC-4.
+(7) INFORMATION EXCHANGE |TRANSITIVE INFORMATION EXCHANGES
+(a) Identify transitive (downstream) information exchanges with other systems through
+the systems identified in CA-3a; and
+(b) Take measures to ensure that transitive (downstream) information exchanges cease
+when the controls on identified transitive (downstream) systems cannot be verified or
+validated.
+Discussion: Transitive or “downstream” information exchanges are information exchanges
+between the system or systems with which the organizational system exchanges information
+and other systems. For mission-essential systems, services, and applications, including high
+value assets, it is necessary to identify such information exchanges. The transparency of the
+controls or protection measures in place in such downstream systems connected directly or
+indirectly to organizational systems is essential to understanding the security and privacy
+risks resulting from those information exchanges. Organizational systems can inherit risk
+from downstream systems through transitive connections and information exchanges, which
+can make the organizational systems more susceptible to threats, hazards, and adverse
+impacts.
+CA-9:
+INTERNAL SYSTEM CONNECTIONS
+Control:
+a. Authorize internal connections of [Assignment: organization-defined system components or
+classes of components] to the system;
+b. Document, for each internal connection, the interface characteristics, security and privacy
+requirements, and the nature of the information communicated;
+c. Terminate internal system connections after [Assignment: organization-defined conditions];
+and
+d. Review [Assignment: organization-defined frequency] the continued need for each internal
+connection.
+Discussion: Internal system connections are connections between organizational systems and
+separate constituent system components (i.e., connections between components that are part of
+the same system) including components used for system development. Intra-system connections
+include connections with mobile devices, notebook and desktop computers, tablets, printers,
+copiers, facsimile machines, scanners, sensors, and servers. Instead of authorizing each internal
+system connection individually, organizations can authorize internal connections for a class of
+system components with common characteristics and/or configurations, including printers,
+scanners, and copiers with a specified processing, transmission, and storage capability or smart
+phones and tablets with a specific baseline configuration. The continued need for an internal
+system connection is reviewed from the perspective of whether it provides support for
+organizational missions or business functions.
+Related Controls: AC-3, AC-4, AC-18, AC-19, CM-2, IA-3, SC-7, SI-12.
+Control Enhancements:
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 95
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(1) INTERNAL SYSTEM CONNECTIONS | COMPLIANCE CHECKS
+Perform security and privacy compliance checks on constituent system components prior
+to the establishment of the internal connection.
+Discussion: Compliance checks include verification of the relevant baseline configuration
+PL-8:
+SECURITY AND PRIVACY ARCHITECTURES
+Control:
+a. Develop security and privacy architectures for the system that:
+1. Describe the requirements and approach to be taken for protecting the confidentiality,
+integrity, and availability of organizational information;
+2. Describe the requirements and approach to be taken for processing personally
+identifiable information to minimize privacy risk to individuals;
+3. Describe how the architectures are integrated into and support the enterprise
+architecture; and
+4. Describe any assumptions about, and dependencies on, external systems and services;
+b. Review and update the architectures [Assignment: organization-defined frequency] to reflect
+changes in the enterprise architecture; and
+c. Reflect planned architecture changes in security and privacy plans, Concept of Operations
+(CONOPS), criticality analysis, organizational procedures, and procurements and acquisitions.
+Discussion: The security and privacy architectures at the system level are consistent with the
+organization-wide security and privacy architectures described in PM-7, which are integral to and
+developed as part of the enterprise architecture. The architectures include an architectural
+description, the allocation of security and privacy functionality (including controls), security- and
+privacy-related information for external interfaces, information being exchanged across the
+interfaces, and the protection mechanisms associated with each interface. The architectures can
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 199
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+also include other information, such as user roles and the access privileges assigned to each role;
+security and privacy requirements; types of information processed, stored, and transmitted by
+the system; supply chain risk management requirements; restoration priorities of information
+and system services; and other protection needs.
+[SP 800-160-1] provides guidance on the use of security architectures as part of the system
+development life cycle process. [OMB M-19-03] requires the use of the systems security
+engineering concepts described in [SP 800-160-1] for high value assets. Security and privacy
+architectures are reviewed and updated throughout the system development life cycle, from
+analysis of alternatives through review of the proposed architecture in the RFP responses to the
+design reviews before and during implementation (e.g., during preliminary design reviews and
+critical design reviews).
+In today’s modern computing architectures, it is becoming less common for organizations to
+control all information resources. There may be key dependencies on external information
+services and service providers. Describing such dependencies in the security and privacy
+architectures is necessary for developing a comprehensive mission and business protection
+strategy. Establishing, developing, documenting, and maintaining under configuration control a
+baseline configuration for organizational systems is critical to implementing and maintaining
+effective architectures. The development of the architectures is coordinated with the senior
+agency information security officer and the senior agency official for privacy to ensure that the
+controls needed to support security and privacy requirements are identified and effectively
+implemented. In many circumstances, there may be no distinction between the security and
+privacy architecture for a system. In other circumstances, security objectives may be adequately
+satisfied, but privacy objectives may only be partially satisfied by the security requirements. In
+these cases, consideration of the privacy requirements needed to achieve satisfaction will result
+in a distinct privacy architecture. The documentation, however, may simply reflect the combined
+architectures.
+PL-8 is primarily directed at organizations to ensure that architectures are developed for the
+system and, moreover, that the architectures are integrated with or tightly coupled to the
+enterprise architecture. In contrast, SA-17 is primarily directed at the external information
+technology product and system developers and integrators. SA-17, which is complementary to
+PL-8, is selected when organizations outsource the development of systems or components to
+external entities and when there is a need to demonstrate consistency with the organization’s
+enterprise architecture and security and privacy architectures.
+Related Controls: CM-2, CM-6, PL-2, PL-7, PL-9, PM-5, PM-7, RA-9, SA-3, SA-5, SA-8, SA-17, SC-7.
+Control Enhancements:
+(1) SECURITY AND PRIVACY ARCHITECTURES | DEFENSE IN DEPTH
+Design the security and privacy architectures for the system using a defense-in-depth
+approach that:
+(a) Allocates [Assignment: organization-defined controls] to [Assignment: organizationdefined locations and architectural layers]; and
+(b) Ensures that the allocated controls operate in a coordinated and mutually reinforcing
+manner.
+Discussion: Organizations strategically allocate security and privacy controls in the security
+and privacy architectures so that adversaries must overcome multiple controls to achieve
+their objective. Requiring adversaries to defeat multiple controls makes it more difficult to
+attack information resources by increasing the work factor of the adversary; it also increases
+the likelihood of detection. The coordination of allocated controls is essential to ensure that
+an attack that involves one control does not create adverse, unintended consequences by
+interfering with other controls. Unintended consequences can include system lockout and
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 200
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+cascading alarms. The placement of controls in systems and organizations is an important
+activity that requires thoughtful analysis. The value of organizational assets is an important
+consideration in providing additional layering. Defense-in-depth architectural approaches
+include modularity and layering (see SA-8(3)), separation of system and user functionality
+(see SC-2), and security function isolation (see SC-3).
+Related Controls: SC-2, SC-3, SC-29, SC-36.
+(2) SECURITY AND PRIVACY ARCHITECTURES | SUPPLIER DIVERSITY
+Require that [Assignment: organization-defined controls] allocated to [Assignment:
+organization-defined locations and architectural layers] are obtained from different
+suppliers.
+Discussion: Information technology products have different strengths and weaknesses.
+Providing a broad spectrum of products complements the individual offerings. For example,
+vendors offering malicious code protection typically update their products at different times,
+often developing solutions for known viruses, Trojans, or worms based on their priorities
+and development schedules. By deploying different products at different locations, there is
+an increased likelihood that at least one of the products will detect the malicious code. With
+respect to privacy, vendors may offer products that track personally identifiable information
+in systems. Products may use different tracking methods. Using multiple products may result
+in more assurance that personally identifiable information is inventoried.
+SA-17:
+DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN
+Control: Require the developer of the system, system component, or system service to produce
+a design specification and security and privacy architecture that:
+a. Is consistent with the organization’s security and privacy architecture that is an integral part
+the organization’s enterprise architecture;
+b. Accurately and completely describes the required security and privacy functionality, and the
+allocation of controls among physical and logical components; and
+c. Expresses how individual security and privacy functions, mechanisms, and services work
+together to provide required security and privacy capabilities and a unified approach to
+protection.
+Discussion: Developer security and privacy architecture and design are directed at external
+developers, although they could also be applied to internal (in-house) development. In contrast,
+PL-8 is directed at internal developers to ensure that organizations develop a security and privacy
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 285
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+architecture that is integrated with the enterprise architecture. The distinction between SA-17
+and PL-8 is especially important when organizations outsource the development of systems,
+system components, or system services and when there is a requirement to demonstrate
+consistency with the enterprise architecture and security and privacy architecture of the
+organization. [ISO 15408-2], [ISO 15408-3], and [SP 800-160-1] provide information on security
+architecture and design, including formal policy models, security-relevant components, formal
+and informal correspondence, conceptually simple design, and structuring for least privilege and
+testing.
+Related Controls: PL-2, PL-8, PM-7, SA-3, SA-4, SA-8, SC-7.
+Control Enhancements:
+(1) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | FORMAL POLICY MODEL
+Require the developer of the system, system component, or system service to:
+(a) Produce, as an integral part of the development process, a formal policy model
+describing the [Assignment: organization-defined elements of organizational security
+and privacy policy] to be enforced; and
+(b) Prove that the formal policy model is internally consistent and sufficient to enforce
+the defined elements of the organizational security and privacy policy when
+implemented.
+Discussion: Formal models describe specific behaviors or security and privacy policies using
+formal languages, thus enabling the correctness of those behaviors and policies to be
+formally proven. Not all components of systems can be modeled. Generally, formal
+specifications are scoped to the behaviors or policies of interest, such as nondiscretionary
+access control policies. Organizations choose the formal modeling language and approach
+based on the nature of the behaviors and policies to be described and the available tools.
+Related Controls: AC-3, AC-4, AC-25.
+(2) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | SECURITY-RELEVANT
+COMPONENTS
+Require the developer of the system, system component, or system service to:
+(a) Define security-relevant hardware, software, and firmware; and
+(b) Provide a rationale that the definition for security-relevant hardware, software, and
+firmware is complete.
+Discussion: The security-relevant hardware, software, and firmware represent the portion
+of the system, component, or service that is trusted to perform correctly to maintain
+required security properties.
+Related Controls: AC-25, SA-5.
+(3) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | FORMAL CORRESPONDENCE
+Require the developer of the system, system component, or system service to:
+(a) Produce, as an integral part of the development process, a formal top-level
+specification that specifies the interfaces to security-relevant hardware, software, and
+firmware in terms of exceptions, error messages, and effects;
+(b) Show via proof to the extent feasible with additional informal demonstration as
+necessary, that the formal top-level specification is consistent with the formal policy
+model;
+(c) Show via informal demonstration, that the formal top-level specification completely
+covers the interfaces to security-relevant hardware, software, and firmware;
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 286
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(d) Show that the formal top-level specification is an accurate description of the
+implemented security-relevant hardware, software, and firmware; and
+(e) Describe the security-relevant hardware, software, and firmware mechanisms not
+addressed in the formal top-level specification but strictly internal to the securityrelevant hardware, software, and firmware.
+Discussion: Correspondence is an important part of the assurance gained through modeling.
+It demonstrates that the implementation is an accurate transformation of the model, and
+that any additional code or implementation details that are present have no impact on the
+behaviors or policies being modeled. Formal methods can be used to show that the highlevel security properties are satisfied by the formal system description, and that the formal
+system description is correctly implemented by a description of some lower level, including a
+hardware description. Consistency between the formal top-level specification and the formal
+policy models is generally not amenable to being fully proven. Therefore, a combination of
+formal and informal methods may be needed to demonstrate such consistency. Consistency
+between the formal top-level specification and the actual implementation may require the
+use of an informal demonstration due to limitations on the applicability of formal methods
+to prove that the specification accurately reflects the implementation. Hardware, software,
+and firmware mechanisms internal to security-relevant components include mapping
+registers and direct memory input and output.
+Related Controls: AC-3, AC-4, AC-25, SA-4, SA-5.
+(4) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | INFORMAL CORRESPONDENCE
+Require the developer of the system, system component, or system service to:
+(a) Produce, as an integral part of the development process, an informal descriptive toplevel specification that specifies the interfaces to security-relevant hardware,
+software, and firmware in terms of exceptions, error messages, and effects;
+(b) Show via [Selection: informal demonstration; convincing argument with formal
+methods as feasible] that the descriptive top-level specification is consistent with the
+formal policy model;
+(c) Show via informal demonstration, that the descriptive top-level specification
+completely covers the interfaces to security-relevant hardware, software, and
+firmware;
+(d) Show that the descriptive top-level specification is an accurate description of the
+interfaces to security-relevant hardware, software, and firmware; and
+(e) Describe the security-relevant hardware, software, and firmware mechanisms not
+addressed in the descriptive top-level specification but strictly internal to the securityrelevant hardware, software, and firmware.
+Discussion: Correspondence is an important part of the assurance gained through modeling.
+It demonstrates that the implementation is an accurate transformation of the model, and
+that additional code or implementation detail has no impact on the behaviors or policies
+being modeled. Consistency between the descriptive top-level specification (i.e., highlevel/low-level design) and the formal policy model is generally not amenable to being fully
+proven. Therefore, a combination of formal and informal methods may be needed to show
+such consistency. Hardware, software, and firmware mechanisms strictly internal to
+security-relevant hardware, software, and firmware include mapping registers and direct
+memory input and output.
+Related Controls: AC-3, AC-4, AC-25, SA-4, SA-5.
+(5) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | CONCEPTUALLY SIMPLE DESIGN
+Require the developer of the system, system component, or system service to:
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 287
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(a) Design and structure the security-relevant hardware, software, and firmware to use a
+complete, conceptually simple protection mechanism with precisely defined
+semantics; and
+(b) Internally structure the security-relevant hardware, software, and firmware with
+specific regard for this mechanism.
+Discussion: The principle of reduced complexity states that the system design is as simple
+and small as possible (see SA-8(7)). A small and simple design is easier to understand and
+analyze and is also less prone to error (see AC-25, SA-8(13)). The principle of reduced
+complexity applies to any aspect of a system, but it has particular importance for security
+due to the various analyses performed to obtain evidence about the emergent security
+property of the system. For such analyses to be successful, a small and simple design is
+essential. Application of the principle of reduced complexity contributes to the ability of
+system developers to understand the correctness and completeness of system security
+functions and facilitates the identification of potential vulnerabilities. The corollary of
+reduced complexity states that the simplicity of the system is directly related to the number
+of vulnerabilities it will contain. That is, simpler systems contain fewer vulnerabilities. An
+important benefit of reduced complexity is that it is easier to understand whether the
+security policy has been captured in the system design and that fewer vulnerabilities are
+likely to be introduced during engineering development. An additional benefit is that any
+such conclusion about correctness, completeness, and existence of vulnerabilities can be
+reached with a higher degree of assurance in contrast to conclusions reached in situations
+where the system design is inherently more complex.
+Related Controls: AC-25, SA-8, SC-3.
+(6) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | STRUCTURE FOR TESTING
+Require the developer of the system, system component, or system service to structure
+security-relevant hardware, software, and firmware to facilitate testing.
+Discussion: Applying the security design principles in [SP 800-160-1] promotes complete,
+consistent, and comprehensive testing and evaluation of systems, system components, and
+services. The thoroughness of such testing contributes to the evidence produced to generate
+an effective assurance case or argument as to the trustworthiness of the system, system
+component, or service.
+Related Controls: SA-5, SA-11.
+(7) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | STRUCTURE FOR LEAST PRIVILEGE
+Require the developer of the system, system component, or system service to structure
+security-relevant hardware, software, and firmware to facilitate controlling access with
+least privilege.
+Discussion: The principle of least privilege states that each component is allocated sufficient
+privileges to accomplish its specified functions but no more (see SA-8(14)). Applying the
+principle of least privilege limits the scope of the component’s actions, which has two
+desirable effects. First, the security impact of a failure, corruption, or misuse of the system
+component results in a minimized security impact. Second, the security analysis of the
+component is simplified. Least privilege is a pervasive principle that is reflected in all aspects
+of the secure system design. Interfaces used to invoke component capability are available to
+only certain subsets of the user population, and component design supports a sufficiently
+fine granularity of privilege decomposition. For example, in the case of an audit mechanism,
+there may be an interface for the audit manager, who configures the audit settings; an
+interface for the audit operator, who ensures that audit data is safely collected and stored;
+and, finally, yet another interface for the audit reviewer, who only has a need to view the
+audit data that has been collected but no need to perform operations on that data.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 288
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+In addition to its manifestations at the system interface, least privilege can be used as a
+guiding principle for the internal structure of the system itself. One aspect of internal least
+privilege is to construct modules so that only the elements encapsulated by the module are
+directly operated upon by the functions within the module. Elements external to a module
+that may be affected by the module’s operation are indirectly accessed through interaction
+(e.g., via a function call) with the module that contains those elements. Another aspect of
+internal least privilege is that the scope of a given module or component includes only those
+system elements that are necessary for its functionality, and the access modes to the
+elements (e.g., read, write) are minimal.
+Related Controls: AC-5, AC-6, SA-8.
+(8) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | ORCHESTRATION
+Design [Assignment: organization-defined critical systems or system components] with
+coordinated behavior to implement the following capabilities: [Assignment: organizationdefined capabilities, by system or component].
+Discussion: Security resources that are distributed, located at different layers or in different
+system elements, or are implemented to support different aspects of trustworthiness can
+interact in unforeseen or incorrect ways. Adverse consequences can include cascading
+failures, interference, or coverage gaps. Coordination of the behavior of security resources
+(e.g., by ensuring that one patch is installed across all resources before making a
+configuration change that assumes that the patch is propagated) can avert such negative
+interactions.
+Related Controls: None.
+(9) DEVELOPER SECURITY AND PRIVACY ARCHITECTURE AND DESIGN | DESIGN DIVERSITY
+Use different designs for [Assignment: organization-defined critical systems or system
+components] to satisfy a common set of requirements or to provide equivalent
+functionality.
+Discussion: Design diversity is achieved by supplying the same requirements specification to
+multiple developers, each of whom is responsible for developing a variant of the system or
+system component that meets the requirements. Variants can be in software design, in
+hardware design, or in both hardware and a software design. Differences in the designs of
+the variants can result from developer experience (e.g., prior use of a design pattern), design
+style (e.g., when decomposing a required function into smaller tasks, determining what
+constitutes a separate task and how far to decompose tasks into sub-tasks), selection of
+libraries to incorporate into the variant, and the development environment (e.g., different
+design tools make some design patterns easier to visualize). Hardware design diversity
+includes making different decisions about what information to keep in analog form and what
+information to convert to digital form, transmitting the same information at different times,
+and introducing delays in sampling (temporal diversity). Design diversity is commonly used
+to support fault tolerance.
