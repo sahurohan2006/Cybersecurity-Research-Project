@@ -5,19 +5,6 @@ public class Test {
     static Map<String,Word> tokensInDoc;
 
     public static void main(String[] args) throws Exception {
-        Map<String, Word> map = new HashMap<>();
-        List<Word> allWords = new ArrayList<>();
-        try {
-            Stopwords s = new Stopwords();
-        } catch (Exception e) {
-            System.out.println();
-        }
-
-
-        // read the stop words and add them into a list or instantiate the existing class
-
-        // read all files in a loop
-        // per each file invoke calculate TF
         File corpus = new File("/Users/shalinisahu/Desktop/Research Project/corpus1");
         File docs[] = corpus.listFiles();
         for (File f : docs) {
@@ -25,6 +12,36 @@ public class Test {
                 calcuatetfIDF(f, docs.length);
             }
         }
+        List<String> vals = new LinkedList<String>(tokensInDoc.keySet());
+
+        Collections.sort(vals, new Comparator<String>() {
+            public int compare(String o1, String o2) {
+                if(tokensInDoc.get(o1).getTFIDF() >= tokensInDoc.get(o2).getTFIDF()) {
+                    return 0;
+                }
+                return 1;
+            }});
+
+        Map<String,Word> sorted = new HashMap<>();
+        Iterator it = vals.iterator();
+        while(it.hasNext()) {
+            String temp = (String) it.next();
+            sorted.put(temp, tokensInDoc.get(temp));
+        }
+        for(String str: sorted.keySet()) {
+            System.out.println(str + " --> " + sorted.get(str).getTFIDF());
+        }
+
+
+
+
+
+
+        // read the stop words and add them into a list or instantiate the existing class
+
+        // read all files in a loop
+        // per each file invoke calculate TF
+
 
 
 
@@ -169,8 +186,8 @@ public class Test {
             String[] words = line.split(" ");
             for (String x : words) {
                 // use tokensInDoc to count the number of occurrnces for each word
-                if (!stopwords.contains(x) && tokensInDoc.containsKey(x)) {
-                    tokensInDoc.get(x).incrementFrequency();
+                if (!stopwords.contains(x.toLowerCase()) && tokensInDoc.containsKey(x.toLowerCase())) {
+                    tokensInDoc.get(x.toLowerCase()).incrementFrequency();
                     // tokensInDoc.put(x, tokensInDoc.get(x) + 1);
 
                     //}
@@ -178,7 +195,7 @@ public class Test {
                     w = new Word(x);
                     w.incrementFrequency();
                     w.incrementNumDocsWithWord();
-                    tokensInDoc.put(x, w);
+                    tokensInDoc.put(x.toLowerCase(), w);
                 }
                 totalWords++;
                 // Loop through the map and create word objects
