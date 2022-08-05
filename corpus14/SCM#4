@@ -1,0 +1,396 @@
+DE.CM-3: Personnel activity is monitored to detect potential cybersecurity events
+ACCOUNT MANAGEMENT
+Control:
+a. Define and document the types of accounts allowed and specifically prohibited for use
+within the system;
+b. Assign account managers;
+c. Require [Assignment: organization-defined prerequisites and criteria] for group and role
+membership;
+d. Specify:
+1. Authorized users of the system;
+2. Group and role membership; and
+3. Access authorizations (i.e., privileges) and [Assignment: organization-defined attributes
+(as required)] for each account;
+e. Require approvals by [Assignment: organization-defined personnel or roles] for requests to
+create accounts;
+f. Create, enable, modify, disable, and remove accounts in accordance with [Assignment:
+organization-defined policy, procedures, prerequisites, and criteria];
+g. Monitor the use of accounts;
+h. Notify account managers and [Assignment: organization-defined personnel or roles] within:
+1. [Assignment: organization-defined time period] when accounts are no longer required;
+2. [Assignment: organization-defined time period] when users are terminated or
+transferred; and
+3. [Assignment: organization-defined time period] when system usage or need-to-know
+changes for an individual;
+i. Authorize access to the system based on:
+1. A valid access authorization;
+2. Intended system usage; and
+3. [Assignment: organization-defined attributes (as required)];
+j. Review accounts for compliance with account management requirements [Assignment:
+organization-defined frequency];
+k. Establish and implement a process for changing shared or group account authenticators (if
+deployed) when individuals are removed from the group; and
+l. Align account management processes with personnel termination and transfer processes.
+Discussion: Examples of system account types include individual, shared, group, system, guest,
+anonymous, emergency, developer, temporary, and service. Identification of authorized system
+users and the specification of access privileges reflect the requirements in other controls in the
+security plan. Users requiring administrative privileges on system accounts receive additional
+scrutiny by organizational personnel responsible for approving such accounts and privileged
+access, including system owner, mission or business owner, senior agency information security
+officer, or senior agency official for privacy. Types of accounts that organizations may wish to
+prohibit due to increased risk include shared, group, emergency, anonymous, temporary, and
+guest accounts.
+Where access involves personally identifiable information, security programs collaborate with
+the senior agency official for privacy to establish the specific conditions for group and role
+membership; specify authorized users, group and role membership, and access authorizations for
+each account; and create, adjust, or remove system accounts in accordance with organizational
+policies. Policies can include such information as account expiration dates or other factors that
+trigger the disabling of accounts. Organizations may choose to define access privileges or other
+attributes by account, type of account, or a combination of the two. Examples of other attributes
+required for authorizing access include restrictions on time of day, day of week, and point of
+origin. In defining other system account attributes, organizations consider system-related
+requirements and mission/business requirements. Failure to consider these factors could affect
+system availability.
+Temporary and emergency accounts are intended for short-term use. Organizations establish
+temporary accounts as part of normal account activation procedures when there is a need for
+short-term accounts without the demand for immediacy in account activation. Organizations
+establish emergency accounts in response to crisis situations and with the need for rapid account
+activation. Therefore, emergency account activation may bypass normal account authorization
+processes. Emergency and temporary accounts are not to be confused with infrequently used
+accounts, including local logon accounts used for special tasks or when network resources are
+unavailable (may also be known as accounts of last resort). Such accounts remain available and
+are not subject to automatic disabling or removal dates. Conditions for disabling or deactivating
+accounts include when shared/group, emergency, or temporary accounts are no longer required
+and when individuals are transferred or terminated. Changing shared/group authenticators when
+members leave the group is intended to ensure that former group members do not retain access
+to the shared or group account. Some types of system accounts may require specialized training.
+ACCOUNT MANAGEMENT | AUTOMATED SYSTEM ACCOUNT MANAGEMENT
+Support the management of system accounts using [Assignment: organization-defined
+automated mechanisms].
+Discussion: Automated system account management includes using automated mechanisms
+to create, enable, modify, disable, and remove accounts; notify account managers when an
+account is created, enabled, modified, disabled, or removed, or when users are terminated
+or transferred; monitor system account usage; and report atypical system account usage.
+Automated mechanisms can include internal system functions and email, telephonic, and
+text messaging notifications.
+ACCOUNT MANAGEMENT | AUTOMATED TEMPORARY AND EMERGENCY ACCOUNT MANAGEMENT
+Automatically [Selection: remove; disable] temporary and emergency accounts after
+[Assignment: organization-defined time period for each type of account].
+Discussion: Management of temporary and emergency accounts includes the removal or
+disabling of such accounts automatically after a predefined time period rather than at the
+convenience of the system administrator. Automatic removal or disabling of accounts
+provides a more consistent implementation.
+ACCOUNT MANAGEMENT | DISABLE ACCOUNTS
+Disable accounts within [Assignment: organization-defined time period] when the
+accounts:
+(a) Have expired;
+(b) Are no longer associated with a user or individual;
+(c) Are in violation of organizational policy; or
+(d) Have been inactive for [Assignment: organization-defined time period].
+Discussion: Disabling expired, inactive, or otherwise anomalous accounts supports the
+concepts of least privilege and least functionality which reduce the attack surface of the
+system.
+ACCOUNT MANAGEMENT | AUTOMATED AUDIT ACTIONS
+Automatically audit account creation, modification, enabling, disabling, and removal
+actions.
+Discussion: Account management audit records are defined in accordance with AU-2 and
+reviewed, analyzed, and reported in accordance with AU-6.
+ACCOUNT MANAGEMENT | INACTIVITY LOGOUT
+Require that users log out when [Assignment: organization-defined time period of
+expected inactivity or description of when to log out].
+Discussion: Inactivity logout is behavior- or policy-based and requires users to take physical
+action to log out when they are expecting inactivity longer than the defined period.
+Automatic enforcement of inactivity logout is addressed by AC-11.
+ACCOUNT MANAGEMENT | DYNAMIC PRIVILEGE MANAGEMENT
+Implement [Assignment: organization-defined dynamic privilege management
+capabilities].
+Discussion: In contrast to access control approaches that employ static accounts and
+predefined user privileges, dynamic access control approaches rely on runtime access
+control decisions facilitated by dynamic privilege management, such as attribute-based
+access control. While user identities remain relatively constant over time, user privileges
+typically change more frequently based on ongoing mission or business requirements and
+the operational needs of organizations. An example of dynamic privilege management is the
+immediate revocation of privileges from users as opposed to requiring that users terminate
+and restart their sessions to reflect changes in privileges. Dynamic privilege management can
+also include mechanisms that change user privileges based on dynamic rules as opposed to
+editing specific user profiles. Examples include automatic adjustments of user privileges if
+they are operating out of their normal work times, if their job function or assignment
+changes, or if systems are under duress or in emergency situations. Dynamic privilege
+management includes the effects of privilege changes, for example, when there are changes
+to encryption keys used for communications
+ACCOUNT MANAGEMENT | PRIVILEGED USER ACCOUNTS
+(a) Establish and administer privileged user accounts in accordance with [Selection: a rolebased access scheme; an attribute-based access scheme];
+(b) Monitor privileged role or attribute assignments;
+(c) Monitor changes to roles or attributes; and
+(d) Revoke access when privileged role or attribute assignments are no longer
+appropriate.
+Discussion: Privileged roles are organization-defined roles assigned to individuals that allow
+those individuals to perform certain security-relevant functions that ordinary users are not
+authorized to perform. Privileged roles include key management, account management,
+database administration, system and network administration, and web administration. A
+role-based access scheme organizes permitted system access and privileges into roles. In
+contrast, an attribute-based access scheme specifies allowed system access and privileges
+based on attributes
+ACCOUNT MANAGEMENT | DYNAMIC ACCOUNT MANAGEMENT
+Create, activate, manage, and deactivate [Assignment: organization-defined system
+accounts] dynamically.
+Discussion: Approaches for dynamically creating, activating, managing, and deactivating
+system accounts rely on automatically provisioning the accounts at runtime for entities that
+were previously unknown. Organizations plan for the dynamic management, creation,
+activation, and deactivation of system accounts by establishing trust relationships, business
+rules, and mechanisms with appropriate authorities to validate related authorizations and
+privileges.
+ACCOUNT MANAGEMENT | RESTRICTIONS ON USE OF SHARED AND GROUP ACCOUNTS
+Only permit the use of shared and group accounts that meet [Assignment: organizationdefined conditions for establishing shared and group accounts].
+Discussion: Before permitting the use of shared or group accounts, organizations consider
+the increased risk due to the lack of accountability with such accounts.
+ACCOUNT MANAGEMENT | USAGE CONDITIONS
+Enforce [Assignment: organization-defined circumstances and/or usage conditions] for
+[Assignment: organization-defined system accounts].
+Discussion: Specifying and enforcing usage conditions helps to enforce the principle of least
+privilege, increase user accountability, and enable effective account monitoring. Account
+monitoring includes alerts generated if the account is used in violation of organizational
+parameters. Organizations can describe specific conditions or circumstances under which
+system accounts can be used, such as by restricting usage to certain days of the week, time
+of day, or specific durations of time
+ACCOUNT MANAGEMENT | ACCOUNT MONITORING FOR ATYPICAL USAGE
+(a) Monitor system accounts for [Assignment: organization-defined atypical usage]; and
+(b) Report atypical usage of system accounts to [Assignment: organization-defined
+personnel or roles].
+Discussion: Atypical usage includes accessing systems at certain times of the day or from
+locations that are not consistent with the normal usage patterns of individuals. Monitoring
+for atypical usage may reveal rogue behavior by individuals or an attack in progress. Account
+monitoring may inadvertently create privacy risks since data collected to identify atypical
+usage may reveal previously unknown information about the behavior of individuals.
+Organizations assess and document privacy risks from monitoring accounts for atypical
+usage in their privacy impact assessment and make determinations that are in alignment
+with their privacy program plan.
+ACCOUNT MANAGEMENT | DISABLE ACCOUNTS FOR HIGH-RISK INDIVIDUALS
+Disable accounts of individuals within [Assignment: organization-defined time period] of
+discovery of [Assignment: organization-defined significant risks].
+Discussion: Users who pose a significant security and/or privacy risk include individuals for
+whom reliable evidence indicates either the intention to use authorized access to systems to
+cause harm or through whom adversaries will cause harm. Such harm includes adverse
+impacts to organizational operations, organizational assets, individuals, other organizations,
+or the Nation. Close coordination among system administrators, legal staff, human resource
+managers, and authorizing officials is essential when disabling system accounts for high-risk
+individuals
+AUDIT RECORD GENERATION
+Control:
+a. Provide audit record generation capability for the event types the system is capable of
+auditing as defined in AU-2a on [Assignment: organization-defined system components];
+b. Allow [Assignment: organization-defined personnel or roles] to select the event types that
+are to be logged by specific components of the system; and
+c. Generate audit records for the event types defined in AU-2c that include the audit record
+content defined in AU-3.
+Discussion: Audit records can be generated from many different system components. The event
+types specified in AU-2d are the event types for which audit logs are to be generated and are a
+subset of all event types for which the system can generate audit records.
+AUDIT RECORD GENERATION | SYSTEM-WIDE AND TIME-CORRELATED AUDIT TRAIL
+Compile audit records from [Assignment: organization-defined system components] into a
+system-wide (logical or physical) audit trail that is time-correlated to within [Assignment:
+organization-defined level of tolerance for the relationship between time stamps of
+individual records in the audit trail].
+Discussion: Audit trails are time-correlated if the time stamps in the individual audit records
+can be reliably related to the time stamps in other audit records to achieve a time ordering
+of the records within organizational tolerances.
+AUDIT RECORD GENERATION | STANDARDIZED FORMATS
+Produce a system-wide (logical or physical) audit trail composed of audit records in a
+standardized format.
+Discussion: Audit records that follow common standards promote interoperability and
+information exchange between devices and systems. Promoting interoperability and
+information exchange facilitates the production of event information that can be readily
+analyzed and correlated. If logging mechanisms do not conform to standardized formats,
+systems may convert individual audit records into standardized formats when compiling
+system-wide audit trails
+AUDIT RECORD GENERATION | CHANGES BY AUTHORIZED INDIVIDUALS
+Provide and implement the capability for [Assignment: organization-defined individuals or
+roles] to change the logging to be performed on [Assignment: organization-defined system
+components] based on [Assignment: organization-defined selectable event criteria] within
+[Assignment: organization-defined time thresholds].
+Discussion: Permitting authorized individuals to make changes to system logging enables
+organizations to extend or limit logging as necessary to meet organizational requirements.
+Logging that is limited to conserve system resources may be extended (either temporarily or
+permanently) to address certain threat situations. In addition, logging may be limited to a
+specific set of event types to facilitate audit reduction, analysis, and reporting. Organizations
+can establish time thresholds in which logging actions are changed (e.g., near real-time,
+within minutes, or within hours).
+AUDIT RECORD GENERATION | QUERY PARAMETER AUDITS OF PERSONALLY IDENTIFIABLE
+INFORMATION
+Provide and implement the capability for auditing the parameters of user query events for
+data sets containing personally identifiable information.
+Discussion: Query parameters are explicit criteria that an individual or automated system
+submits to a system to retrieve data. Auditing of query parameters for datasets that contain
+personally identifiable information augments the capability of an organization to track and
+understand the access, usage, or sharing of personally identifiable information by authorized
+personnel.
+MONITORING FOR INFORMATION DISCLOSURE
+Control:
+a. Monitor [Assignment: organization-defined open-source information and/or information
+sites] [Assignment: organization-defined frequency] for evidence of unauthorized disclosure
+of organizational information; and
+b. If an information disclosure is discovered:
+1. Notify [Assignment: organization-defined personnel or roles]; and
+2. Take the following additional actions: [Assignment: organization-defined additional
+actions].
+Discussion: Unauthorized disclosure of information is a form of data leakage. Open-source
+information includes social networking sites and code-sharing platforms and repositories.
+Examples of organizational information include personally identifiable information retained by
+the organization or proprietary information generated by the organization.
+MONITORING FOR INFORMATION DISCLOSURE | USE OF AUTOMATED TOOLS
+Monitor open-source information and information sites using [Assignment: organizationdefined automated mechanisms].
+Discussion: Automated mechanisms include commercial services that provide notifications
+and alerts to organizations and automated scripts to monitor new posts on websites.
+MONITORING FOR INFORMATION DISCLOSURE | REVIEW OF MONITORED SITES
+Review the list of open-source information sites being monitored [Assignment:
+organization-defined frequency].
+Discussion: Reviewing the current list of open-source information sites being monitored on
+a regular basis helps to ensure that the selected sites remain relevant. The review also
+provides the opportunity to add new open-source information sites with the potential to
+provide evidence of unauthorized disclosure of organizational information. The list of sites
+monitored can be guided and informed by threat intelligence of other credible sources of
+information.
+MONITORING FOR INFORMATION DISCLOSURE | UNAUTHORIZED REPLICATION OF INFORMATION
+Employ discovery techniques, processes, and tools to determine if external entities are
+replicating organizational information in an unauthorized manner.
+Discussion: The unauthorized use or replication of organizational information by external
+entities can cause adverse impacts on organizational operations and assets, including
+damage to reputation. Such activity can include the replication of an organizational website
+by an adversary or hostile threat actor who attempts to impersonate the web-hosting
+organization. Discovery tools, techniques, and processes used to determine if
+external entities are replicating organizational information in an unauthorized manner
+include scanning external websites, monitoring social media, and training staff to recognize
+the unauthorized use of organizational information.
+CONTINUOUS MONITORING
+Control: Develop a system-level continuous monitoring strategy and implement continuous
+monitoring in accordance with the organization-level continuous monitoring strategy that
+includes:
+a. Establishing the following system-level metrics to be monitored: [Assignment: organizationdefined system-level metrics];
+b. Establishing [Assignment: organization-defined frequencies] for monitoring and
+[Assignment: organization-defined frequencies] for assessment of control effectiveness;
+c. Ongoing control assessments in accordance with the continuous monitoring strategy;
+d. Ongoing monitoring of system and organization-defined metrics in accordance with the
+continuous monitoring strategy;
+e. Correlation and analysis of information generated by control assessments and monitoring;
+f. Response actions to address results of the analysis of control assessment and monitoring
+information; and
+g. Reporting the security and privacy status of the system to [Assignment: organizationdefined personnel or roles] [Assignment: organization-defined frequency].
+Discussion: Continuous monitoring at the system level facilitates ongoing awareness of the
+system security and privacy posture to support organizational risk management decisions. The
+terms “continuous” and “ongoing” imply that organizations assess and monitor their controls
+and risks at a frequency sufficient to support risk-based decisions. Different types of controls may
+require different monitoring frequencies. The results of continuous monitoring generate risk
+response actions by organizations. When monitoring the effectiveness of multiple controls that
+have been grouped into capabilities, a root-cause analysis may be needed to determine the
+specific control that has failed. Continuous monitoring programs allow organizations to maintain
+the authorizations of systems and common controls in highly dynamic environments of operation
+with changing mission and business needs, threats, vulnerabilities, and technologies. Having
+access to security and privacy information on a continuing basis through reports and dashboards
+gives organizational officials the ability to make effective and timely risk management decisions,
+including ongoing authorization decisions.
+Automation supports more frequent updates to hardware, software, and firmware inventories,
+authorization packages, and other system information. Effectiveness is further enhanced when
+continuous monitoring outputs are formatted to provide information that is specific, measurable,
+actionable, relevant, and timely. Continuous monitoring activities are scaled in accordance with
+the security categories of systems. Monitoring requirements, including the need for specific
+monitoring, may be referenced in other controls and control enhancements,
+CONTINUOUS MONITORING | INDEPENDENT ASSESSMENT
+Employ independent assessors or assessment teams to monitor the controls in the system
+on an ongoing basis.
+Discussion: Organizations maximize the value of control assessments by requiring that
+assessments be conducted by assessors with appropriate levels of independence. The level
+of required independence is based on organizational continuous monitoring strategies.
+Assessor independence provides a degree of impartiality to the monitoring process. To
+achieve such impartiality, assessors do not create a mutual or conflicting interest with the
+organizations where the assessments are being conducted, assess their own work, act as
+management or employees of the organizations they are serving, or place themselves in
+advocacy positions for the organizations acquiring their services.
+CONTINUOUS MONITORING | TREND ANALYSES
+Employ trend analyses to determine if control implementations, the frequency of
+continuous monitoring activities, and the types of activities used in the continuous
+monitoring process need to be modified based on empirical data.
+Discussion: Trend analyses include examining recent threat information that addresses the
+types of threat events that have occurred in the organization or the Federal Government,
+success rates of certain types of attacks, emerging vulnerabilities in technologies, evolving
+social engineering techniques, the effectiveness of configuration settings, results from
+multiple control assessments, and findings from Inspectors General or auditors
+CONTINUOUS MONITORING | RISK MONITORING
+Ensure risk monitoring is an integral part of the continuous monitoring strategy that
+includes the following:
+(a) Effectiveness monitoring;
+(b) Compliance monitoring; and
+(c) Change monitoring.
+Discussion: Risk monitoring is informed by the established organizational risk tolerance.
+Effectiveness monitoring determines the ongoing effectiveness of the implemented risk
+response measures. Compliance monitoring verifies that required risk response measures
+are implemented. It also verifies that security and privacy requirements are satisfied. Change
+monitoring identifies changes to organizational systems and environments of operation that
+may affect security and privacy risk.
+CONTINUOUS MONITORING | CONSISTENCY ANALYSIS
+Employ the following actions to validate that policies are established and implemented
+controls are operating in a consistent manner: [Assignment: organization-defined actions].
+Discussion: Security and privacy controls are often added incrementally to a system. As a
+result, policies for selecting and implementing controls may be inconsistent, and the controls
+could fail to work together in a consistent or coordinated manner. At a minimum, the lack of
+consistency and coordination could mean that there are unacceptable security and privacy
+gaps in the system. At worst, it could mean that some of the controls implemented in one
+location or by one component are actually impeding the functionality of other controls (e.g.,
+encrypting internal network traffic can impede monitoring). In other situations, failing to
+consistently monitor all implemented network protocols (e.g., a dual stack of IPv4 and IPv6)
+may create unintended vulnerabilities in the system that could be exploited by adversaries.
+It is important to validate—through testing, monitoring, and analysis—that the implemented
+controls are operating in a consistent, coordinated, non-interfering manner.
+) CONTINUOUS MONITORING | AUTOMATION SUPPORT FOR MONITORING
+Ensure the accuracy, currency, and availability of monitoring results for the system using
+[Assignment: organization-defined automated mechanisms].
+Discussion: Using automated tools for monitoring helps to maintain the accuracy, currency,
+and availability of monitoring information which in turns helps to increase the level of
+ongoing awareness of the system security and privacy posture in support of organizational
+risk management decisions.
+SOFTWARE USAGE RESTRICTIONS
+Control:
+a. Use software and associated documentation in accordance with contract agreements and
+copyright laws;
+b. Track the use of software and associated documentation protected by quantity licenses to
+control copying and distribution; and
+c. Control and document the use of peer-to-peer file sharing technology to ensure that this
+capability is not used for the unauthorized distribution, display, performance, or
+reproduction of copyrighted work.
+Discussion: Software license tracking can be accomplished by manual or automated methods,
+depending on organizational needs. Examples of contract agreements include software license
+agreements and non-disclosure agreements.
+SOFTWARE USAGE RESTRICTIONS | OPEN-SOURCE SOFTWARE
+Establish the following restrictions on the use of open-source software: [Assignment:
+organization-defined restrictions].
+Discussion: Open-source software refers to software that is available in source code form.
+Certain software rights normally reserved for copyright holders are routinely provided under
+software license agreements that permit individuals to study, change, and improve the
+software. From a security perspective, the major advantage of open-source software is that
+it provides organizations with the ability to examine the source code. In some cases, there is
+an online community associated with the software that inspects, tests, updates, and reports
+on issues found in software on an ongoing basis. However, remediating vulnerabilities in
+open-source software may be problematic. There may also be licensing issues associated
+with open-source software, including the constraints on derivative use of such software.
+Open-source software that is available only in binary form may increase the level of risk in
+using such software.
+USER-INSTALLED SOFTWARE
+Control:
+a. Establish [Assignment: organization-defined policies] governing the installation of software
+by users;
+b. Enforce software installation policies through the following methods: [Assignment:
+organization-defined methods]; and
+c. Monitor policy compliance [Assignment: organization-defined frequency].
+Discussion: If provided the necessary privileges, users can install software in organizational
+systems. To maintain control over the software installed, organizations identify permitted and
+prohibited actions regarding software installation. Permitted software installations include
+updates and security patches to existing software and downloading new applications from
+organization-approved “app stores.” Prohibited software installations include software with
+unknown or suspect pedigrees or software that organizations consider potentially malicious.
+Policies selected for governing user-installed software are organization-developed or provided by
+some external entity. Policy enforcement methods can include procedural methods and
+automated methods.
+Enforce and monitor compliance with software installation policies using [Assignment:
+organization-defined automated mechanisms].
+Discussion: Organizations enforce and monitor compliance with software installation
+policies using automated mechanisms to more quickly detect and respond to unauthorized
+software installation which can be an indicator of an internal or external hostile attack.

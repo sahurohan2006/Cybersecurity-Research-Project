@@ -1,0 +1,78 @@
+Cyber threat intelligence is received from information sharing forums and sources
+SECURITY ALERTS, ADVISORIES, AND DIRECTIVES
+Control:
+a. Receive system security alerts, advisories, and directives from [Assignment: organizationdefined external organizations] on an ongoing basis;
+b. Generate internal security alerts, advisories, and directives as deemed necessary;
+c. Disseminate security alerts, advisories, and directives to: [Selection (one or more):
+[Assignment: organization-defined personnel or roles]; [Assignment: organization-defined
+elements within the organization]; [Assignment: organization-defined external
+organizations]]; and
+d. Implement security directives in accordance with established time frames, or notify the
+issuing organization of the degree of noncompliance.
+Discussion: The Cybersecurity and Infrastructure Security Agency (CISA) generates security alerts
+and advisories to maintain situational awareness throughout the Federal Government. Security
+directives are issued by OMB or other designated organizations with the responsibility and
+authority to issue such directives. Compliance with security directives is essential due to the
+critical nature of many of these directives and the potential (immediate) adverse effects on
+organizational operations and assets, individuals, other organizations, and the Nation should the
+directives not be implemented in a timely manner. External organizations include supply chain
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 344
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+partners, external mission or business partners, external service providers, and other peer or
+supporting organizations.
+Related Controls: PM-15, RA-5, SI-2.
+Control Enhancements:
+(1) SECURITY ALERTS, ADVISORIES, AND DIRECTIVES | AUTOMATED ALERTS AND ADVISORIES
+Broadcast security alert and advisory information throughout the organization using
+[Assignment: organization-defined automated mechanisms].
+Discussion: The significant number of changes to organizational systems and environments
+of operation requires the dissemination of security-related information to a variety of
+organizational entities that have a direct interest in the success of organizational mission and
+business functions. Based on information provided by security alerts and advisories, changes
+may be required at one or more of the three levels related to the management of risk,
+including the governance level, mission and business process level, and the information
+system level.
+Related Controls: None.
+SECURITY AND PRIVACY GROUPS AND ASSOCIATIONS
+Control: Establish and institutionalize contact with selected groups and associations within the
+security and privacy communities:
+a. To facilitate ongoing security and privacy education and training for organizational
+personnel;
+b. To maintain currency with recommended security and privacy practices, techniques, and
+technologies; and
+c. To share current security and privacy information, including threats, vulnerabilities, and
+incidents.
+Discussion: Ongoing contact with security and privacy groups and associations is important in an
+environment of rapidly changing technologies and threats. Groups and associations include
+special interest groups, professional associations, forums, news groups, users’ groups, and peer
+groups of security and privacy professionals in similar organizations. Organizations select security
+and privacy groups and associations based on mission and business functions. Organizations
+share threat, vulnerability, and incident information as well as contextual insights, compliance
+techniques, and privacy problems consistent with applicable laws, executive orders, directives,
+policies, regulations, standards, and guidelines.
+THREAT AWARENESS PROGRAM
+Control: Implement a threat awareness program that includes a cross-organization informationsharing capability for threat intelligence.
+Discussion: Because of the constantly changing and increasing sophistication of adversaries,
+especially the advanced persistent threat (APT), it may be more likely that adversaries can
+successfully breach or compromise organizational systems. One of the best techniques to
+address this concern is for organizations to share threat information, including threat events (i.e.,
+tactics, techniques, and procedures) that organizations have experienced, mitigations that
+organizations have found are effective against certain types of threats, and threat intelligence
+(i.e., indications and warnings about threats). Threat information sharing may be bilateral or
+multilateral. Bilateral threat sharing includes government-to-commercial and government-togovernment cooperatives. Multilateral threat sharing includes organizations taking part in threatsharing consortia. Threat information may require special agreements and protection, or it may
+be freely shared.
+Related Controls: IR-4, PM-12.
+Control Enhancements:
+(1) THREAT AWARENESS PROGRAM | AUTOMATED MEANS FOR SHARING THREAT INTELLIGENCE
+Employ automated mechanisms to maximize the effectiveness of sharing threat
+intelligence information.
+Discussion: To maximize the effectiveness of monitoring, it is important to know what
+threat observables and indicators the sensors need to be searching for. By using well-
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 212
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+established frameworks, services, and automated tools, organizations improve their ability
+to rapidly share and feed the relevant threat detection signatures into monitoring tools.

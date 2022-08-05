@@ -1,0 +1,197 @@
+PR.DS-3: Assets are formally managed throughout removal, transfers, and disposition
+SYSTEM COMPONENT INVENTORY
+Control:
+a. Develop and document an inventory of system components that:
+1. Accurately reflects the system;
+2. Includes all components within the system;
+3. Does not include duplicate accounting of components or components assigned to any
+other system;
+Is at the level of granularity deemed necessary for tracking and reporting; and
+5. Includes the following information to achieve system component accountability:
+[Assignment: organization-defined information deemed necessary to achieve effective
+system component accountability]; and
+b. Review and update the system component inventory [Assignment: organization-defined
+frequency].
+Discussion: System components are discrete, identifiable information technology assets that
+include hardware, software, and firmware. Organizations may choose to implement centralized
+system component inventories that include components from all organizational systems. In such
+situations, organizations ensure that the inventories include system-specific information required
+for component accountability. The information necessary for effective accountability of system
+components includes the system name, software owners, software version numbers, hardware
+inventory specifications, software license information, and for networked components, the
+machine names and network addresses across all implemented protocols (e.g., IPv4, IPv6).
+Inventory specifications include date of receipt, cost, model, serial number, manufacturer,
+supplier information, component type, and physical location.
+Preventing duplicate accounting of system components addresses the lack of accountability that
+occurs when component ownership and system association is not known, especially in large or
+complex connected systems. Effective prevention of duplicate accounting of system components
+necessitates use of a unique identifier for each component. For software inventory, centrally
+managed software that is accessed via other systems is addressed as a component of the system
+on which it is installed and managed. Software installed on multiple organizational systems and
+managed at the system level is addressed for each individual system and may appear more than
+once in a centralized component inventory, necessitating a system association for each software
+instance in the centralized inventory to avoid duplicate accounting of components. Scanning
+systems implementing multiple network protocols (e.g., IPv4 and IPv6) can result in duplicate
+components being identified in different address spaces. The implementation of CM-8(7) can
+help to eliminate duplicate accounting of components.
+SYSTEM COMPONENT INVENTORY | UPDATES DURING INSTALLATION AND REMOVAL
+Update the inventory of system components as part of component installations, removals,
+and system updates.
+Discussion: Organizations can improve the accuracy, completeness, and consistency of
+system component inventories if the inventories are updated as part of component
+installations or removals or during general system updates. If inventories are not updated at
+these key times, there is a greater likelihood that the information will not be appropriately
+captured and documented. System updates include hardware, software, and firmware
+components.
+SYSTEM COMPONENT INVENTORY | AUTOMATED MAINTENANCE
+Maintain the currency, completeness, accuracy, and availability of the inventory of system
+components using [Assignment: organization-defined automated mechanisms].
+Discussion: Organizations maintain system inventories to the extent feasible. For example,
+virtual machines can be difficult to monitor because such machines are not visible to the
+network when not in use. In such cases, organizations maintain as up-to-date, complete, and
+accurate an inventory as is deemed reasonable. Automated maintenance can be achieved by
+the implementation of CM-2(2) for organizations that combine system component inventory
+and baseline configuration activities.
+SYSTEM COMPONENT INVENTORY | AUTOMATED UNAUTHORIZED COMPONENT DETECTION
+(a) Detect the presence of unauthorized hardware, software, and firmware components
+within the system using [Assignment: organization-defined automated mechanisms]
+[Assignment: organization-defined frequency]; and
+(b) Take the following actions when unauthorized components are detected: [Selection
+(one or more): disable network access by such components; isolate the components;
+notify [Assignment: organization-defined personnel or roles]].
+Discussion: Automated unauthorized component detection is applied in addition to the
+monitoring for unauthorized remote connections and mobile devices. Monitoring for
+unauthorized system components may be accomplished on an ongoing basis or by the
+periodic scanning of systems for that purpose. Automated mechanisms may also be used to
+prevent the connection of unauthorized components (see CM-7(9)). Automated mechanisms
+can be implemented in systems or in separate system components. When acquiring and
+implementing automated mechanisms, organizations consider whether such mechanisms
+depend on the ability of the system component to support an agent or supplicant in order to
+be detected since some types of components do not have or cannot support agents (e.g., IoT
+devices, sensors). Isolation can be achieved , for example, by placing unauthorized system
+components in separate domains or subnets or quarantining such components. This type of
+component isolation is commonly referred to as “sandboxing.”
+SYSTEM COMPONENT INVENTORY | ACCOUNTABILITY INFORMATION
+Include in the system component inventory information, a means for identifying by
+[Selection (one or more): name; position; role], individuals responsible and accountable for
+administering those components.
+Discussion: Identifying individuals who are responsible and accountable for administering
+system components ensures that the assigned components are properly administered and
+that organizations can contact those individuals if some action is required (e.g., when the
+component is determined to be the source of a breach, needs to be recalled or replaced, or
+needs to be relocated)
+SYSTEM COMPONENT INVENTORY | ASSESSED CONFIGURATIONS AND APPROVED DEVIATIONS
+Include assessed component configurations and any approved deviations to current
+deployed configurations in the system component inventory.
+Discussion: Assessed configurations and approved deviations focus on configuration settings
+established by organizations for system components, the specific components that have
+been assessed to determine compliance with the required configuration settings, and any
+approved deviations from established configuration settings.
+SYSTEM COMPONENT INVENTORY | CENTRALIZED REPOSITORY
+Provide a centralized repository for the inventory of system components
+Discussion: Organizations may implement centralized system component inventories that
+include components from all organizational systems. Centralized repositories of component
+inventories provide opportunities for efficiencies in accounting for organizational hardware,
+software, and firmware assets. Such repositories may also help organizations rapidly identify
+the location and responsible individuals of components that have been compromised,
+breached, or are otherwise in need of mitigation actions. Organizations ensure that the
+resulting centralized inventories include system-specific information required for proper
+component accountability.
+SYSTEM COMPONENT INVENTORY | AUTOMATED LOCATION TRACKING
+Support the tracking of system components by geographic location using [Assignment:
+organization-defined automated mechanisms].
+Discussion: The use of automated mechanisms to track the location of system components
+can increase the accuracy of component inventories. Such capability may help organizations
+rapidly identify the location and responsible individuals of system components that have
+been compromised, breached, or are otherwise in need of mitigation actions. The use of
+tracking mechanisms can be coordinated with senior agency officials for privacy if there are
+implications that affect individual privacy.
+SYSTEM COMPONENT INVENTORY | ASSIGNMENT OF COMPONENTS TO SYSTEMS
+(a) Assign system components to a system; and
+(b) Receive an acknowledgement from [Assignment: organization-defined personnel or
+roles] of this assignment.
+Discussion: System components that are not assigned to a system may be unmanaged, lack
+the required protection, and become an organizational vulnerability.
+MEDIA SANITIZATION
+Control:
+a. Sanitize [Assignment: organization-defined system media] prior to disposal, release out of
+organizational control, or release for reuse using [Assignment: organization-defined
+sanitization techniques and procedures]; and
+b. Employ sanitization mechanisms with the strength and integrity commensurate with the
+security category or classification of the information.
+Discussion: Media sanitization applies to all digital and non-digital system media subject to
+disposal or reuse, whether or not the media is considered removable. Examples include digital
+media in scanners, copiers, printers, notebook computers, workstations, network components,
+mobile devices, and non-digital media (e.g., paper and microfilm). The sanitization process
+removes information from system media such that the information cannot be retrieved or
+reconstructed. Sanitization techniques—including clearing, purging, cryptographic erase, deidentification of personally identifiable information, and destruction—prevent the disclosure of
+information to unauthorized individuals when such media is reused or released for disposal.
+Organizations determine the appropriate sanitization methods, recognizing that destruction is
+sometimes necessary when other methods cannot be applied to media requiring sanitization
+Organizations use discretion on the employment of approved sanitization techniques and
+procedures for media that contains information deemed to be in the public domain or publicly
+releasable or information deemed to have no adverse impact on organizations or individuals if
+released for reuse or disposal. Sanitization of non-digital media includes destruction, removing a
+classified appendix from an otherwise unclassified document, or redacting selected sections or
+words from a document by obscuring the redacted sections or words in a manner equivalent in
+effectiveness to removing them from the document. NSA standards and policies control the
+sanitization process for media that contains classified information. NARA policies control the
+sanitization process for controlled unclassified information.
+MEDIA SANITIZATION | REVIEW, APPROVE, TRACK, DOCUMENT, AND VERIFY
+Review, approve, track, document, and verify media sanitization and disposal actions.
+Discussion: Organizations review and approve media to be sanitized to ensure compliance
+with records retention policies. Tracking and documenting actions include listing personnel
+who reviewed and approved sanitization and disposal actions, types of media sanitized, files
+stored on the media, sanitization methods used, date and time of the sanitization actions,
+personnel who performed the sanitization, verification actions taken and personnel who
+performed the verification, and the disposal actions taken. Organizations verify that the
+sanitization of the media was effective prior to disposal.
+MEDIA SANITIZATION | EQUIPMENT TESTING
+Test sanitization equipment and procedures [Assignment: organization-defined frequency]
+to ensure that the intended sanitization is being achieved.
+Discussion: Testing of sanitization equipment and procedures may be conducted by
+qualified and authorized external entities, including federal agencies or external service
+providers
+MEDIA SANITIZATION | NONDESTRUCTIVE TECHNIQUES
+Apply nondestructive sanitization techniques to portable storage devices prior to
+connecting such devices to the system under the following circumstances: [Assignment:
+organization-defined circumstances requiring sanitization of portable storage devices].
+Discussion: Portable storage devices include external or removable hard disk drives (e.g.,
+solid state, magnetic), optical discs, magnetic or optical tapes, flash memory devices, flash
+memory cards, and other external or removable disks. Portable storage devices can be
+obtained from untrustworthy sources and contain malicious code that can be inserted into
+or transferred to organizational systems through USB ports or other entry portals. While
+scanning storage devices is recommended, sanitization provides additional assurance that
+such devices are free of malicious code. Organizations consider nondestructive sanitization
+of portable storage devices when the devices are purchased from manufacturers or vendors
+prior to initial use or when organizations cannot maintain a positive chain of custody for the
+devices.
+MEDIA SANITIZATION | DUAL AUTHORIZATION
+Enforce dual authorization for the sanitization of [Assignment: organization-defined
+system media].
+Discussion: Organizations employ dual authorization to help ensure that system media
+sanitization cannot occur unless two technically qualified individuals conduct the designated
+task. Individuals who sanitize system media possess sufficient skills and expertise to
+determine if the proposed sanitization reflects applicable federal and organizational
+standards, policies, and procedures. Dual authorization also helps to ensure that sanitization
+occurs as intended, protecting against errors and false claims of having performed the
+sanitization actions. Dual authorization may also be known as two-person control. To reduce
+the risk of collusion, organizations consider rotating dual authorization duties to other
+individuals.
+MEDIA SANITIZATION | REMOTE PURGING OR WIPING OF INFORMATION
+Provide the capability to purge or wipe information from [Assignment: organizationdefined systems or system components] [Selection: remotely; under the following
+conditions: [Assignment: organization-defined conditions]].
+Discussion: Remote purging or wiping of information protects information on organizational
+systems and system components if systems or components are obtained by unauthorized
+individuals. Remote purge or wipe commands require strong authentication to help mitigate
+the risk of unauthorized individuals purging or wiping the system, component, or device. The
+purge or wipe function can be implemented in a variety of ways, including by overwriting
+data or information multiple times or by destroying the key necessary to decrypt encrypted
+data.
+DELIVERY AND REMOVAL
+Control:
+a. Authorize and control [Assignment: organization-defined types of system components]
+entering and exiting the facility; and
+b. Maintain records of the system components.
+Discussion: Enforcing authorizations for entry and exit of system components may require
+restricting access to delivery areas and isolating the areas from the system and media libraries.

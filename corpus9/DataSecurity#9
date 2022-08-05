@@ -1,0 +1,231 @@
+PR.DS-8: Integrity checking mechanisms are used to verify hardware integrity
+DEVELOPER CONFIGURATION MANAGEMENT
+Control: Require the developer of the system, system component, or system service to:
+a. Perform configuration management during system, component, or service [Selection (one or
+more): design; development; implementation; operation; disposal];
+b. Document, manage, and control the integrity of changes to [Assignment: organizationdefined configuration items under configuration management];
+c. Implement only organization-approved changes to the system, component, or service;
+Document approved changes to the system, component, or service and the potential
+security and privacy impacts of such changes; and
+e. Track security flaws and flaw resolution within the system, component, or service and report
+findings to [Assignment: organization-defined personnel].
+Discussion: Organizations consider the quality and completeness of configuration management
+activities conducted by developers as direct evidence of applying effective security controls.
+Controls include protecting the master copies of material used to generate security-relevant
+portions of the system hardware, software, and firmware from unauthorized modification or
+destruction. Maintaining the integrity of changes to the system, system component, or system
+service requires strict configuration control throughout the system development life cycle to
+track authorized changes and prevent unauthorized changes.
+The configuration items that are placed under configuration management include the formal
+model; the functional, high-level, and low-level design specifications; other design data;
+implementation documentation; source code and hardware schematics; the current running
+version of the object code; tools for comparing new versions of security-relevant hardware
+descriptions and source code with previous versions; and test fixtures and documentation.
+Depending on the mission and business needs of organizations and the nature of the contractual
+relationships in place, developers may provide configuration management support during the
+operations and maintenance stage of the system development life cycle.
+DEVELOPER CONFIGURATION MANAGEMENT | SOFTWARE AND FIRMWARE INTEGRITY VERIFICATION
+Require the developer of the system, system component, or system service to enable
+integrity verification of software and firmware components.
+Discussion: Software and firmware integrity verification allows organizations to detect
+unauthorized changes to software and firmware components using developer-provided
+tools, techniques, and mechanisms. The integrity checking mechanisms can also address
+counterfeiting of software and firmware components. Organizations verify the integrity of
+software and firmware components, for example, through secure one-way hashes provided
+by developers. Delivered software and firmware components also include any updates to
+such components.
+DEVELOPER CONFIGURATION MANAGEMENT | ALTERNATIVE CONFIGURATION MANAGEMENT
+PROCESSES
+Provide an alternate configuration management process using organizational personnel in
+the absence of a dedicated developer configuration management team.
+Discussion: Alternate configuration management processes may be required when
+organizations use commercial off-the-shelf information technology products. Alternate
+configuration management processes include organizational personnel who review and
+approve proposed changes to systems, system components, and system services and
+conduct security and privacy impact analyses prior to the implementation of changes to
+systems, components, or services.
+DEVELOPER CONFIGURATION MANAGEMENT | HARDWARE INTEGRITY VERIFICATION
+Require the developer of the system, system component, or system service to enable
+integrity verification of hardware components.
+Discussion: Hardware integrity verification allows organizations to detect unauthorized
+changes to hardware components using developer-provided tools, techniques, methods, and
+mechanisms. Organizations may verify the integrity of hardware components with hard-tocopy labels, verifiable serial numbers provided by developers, and by requiring the use of
+anti-tamper technologies. Delivered hardware components also include hardware and
+firmware updates to such components
+DEVELOPER CONFIGURATION MANAGEMENT | TRUSTED GENERATION
+Require the developer of the system, system component, or system service to employ
+tools for comparing newly generated versions of security-relevant hardware descriptions,
+source code, and object code with previous versions.
+Discussion: The trusted generation of descriptions, source code, and object code addresses
+authorized changes to hardware, software, and firmware components between versions
+during development. The focus is on the efficacy of the configuration management process
+by the developer to ensure that newly generated versions of security-relevant hardware
+descriptions, source code, and object code continue to enforce the security policy for the
+system, system component, or system service. In contrast, SA-10(1) and SA-10(3) allow
+organizations to detect unauthorized changes to hardware, software, and firmware
+components using tools, techniques, or mechanisms provided by developers.
+DEVELOPER CONFIGURATION MANAGEMENT | MAPPING INTEGRITY FOR VERSION CONTROL
+Require the developer of the system, system component, or system service to maintain
+the integrity of the mapping between the master build data describing the current version
+of security-relevant hardware, software, and firmware and the on-site master copy of the
+data for the current version.
+Discussion: Mapping integrity for version control addresses changes to hardware, software,
+and firmware components during both initial development and system development life
+cycle updates. Maintaining the integrity between the master copies of security-relevant
+hardware, software, and firmware (including designs, hardware drawings, source code) and
+the equivalent data in master copies in operational environments is essential to ensuring the
+availability of organizational systems that support critical mission and business functions.
+DEVELOPER CONFIGURATION MANAGEMENT | TRUSTED DISTRIBUTION
+Require the developer of the system, system component, or system service to execute
+procedures for ensuring that security-relevant hardware, software, and firmware updates
+distributed to the organization are exactly as specified by the master copies.
+Discussion: The trusted distribution of security-relevant hardware, software, and firmware
+updates help to ensure that the updates are correct representations of the master copies
+maintained by the developer and have not been tampered with during distribution.
+DEVELOPER CONFIGURATION MANAGEMENT | SECURITY AND PRIVACY REPRESENTATIVES
+Require [Assignment: organization-defined security and privacy representatives] to be
+included in the [Assignment: organization-defined configuration change management and
+control process].
+Discussion: Information security and privacy representatives can include system security
+officers, senior agency information security officers, senior agency officials for privacy, and
+system privacy officers. Representation by personnel with information security and privacy
+expertise is important because changes to system configurations can have unintended side
+effects, some of which may be security- or privacy-relevant. Detecting such changes early in
+the process can help avoid unintended, negative consequences that could ultimately affect
+the security and privacy posture of systems. The configuration change management and
+control process in this control enhancement refers to the change management and control
+process defined by organizations in SA-10b.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY
+Control:
+a. Employ integrity verification tools to detect unauthorized changes to the following software,
+firmware, and information: [Assignment: organization-defined software, firmware, and
+information]; and
+b. Take the following actions when unauthorized changes to the software, firmware, and
+information are detected: [Assignment: organization-defined actions].
+Discussion: Unauthorized changes to software, firmware, and information can occur due to
+errors or malicious activity. Software includes operating systems (with key internal components,
+such as kernels or drivers), middleware, and applications. Firmware interfaces include Unified
+Extensible Firmware Interface (UEFI) and Basic Input/Output System (BIOS). Information includes
+personally identifiable information and metadata that contains security and privacy attributes
+associated with information. Integrity-checking mechanisms—including parity checks, cyclical
+redundancy checks, cryptographic hashes, and associated tools—can automatically monitor the
+integrity of systems and hosted applications
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | INTEGRITY CHECKS
+Perform an integrity check of [Assignment: organization-defined software, firmware, and
+information] [Selection (one or more): at startup; at [Assignment: organization-defined
+transitional states or security-relevant events]; [Assignment: organization-defined
+frequency]].
+Discussion: Security-relevant events include the identification of new threats to which
+organizational systems are susceptible and the installation of new hardware, software, or
+firmware. Transitional states include system startup, restart, shutdown, and abort.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | AUTOMATED NOTIFICATIONS OF INTEGRITY
+VIOLATIONS
+Employ automated tools that provide notification to [Assignment: organization-defined
+personnel or roles] upon discovering discrepancies during integrity verification.
+Discussion: The employment of automated tools to report system and information integrity
+violations and to notify organizational personnel in a timely matter is essential to effective
+risk response. Personnel with an interest in system and information integrity violations
+include mission and business owners, system owners, senior agency information security
+official, senior agency official for privacy, system administrators, software developers,
+systems integrators, information security officers, and privacy officers.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | CENTRALLY MANAGED INTEGRITY TOOLS
+Employ centrally managed integrity verification tools.
+Discussion: Centrally managed integrity verification tools provides greater consistency in the
+application of such tools and can facilitate more comprehensive coverage of integrity
+verification actions.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | AUTOMATED RESPONSE TO INTEGRITY
+VIOLATIONS
+Automatically [Selection (one or more): shut the system down; restart the system;
+implement [Assignment: organization-defined controls]] when integrity violations are
+discovered.
+Discussion: Organizations may define different integrity-checking responses by type of
+information, specific information, or a combination of both. Types of information include
+firmware, software, and user data. Specific information includes boot firmware for certain
+types of machines. The automatic implementation of controls within organizational systems
+includes reversing the changes, halting the system, or triggering audit alerts when
+unauthorized modifications to critical security files occur.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | CRYPTOGRAPHIC PROTECTION
+Implement cryptographic mechanisms to detect unauthorized changes to software,
+firmware, and information.
+Discussion: Cryptographic mechanisms used to protect integrity include digital signatures
+and the computation and application of signed hashes using asymmetric cryptography,
+protecting the confidentiality of the key used to generate the hash, and using the public key
+to verify the hash information. Organizations that employ cryptographic mechanisms also
+consider cryptographic key management solutions
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | INTEGRATION OF DETECTION AND
+RESPONSE
+Incorporate the detection of the following unauthorized changes into the organizational
+incident response capability: [Assignment: organization-defined security-relevant changes
+to the system].
+Discussion: Integrating detection and response helps to ensure that detected events are
+tracked, monitored, corrected, and available for historical purposes. Maintaining historical
+records is important for being able to identify and discern adversary actions over an
+extended time period and for possible legal actions. Security-relevant changes include
+unauthorized changes to established configuration settings or the unauthorized elevation of
+system privileges.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | AUDITING CAPABILITY FOR SIGNIFICANT
+EVENTS
+Upon detection of a potential integrity violation, provide the capability to audit the event
+and initiate the following actions: [Selection (one or more): generate an audit record; alert
+current user; alert [Assignment: organization-defined personnel or roles]; [Assignment:
+organization-defined other actions]].
+Discussion: Organizations select response actions based on types of software, specific
+software, or information for which there are potential integrity violations
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | VERIFY BOOT PROCESS
+Verify the integrity of the boot process of the following system components: [Assignment:
+organization-defined system components].
+Discussion: Ensuring the integrity of boot processes is critical to starting system components
+in known, trustworthy states. Integrity verification mechanisms provide a level of assurance
+that only trusted code is executed during boot processes.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | PROTECTION OF BOOT FIRMWARE
+Implement the following mechanisms to protect the integrity of boot firmware in
+[Assignment: organization-defined system components]: [Assignment: organizationdefined mechanisms].
+Discussion: Unauthorized modifications to boot firmware may indicate a sophisticated,
+targeted attack. These types of targeted attacks can result in a permanent denial of service
+or a persistent malicious code presence. These situations can occur if the firmware is
+corrupted or if the malicious code is embedded within the firmware. System components
+can protect the integrity of boot firmware in organizational systems by verifying the integrity
+and authenticity of all updates to the firmware prior to applying changes to the system
+component and preventing unauthorized processes from modifying the boot firmware.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | INTEGRITY VERIFICATION
+Require that the integrity of the following user-installed software be verified prior to
+execution: [Assignment: organization-defined user-installed software].
+Discussion: Organizations verify the integrity of user-installed software prior to execution to
+reduce the likelihood of executing malicious code or programs that contains errors from
+unauthorized modifications. Organizations consider the practicality of approaches to
+verifying software integrity, including the availability of trustworthy checksums from
+software developers and vendors.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | CODE AUTHENTICATION
+Implement cryptographic mechanisms to authenticate the following software or firmware
+components prior to installation: [Assignment: organization-defined software or firmware
+components].
+Discussion: Cryptographic authentication includes verifying that software or firmware
+components have been digitally signed using certificates recognized and approved by
+organizations. Code signing is an effective method to protect against malicious code.
+Organizations that employ cryptographic mechanisms also consider cryptographic key
+management solutions.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | TIME LIMIT ON PROCESS EXECUTION
+WITHOUT SUPERVISION
+Prohibit processes from executing without supervision for more than [Assignment:
+organization-defined time period].
+Discussion: Placing a time limit on process execution without supervision is intended to
+apply to processes for which typical or normal execution periods can be determined and
+situations in which organizations exceed such periods. Supervision includes timers on
+operating systems, automated responses, and manual oversight and response when system
+process anomalies occur.
+SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY | RUNTIME APPLICATION SELF-PROTECTION
+Implement [Assignment: organization-defined controls] for application self-protection at
+runtime.
+Discussion: Runtime application self-protection employs runtime instrumentation to detect
+and block the exploitation of software vulnerabilities by taking advantage of information
+from the software in execution. Runtime exploit prevention differs from traditional
+perimeter-based protections such as guards and firewalls which can only detect and block
+attacks by using network information without contextual awareness. Runtime application
+self-protection technology can reduce the susceptibility of software to attacks by monitoring
+its inputs and blocking those inputs that could allow attacks. It can also help protect the
+runtime environment from unwanted changes and tampering. When a threat is detected,
+runtime application self-protection technology can prevent exploitation and take other
+actions (e.g., sending a warning message to the user, terminating the user's session,
+terminating the application, or sending an alert to organizational personnel). Runtime
+application self-protection solutions can be deployed in either a monitor or protection
+mode

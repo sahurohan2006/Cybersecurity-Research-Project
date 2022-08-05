@@ -24,6 +24,13 @@ public class Stopwords {
         return words;
     }
 
+    public boolean containsWord(String word) {
+        if(words.contains(word)) {
+            return true;
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) throws Exception {
         Stopwords s = new Stopwords();

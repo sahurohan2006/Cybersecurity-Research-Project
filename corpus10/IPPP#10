@@ -1,0 +1,330 @@
+PR.IP-9: Response plans (Incident Response and Business Continuity) and recovery plans (Incident Recovery and Disaster Recovery) are in place and managed
+CONTINGENCY PLAN
+Control:
+a. Develop a contingency plan for the system that:
+1. Identifies essential mission and business functions and associated contingency
+requirements;
+2. Provides recovery objectives, restoration priorities, and metrics;
+3. Addresses contingency roles, responsibilities, assigned individuals with contact
+information;
+4. Addresses maintaining essential mission and business functions despite a system
+disruption, compromise, or failure;
+5. Addresses eventual, full system restoration without deterioration of the controls
+originally planned and implemented;
+6. Addresses the sharing of contingency information; and
+7. Is reviewed and approved by [Assignment: organization-defined personnel or roles];
+b. Distribute copies of the contingency plan to [Assignment: organization-defined key
+contingency personnel (identified by name and/or by role) and organizational elements];
+c. Coordinate contingency planning activities with incident handling activities;
+d. Review the contingency plan for the system [Assignment: organization-defined frequency];
+e. Update the contingency plan to address changes to the organization, system, or
+environment of operation and problems encountered during contingency plan
+implementation, execution, or testing;
+f. Communicate contingency plan changes to [Assignment: organization-defined key
+contingency personnel (identified by name and/or by role) and organizational elements];
+g. Incorporate lessons learned from contingency plan testing, training, or actual contingency
+activities into contingency testing and training; and
+h. Protect the contingency plan from unauthorized disclosure and modification.
+Discussion: Contingency planning for systems is part of an overall program for achieving
+continuity of operations for organizational mission and business functions. Contingency planning
+addresses system restoration and implementation of alternative mission or business processes
+when systems are compromised or breached. Contingency planning is considered throughout the
+system development life cycle and is a fundamental part of the system design. Systems can be
+designed for redundancy, to provide backup capabilities, and for resilience. Contingency plans
+reflect the degree of restoration required for organizational systems since not all systems need
+to fully recover to achieve the level of continuity of operations desired. System recovery
+objectives reflect applicable laws, executive orders, directives, regulations, policies, standards,
+guidelines, organizational risk tolerance, and system impact level.
+Actions addressed in contingency plans include orderly system degradation, system shutdown,
+fallback to a manual mode, alternate information flows, and operating in modes reserved for
+when systems are under attack. By coordinating contingency planning with incident handling
+activities, organizations ensure that the necessary planning activities are in place and activated in
+the event of an incident. Organizations consider whether continuity of operations during an
+incident conflicts with the capability to automatically disable the system, as specified in IR-4(5).
+Incident response planning is part of contingency planning for organizations and is addressed in
+the IR (Incident Response) family.
+CONTINGENCY PLAN | COORDINATE WITH RELATED PLANS
+Coordinate contingency plan development with organizational elements responsible for
+related plans.
+Discussion: Plans that are related to contingency plans include Business Continuity Plans,
+Disaster Recovery Plans, Critical Infrastructure Plans, Continuity of Operations Plans, Crisis
+Communications Plans, Insider Threat Implementation Plans, Data Breach Response Plans,
+Cyber Incident Response Plans, Breach Response Plans, and Occupant Emergency Plans.
+CONTINGENCY PLAN | CAPACITY PLANNING
+Conduct capacity planning so that necessary capacity for information processing,
+telecommunications, and environmental support exists during contingency operations.
+Discussion: Capacity planning is needed because different threats can result in a reduction
+of the available processing, telecommunications, and support services intended to support
+essential mission and business functions. Organizations anticipate degraded operations
+during contingency operations and factor the degradation into capacity planning. For
+capacity planning, environmental support refers to any environmental factor for which the
+organization determines that it needs to provide support in a contingency situation, even if
+in a degraded state. Such determinations are based on an organizational assessment of risk,
+system categorization (impact level), and organizational risk tolerance.
+CONTINGENCY PLAN | RESUME MISSION AND BUSINESS FUNCTIONS
+Plan for the resumption of [Selection: all; essential] mission and business functions within
+[Assignment: organization-defined time period] of contingency plan activation.
+Discussion: Organizations may choose to conduct contingency planning activities to resume
+mission and business functions as part of business continuity planning or as part of business
+impact analyses. Organizations prioritize the resumption of mission and business functions.
+The time period for resuming mission and business functions may be dependent on the
+severity and extent of the disruptions to the system and its supporting infrastructure.
+CONTINGENCY PLAN | CONTINUE MISSION AND BUSINESS FUNCTIONS
+Plan for the continuance of [Selection: all; essential] mission and business functions with
+minimal or no loss of operational continuity and sustains that continuity until full system
+restoration at primary processing and/or storage sites.
+Discussion: Organizations may choose to conduct the contingency planning activities to
+continue mission and business functions as part of business continuity planning or business
+impact analyses. Primary processing and/or storage sites defined by organizations as part of
+contingency planning may change depending on the circumstances associated with the
+contingency.
+CONTINGENCY PLAN | ALTERNATE PROCESSING AND STORAGE SITES
+Plan for the transfer of [Selection: all; essential] mission and business functions to
+alternate processing and/or storage sites with minimal or no loss of operational continuity
+and sustain that continuity through system restoration to primary processing and/or
+storage sites.
+Discussion: Organizations may choose to conduct contingency planning activities for
+alternate processing and storage sites as part of business continuity planning or business
+impact analyses. Primary processing and/or storage sites defined by organizations as part of
+contingency planning may change depending on the circumstances associated with the
+contingency.
+CONTINGENCY PLAN | COORDINATE WITH EXTERNAL SERVICE PROVIDERS
+Coordinate the contingency plan with the contingency plans of external service providers
+to ensure that contingency requirements can be satisfied.
+Discussion: When the capability of an organization to carry out its mission and business
+functions is dependent on external service providers, developing a comprehensive and
+timely contingency plan may become more challenging. When mission and business
+functions are dependent on external service providers, organizations coordinate contingency
+planning activities with the external entities to ensure that the individual plans reflect the
+overall contingency needs of the organization.
+CONTINGENCY PLAN | IDENTIFY CRITICAL ASSETS
+Identify critical system assets supporting [Selection: all; essential] mission and business
+functions.
+Discussion: Organizations may choose to identify critical assets as part of criticality analysis,
+business continuity planning, or business impact analyses. Organizations identify critical
+system assets so that additional controls can be employed (beyond the controls routinely
+implemented) to help ensure that organizational mission and business functions can
+continue to be conducted during contingency operations. The identification of critical
+information assets also facilitates the prioritization of organizational resources. Critical
+system assets include technical and operational aspects. Technical aspects include system
+components, information technology services, information technology products, and
+mechanisms. Operational aspects include procedures (i.e., manually executed operations)
+and personnel (i.e., individuals operating technical controls and/or executing manual
+procedures). Organizational program protection plans can assist in identifying critical assets.
+If critical assets are resident within or supported by external service providers, organizations
+consider implementing CP-2(7) as a control enhancement.
+ALTERNATE PROCESSING SITE
+Control:
+a. Establish an alternate processing site, including necessary agreements to permit the transfer
+and resumption of [Assignment: organization-defined system operations] for essential
+mission and business functions within [Assignment: organization-defined time period
+consistent with recovery time and recovery point objectives] when the primary processing
+capabilities are unavailable;
+b. Make available at the alternate processing site, the equipment and supplies required to
+transfer and resume operations or put contracts in place to support delivery to the site
+within the organization-defined time period for transfer and resumption; and
+c. Provide controls at the alternate processing site that are equivalent to those at the primary
+site.
+Discussion: Alternate processing sites are geographically distinct from primary processing sites
+and provide processing capability if the primary processing site is not available. The alternate
+processing capability may be addressed using a physical processing site or other alternatives,
+such as failover to a cloud-based service provider or other internally or externally provided
+processing service. Geographically distributed architectures that support contingency
+requirements may also be considered alternate processing sites. Controls that are covered by
+alternate processing site agreements include the environmental conditions at alternate sites,
+access rules, physical and environmental protection requirements, and the coordination for the
+transfer and assignment of personnel. Requirements are allocated to alternate processing sites
+that reflect the requirements in contingency plans to maintain essential mission and business
+functions despite disruption, compromise, or failure in organizational systems
+ALTERNATE PROCESSING SITE | SEPARATION FROM PRIMARY SITE
+Identify an alternate processing site that is sufficiently separated from the primary
+processing site to reduce susceptibility to the same threats.
+Discussion: Threats that affect alternate processing sites are defined in organizational
+assessments of risk and include natural disasters, structural failures, hostile attacks, and
+errors of omission or commission. Organizations determine what is considered a sufficient
+degree of separation between primary and alternate processing sites based on the types of
+threats that are of concern. For threats such as hostile attacks, the degree of separation
+between sites is less relevant.
+ALTERNATE PROCESSING SITE | ACCESSIBILITY
+Identify potential accessibility problems to alternate processing sites in the event of an
+area-wide disruption or disaster and outlines explicit mitigation actions.
+Discussion: Area-wide disruptions refer to those types of disruptions that are broad in
+geographic scope with such determinations made by organizations based on organizational
+assessments of risk.
+ALTERNATE PROCESSING SITE | PRIORITY OF SERVICE
+Develop alternate processing site agreements that contain priority-of-service provisions in
+accordance with availability requirements (including recovery time objectives).
+Discussion: Priority of service agreements refer to negotiated agreements with service
+providers that ensure that organizations receive priority treatment consistent with their
+availability requirements and the availability of information resources for logical alternate
+processing and/or at the physical alternate processing site. Organizations establish recovery
+time objectives as part of contingency planning.
+ALTERNATE PROCESSING SITE | PREPARATION FOR USE
+Prepare the alternate processing site so that the site can serve as the operational site
+supporting essential mission and business functions.
+Discussion: Site preparation includes establishing configuration settings for systems at the
+alternate processing site consistent with the requirements for such settings at the primary
+site and ensuring that essential supplies and logistical considerations are in place.
+ALTERNATE PROCESSING SITE | INABILITY TO RETURN TO PRIMARY SITE
+Plan and prepare for circumstances that preclude returning to the primary processing site.
+Discussion: There may be situations that preclude an organization from returning to the
+primary processing site such as if a natural disaster (e.g., flood or a hurricane) damaged or
+destroyed a facility and it was determined that rebuilding in the same location was not
+prudent.
+Control: When [Assignment: organization-defined conditions] are detected, enter a safe mode of
+operation with [Assignment: organization-defined restrictions of safe mode of operation].
+Discussion: For systems that support critical mission and business functions—including military
+operations, civilian space operations, nuclear power plant operations, and air traffic control
+operations (especially real-time operational environments)—organizations can identify certain
+conditions under which those systems revert to a predefined safe mode of operation. The safe
+mode of operation, which can be activated either automatically or manually, restricts the
+operations that systems can execute when those conditions are encountered. Restriction
+includes allowing only selected functions to execute that can be carried out under limited power
+or with reduced communications bandwidth.
+ALTERNATIVE SECURITY MECHANISMS
+Control: Employ [Assignment: organization-defined alternative or supplemental security
+mechanisms] for satisfying [Assignment: organization-defined security functions] when the
+primary means of implementing the security function is unavailable or compromised.
+Discussion: Use of alternative security mechanisms supports system resiliency, contingency
+planning, and continuity of operations. To ensure mission and business continuity, organizations
+can implement alternative or supplemental security mechanisms. The mechanisms may be less
+effective than the primary mechanisms. However, having the capability to readily employ
+alternative or supplemental mechanisms enhances mission and business continuity that might
+otherwise be adversely impacted if operations had to be curtailed until the primary means of
+implementing the functions was restored. Given the cost and level of effort required to provide
+such alternative capabilities, the alternative or supplemental mechanisms are only applied to
+critical security capabilities provided by systems, system components, or system services. For
+example, an organization may issue one-time pads to senior executives, officials, and system
+administrators if multi-factor tokens—the standard means for achieving secure authentication—
+are compromised.
+INCIDENT RESPONSE ASSISTANCE
+Control: Provide an incident response support resource, integral to the organizational incident
+response capability, that offers advice and assistance to users of the system for the handling and
+reporting of incidents.
+Discussion: Incident response support resources provided by organizations include help desks,
+assistance groups, automated ticketing systems to open and track incident response tickets, and
+access to forensics services or consumer redress services, when required.
+INCIDENT RESPONSE ASSISTANCE | AUTOMATION SUPPORT FOR AVAILABILITY OF INFORMATION AND
+SUPPORT
+Increase the availability of incident response information and support using [Assignment:
+organization-defined automated mechanisms].
+Discussion: Automated mechanisms can provide a push or pull capability for users to obtain
+incident response assistance. For example, individuals may have access to a website to query
+the assistance capability, or the assistance capability can proactively send incident response
+information to users (general distribution or targeted) as part of increasing understanding of
+current response capabilities and support.
+INCIDENT RESPONSE ASSISTANCE | COORDINATION WITH EXTERNAL PROVIDERS
+(a) Establish a direct, cooperative relationship between its incident response capability
+and external providers of system protection capability; and
+(b) Identify organizational incident response team members to the external providers.
+Discussion: External providers of a system protection capability include the Computer
+Network Defense program within the U.S. Department of Defense. External providers help to
+protect, monitor, analyze, detect, and respond to unauthorized activity within organizational
+information systems and networks. It may be beneficial to have agreements in place with
+external providers to clarify the roles and responsibilities of each party before an incident
+occurs
+INCIDENT RESPONSE PLAN
+Control:
+a. Develop an incident response plan that:
+1. Provides the organization with a roadmap for implementing its incident response
+capability;
+2. Describes the structure and organization of the incident response capability;
+3. Provides a high-level approach for how the incident response capability fits into the
+overall organization;
+4. Meets the unique requirements of the organization, which relate to mission, size,
+structure, and functions;
+5. Defines reportable incidents;
+Provides metrics for measuring the incident response capability within the organization;
+7. Defines the resources and management support needed to effectively maintain and
+mature an incident response capability;
+8. Addresses the sharing of incident information;
+9. Is reviewed and approved by [Assignment: organization-defined personnel or roles]
+[Assignment: organization-defined frequency]; and
+10. Explicitly designates responsibility for incident response to [Assignment: organizationdefined entities, personnel, or roles].
+b. Distribute copies of the incident response plan to [Assignment: organization-defined incident
+response personnel (identified by name and/or by role) and organizational elements];
+c. Update the incident response plan to address system and organizational changes or
+problems encountered during plan implementation, execution, or testing;
+d. Communicate incident response plan changes to [Assignment: organization-defined incident
+response personnel (identified by name and/or by role) and organizational elements]; and
+e. Protect the incident response plan from unauthorized disclosure and modification.
+Discussion: It is important that organizations develop and implement a coordinated approach to
+incident response. Organizational mission and business functions determine the structure of
+incident response capabilities. As part of the incident response capabilities, organizations
+consider the coordination and sharing of information with external organizations, including
+external service providers and other organizations involved in the supply chain. For incidents
+involving personally identifiable information (i.e., breaches), include a process to determine
+whether notice to oversight organizations or affected individuals is appropriate and provide that
+notice accordingly.
+INCIDENT RESPONSE PLAN | BREACHES
+Include the following in the Incident Response Plan for breaches involving personally
+identifiable information:
+(a) A process to determine if notice to individuals or other organizations, including
+oversight organizations, is needed;
+(b) An assessment process to determine the extent of the harm, embarrassment,
+inconvenience, or unfairness to affected individuals and any mechanisms to mitigate
+such harms; and
+(c) Identification of applicable privacy requirements.
+Discussion: Organizations may be required by law, regulation, or policy to follow specific
+procedures relating to breaches, including notice to individuals, affected organizations, and
+oversight bodies; standards of harm; and mitigation or other specific requirements
+INFORMATION SPILLAGE RESPONSE
+Control: Respond to information spills by:
+a. Assigning [Assignment: organization-defined personnel or roles] with responsibility for
+responding to information spills;
+Identifying the specific information involved in the system contamination;
+c. Alerting [Assignment: organization-defined personnel or roles] of the information spill using
+a method of communication not associated with the spill;
+d. Isolating the contaminated system or system component;
+e. Eradicating the information from the contaminated system or component;
+f. Identifying other systems or system components that may have been subsequently
+contaminated; and
+g. Performing the following additional actions: [Assignment: organization-defined actions].
+Discussion: Information spillage refers to instances where information is placed on systems that
+are not authorized to process such information. Information spills occur when information that is
+thought to be a certain classification or impact level is transmitted to a system and subsequently
+is determined to be of a higher classification or impact level. At that point, corrective action is
+required. The nature of the response is based on the classification or impact level of the spilled
+information, the security capabilities of the system, the specific nature of the contaminated
+storage media, and the access authorizations of individuals with authorized access to the
+contaminated system. The methods used to communicate information about the spill after the
+fact do not involve methods directly associated with the actual spill to minimize the risk of
+further spreading the contamination before such contamination is isolated and eradicated.
+INFORMATION SPILLAGE RESPONSE | TRAINING
+Provide information spillage response training [Assignment: organization-defined
+frequency].
+Discussion: Organizations establish requirements for responding to information spillage
+incidents in incident response plans. Incident response training on a regular basis helps to
+ensure that organizational personnel understand their individual responsibilities and what
+specific actions to take when spillage incidents occur.
+INFORMATION SPILLAGE RESPONSE | POST-SPILL OPERATIONS
+Implement the following procedures to ensure that organizational personnel impacted by
+information spills can continue to carry out assigned tasks while contaminated systems are
+undergoing corrective actions: [Assignment: organization-defined procedures].
+Discussion: Corrective actions for systems contaminated due to information spillages may
+be time-consuming. Personnel may not have access to the contaminated systems while
+corrective actions are being taken, which may potentially affect their ability to conduct
+organizational business.
+INFORMATION SPILLAGE RESPONSE | EXPOSURE TO UNAUTHORIZED PERSONNEL
+Employ the following controls for personnel exposed to information not within assigned
+access authorizations: [Assignment: organization-defined controls].
+Discussion: Controls include ensuring that personnel who are exposed to spilled information
+are made aware of the laws, executive orders, directives, regulations, policies, standards,
+and guidelines regarding the information and the restrictions imposed based on exposure to
+such information.
+ALTERNATE WORK SITE
+Control:
+a. Determine and document the [Assignment: organization-defined alternate work sites]
+allowed for use by employees;
+b. Employ the following controls at alternate work sites: [Assignment: organization-defined
+controls];
+c. Assess the effectiveness of controls at alternate work sites; and
+d. Provide a means for employees to communicate with information security and privacy
+personnel in case of incidents.
+Discussion: Alternate work sites include government facilities or the private residences of
+employees. While distinct from alternative processing sites, alternate work sites can provide
+readily available alternate locations during contingency operations. Organizations can define
+different sets of controls for specific alternate work sites or types of sites depending on the
+work-related activities conducted at the sites. Implementing and assessing the effectiveness of
+organization-defined controls and providing a means to communicate incidents at alternate work
+sites supports the contingency planning activities of organizations.

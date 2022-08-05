@@ -1,0 +1,129 @@
+Governance and risk management processes address cybersecurity risks
+ALLOCATION OF RESOURCES
+Control:
+a. Determine the high-level information security and privacy requirements for the system or
+system service in mission and business process planning;
+b. Determine, document, and allocate the resources required to protect the system or system
+service as part of the organizational capital planning and investment control process; and
+c. Establish a discrete line item for information security and privacy in organizational
+programming and budgeting documentation.
+Discussion: Resource allocation for information security and privacy includes funding for system
+and services acquisition, sustainment, and supply chain-related risks throughout the system
+development life cycle.
+INFORMATION SECURITY AND PRIVACY RESOURCES
+Control:
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 205
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+a. Include the resources needed to implement the information security and privacy programs
+in capital planning and investment requests and document all exceptions to this
+requirement;
+b. Prepare documentation required for addressing information security and privacy programs
+in capital planning and investment requests in accordance with applicable laws, executive
+orders, directives, policies, regulations, standards; and
+c. Make available for expenditure, the planned information security and privacy resources.
+Discussion: Organizations consider establishing champions for information security and privacy
+and, as part of including the necessary resources, assign specialized expertise and resources as
+needed. Organizations may designate and empower an Investment Review Board or similar
+group to manage and provide oversight for the information security and privacy aspects of the
+capital planning and investment control process.
+ENTERPRISE ARCHITECTURE
+Control: Develop and maintain an enterprise architecture with consideration for information
+security, privacy, and the resulting risk to organizational operations and assets, individuals, other
+organizations, and the Nation.
+Discussion: The integration of security and privacy requirements and controls into the enterprise
+architecture helps to ensure that security and privacy considerations are addressed throughout
+the system development life cycle and are explicitly related to the organization’s mission and
+business processes. The process of security and privacy requirements integration also embeds
+into the enterprise architecture and the organization’s security and privacy architectures
+consistent with the organizational risk management strategy. For PM-7, security and privacy
+architectures are developed at a system-of-systems level, representing all organizational
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 207
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+systems. For PL-8, the security and privacy architectures are developed at a level that represents
+an individual system. The system-level architectures are consistent with the security and privacy
+architectures defined for the organization. Security and privacy requirements and control
+integration are most effectively accomplished through the rigorous application of the Risk
+Management Framework [SP 800-37] and supporting security standards and guidelines.
+Discussion: Not every function or service that a system provides is essential to
+organizational mission or business functions. Printing or copying is an example of a nonessential but supporting service for an organization. Whenever feasible, such supportive but
+non-essential functions or services are not co-located with the functions or services that
+support essential mission or business functions. Maintaining such functions on the same
+system or system component increases the attack surface of the organization’s missionessential functions or services. Moving supportive but non-essential functions to a noncritical system, system component, or external provider can also increase efficiency by
+putting those functions or services under the control of individuals or providers who are
+subject matter experts in the functions or services
+RISK MANAGEMENT STRATEGY
+Control:
+a. Develops a comprehensive strategy to manage:
+1. Security risk to organizational operations and assets, individuals, other organizations,
+and the Nation associated with the operation and use of organizational systems; and
+2. Privacy risk to individuals resulting from the authorized processing of personally
+identifiable information;
+b. Implement the risk management strategy consistently across the organization; and
+c. Review and update the risk management strategy [Assignment: organization-defined
+frequency] or as required, to address organizational changes.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 208
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: An organization-wide risk management strategy includes an expression of the
+security and privacy risk tolerance for the organization, security and privacy risk mitigation
+strategies, acceptable risk assessment methodologies, a process for evaluating security and
+privacy risk across the organization with respect to the organization’s risk tolerance, and
+approaches for monitoring risk over time. The senior accountable official for risk management
+(agency head or designated official) aligns information security management processes with
+strategic, operational, and budgetary planning processes. The risk executive function, led by the
+senior accountable official for risk management, can facilitate consistent application of the risk
+management strategy organization-wide. The risk management strategy can be informed by
+security and privacy risk-related inputs from other sources, both internal and external to the
+organization, to ensure that the strategy is broad-based and comprehensive. The supply chain
+risk management strategy described in PM-30 can also provide useful inputs to the organizationwide risk management strategy.
+AUTHORIZATION PROCESS
+Control:
+a. Manage the security and privacy state of organizational systems and the environments in
+which those systems operate through authorization processes;
+b. Designate individuals to fulfill specific roles and responsibilities within the organizational risk
+management process; and
+c. Integrate the authorization processes into an organization-wide risk management program.
+Discussion: Authorization processes for organizational systems and environments of operation
+require the implementation of an organization-wide risk management process and associated
+security and privacy standards and guidelines. Specific roles for risk management processes
+include a risk executive (function) and designated authorizing officials for each organizational
+system and common control provider. The authorization processes for the organization are
+integrated with continuous monitoring processes to facilitate ongoing understanding and
+acceptance of security and privacy risks to organizational operations, organizational assets,
+individuals, other organizations, and the Nation.
+MISSION AND BUSINESS PROCESS DEFINITION
+Control:
+a. Define organizational mission and business processes with consideration for information
+security and privacy and the resulting risk to organizational operations, organizational assets,
+individuals, other organizations, and the Nation; and
+b. Determine information protection and personally identifiable information processing needs
+arising from the defined mission and business processes; and
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 209
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+c. Review and revise the mission and business processes [Assignment: organization-defined
+frequency].
+Discussion: Protection needs are technology-independent capabilities that are required to
+counter threats to organizations, individuals, systems, and the Nation through the compromise
+of information (i.e., loss of confidentiality, integrity, availability, or privacy). Information
+protection and personally identifiable information processing needs are derived from the mission
+and business needs defined by organizational stakeholders, the mission and business processes
+designed to meet those needs, and the organizational risk management strategy. Information
+protection and personally identifiable information processing needs determine the required
+controls for the organization and the systems. Inherent to defining protection and personally
+identifiable information processing needs is an understanding of the adverse impact that could
+result if a compromise or breach of information occurs. The categorization process is used to
+make such potential impact determinations. Privacy risks to individuals can arise from the
+compromise of personally identifiable information, but they can also arise as unintended
+consequences or a byproduct of the processing of personally identifiable information at any
+stage of the information life cycle. Privacy risk assessments are used to prioritize the risks that
+are created for individuals from system processing of personally identifiable information. These
+risk assessments enable the selection of the required privacy controls for the organization and
+systems. Mission and business process definitions and the associated protection requirements
+are documented in accordance with organizational policies and procedures

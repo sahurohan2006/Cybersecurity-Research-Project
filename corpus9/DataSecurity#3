@@ -1,0 +1,138 @@
+PR.DS-2: Data-in-transit is protected
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY
+Control: Protect the [Selection (one or more): confidentiality; integrity] of transmitted
+information.
+Discussion: Protecting the confidentiality and integrity of transmitted information applies to
+internal and external networks as well as any system components that can transmit information,
+including servers, notebook computers, desktop computers, mobile devices, printers, copiers,
+scanners, facsimile machines, and radios. Unprotected communication paths are exposed to the
+possibility of interception and modification. Protecting the confidentiality and integrity of
+information can be accomplished by physical or logical means. Physical protection can be
+achieved by using protected distribution systems. A protected distribution system is a wireline or
+fiber-optics telecommunications system that includes terminals and adequate electromagnetic,
+acoustical, electrical, and physical controls to permit its use for the unencrypted transmission of
+classified information. Logical protection can be achieved by employing encryption techniques.
+Organizations that rely on commercial providers who offer transmission services as commodity
+services rather than as fully dedicated services may find it difficult to obtain the necessary
+assurances regarding the implementation of needed controls for transmission confidentiality and
+integrity. In such situations, organizations determine what types of confidentiality or integrity
+services are available in standard, commercial telecommunications service packages. If it is not
+feasible to obtain the necessary controls and assurances of control effectiveness through
+appropriate contracting vehicles, organizations can implement appropriate compensating
+controls.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | CRYPTOGRAPHIC PROTECTION
+Implement cryptographic mechanisms to [Selection (one or more): prevent unauthorized
+disclosure of information; detect changes to information] during transmission.
+Discussion: Encryption protects information from unauthorized disclosure and modification
+during transmission. Cryptographic mechanisms that protect the confidentiality and integrity
+of information during transmission include TLS and IPSec. Cryptographic mechanisms used to
+protect information integrity include cryptographic hash functions that have applications in
+digital signatures, checksums, and message authentication codes.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | PRE- AND POST-TRANSMISSION HANDLING
+Maintain the [Selection (one or more): confidentiality; integrity] of information during
+preparation for transmission and during reception.
+Discussion: Information can be unintentionally or maliciously disclosed or modified during
+preparation for transmission or during reception, including during aggregation, at protocol
+transformation points, and during packing and unpacking. Such unauthorized disclosures or
+modifications compromise the confidentiality or integrity of the information.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | CRYPTOGRAPHIC PROTECTION FOR MESSAGE
+EXTERNALS
+Implement cryptographic mechanisms to protect message externals unless otherwise
+protected by [Assignment: organization-defined alternative physical controls].
+Discussion: Cryptographic protection for message externals addresses protection from the
+unauthorized disclosure of information. Message externals include message headers and
+routing information. Cryptographic protection prevents the exploitation of message
+externals and applies to internal and external networks or links that may be visible to
+individuals who are not authorized users. Header and routing information is sometimes
+transmitted in clear text (i.e., unencrypted) because the information is not identified by
+organizations as having significant value or because encrypting the information can result in
+lower network performance or higher costs. Alternative physical controls include protected
+distribution systems
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | CONCEAL OR RANDOMIZE COMMUNICATIONS
+Implement cryptographic mechanisms to conceal or randomize communication patterns
+unless otherwise protected by [Assignment: organization-defined alternative physical
+controls].
+Discussion: Concealing or randomizing communication patterns addresses protection from
+unauthorized disclosure of information. Communication patterns include frequency, periods,
+predictability, and amount. Changes to communications patterns can reveal information
+with intelligence value, especially when combined with other available information related
+to the mission and business functions of the organization. Concealing or randomizing
+communications prevents the derivation of intelligence based on communications patterns
+and applies to both internal and external networks or links that may be visible to individuals
+who are not authorized users. Encrypting the links and transmitting in continuous, fixed, or
+random patterns prevents the derivation of intelligence from the system communications
+patterns. Alternative physical controls include protected distribution systems.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | PROTECTED DISTRIBUTION SYSTEM
+Implement [Assignment: organization-defined protected distribution system] to [Selection
+(one or more): prevent unauthorized disclosure of information; detect changes to
+information] during transmission.
+Discussion: The purpose of a protected distribution system is to deter, detect, and/or make
+difficult physical access to the communication lines that carry national security information.
+TRUSTED PATH
+Control:
+a. Provide a [Selection: physically; logically] isolated trusted communications path for
+communications between the user and the trusted components of the system; and
+Permit users to invoke the trusted communications path for communications between the
+user and the following security functions of the system, including at a minimum,
+authentication and re-authentication: [Assignment: organization-defined security functions].
+Discussion: Trusted paths are mechanisms by which users can communicate (using input devices
+such as keyboards) directly with the security functions of systems with the requisite assurance to
+support security policies. Trusted path mechanisms can only be activated by users or the security
+functions of organizational systems. User responses that occur via trusted paths are protected
+from modification by and disclosure to untrusted applications. Organizations employ trusted
+paths for trustworthy, high-assurance connections between security functions of systems and
+users, including during system logons. The original implementations of trusted paths employed
+an out-of-band signal to initiate the path, such as using the <BREAK> key, which does not
+transmit characters that can be spoofed. In later implementations, a key combination that could
+not be hijacked was used (e.g., the <CTRL> + <ALT> + <DEL> keys). Such key combinations,
+however, are platform-specific and may not provide a trusted path implementation in every case.
+The enforcement of trusted communications paths is provided by a specific implementation that
+meets the reference monitor concept.
+TRUSTED PATH | IRREFUTABLE COMMUNICATIONS PATH
+(a) Provide a trusted communications path that is irrefutably distinguishable from other
+communications paths; and
+(b) Initiate the trusted communications path for communications between the
+[Assignment: organization-defined security functions] of the system and the user.
+Discussion: An irrefutable communications path permits the system to initiate a trusted path,
+which necessitates that the user can unmistakably recognize the source of the communication as
+a trusted system component. For example, the trusted path may appear in an area of the display
+that other applications cannot access or be based on the presence of an identifier that cannot be
+spoofed.
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT
+Control: Establish and manage cryptographic keys when cryptography is employed within the
+system in accordance with the following key management requirements: [Assignment:
+organization-defined requirements for key generation, distribution, storage, access, and
+destruction].
+Discussion: Cryptographic key management and establishment can be performed using manual
+procedures or automated mechanisms with supporting manual procedures. Organizations define
+key management requirements in accordance with applicable laws, executive orders, directives,
+regulations, policies, standards, and guidelines and specify appropriate options, parameters, and
+levels. Organizations manage trust stores to ensure that only approved trust anchors are part of
+such trust stores. This includes certificates with visibility external to organizational systems and
+certificates related to the internal operations of systems. [NIST CMVP] and [NIST CAVP] provide
+additional information on validated cryptographic modules and algorithms that can be used in
+cryptographic key management and establishment
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | AVAILABILITY
+Maintain availability of information in the event of the loss of cryptographic keys by users.
+Discussion: Escrowing of encryption keys is a common practice for ensuring availability in
+the event of key loss. A forgotten passphrase is an example of losing a cryptographic key.
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | SYMMETRIC KEYS
+Produce, control, and distribute symmetric cryptographic keys using [Selection: NIST FIPSvalidated; NSA-approved] key management technology and processes.
+Discussion: [SP 800-56A], [SP 800-56B], and [SP 800-56C] provide guidance on cryptographic
+key establishment schemes and key derivation methods. [SP 800-57-1], [SP 800-57-2], and
+[SP 800-57-3] provide guidance on cryptographic key management.
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | ASYMMETRIC KEYS
+Produce, control, and distribute asymmetric cryptographic keys using [Selection: NSAapproved key management technology and processes; prepositioned keying material;
+DoD-approved or DoD-issued Medium Assurance PKI certificates; DoD-approved or DoDissued Medium Hardware Assurance PKI certificates and hardware security tokens that
+protect the user’s private key; certificates issued in accordance with organization-defined
+requirements].
+Discussion: [SP 800-56A], [SP 800-56B], and [SP 800-56C] provide guidance on cryptographic
+key establishment schemes and key derivation methods. [SP 800-57-1], [SP 800-57-2], and
+[SP 800-57-3] provide guidance on cryptographic key management.
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | PHYSICAL CONTROL OF KEYS
+Maintain physical control of cryptographic keys when stored information is encrypted by
+external service providers.
+Discussion: For organizations that use external service providers (e.g., cloud service or data
+center providers), physical control of cryptographic keys provides additional assurance that
+information stored by such external providers is not subject to unauthorized disclosure or
+modification

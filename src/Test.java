@@ -1,5 +1,6 @@
 import java.io.File;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import java.util.*;
 
 public class Test{
@@ -8,7 +9,7 @@ public class Test{
 
         ArrayList<Map<String,Word>> docsStats = new ArrayList<>();
 
-        File corpus = new File("/Users/shalinisahu/Desktop/Research Project/corpus1");
+        File corpus = new File("/Users/shalinisahu/Desktop/Research Project/corpus2");
         File docs[] = corpus.listFiles();
         for (File f : docs) {
             if (f.isFile()) {
@@ -24,17 +25,36 @@ public class Test{
 
             List<String> vals = new LinkedList<String>(tokensInDoc.keySet());
 
-            Collections.sort(vals, new Comparator<String>() {
+           Collections.sort(vals, new Comparator<String>() {
                 public int compare(String o1, String o2) {
                     if (tokensInDoc.get(o1).getTFIDF() > tokensInDoc.get(o2).getTFIDF()) {
                         return -1;
                     }
-                    if (tokensInDoc.get(o1).getTFIDF() < tokensInDoc.get(o2).getTFIDF()) {
+                    else if (tokensInDoc.get(o1).getTFIDF() < tokensInDoc.get(o2).getTFIDF()) {
                         return 1;
                     }
-                    return 0;
+                    else {
+                        return 0;
+                    }
                 }
             });
+
+           // When printing TF-IDF, show the first two
+
+
+            /*
+            Collections.sort(vals, (w,x) -> {
+                if(tokensInDoc.get(w).getTFIDF() > tokensInDoc.get(x).getTFIDF()) {
+                    return -1;
+                }
+                if(tokensInDoc.get(w).getTFIDF() <= tokensInDoc.get(x).getTFIDF()) {
+                    return -1;
+                }
+                return 0;
+            });
+
+             */
+
 
             Map<String, Word> sorted = new HashMap<>();
             Iterator it = vals.iterator();
@@ -45,7 +65,7 @@ public class Test{
 
             int i = 0;
             for (String str : sorted.keySet()) {
-                if( i<5 ) {
+                if( i<20 ) {
                     System.out.println(str + " --> " + sorted.get(str).getTFIDF());
                     i++;
                 }else{
@@ -79,7 +99,6 @@ public class Test{
                 TF t = new TF(doc2, w);
                 t.TFIDF();
                 map.put(w.getTFIDF(), w);
-
             }
         }
         File doc3 = new File("AssetManagementDoc#3");
@@ -93,10 +112,8 @@ public class Test{
                 TF t = new TF(doc3, w);
                 t.TFIDF();
                 map.put(w.getTFIDF(), w);
-
             }
         }
-
         File doc4 = new File("AssetManagementDoc#4");
         sc = new Scanner(doc4);
         while(sc.hasNext()) {
@@ -107,10 +124,8 @@ public class Test{
                 TF t = new TF(doc4, w);
                 t.TFIDF();
                 map.put(w.getTFIDF(), w);
-
             }
         }
-
         File doc5 = new File("AssetManagementDoc#5");
         sc = new Scanner(doc5);
         while(sc.hasNext()) {
@@ -121,10 +136,8 @@ public class Test{
                 TF t = new TF(doc5, w);
                 t.TFIDF();
                 map.put(w.getTFIDF(), w);
-
             }
         }
-
         File doc6 = new File("AssetManagementDoc#6");
         sc = new Scanner(doc6);
         while(sc.hasNext()) {
@@ -135,10 +148,8 @@ public class Test{
                 TF t = new TF(doc6, w);
                 t.TFIDF();
                 map.put(w.getTFIDF(), w);
-
             }
         }
-
         File doc7 = new File("AssetManagementDoc#7");
         sc = new Scanner(doc7);
         while(sc.hasNext()) {
@@ -149,26 +160,15 @@ public class Test{
                 TF t = new TF(doc7, w);
                 t.TFIDF();
                 map.put(w.getTFIDF(), w);
-
             }
         }
-
-
         for(Double d: map.keySet()) {
             System.out.println(d + " --> " + map.get(d));
         }
-
 */
 
 
         /*
-
-
-
-
-
-
-
          */
 
 
@@ -176,20 +176,10 @@ public class Test{
 
 
         /*
-
-
-
-
         sc4.close();
-
         sc5.close();
-
         sc6.close();
-
         sc7.close();
-
-
-
          */
     }
 
@@ -208,35 +198,60 @@ public class Test{
 
             // remove all not alphanumeric symbols from the line
             // regular expression
-            line = line.replaceAll("[^a-zA-Z0-9]", " ");
 
+            // the following does not work very well. It allows for some hidden characters
+            //line = line.replaceAll("[^a-zA-Z0-9]", " ");
 
+            line = line.replaceAll("[^\\w]", " ");
+
+            // removing digits
+            line = line.replaceAll("[\\d+]", " ");
+
+            // removing new lines and tabs
+            line = line.replaceAll("[\\n\\t]", " ");
+
+            // removing extra spaces
+            line = line.replaceAll("\\s+", " ");
+
+            // trimming
+            line = line.trim();
+
+            // converting to lower case
+            line = line.toLowerCase();
+
+            //System.out.println("I***" + line + "***" );
 
             String[] words = line.split(" ");
 
             for (String x : words) {
                 Set<String> stopwords = s.getWords();
                 // use tokensInDoc to count the number of occurrnces for each word
-                //x = x.trim();
 
-                if (!s.containsWord(x.toLowerCase()) && tokensInDoc.containsKey(x.toLowerCase()) && x.length() > 0) {
-                    //System.out.println("***" + x + "***" );
-                    tokensInDoc.get(x.toLowerCase()).incrementFrequency();
+                if (!s.containsWord( x ) && tokensInDoc.containsKey( x ) && x.length() > 2) {
+
+                    //System.out.println("I***" + x + "***" );
+
+                    tokensInDoc.get( x ).incrementFrequency();
 
                     // tokensInDoc.put(x, tokensInDoc.get(x) + 1);
 
                     //}
-                } else if(!s.containsWord(x.toLowerCase())) {
-                    w = new Word(x.toLowerCase());
+                } else if(!s.containsWord( x )) {
+
+                    //System.out.println("E***" + x + "***" );
+
+                    w = new Word( x );
                     w.incrementFrequency();
                     w.incrementNumDocsWithWord();
-                    tokensInDoc.put(x.toLowerCase(), w);
-                   }
-                }
-                totalWords++;
-                // Loop through the map and create word objects
+                    tokensInDoc.put( x, w);
 
+
+                }
             }
+            totalWords++;
+            // Loop through the map and create word objects
+
+        }
 
 
         for (String str : tokensInDoc.keySet()) {

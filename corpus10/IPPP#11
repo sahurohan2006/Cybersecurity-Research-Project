@@ -1,0 +1,113 @@
+PR.IP-10: Response and recovery plans are tested
+CONTINGENCY PLAN TESTING
+Control:
+a. Test the contingency plan for the system [Assignment: organization-defined frequency] using
+the following tests to determine the effectiveness of the plan and the readiness to execute
+the plan: [Assignment: organization-defined tests].
+b. Review the contingency plan test results; and
+Initiate corrective actions, if needed.
+Discussion: Methods for testing contingency plans to determine the effectiveness of the plans
+and identify potential weaknesses include checklists, walk-through and tabletop exercises,
+simulations (parallel or full interrupt), and comprehensive exercises. Organizations conduct
+testing based on the requirements in contingency plans and include a determination of the
+effects on organizational operations, assets, and individuals due to contingency operations.
+Organizations have flexibility and discretion in the breadth, depth, and timelines of corrective
+actions.
+CONTINGENCY PLAN TESTING | COORDINATE WITH RELATED PLANS
+Coordinate contingency plan testing with organizational elements responsible for related
+plans.
+Discussion: Plans related to contingency planning for organizational systems include
+Business Continuity Plans, Disaster Recovery Plans, Continuity of Operations Plans, Crisis
+Communications Plans, Critical Infrastructure Plans, Cyber Incident Response Plans, and
+Occupant Emergency Plans. Coordination of contingency plan testing does not require
+organizations to create organizational elements to handle related plans or to align such
+elements with specific plans. However, it does require that if such organizational elements
+are responsible for related plans, organizations coordinate with those elements.
+CONTINGENCY PLAN TESTING | ALTERNATE PROCESSING SITE
+Test the contingency plan at the alternate processing site:
+(a) To familiarize contingency personnel with the facility and available resources; and
+(b) To evaluate the capabilities of the alternate processing site to support contingency
+operations.
+Discussion: Conditions at the alternate processing site may be significantly different than
+the conditions at the primary site. Having the opportunity to visit the alternate site and
+experience the actual capabilities available at the site can provide valuable information on
+potential vulnerabilities that could affect essential organizational mission and business
+functions. The on-site visit can also provide an opportunity to refine the contingency plan to
+address the vulnerabilities discovered during testing.
+CONTINGENCY PLAN TESTING | AUTOMATED TESTING
+Test the contingency plan using [Assignment: organization-defined automated
+mechanisms].
+Discussion: Automated mechanisms facilitate thorough and effective testing of contingency
+plans by providing more complete coverage of contingency issues, selecting more realistic
+test scenarios and environments, and effectively stressing the system and supported mission
+and business functions
+CONTINGENCY PLAN TESTING | FULL RECOVERY AND RECONSTITUTION
+Include a full recovery and reconstitution of the system to a known state as part of
+contingency plan testing.
+Discussion: Recovery is executing contingency plan activities to restore organizational
+mission and business functions. Reconstitution takes place following recovery and includes
+activities for returning systems to fully operational states. Organizations establish a known
+state for systems that includes system state information for hardware, software programs,
+and data. Preserving system state information facilitates system restart and return to the
+operational mode of organizations with less disruption of mission and business processes.
+CONTINGENCY PLAN TESTING | SELF-CHALLENGE
+Employ [Assignment: organization-defined mechanisms] to [Assignment: organizationdefined system or system component] to disrupt and adversely affect the system or system
+component.
+Discussion: Often, the best method of assessing system resilience is to disrupt the system in
+some manner. The mechanisms used by the organization could disrupt system functions or
+system services in many ways, including terminating or disabling critical system components,
+changing the configuration of system components, degrading critical functionality (e.g.,
+restricting network bandwidth), or altering privileges. Automated, on-going, and simulated
+cyber-attacks and service disruptions can reveal unexpected functional dependencies and
+help the organization determine its ability to ensure resilience in the face of an actual cyberattack
+INCIDENT RESPONSE TESTING
+Control: Test the effectiveness of the incident response capability for the system [Assignment:
+organization-defined frequency] using the following tests: [Assignment: organization-defined
+tests].
+Discussion: Organizations test incident response capabilities to determine their effectiveness
+and identify potential weaknesses or deficiencies. Incident response testing includes the use of
+checklists, walk-through or tabletop exercises, and simulations (parallel or full interrupt). Incident
+response testing can include a determination of the effects on organizational operations and
+assets and individuals due to incident response. The use of qualitative and quantitative data aids
+in determining the effectiveness of incident response processes.
+INCIDENT RESPONSE TESTING | AUTOMATED TESTING
+Test the incident response capability using [Assignment: organization-defined automated
+mechanisms].
+Discussion: Organizations use automated mechanisms to more thoroughly and effectively
+test incident response capabilities. This can be accomplished by providing more complete
+coverage of incident response issues, selecting realistic test scenarios and environments, and
+stressing the response capability.
+INCIDENT RESPONSE TESTING | COORDINATION WITH RELATED PLANS
+Coordinate incident response testing with organizational elements responsible for related
+plans.
+Discussion: Organizational plans related to incident response testing include business
+continuity plans, disaster recovery plans, continuity of operations plans, contingency plans,
+crisis communications plans, critical infrastructure plans, and occupant emergency plans
+INCIDENT RESPONSE TESTING | CONTINUOUS IMPROVEMENT
+Use qualitative and quantitative data from testing to:
+(a) Determine the effectiveness of incident response processes;
+(b) Continuously improve incident response processes; and
+(c) Provide incident response measures and metrics that are accurate, consistent, and in a
+reproducible format.
+Discussion: To help incident response activities function as intended, organizations may use
+metrics and evaluation criteria to assess incident response programs as part of an effort to
+continually improve response performance. These efforts facilitate improvement in incident
+response efficacy and lessen the impact of incidents.
+TESTING, TRAINING, AND MONITORING
+Control:
+a. Implement a process for ensuring that organizational plans for conducting security and
+privacy testing, training, and monitoring activities associated with organizational systems:
+1. Are developed and maintained; and
+2. Continue to be executed; and
+b. Review testing, training, and monitoring plans for consistency with the organizational risk
+management strategy and organization-wide priorities for risk response actions.
+Discussion: A process for organization-wide security and privacy testing, training, and monitoring
+helps ensure that organizations provide oversight for testing, training, and monitoring activities
+and that those activities are coordinated. With the growing importance of continuous monitoring
+programs, the implementation of information security and privacy across the three levels of the
+risk management hierarchy and the widespread use of common controls, organizations
+coordinate and consolidate the testing and monitoring activities that are routinely conducted as
+part of ongoing assessments supporting a variety of controls. Security and privacy training
+activities, while focused on individual systems and specific roles, require coordination across all
+organizational elements. Testing, training, and monitoring plans and activities are informed by
+current threat and vulnerability assessments.

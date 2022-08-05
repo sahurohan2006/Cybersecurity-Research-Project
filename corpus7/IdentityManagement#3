@@ -1,0 +1,248 @@
+PR.AC-2: Physical access to assets is managed and protected
+PHYSICAL ACCESS AUTHORIZATIONS
+Control:
+a. Develop, approve, and maintain a list of individuals with authorized access to the facility
+where the system resides;
+b. Issue authorization credentials for facility access;
+c. Review the access list detailing authorized facility access by individuals [Assignment:
+organization-defined frequency]; and
+d. Remove individuals from the facility access list when access is no longer required.
+Discussion: Physical access authorizations apply to employees and visitors. Individuals with
+permanent physical access authorization credentials are not considered visitors. Authorization
+credentials include ID badges, identification cards, and smart cards. Organizations determine the
+strength of authorization credentials needed consistent with applicable laws, executive orders,
+directives, regulations, policies, standards, and guidelines. Physical access authorizations may not
+be necessary to access certain areas within facilities that are designated as publicly accessible.
+Control Enhancements:
+(1) PHYSICAL ACCESS AUTHORIZATIONS | ACCESS BY POSITION OR ROLE
+Authorize physical access to the facility where the system resides based on position or
+role.
+Discussion: Role-based facility access includes access by authorized permanent and
+regular/routine maintenance personnel, duty officers, and emergency medical staff.
+Related Controls: AC-2, AC-3, AC-6.
+(2) PHYSICAL ACCESS AUTHORIZATIONS | TWO FORMS OF IDENTIFICATION
+Require two forms of identification from the following forms of identification for visitor
+access to the facility where the system resides: [Assignment: organization-defined list of
+acceptable forms of identification].
+Discussion: Acceptable forms of identification include passports, REAL ID-compliant drivers’
+licenses, and Personal Identity Verification (PIV) cards. For gaining access to facilities using
+automated mechanisms, organizations may use PIV cards, key cards, PINs, and biometrics.
+Related Controls: IA-2, IA-4, IA-5.
+(3) PHYSICAL ACCESS AUTHORIZATIONS | RESTRICT UNESCORTED ACCESS
+Restrict unescorted access to the facility where the system resides to personnel with
+[Selection (one or more): security clearances for all information contained within the
+system; formal access authorizations for all information contained within the system; need
+for access to all information contained within the system; [Assignment: organizationdefined physical access authorizations]].
+Discussion: Individuals without required security clearances, access approvals, or need to
+know are escorted by individuals with appropriate physical access authorizations to ensure
+that information is not exposed or otherwise compromised.
+PHYSICAL ACCESS CONTROL
+Control:
+a. Enforce physical access authorizations at [Assignment: organization-defined entry and exit
+points to the facility where the system resides] by:
+1. Verifying individual access authorizations before granting access to the facility; and
+2. Controlling ingress and egress to the facility using [Selection (one or more): [Assignment:
+organization-defined physical access control systems or devices]; guards];
+b. Maintain physical access audit logs for [Assignment: organization-defined entry or exit
+points];
+c. Control access to areas within the facility designated as publicly accessible by implementing
+the following controls: [Assignment: organization-defined physical access controls];
+d. Escort visitors and control visitor activity [Assignment: organization-defined circumstances
+requiring visitor escorts and control of visitor activity];
+e. Secure keys, combinations, and other physical access devices;
+f. Inventory [Assignment: organization-defined physical access devices] every [Assignment:
+organization-defined frequency]; and
+g. Change combinations and keys [Assignment: organization-defined frequency] and/or when
+keys are lost, combinations are compromised, or when individuals possessing the keys or
+combinations are transferred or terminated.
+Discussion: Physical access control applies to employees and visitors. Individuals with permanent
+physical access authorizations are not considered visitors. Physical access controls for publicly
+accessible areas may include physical access control logs/records, guards, or physical access
+devices and barriers to prevent movement from publicly accessible areas to non-public areas.
+Organizations determine the types of guards needed, including professional security staff, system
+users, or administrative staff. Physical access devices include keys, locks, combinations, biometric
+readers, and card readers. Physical access control systems comply with applicable laws, executive
+orders, directives, policies, regulations, standards, and guidelines. Organizations have flexibility in
+the types of audit logs employed. Audit logs can be procedural, automated, or some combination
+thereof. Physical access points can include facility access points, interior access points to systems
+that require supplemental access controls, or both. Components of systems may be in areas
+designated as publicly accessible with organizations controlling access to the components.
+Control Enhancements:
+(1) PHYSICAL ACCESS CONTROL | SYSTEM ACCESS
+Enforce physical access authorizations to the system in addition to the physical access
+controls for the facility at [Assignment: organization-defined physical spaces containing
+one or more components of the system].
+Discussion: Control of physical access to the system provides additional physical security for
+those areas within facilities where there is a concentration of system components.
+Related Controls: None.
+(2) PHYSICAL ACCESS CONTROL | FACILITY AND SYSTEMS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 182
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Perform security checks [Assignment: organization-defined frequency] at the physical
+perimeter of the facility or system for exfiltration of information or removal of system
+components.
+Discussion: Organizations determine the extent, frequency, and/or randomness of security
+checks to adequately mitigate risk associated with exfiltration.
+Related Controls: AC-4, SC-7.
+(3) PHYSICAL ACCESS CONTROL | CONTINUOUS GUARDS
+Employ guards to control [Assignment: organization-defined physical access points] to the
+facility where the system resides 24 hours per day, 7 days per week.
+Discussion: Employing guards at selected physical access points to the facility provides a
+more rapid response capability for organizations. Guards also provide the opportunity for
+human surveillance in areas of the facility not covered by video surveillance.
+Related Controls: CP-6, CP-7, PE-6.
+(4) PHYSICAL ACCESS CONTROL | LOCKABLE CASINGS
+Use lockable physical casings to protect [Assignment: organization-defined system
+components] from unauthorized physical access.
+Discussion: The greatest risk from the use of portable devices—such as smart phones,
+tablets, and notebook computers—is theft. Organizations can employ lockable, physical
+casings to reduce or eliminate the risk of equipment theft. Such casings come in a variety of
+sizes, from units that protect a single notebook computer to full cabinets that can protect
+multiple servers, computers, and peripherals. Lockable physical casings can be used in
+conjunction with cable locks or lockdown plates to prevent the theft of the locked casing
+containing the computer equipment.
+Related Controls: None.
+(5) PHYSICAL ACCESS CONTROL | TAMPER PROTECTION
+Employ [Assignment: organization-defined anti-tamper technologies] to [Selection (one or
+more): detect; prevent] physical tampering or alteration of [Assignment: organizationdefined hardware components] within the system.
+Discussion: Organizations can implement tamper detection and prevention at selected
+hardware components or implement tamper detection at some components and tamper
+prevention at other components. Detection and prevention activities can employ many
+types of anti-tamper technologies, including tamper-detection seals and anti-tamper
+coatings. Anti-tamper programs help to detect hardware alterations through counterfeiting
+and other supply chain-related risks.
+Related Controls: SA-16, SR-9, SR-11.
+(6) PHYSICAL ACCESS CONTROL | FACILITY PENETRATION TESTING
+[Withdrawn: Incorporated into CA-8.]
+(7) PHYSICAL ACCESS CONTROL | PHYSICAL BARRIERS
+Limit access using physical barriers.
+Discussion: Physical barriers include bollards, concrete slabs, jersey walls, and hydraulic
+active vehicle barriers.
+Related Controls: None.
+(8) PHYSICAL ACCESS CONTROL | ACCESS CONTROL VESTIBULES
+Employ access control vestibules at [Assignment: organization-defined locations within the
+facility].
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 183
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: An access control vestibule is part of a physical access control system that
+typically provides a space between two sets of interlocking doors. Vestibules are designed to
+prevent unauthorized individuals from following authorized individuals into facilities with
+controlled access. This activity, also known as piggybacking or tailgating, results in
+unauthorized access to the facility. Interlocking door controllers can be used to limit the
+number of individuals who enter controlled access points and to provide containment areas
+while authorization for physical access is verified. Interlocking door controllers can be fully
+automated (i.e., controlling the opening and closing of the doors) or partially automated
+(i.e., using security guards to control the number of individuals entering the containment
+area).
+ACCESS CONTROL FOR TRANSMISSION
+Control: Control physical access to [Assignment: organization-defined system distribution and
+transmission lines] within organizational facilities using [Assignment: organization-defined
+security controls].
+Discussion: Security controls applied to system distribution and transmission lines prevent
+accidental damage, disruption, and physical tampering. Such controls may also be necessary to
+prevent eavesdropping or modification of unencrypted transmissions. Security controls used to
+control physical access to system distribution and transmission lines include disconnected or
+locked spare jacks, locked wiring closets, protection of cabling by conduit or cable trays, and
+wiretapping sensors.
+ACCESS CONTROL FOR OUTPUT DEVICES
+Control: Control physical access to output from [Assignment: organization-defined output
+devices] to prevent unauthorized individuals from obtaining the output.
+Discussion: Controlling physical access to output devices includes placing output devices in
+locked rooms or other secured areas with keypad or card reader access controls and allowing
+access to authorized individuals only, placing output devices in locations that can be monitored
+by personnel, installing monitor or screen filters, and using headphones. Examples of output
+devices include monitors, printers, scanners, audio devices, facsimile machines, and copiers
+Control Enhancements:
+(1) ACCESS CONTROL FOR OUTPUT DEVICES | ACCESS TO OUTPUT BY AUTHORIZED INDIVIDUALS
+[Withdrawn: Incorporated into PE-5.]
+(2) ACCESS CONTROL FOR OUTPUT DEVICES | LINK TO INDIVIDUAL IDENTITY
+Link individual identity to receipt of output from output devices.
+Discussion: Methods for linking individual identity to the receipt of output from output
+devices include installing security functionality on facsimile machines, copiers, and printers.
+Such functionality allows organizations to implement authentication on output devices prior
+to the release of output to individuals.
+MONITORING PHYSICAL ACCESS
+Control:
+a. Monitor physical access to the facility where the system resides to detect and respond to
+physical security incidents;
+b. Review physical access logs [Assignment: organization-defined frequency] and upon
+occurrence of [Assignment: organization-defined events or potential indications of events];
+and
+c. Coordinate results of reviews and investigations with the organizational incident response
+capability.
+Discussion: Physical access monitoring includes publicly accessible areas within organizational
+facilities. Examples of physical access monitoring include the employment of guards, video
+surveillance equipment (i.e., cameras), and sensor devices. Reviewing physical access logs can
+help identify suspicious activity, anomalous events, or potential threats. The reviews can be
+supported by audit logging controls, such as AU-2, if the access logs are part of an automated
+system. Organizational incident response capabilities include investigations of physical security
+incidents and responses to the incidents. Incidents include security violations or suspicious
+physical access activities. Suspicious physical access activities include accesses outside of normal
+work hours, repeated accesses to areas not normally accessed, accesses for unusual lengths of
+time, and out-of-sequence accesses
+MONITORING PHYSICAL ACCESS | INTRUSION ALARMS AND SURVEILLANCE EQUIPMENT
+Monitor physical access to the facility where the system resides using physical intrusion
+alarms and surveillance equipment.
+Discussion: Physical intrusion alarms can be employed to alert security personnel when
+unauthorized access to the facility is attempted. Alarm systems work in conjunction with
+physical barriers, physical access control systems, and security guards by triggering a
+response when these other forms of security have been compromised or breached. Physical
+intrusion alarms can include different types of sensor devices, such as motion sensors,
+contact sensors, and broken glass sensors. Surveillance equipment includes video cameras
+installed at strategic locations throughout the facility.
+MONITORING PHYSICAL ACCESS | AUTOMATED INTRUSION RECOGNITION AND RESPONSES
+Recognize [Assignment: organization-defined classes or types of intrusions] and initiate
+[Assignment: organization-defined response actions] using [Assignment: organizationdefined automated mechanisms].
+Discussion: Response actions can include notifying selected organizational personnel or law
+enforcement personnel. Automated mechanisms implemented to initiate response actions
+include system alert notifications, email and text messages, and activating door locking
+mechanisms. Physical access monitoring can be coordinated with intrusion detection
+systems and system monitoring capabilities to provide integrated threat coverage for the
+organization.
+MONITORING PHYSICAL ACCESS | VIDEO SURVEILLANCE
+(a) Employ video surveillance of [Assignment: organization-defined operational areas];
+(b) Review video recordings [Assignment: organization-defined frequency]; and
+(c) Retain video recordings for [Assignment: organization-defined time period].
+Discussion: Video surveillance focuses on recording activity in specified areas for the
+purposes of subsequent review, if circumstances so warrant. Video recordings are typically
+reviewed to detect anomalous events or incidents. Monitoring the surveillance video is not
+required, although organizations may choose to do so. There may be legal considerations
+when performing and retaining video surveillance, especially if such surveillance is in a public
+location.
+MONITORING PHYSICAL ACCESS | MONITORING PHYSICAL ACCESS TO SYSTEMS
+Monitor physical access to the system in addition to the physical access monitoring of the
+facility at [Assignment: organization-defined physical spaces containing one or more
+components of the system].
+Discussion: Monitoring physical access to systems provides additional monitoring for those
+areas within facilities where there is a concentration of system components, including server
+rooms, media storage areas, and communications centers. Physical access monitoring can be
+coordinated with intrusion detection systems and system monitoring capabilities to provide
+comprehensive and integrated threat coverage for the organization
+VISITOR ACCESS RECORDS
+Control:
+a. Maintain visitor access records to the facility where the system resides for [Assignment:
+organization-defined time period];
+b. Review visitor access records [Assignment: organization-defined frequency]; and
+c. Report anomalies in visitor access records to [Assignment: organization-defined personnel].
+Discussion: Visitor access records include the names and organizations of individuals visiting,
+visitor signatures, forms of identification, dates of access, entry and departure times, purpose of
+visits, and the names and organizations of individuals visited. Access record reviews determine if
+access authorizations are current and are still required to support organizational mission and
+business functions. Access records are not required for publicly accessible areas.
+VISITOR ACCESS RECORDS | AUTOMATED RECORDS MAINTENANCE AND REVIEW
+Maintain and review visitor access records using [Assignment: organization-defined
+automated mechanisms].
+Discussion: Visitor access records may be stored and maintained in a database management
+system that is accessible by organizational personnel. Automated access to such records
+facilitates record reviews on a regular basis to determine if access authorizations are current
+and still required to support organizational mission and business functions.
+VISITOR ACCESS RECORDS | PHYSICAL ACCESS RECORDS
+VISITOR ACCESS RECORDS | LIMIT PERSONALLY IDENTIFIABLE INFORMATION ELEMENTS
+Limit personally identifiable information contained in visitor access records to the
+following elements identified in the privacy risk assessment: [Assignment: organizationdefined elements].
+Discussion: Organizations may have requirements that specify the contents of visitor access
+records. Limiting personally identifiable information in visitor access records when such
+information is not needed for operational purposes helps reduce the level of privacy risk
+created by a system.

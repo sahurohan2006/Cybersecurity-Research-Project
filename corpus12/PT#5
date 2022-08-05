@@ -1,0 +1,277 @@
+PR.PT-4: Communications and control networks are protected
+INFORMATION FLOW ENFORCEMENT
+Control: Enforce approved authorizations for controlling the flow of information within the
+system and between connected systems based on [Assignment: organization-defined
+information flow control policies].
+Discussion: Information flow control regulates where information can travel within a system and
+between systems (in contrast to who is allowed to access the information) and without regard to
+subsequent accesses to that information. Flow control restrictions include blocking external
+traffic that claims to be from within the organization, keeping export-controlled information
+from being transmitted in the clear to the Internet, restricting web requests that are not from
+the internal web proxy server, and limiting information transfers between organizations based
+on data structures and content. Transferring information between organizations may require an
+agreement specifying how the information flow is enforced (see CA-3). Transferring information
+between systems in different security or privacy domains with different security or privacy
+policies introduces the risk that such transfers violate one or more domain security or privacy
+policies. In such situations, information owners/stewards provide guidance at designated policy
+enforcement points between connected systems. Organizations consider mandating specific
+architectural solutions to enforce specific security and privacy policies. Enforcement includes
+prohibiting information transfers between connected systems (i.e., allowing access only),
+verifying write permissions before accepting information from another security or privacy
+domain or connected system, employing hardware mechanisms to enforce one-way information
+flows, and implementing trustworthy regrading mechanisms to reassign security or privacy
+attributes and labels.
+Organizations commonly employ information flow control policies and enforcement mechanisms
+to control the flow of information between designated sources and destinations within systems
+and between connected systems. Flow control is based on the characteristics of the information
+and/or the information path. Enforcement occurs, for example, in boundary protection devices
+that employ rule sets or establish configuration settings that restrict system services, provide a
+packet-filtering capability based on header information, or provide a message-filtering capability
+based on message content. Organizations also consider the trustworthiness of filtering and/or
+inspection mechanisms (i.e., hardware, firmware, and software components) that are critical to
+information flow enforcement. Control enhancements 3 through 32 primarily address crossdomain solution needs that focus on more advanced filtering techniques, in-depth analysis, and
+stronger flow enforcement mechanisms implemented in cross-domain products, such as highassurance guards. Such capabilities are generally not available in commercial off-the-shelf
+products. Information flow enforcement also applies to control plane traffic (e.g., routing and
+DNS)
+REMOTE ACCESS
+Control:
+a. Establish and document usage restrictions, configuration/connection requirements, and
+implementation guidance for each type of remote access allowed; and
+b. Authorize each type of remote access to the system prior to allowing such connections.
+Discussion: Remote access is access to organizational systems (or processes acting on behalf of
+users) that communicate through external networks such as the Internet. Types of remote access
+include dial-up, broadband, and wireless. Organizations use encrypted virtual private networks
+(VPNs) to enhance confidentiality and integrity for remote connections. The use of encrypted
+VPNs provides sufficient assurance to the organization that it can effectively treat such
+connections as internal networks if the cryptographic mechanisms used are implemented in
+accordance with applicable laws, executive orders, directives, regulations, policies, standards,
+and guidelines. Still, VPN connections traverse external networks, and the encrypted VPN does
+not enhance the availability of remote connections. VPNs with encrypted tunnels can also affect
+the ability to adequately monitor network communications traffic for malicious code. Remote
+access controls apply to systems other than public web servers or systems designed for public
+access. Authorization of each remote access type addresses authorization prior to allowing
+remote access without specifying the specific formats for such authorization. While organizations
+may use information exchange and system connection security agreements to manage remote
+access connections to other systems, such agreements are addressed as part of CA-3. Enforcing
+access restrictions for remote access is addressed via AC-3.
+Control:
+a. Establish configuration requirements, connection requirements, and implementation
+guidance for each type of wireless access; and
+b. Authorize each type of wireless access to the system prior to allowing such connections.
+Discussion: Wireless technologies include microwave, packet radio (ultra-high frequency or very
+high frequency), 802.11x, and Bluetooth. Wireless networks use authentication protocols that
+provide authenticator protection and mutual authentication
+TELECOMMUNICATIONS SERVICES
+Control: Establish alternate telecommunications services, including necessary agreements to
+permit the resumption of [Assignment: organization-defined system operations] for essential
+mission and business functions within [Assignment: organization-defined time period] when the
+primary telecommunications capabilities are unavailable at either the primary or alternate
+processing or storage sites.
+Discussion: Telecommunications services (for data and voice) for primary and alternate
+processing and storage sites are in scope for CP-8. Alternate telecommunications services reflect
+the continuity requirements in contingency plans to maintain essential mission and business
+functions despite the loss of primary telecommunications services. Organizations may specify
+different time periods for primary or alternate sites. Alternate telecommunications services
+include additional organizational or commercial ground-based circuits or lines, network-based
+approaches to telecommunications, or the use of satellites. Organizations consider factors such
+as availability, quality of service, and access when entering into alternate telecommunications
+agreements.
+BOUNDARY PROTECTION
+Control:
+a. Monitor and control communications at the external managed interfaces to the system and
+at key internal managed interfaces within the system;
+b. Implement subnetworks for publicly accessible system components that are [Selection:
+physically; logically] separated from internal organizational networks; and
+c. Connect to external networks or systems only through managed interfaces consisting of
+boundary protection devices arranged in accordance with an organizational security and
+privacy architecture.
+Discussion: Managed interfaces include gateways, routers, firewalls, guards, network-based
+malicious code analysis, virtualization systems, or encrypted tunnels implemented within a
+security architecture. Subnetworks that are physically or logically separated from internal
+networks are referred to as demilitarized zones or DMZs. Restricting or prohibiting interfaces
+within organizational systems includes restricting external web traffic to designated web servers
+within managed interfaces, prohibiting external traffic that appears to be spoofing internal
+addresses, and prohibiting internal traffic that appears to be spoofing external addresses. [SP
+800-189] provides additional information on source address validation techniques to prevent
+ingress and egress of traffic with spoofed addresses. Commercial telecommunications services
+are provided by network components and consolidated management systems shared by
+customers. These services may also include third party-provided access lines and other service
+elements. Such services may represent sources of increased risk despite contract security
+provisions. Boundary protection may be implemented as a common control for all or part of an
+organizational network such that the boundary to be protected is greater than a system-specific
+boundary (i.e., an authorization boundary).
+SECURE NAME/ADDRESS RESOLUTION SERVICE (AUTHORITATIVE SOURCE)
+Control:
+a. Provide additional data origin authentication and integrity verification artifacts along with
+the authoritative name resolution data the system returns in response to external
+name/address resolution queries; and
+b. Provide the means to indicate the security status of child zones and (if the child supports
+secure resolution services) to enable verification of a chain of trust among parent and child
+domains, when operating as part of a distributed, hierarchical namespace.
+Discussion: Providing authoritative source information enables external clients, including remote
+Internet clients, to obtain origin authentication and integrity verification assurances for the
+host/service name to network address resolution information obtained through the service.
+Systems that provide name and address resolution services include domain name system (DNS)
+servers. Additional artifacts include DNS Security Extensions (DNSSEC) digital signatures and
+cryptographic keys. Authoritative data includes DNS resource records. The means for indicating
+the security status of child zones include the use of delegation signer resource records in the
+DNS. Systems that use technologies other than the DNS to map between host and service names
+and network addresses provide other means to assure the authenticity and integrity of response
+data
+SECURE NAME/ADDRESS RESOLUTION SERVICE (RECURSIVE OR CACHING RESOLVER)
+Control: Request and perform data origin authentication and data integrity verification on the
+name/address resolution responses the system receives from authoritative sources.
+Discussion: Each client of name resolution services either performs this validation on its own or
+has authenticated channels to trusted validation providers. Systems that provide name and
+address resolution services for local clients include recursive resolving or caching domain name
+system (DNS) servers. DNS client resolvers either perform validation of DNSSEC signatures, or
+clients use authenticated channels to recursive resolvers that perform such validations. Systems
+that use technologies other than the DNS to map between host and service names and network
+addresses provide some other means to enable clients to verify the authenticity and integrity of
+response data.
+ARCHITECTURE AND PROVISIONING FOR NAME/ADDRESS RESOLUTION SERVICE
+Control: Ensure the systems that collectively provide name/address resolution service for an
+organization are fault-tolerant and implement internal and external role separation.
+Discussion: Systems that provide name and address resolution services include domain name
+system (DNS) servers. To eliminate single points of failure in systems and enhance redundancy,
+organizations employ at least two authoritative domain name system servers—one configured as
+the primary server and the other configured as the secondary server. Additionally, organizations
+typically deploy the servers in two geographically separated network subnetworks (i.e., not
+located in the same physical facility). For role separation, DNS servers with internal roles only
+process name and address resolution requests from within organizations (i.e., from internal
+clients). DNS servers with external roles only process name and address resolution information
+requests from clients external to organizations (i.e., on external networks, including the
+Internet). Organizations specify clients that can access authoritative DNS servers in certain roles
+(e.g., by address ranges and explicit lists).
+SESSION AUTHENTICITY
+Control: Protect the authenticity of communications sessions.
+Discussion: Protecting session authenticity addresses communications protection at the session
+level, not at the packet level. Such protection establishes grounds for confidence at both ends of
+communications sessions in the ongoing identities of other parties and the validity of transmitted
+information. Authenticity protection includes protecting against “man-in-the-middle” attacks,
+session hijacking, and the insertion of false information into sessions
+FAIL IN KNOWN STATE
+Control: Fail to a [Assignment: organization-defined known system state] for the following
+failures on the indicated components while preserving [Assignment: organization-defined system
+state information] in failure: [Assignment: list of organization-defined types of system failures on
+organization-defined system components].
+Discussion: Failure in a known state addresses security concerns in accordance with the mission
+and business needs of organizations. Failure in a known state prevents the loss of confidentiality,
+integrity, or availability of information in the event of failures of organizational systems or system
+components. Failure in a known safe state helps to prevent systems from failing to a state that
+may cause injury to individuals or destruction to property. Preserving system state information
+facilitates system restart and return to the operational mode with less disruption of mission and
+business processes.
+THIN NODES
+Control: Employ minimal functionality and information storage on the following system
+components: [Assignment: organization-defined system components].
+Discussion: The deployment of system components with minimal functionality reduces the need
+to secure every endpoint and may reduce the exposure of information, systems, and services to
+attacks. Reduced or minimal functionality includes diskless nodes and thin client technologies
+HETEROGENEITY
+Control: Employ a diverse set of information technologies for the following system components
+in the implementation of the system: [Assignment: organization-defined system components].
+Discussion: Increasing the diversity of information technologies within organizational systems
+reduces the impact of potential exploitations or compromises of specific technologies. Such
+diversity protects against common mode failures, including those failures induced by supply
+chain attacks. Diversity in information technologies also reduces the likelihood that the means
+adversaries use to compromise one system component will be effective against other system
+components, thus further increasing the adversary work factor to successfully complete planned
+attacks. An increase in diversity may add complexity and management overhead that could
+ultimately lead to mistakes and unauthorized configurations
+SYSTEM PARTITIONING
+Control: Partition the system into [Assignment: organization-defined system components]
+residing in separate [Selection: physical; logical] domains or environments based on [Assignment:
+organization-defined circumstances for physical or logical separation of components].
+Discussion: System partitioning is part of a defense-in-depth protection strategy. Organizations
+determine the degree of physical separation of system components. Physical separation options
+include physically distinct components in separate racks in the same room, critical components in
+separate rooms, and geographical separation of critical components. Security categorization can
+guide the selection of candidates for domain partitioning. Managed interfaces restrict or prohibit
+network access and information flow among partitioned system components
+DISTRIBUTED PROCESSING AND STORAGE
+Control: Distribute the following processing and storage components across multiple [Selection:
+physical locations; logical domains]: [Assignment: organization-defined processing and storage
+components].
+Discussion: Distributing processing and storage across multiple physical locations or logical
+domains provides a degree of redundancy or overlap for organizations. The redundancy and
+overlap increase the work factor of adversaries to adversely impact organizational operations,
+assets, and individuals. The use of distributed processing and storage does not assume a single
+primary processing or storage location. Therefore, it allows for parallel processing and storage.
+OUT-OF-BAND CHANNELS
+Control: Employ the following out-of-band channels for the physical delivery or electronic
+transmission of [Assignment: organization-defined information, system components, or devices]
+to [Assignment: organization-defined individuals or systems]: [Assignment: organization-defined
+out-of-band channels].
+Discussion: Out-of-band channels include local, non-network accesses to systems; network paths
+physically separate from network paths used for operational traffic; or non-electronic paths, such
+as the U.S. Postal Service. The use of out-of-band channels is contrasted with the use of in-band
+channels (i.e., the same channels) that carry routine operational traffic. Out-of-band channels do
+not have the same vulnerability or exposure as in-band channels. Therefore, the confidentiality,
+integrity, or availability compromises of in-band channels will not compromise or adversely affect
+the out-of-band channels. Organizations may employ out-of-band channels in the delivery or
+transmission of organizational items, including authenticators and credentials; cryptographic key
+management information; system and data backups; configuration management changes for
+hardware, firmware, or software; security updates; maintenance information; and malicious
+code protection updates.
+OPERATIONS SECURITY
+Control: Employ the following operations security controls to protect key organizational
+information throughout the system development life cycle: [Assignment: organization-defined
+operations security controls].
+Discussion: Operations security (OPSEC) is a systematic process by which potential adversaries
+can be denied information about the capabilities and intentions of organizations by identifying,
+controlling, and protecting generally unclassified information that specifically relates to the
+planning and execution of sensitive organizational activities. The OPSEC process involves five
+steps: identification of critical information, analysis of threats, analysis of vulnerabilities,
+assessment of risks, and the application of appropriate countermeasures. OPSEC controls are
+applied to organizational systems and the environments in which those systems operate. OPSEC
+controls protect the confidentiality of information, including limiting the sharing of information
+with suppliers, potential suppliers, and other non-organizational elements and individuals.
+Information critical to organizational mission and business functions includes user identities,
+element uses, suppliers, supply chain processes, functional requirements, security requirements,
+system design specifications, testing and evaluation protocols, and security control
+implementation details.
+PROCESS ISOLATION
+Control: Maintain a separate execution domain for each executing system process.
+Discussion: Systems can maintain separate execution domains for each executing process by
+assigning each process a separate address space. Each system process has a distinct address
+space so that communication between processes is performed in a manner controlled through
+the security functions, and one process cannot modify the executing code of another process.
+Maintaining separate execution domains for executing processes can be achieved, for example,
+by implementing separate address spaces. Process isolation technologies, including sandboxing
+or virtualization, logically separate software and firmware from other software, firmware, and
+data. Process isolation helps limit the access of potentially untrusted software to other system
+resources. The capability to maintain separate execution domains is available in commercial
+operating systems that employ multi-state processor technologies
+WIRELESS LINK PROTECTION
+Control: Protect external and internal [Assignment: organization-defined wireless links] from the
+following signal parameter attacks: [Assignment: organization-defined types of signal parameter
+attacks or references to sources for such attacks].
+Discussion: Wireless link protection applies to internal and external wireless communication
+links that may be visible to individuals who are not authorized system users. Adversaries can
+exploit the signal parameters of wireless links if such links are not adequately protected. There
+are many ways to exploit the signal parameters of wireless links to gain intelligence, deny service,
+or spoof system users. Protection of wireless links reduces the impact of attacks that are unique
+to wireless systems. If organizations rely on commercial service providers for transmission
+services as commodity items rather than as fully dedicated services, it may not be possible to
+implement wireless link protections to the extent necessary to meet organizational security
+requirements.
+PORT AND I/O DEVICE ACCESS
+Control: [Selection: Physically; Logically] disable or remove [Assignment: organization-defined
+connection ports or input/output devices] on the following systems or system components:
+[Assignment: organization-defined systems or system components].
+Discussion: Connection ports include Universal Serial Bus (USB), Thunderbolt, and Firewire (IEEE
+1394). Input/output (I/O) devices include compact disc and digital versatile disc drives. Disabling
+or removing such connection ports and I/O devices helps prevent the exfiltration of information
+from systems and the introduction of malicious code from those ports or devices. Physically
+disabling or removing ports and/or devices is the stronger action.
+USAGE RESTRICTIONS
+Control:
+a. Establish usage restrictions and implementation guidelines for the following system
+components: [Assignment: organization-defined system components]; and
+b. Authorize, monitor, and control the use of such components within the system.
+Discussion: Usage restrictions apply to all system components including but not limited to
+mobile code, mobile devices, wireless access, and wired and wireless peripheral components
+(e.g., copiers, printers, scanners, optical devices, and other similar technologies). The usage
+restrictions and implementation guidelines are based on the potential for system components to
+cause damage to the system and help to ensure that only authorized system use occurs.

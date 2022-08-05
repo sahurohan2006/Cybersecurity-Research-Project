@@ -1,0 +1,123 @@
+PR.PT-5: Mechanisms (e.g., failsafe, load balancing, hot swap) are implemented to achieve resilience requirements in normal and adverse situations
+ALTERNATE PROCESSING SITE
+Control:
+a. Establish an alternate processing site, including necessary agreements to permit the transfer
+and resumption of [Assignment: organization-defined system operations] for essential
+mission and business functions within [Assignment: organization-defined time period
+consistent with recovery time and recovery point objectives] when the primary processing
+capabilities are unavailable;
+b. Make available at the alternate processing site, the equipment and supplies required to
+transfer and resume operations or put contracts in place to support delivery to the site
+within the organization-defined time period for transfer and resumption; and
+c. Provide controls at the alternate processing site that are equivalent to those at the primary
+site.
+Discussion: Alternate processing sites are geographically distinct from primary processing sites
+and provide processing capability if the primary processing site is not available. The alternate
+processing capability may be addressed using a physical processing site or other alternatives,
+such as failover to a cloud-based service provider or other internally or externally provided
+processing service. Geographically distributed architectures that support contingency
+requirements may also be considered alternate processing sites. Controls that are covered by
+alternate processing site agreements include the environmental conditions at alternate sites,
+access rules, physical and environmental protection requirements, and the coordination for the
+transfer and assignment of personnel. Requirements are allocated to alternate processing sites
+that reflect the requirements in contingency plans to maintain essential mission and business
+functions despite disruption, compromise, or failure in organizational systems.
+TELECOMMUNICATIONS SERVICES
+Control: Establish alternate telecommunications services, including necessary agreements to
+permit the resumption of [Assignment: organization-defined system operations] for essential
+mission and business functions within [Assignment: organization-defined time period] when the
+primary telecommunications capabilities are unavailable at either the primary or alternate
+processing or storage sites.
+Discussion: Telecommunications services (for data and voice) for primary and alternate
+processing and storage sites are in scope for CP-8. Alternate telecommunications services reflect
+the continuity requirements in contingency plans to maintain essential mission and business
+functions despite the loss of primary telecommunications services. Organizations may specify
+different time periods for primary or alternate sites. Alternate telecommunications services
+include additional organizational or commercial ground-based circuits or lines, network-based
+approaches to telecommunications, or the use of satellites. Organizations consider factors such
+as availability, quality of service, and access when entering into alternate telecommunications
+agreements.
+ALTERNATE COMMUNICATIONS PROTOCOLS
+Control: Provide the capability to employ [Assignment: organization-defined alternative
+communications protocols] in support of maintaining continuity of operations.
+Discussion: Contingency plans and the contingency training or testing associated with those
+plans incorporate an alternate communications protocol capability as part of establishing
+resilience in organizational systems. Switching communications protocols may affect software
+applications and operational aspects of systems. Organizations assess the potential side effects
+of introducing alternate communications protocols prior to implementation
+ALTERNATIVE SECURITY MECHANISMS
+Control: Employ [Assignment: organization-defined alternative or supplemental security
+mechanisms] for satisfying [Assignment: organization-defined security functions] when the
+primary means of implementing the security function is unavailable or compromised.
+Discussion: Use of alternative security mechanisms supports system resiliency, contingency
+planning, and continuity of operations. To ensure mission and business continuity, organizations
+can implement alternative or supplemental security mechanisms. The mechanisms may be less
+effective than the primary mechanisms. However, having the capability to readily employ
+alternative or supplemental mechanisms enhances mission and business continuity that might
+otherwise be adversely impacted if operations had to be curtailed until the primary means of
+implementing the functions was restored. Given the cost and level of effort required to provide
+such alternative capabilities, the alternative or supplemental mechanisms are only applied to
+critical security capabilities provided by systems, system components, or system services. For
+example, an organization may issue one-time pads to senior executives, officials, and system
+administrators if multi-factor tokens—the standard means for achieving secure authentication—
+are compromised.
+SECURITY AND PRIVACY ARCHITECTURES
+Control:
+a. Develop security and privacy architectures for the system that:
+1. Describe the requirements and approach to be taken for protecting the confidentiality,
+integrity, and availability of organizational information;
+2. Describe the requirements and approach to be taken for processing personally
+identifiable information to minimize privacy risk to individuals;
+3. Describe how the architectures are integrated into and support the enterprise
+architecture; and
+4. Describe any assumptions about, and dependencies on, external systems and services;
+b. Review and update the architectures [Assignment: organization-defined frequency] to reflect
+changes in the enterprise architecture; and
+c. Reflect planned architecture changes in security and privacy plans, Concept of Operations
+(CONOPS), criticality analysis, organizational procedures, and procurements and acquisitions.
+Discussion: The security and privacy architectures at the system level are consistent with the
+organization-wide security and privacy architectures described in PM-7, which are integral to and
+developed as part of the enterprise architecture. The architectures include an architectural
+description, the allocation of security and privacy functionality (including controls), security- and
+privacy-related information for external interfaces, information being exchanged across the
+interfaces, and the protection mechanisms associated with each interface. The architectures can
+also include other information, such as user roles and the access privileges assigned to each role;
+security and privacy requirements; types of information processed, stored, and transmitted by
+the system; supply chain risk management requirements; restoration priorities of information
+and system services; and other protection needs.
+[SP 800-160-1] provides guidance on the use of security architectures as part of the system
+development life cycle process. [OMB M-19-03] requires the use of the systems security
+engineering concepts described in [SP 800-160-1] for high value assets. Security and privacy
+architectures are reviewed and updated throughout the system development life cycle, from
+analysis of alternatives through review of the proposed architecture in the RFP responses to the
+design reviews before and during implementation (e.g., during preliminary design reviews and
+critical design reviews).
+In today’s modern computing architectures, it is becoming less common for organizations to
+control all information resources. There may be key dependencies on external information
+services and service providers. Describing such dependencies in the security and privacy
+architectures is necessary for developing a comprehensive mission and business protection
+strategy. Establishing, developing, documenting, and maintaining under configuration control a
+baseline configuration for organizational systems is critical to implementing and maintaining
+effective architectures. The development of the architectures is coordinated with the senior
+agency information security officer and the senior agency official for privacy to ensure that the
+controls needed to support security and privacy requirements are identified and effectively
+implemented. In many circumstances, there may be no distinction between the security and
+privacy architecture for a system. In other circumstances, security objectives may be adequately
+satisfied, but privacy objectives may only be partially satisfied by the security requirements. In
+these cases, consideration of the privacy requirements needed to achieve satisfaction will result
+in a distinct privacy architecture. The documentation, however, may simply reflect the combined
+architectures.
+PL-8 is primarily directed at organizations to ensure that architectures are developed for the
+system and, moreover, that the architectures are integrated with or tightly coupled to the
+enterprise architecture. In contrast, SA-17 is primarily directed at the external information
+technology product and system developers and integrators. SA-17, which is complementary to
+PL-8, is selected when organizations outsource the development of systems or components to
+external entities and when there is a need to demonstrate consistency with the organization’s
+enterprise architecture and security and privacy architectures.
+RESOURCE AVAILABILITY
+Control: Protect the availability of resources by allocating [Assignment: organization-defined
+resources] by [Selection (one or more): priority; quota; [Assignment: organization-defined
+controls]].
+Discussion: Priority protection prevents lower-priority processes from delaying or interfering
+with the system that services higher-priority processes. Quotas prevent users or processes from
+obtaining more than predetermined amounts of resources.

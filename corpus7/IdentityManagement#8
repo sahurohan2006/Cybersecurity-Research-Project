@@ -1,0 +1,759 @@
+PR.AC-7: Users, devices, and other assets are authenticated (e.g., single-factor, multi-factor) commensurate with the risk of the transaction (e.g., individuals’ security and privacy risks and other organizational risks)
+UNSUCCESSFUL LOGON ATTEMPTS
+Control:
+a. Enforce a limit of [Assignment: organization-defined number] consecutive invalid logon
+attempts by a user during a [Assignment: organization-defined time period]; and
+b. Automatically [Selection (one or more): lock the account or node for an [Assignment:
+organization-defined time period]; lock the account or node until released by an
+administrator; delay next logon prompt per [Assignment: organization-defined delay
+algorithm]; notify system administrator; take other [Assignment: organization-defined
+action]] when the maximum number of unsuccessful attempts is exceeded.
+Discussion: The need to limit unsuccessful logon attempts and take subsequent action when the
+maximum number of attempts is exceeded applies regardless of whether the logon occurs via a
+local or network connection. Due to the potential for denial of service, automatic lockouts
+initiated by systems are usually temporary and automatically release after a predetermined,
+organization-defined time period. If a delay algorithm is selected, organizations may employ
+different algorithms for different components of the system based on the capabilities of those
+components. Responses to unsuccessful logon attempts may be implemented at the operating
+system and the application levels. Organization-defined actions that may be taken when the
+number of allowed consecutive invalid logon attempts is exceeded include prompting the user to
+answer a secret question in addition to the username and password, invoking a lockdown mode
+with limited user capabilities (instead of full lockout), allowing users to only logon from specified
+Internet Protocol (IP) addresses, requiring a CAPTCHA to prevent automated attacks, or applying
+user profiles such as location, time of day, IP address, device, or Media Access Control (MAC)
+address. If automatic system lockout or execution of a delay algorithm is not implemented in
+support of the availability objective, organizations consider a combination of other actions to
+help prevent brute force attacks. In addition to the above, organizations can prompt users to
+respond to a secret question before the number of allowed unsuccessful logon attempts is
+exceeded. Automatically unlocking an account after a specified period of time is generally not
+permitted. However, exceptions may be required based on operational mission or need.
+UNSUCCESSFUL LOGON ATTEMPTS | PURGE OR WIPE MOBILE DEVICE
+Purge or wipe information from [Assignment: organization-defined mobile devices] based
+on [Assignment: organization-defined purging or wiping requirements and techniques]
+after [Assignment: organization-defined number] consecutive, unsuccessful device logon
+attempts.
+Discussion: A mobile device is a computing device that has a small form factor such that it
+can be carried by a single individual; is designed to operate without a physical connection;
+possesses local, non-removable or removable data storage; and includes a self-contained
+power source. Purging or wiping the device applies only to mobile devices for which the
+organization-defined number of unsuccessful logons occurs. The logon is to the mobile
+device, not to any one account on the device. Successful logons to accounts on mobile
+devices reset the unsuccessful logon count to zero. Purging or wiping may be unnecessary if
+the information on the device is protected with sufficiently strong encryption mechanisms.
+UNSUCCESSFUL LOGON ATTEMPTS | BIOMETRIC ATTEMPT LIMITING
+Limit the number of unsuccessful biometric logon attempts to [Assignment: organizationdefined number].
+Discussion: Biometrics are probabilistic in nature. The ability to successfully authenticate
+can be impacted by many factors, including matching performance and presentation attack
+detection mechanisms. Organizations select the appropriate number of attempts for users
+based on organizationally-defined factors.
+UNSUCCESSFUL LOGON ATTEMPTS | USE OF ALTERNATE AUTHENTICATION FACTOR
+(a) Allow the use of [Assignment: organization-defined authentication factors] that are
+different from the primary authentication factors after the number of organizationdefined consecutive invalid logon attempts have been exceeded; and
+(b) Enforce a limit of [Assignment: organization-defined number] consecutive invalid
+logon attempts through use of the alternative factors by a user during a [Assignment:
+organization-defined time period].
+Discussion: The use of alternate authentication factors supports the objective of availability
+and allows a user who has inadvertently been locked out to use additional authentication
+factors to bypass the lockout.
+SYSTEM USE NOTIFICATION
+Control:
+a. Display [Assignment: organization-defined system use notification message or banner] to
+users before granting access to the system that provides privacy and security notices
+consistent with applicable laws, executive orders, directives, regulations, policies, standards,
+and guidelines and state that:
+1. Users are accessing a U.S. Government system;
+2. System usage may be monitored, recorded, and subject to audit;
+3. Unauthorized use of the system is prohibited and subject to criminal and civil penalties;
+and
+4. Use of the system indicates consent to monitoring and recording;
+b. Retain the notification message or banner on the screen until users acknowledge the usage
+conditions and take explicit actions to log on to or further access the system; and
+c. For publicly accessible systems:
+1. Display system use information [Assignment: organization-defined conditions], before
+granting further access to the publicly accessible system;
+2. Display references, if any, to monitoring, recording, or auditing that are consistent with
+privacy accommodations for such systems that generally prohibit those activities; and
+3. Include a description of the authorized uses of the system.
+Discussion: System use notifications can be implemented using messages or warning banners
+displayed before individuals log in to systems. System use notifications are used only for access
+via logon interfaces with human users. Notifications are not required when human interfaces do
+not exist. Based on an assessment of risk, organizations consider whether or not a secondary
+system use notification is needed to access applications or other system resources after the
+initial network logon. Organizations consider system use notification messages or banners
+displayed in multiple languages based on organizational needs and the demographics of system
+users. Organizations consult with the privacy office for input regarding privacy messaging and the
+Office of the General Counsel or organizational equivalent for legal review and approval of
+warning banner content.
+PREVIOUS LOGON NOTIFICATION
+Control: Notify the user, upon successful logon to the system, of the date and time of the last
+logon.
+Discussion: Previous logon notification is applicable to system access via human user interfaces
+and access to systems that occurs in other types of architectures. Information about the last
+successful logon allows the user to recognize if the date and time provided is not consistent with
+the user’s last access.
+PREVIOUS LOGON NOTIFICATION | UNSUCCESSFUL LOGONS
+Notify the user, upon successful logon, of the number of unsuccessful logon attempts since
+the last successful logon.
+Discussion: Information about the number of unsuccessful logon attempts since the last
+successful logon allows the user to recognize if the number of unsuccessful logon attempts is
+consistent with the user’s actual logon attempts.
+PREVIOUS LOGON NOTIFICATION | SUCCESSFUL AND UNSUCCESSFUL LOGONS
+Notify the user, upon successful logon, of the number of [Selection: successful logons;
+unsuccessful logon attempts; both] during [Assignment: organization-defined time period].
+Discussion: Information about the number of successful and unsuccessful logon attempts
+within a specified time period allows the user to recognize if the number and type of logon
+attempts are consistent with the user’s actual logon attempts.
+PREVIOUS LOGON NOTIFICATION | NOTIFICATION OF ACCOUNT CHANGES
+Notify the user, upon successful logon, of changes to [Assignment: organization-defined
+security-related characteristics or parameters of the user’s account] during [Assignment:
+organization-defined time period].
+Discussion: Information about changes to security-related account characteristics within a
+specified time period allows users to recognize if changes were made without their
+knowledge.
+PREVIOUS LOGON NOTIFICATION | ADDITIONAL LOGON INFORMATION
+Notify the user, upon successful logon, of the following additional information:
+[Assignment: organization-defined additional information].
+Discussion: Organizations can specify additional information to be provided to users upon
+logon, including the location of the last logon. User location is defined as information that
+can be determined by systems, such as Internet Protocol (IP) addresses from which network
+logons occurred, notifications of local logons, or device identifiers.
+DEVICE LOCK
+Control:
+a. Prevent further access to the system by [Selection (one or more): initiating a device lock after
+[Assignment: organization-defined time period] of inactivity; requiring the user to initiate a
+device lock before leaving the system unattended]; and
+b. Retain the device lock until the user reestablishes access using established identification and
+authentication procedures.
+Discussion: Device locks are temporary actions taken to prevent logical access to organizational
+systems when users stop work and move away from the immediate vicinity of those systems but
+do not want to log out because of the temporary nature of their absences. Device locks can be
+implemented at the operating system level or at the application level. A proximity lock may be
+used to initiate the device lock (e.g., via a Bluetooth-enabled device or dongle). User-initiated
+device locking is behavior or policy-based and, as such, requires users to take physical action to
+initiate the device lock. Device locks are not an acceptable substitute for logging out of systems,
+such as when organizations require users to log out at the end of workdays.
+DEVICE LOCK | PATTERN-HIDING DISPLAYS
+Conceal, via the device lock, information previously visible on the display with a publicly
+viewable image.
+Discussion: The pattern-hiding display can include static or dynamic images, such as
+patterns used with screen savers, photographic images, solid colors, clock, battery life
+indicator, or a blank screen with the caveat that controlled unclassified information is not
+displayed
+SESSION TERMINATION
+Control: Automatically terminate a user session after [Assignment: organization-defined
+conditions or trigger events requiring session disconnect].
+Discussion: Session termination addresses the termination of user-initiated logical sessions (in
+contrast to SC-10, which addresses the termination of network connections associated with
+communications sessions (i.e., network disconnect)). A logical session (for local, network, and
+remote access) is initiated whenever a user (or process acting on behalf of a user) accesses an
+organizational system. Such user sessions can be terminated without terminating network
+sessions. Session termination ends all processes associated with a user’s logical session except
+for those processes that are specifically created by the user (i.e., session owner) to continue after
+the session is terminated. Conditions or trigger events that require automatic termination of the
+session include organization-defined periods of user inactivity, targeted responses to certain
+types of incidents, or time-of-day restrictions on system use.
+SESSION TERMINATION | USER-INITIATED LOGOUTS
+Provide a logout capability for user-initiated communications sessions whenever
+authentication is used to gain access to [Assignment: organization-defined information
+resources].
+Discussion: Information resources to which users gain access via authentication include local
+workstations, databases, and password-protected websites or web-based services.
+SESSION TERMINATION | TERMINATION MESSAGE
+Display an explicit logout message to users indicating the termination of authenticated
+communications sessions.
+Discussion: Logout messages for web access can be displayed after authenticated sessions
+have been terminated. However, for certain types of sessions, including file transfer protocol
+(FTP) sessions, systems typically send logout messages as final messages prior to terminating
+sessions
+SESSION TERMINATION | TIMEOUT WARNING MESSAGE
+Display an explicit message to users indicating that the session will end in [Assignment:
+organization-defined time until end of session].
+Discussion: To increase usability, notify users of pending session termination and prompt
+users to continue the session. The pending session termination time period is based on the
+parameters defined in the AC-12 base control.
+PERMITTED ACTIONS WITHOUT IDENTIFICATION OR AUTHENTICATION
+Control:
+a. Identify [Assignment: organization-defined user actions] that can be performed on the
+system without identification or authentication consistent with organizational mission and
+business functions; and
+b. Document and provide supporting rationale in the security plan for the system, user actions
+not requiring identification or authentication.
+Discussion: Specific user actions may be permitted without identification or authentication if
+organizations determine that identification and authentication are not required for the specified
+user actions. Organizations may allow a limited number of user actions without identification or
+authentication, including when individuals access public websites or other publicly accessible
+federal systems, when individuals use mobile phones to receive calls, or when facsimiles are
+received. Organizations identify actions that normally require identification or authentication but
+may, under certain circumstances, allow identification or authentication mechanisms to be
+bypassed. Such bypasses may occur, for example, via a software-readable physical switch that
+commands bypass of the logon functionality and is protected from accidental or unmonitored
+use. Permitting actions without identification or authentication does not apply to situations
+where identification and authentication have already occurred and are not repeated but rather
+to situations where identification and authentication have not yet occurred. Organizations may
+decide that there are no user actions that can be performed on organizational systems without
+identification and authentication, and therefore, the value for the assignment operation can be
+“none.”
+POLICY AND PROCEDURES
+Control:
+a. Develop, document, and disseminate to [Assignment: organization-defined personnel or
+roles]:
+1. [Selection (one or more): Organization-level; Mission/business process-level; Systemlevel] identification and authentication policy that:
+(a) Addresses purpose, scope, roles, responsibilities, management commitment,
+coordination among organizational entities, and compliance; and
+(b) Is consistent with applicable laws, executive orders, directives, regulations, policies,
+standards, and guidelines; and
+2. Procedures to facilitate the implementation of the identification and authentication
+policy and the associated identification and authentication controls;
+b. Designate an [Assignment: organization-defined official] to manage the development,
+documentation, and dissemination of the identification and authentication policy and
+procedures; and
+c. Review and update the current identification and authentication:
+1. Policy [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events]; and
+2. Procedures [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events].
+Discussion: Identification and authentication policy and procedures address the controls in the
+IA family that are implemented within systems and organizations. The risk management strategy
+is an important factor in establishing such policies and procedures. Policies and procedures
+contribute to security and privacy assurance. Therefore, it is important that security and privacy
+programs collaborate on the development of identification and authentication policy and
+procedures. Security and privacy program policies and procedures at the organization level are
+preferable, in general, and may obviate the need for mission- or system-specific policies and
+procedures. The policy can be included as part of the general security and privacy policy or be
+represented by multiple policies that reflect the complex nature of organizations. Procedures can
+be established for security and privacy programs, for mission or business processes, and for
+systems, if needed. Procedures describe how the policies or controls are implemented and can
+be directed at the individual or role that is the object of the procedure. Procedures can be
+documented in system security and privacy plans or in one or more separate documents. Events
+that may precipitate an update to identification and authentication policy and procedures
+include assessment or audit findings, security incidents or breaches, or changes in applicable
+laws, executive orders, directives, regulations, policies, standards, and guidelines. Simply
+restating controls does not constitute an organizational policy or procedure.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS)
+Control: Uniquely identify and authenticate organizational users and associate that unique
+identification with processes acting on behalf of those users.
+Discussion: Organizations can satisfy the identification and authentication requirements by
+complying with the requirements in [HSPD 12]. Organizational users include employees or
+individuals who organizations consider to have an equivalent status to employees (e.g.,
+contractors and guest researchers). Unique identification and authentication of users applies to
+all accesses other than those that are explicitly identified in AC-14 and that occur through the
+authorized use of group authenticators without individual authentication. Since processes
+execute on behalf of groups and roles, organizations may require unique identification of
+individuals in group accounts or for detailed accountability of individual activity.
+Organizations employ passwords, physical authenticators, or biometrics to authenticate user
+identities or, in the case of multi-factor authentication, some combination thereof. Access to
+organizational systems is defined as either local access or network access. Local access is any
+access to organizational systems by users or processes acting on behalf of users, where access is
+obtained through direct connections without the use of networks. Network access is access to
+organizational systems by users (or processes acting on behalf of users) where access is obtained
+through network connections (i.e., nonlocal accesses). Remote access is a type of network access
+that involves communication through external networks. Internal networks include local area
+networks and wide area networks.
+The use of encrypted virtual private networks for network connections between organizationcontrolled endpoints and non-organization-controlled endpoints may be treated as internal
+networks with respect to protecting the confidentiality and integrity of information traversing
+the network. Identification and authentication requirements for non-organizational users are
+described in IA-8.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | MULTI-FACTOR
+AUTHENTICATION TO PRIVILEGED ACCOUNTS
+Implement multi-factor authentication for access to privileged accounts.
+Discussion: Multi-factor authentication requires the use of two or more different factors to
+achieve authentication. The authentication factors are defined as follows: something you
+know (e.g., a personal identification number [PIN]), something you have (e.g., a physical
+authenticator such as a cryptographic private key), or something you are (e.g., a biometric).
+Multi-factor authentication solutions that feature physical authenticators include hardware
+authenticators that provide time-based or challenge-response outputs and smart cards such
+as the U.S. Government Personal Identity Verification (PIV) card or the Department of
+Defense (DoD) Common Access Card (CAC). In addition to authenticating users at the system
+level (i.e., at logon), organizations may employ authentication mechanisms at the application
+level, at their discretion, to provide increased security. Regardless of the type of access (i.e.,
+local, network, remote), privileged accounts are authenticated using multi-factor options
+appropriate for the level of risk. Organizations can add additional security measures, such as
+additional or more rigorous authentication mechanisms, for specific types of access.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | MULTI-FACTOR
+AUTHENTICATION TO NON-PRIVILEGED ACCOUNTS
+Implement multi-factor authentication for access to non-privileged accounts.
+Discussion: Multi-factor authentication requires the use of two or more different factors to
+achieve authentication. The authentication factors are defined as follows: something you
+know (e.g., a personal identification number [PIN]), something you have (e.g., a physical
+authenticator such as a cryptographic private key), or something you are (e.g., a biometric).
+Multi-factor authentication solutions that feature physical authenticators include hardware
+authenticators that provide time-based or challenge-response outputs and smart cards such
+as the U.S. Government Personal Identity Verification card or the DoD Common Access Card.
+In addition to authenticating users at the system level, organizations may also employ
+authentication mechanisms at the application level, at their discretion, to provide increased
+information security. Regardless of the type of access (i.e., local, network, remote), nonprivileged accounts are authenticated using multi-factor options appropriate for the level of
+risk. Organizations can provide additional security measures, such as additional or more
+rigorous authentication mechanisms, for specific types of access.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | INDIVIDUAL AUTHENTICATION
+WITH GROUP AUTHENTICATION
+When shared accounts or authenticators are employed, require users to be individually
+authenticated before granting access to the shared accounts or resources.
+Discussion: Individual authentication prior to shared group authentication mitigates the risk
+of using group accounts or authenticators
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | ACCESS TO ACCOUNTS —
+SEPARATE DEVICE
+Implement multi-factor authentication for [Selection (one or more): local; network;
+remote] access to [Selection (one or more): privileged accounts; non-privileged accounts]
+such that:
+(a) One of the factors is provided by a device separate from the system gaining access;
+and
+(b) The device meets [Assignment: organization-defined strength of mechanism
+requirements].
+Discussion: The purpose of requiring a device that is separate from the system to which the
+user is attempting to gain access for one of the factors during multi-factor authentication is
+to reduce the likelihood of compromising authenticators or credentials stored on the
+system. Adversaries may be able to compromise such authenticators or credentials and
+subsequently impersonate authorized users. Implementing one of the factors on a separate
+device (e.g., a hardware token), provides a greater strength of mechanism and an increased
+level of assurance in the authentication process
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | ACCESS TO ACCOUNTS —
+REPLAY RESISTANT
+Implement replay-resistant authentication mechanisms for access to [Selection (one or
+more): privileged accounts; non-privileged accounts].
+Discussion: Authentication processes resist replay attacks if it is impractical to achieve
+successful authentications by replaying previous authentication messages. Replay-resistant
+techniques include protocols that use nonces or challenges such as time synchronous or
+cryptographic authenticators.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | SINGLE SIGN-ON
+Provide a single sign-on capability for [Assignment: organization-defined system accounts
+and services].
+Discussion: Single sign-on enables users to log in once and gain access to multiple system
+resources. Organizations consider the operational efficiencies provided by single sign-on
+capabilities with the risk introduced by allowing access to multiple systems via a single
+authentication event. Single sign-on can present opportunities to improve system security,
+for example by providing the ability to add multi-factor authentication for applications and
+systems (existing and new) that may not be able to natively support multi-factor
+authentication.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | ACCEPTANCE OF PIV
+CREDENTIALS
+Accept and electronically verify Personal Identity Verification-compliant credentials.
+Discussion: Acceptance of Personal Identity Verification (PIV)-compliant credentials applies
+to organizations implementing logical access control and physical access control systems.
+PIV-compliant credentials are those credentials issued by federal agencies that conform to
+FIPS Publication 201 and supporting guidance documents. The adequacy and reliability of PIV
+card issuers are authorized using [SP 800-79-2]. Acceptance of PIV-compliant credentials
+includes derived PIV credentials, the use of which is addressed in [SP 800-166]. The DOD
+Common Access Card (CAC) is an example of a PIV credential.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | OUT-OF-BAND
+AUTHENTICATION
+Implement the following out-of-band authentication mechanisms under [Assignment:
+organization-defined conditions]: [Assignment: organization-defined out-of-band
+authentication].
+Discussion: Out-of-band authentication refers to the use of two separate communication
+paths to identify and authenticate users or devices to an information system. The first path
+(i.e., the in-band path) is used to identify and authenticate users or devices and is generally
+the path through which information flows. The second path (i.e., the out-of-band path) is
+used to independently verify the authentication and/or requested action. For example, a
+user authenticates via a notebook computer to a remote server to which the user desires
+access and requests some action of the server via that communication path. Subsequently,
+the server contacts the user via the user’s cell phone to verify that the requested action
+originated from the user. The user may confirm the intended action to an individual on the
+telephone or provide an authentication code via the telephone. Out-of-band authentication
+can be used to mitigate actual or suspected “man-in the-middle” attacks. The conditions or
+criteria for activation include suspicious activities, new threat indicators, elevated threat
+levels, or the impact or classification level of information in requested transactions.
+DEVICE IDENTIFICATION AND AUTHENTICATION
+Control: Uniquely identify and authenticate [Assignment: organization-defined devices and/or
+types of devices] before establishing a [Selection (one or more): local; remote; network]
+connection.
+Discussion: Devices that require unique device-to-device identification and authentication are
+defined by type, device, or a combination of type and device. Organization-defined device types
+include devices that are not owned by the organization. Systems use shared known information
+(e.g., Media Access Control [MAC], Transmission Control Protocol/Internet Protocol [TCP/IP]
+addresses) for device identification or organizational authentication solutions (e.g., Institute of
+Electrical and Electronics Engineers (IEEE) 802.1x and Extensible Authentication Protocol [EAP],
+RADIUS server with EAP-Transport Layer Security [TLS] authentication, Kerberos) to identify and
+authenticate devices on local and wide area networks. Organizations determine the required
+strength of authentication mechanisms based on the security categories of systems and mission
+or business requirements. Because of the challenges of implementing device authentication on a
+large scale, organizations can restrict the application of the control to a limited number/type of
+devices based on mission or business needs.
+DEVICE IDENTIFICATION AND AUTHENTICATION | CRYPTOGRAPHIC BIDIRECTIONAL AUTHENTICATION
+Authenticate [Assignment: organization-defined devices and/or types of devices] before
+establishing [Selection (one or more): local; remote; network] connection using
+bidirectional authentication that is cryptographically based.
+Discussion: A local connection is a connection with a device that communicates without the
+use of a network. A network connection is a connection with a device that communicates
+through a network. A remote connection is a connection with a device that communicates
+through an external network. Bidirectional authentication provides stronger protection to
+validate the identity of other devices for connections that are of greater risk.
+DEVICE IDENTIFICATION AND AUTHENTICATION | CRYPTOGRAPHIC BIDIRECTIONAL NETWORK
+AUTHENTICATION
+DEVICE IDENTIFICATION AND AUTHENTICATION | DYNAMIC ADDRESS ALLOCATION
+(a) Where addresses are allocated dynamically, standardize dynamic address allocation
+lease information and the lease duration assigned to devices in accordance with
+[Assignment: organization-defined lease information and lease duration]; and
+(b) Audit lease information when assigned to a device.
+Discussion: The Dynamic Host Configuration Protocol (DHCP) is an example of a means by
+which clients can dynamically receive network address assignments.
+DEVICE IDENTIFICATION AND AUTHENTICATION | DEVICE ATTESTATION
+Handle device identification and authentication based on attestation by [Assignment:
+organization-defined configuration management process].
+Discussion: Device attestation refers to the identification and authentication of a device
+based on its configuration and known operating state. Device attestation can be determined
+via a cryptographic hash of the device. If device attestation is the means of identification and
+authentication, then it is important that patches and updates to the device are handled via a
+configuration management process such that the patches and updates are done securely
+and do not disrupt identification and authentication to other devices.
+IDENTIFIER MANAGEMENT
+Control: Manage system identifiers by:
+a. Receiving authorization from [Assignment: organization-defined personnel or roles] to assign
+an individual, group, role, service, or device identifier;
+b. Selecting an identifier that identifies an individual, group, role, service, or device;
+c. Assigning the identifier to the intended individual, group, role, service, or device; and
+d. Preventing reuse of identifiers for [Assignment: organization-defined time period].
+Discussion: Common device identifiers include Media Access Control (MAC) addresses, Internet
+Protocol (IP) addresses, or device-unique token identifiers. The management of individual
+identifiers is not applicable to shared system accounts. Typically, individual identifiers are the
+usernames of the system accounts assigned to those individuals. In such instances, the account
+management activities of AC-2 use account names provided by IA-4. Identifier management also
+addresses individual identifiers not necessarily associated with system accounts. Preventing the
+reuse of identifiers implies preventing the assignment of previously used individual, group, role,
+service, or device identifiers to different individuals, groups, roles, services, or devices.
+IDENTIFIER MANAGEMENT | PROHIBIT ACCOUNT IDENTIFIERS AS PUBLIC IDENTIFIERS
+Prohibit the use of system account identifiers that are the same as public identifiers for
+individual accounts.
+Discussion: Prohibiting account identifiers as public identifiers applies to any publicly
+disclosed account identifier used for communication such as, electronic mail and instant
+messaging. Prohibiting the use of systems account identifiers that are the same as some
+public identifier, such as the individual identifier section of an electronic mail address, makes
+it more difficult for adversaries to guess user identifiers. Prohibiting account identifiers as
+public identifiers without the implementation of other supporting controls only complicates
+guessing of identifiers. Additional protections are required for authenticators and credentials
+to protect the account.
+IDENTIFIER MANAGEMENT | IDENTIFY USER STATUS
+Manage individual identifiers by uniquely identifying each individual as [Assignment:
+organization-defined characteristic identifying individual status].
+Discussion: Characteristics that identify the status of individuals include contractors, foreign
+nationals, and non-organizational users. Identifying the status of individuals by these
+characteristics provides additional information about the people with whom organizational
+personnel are communicating. For example, it might be useful for a government employee
+to know that one of the individuals on an email message is a contractor.
+IDENTIFIER MANAGEMENT | DYNAMIC MANAGEMENT
+Manage individual identifiers dynamically in accordance with [Assignment: organizationdefined dynamic identifier policy].
+Discussion: In contrast to conventional approaches to identification that presume static
+accounts for preregistered users, many distributed systems establish identifiers at runtime
+for entities that were previously unknown. When identifiers are established at runtime for
+previously unknown entities, organizations can anticipate and provision for the dynamic
+establishment of identifiers. Pre-established trust relationships and mechanisms with
+appropriate authorities to validate credentials and related identifiers are essential.
+IDENTIFIER MANAGEMENT | CROSS-ORGANIZATION MANAGEMENT
+Coordinate with the following external organizations for cross-organization management
+of identifiers: [Assignment: organization-defined external organizations].
+Discussion: Cross-organization identifier management provides the capability to identify
+individuals, groups, roles, or devices when conducting cross-organization activities involving
+the processing, storage, or transmission of information.
+IDENTIFIER MANAGEMENT | PAIRWISE PSEUDONYMOUS IDENTIFIERS
+Generate pairwise pseudonymous identifiers.
+Discussion: A pairwise pseudonymous identifier is an opaque unguessable subscriber
+identifier generated by an identity provider for use at a specific individual relying party.
+Generating distinct pairwise pseudonymous identifiers with no identifying information about
+a subscriber discourages subscriber activity tracking and profiling beyond the operational
+requirements established by an organization. The pairwise pseudonymous identifiers are
+unique to each relying party except in situations where relying parties can show a
+demonstrable relationship justifying an operational need for correlation, or all parties
+consent to being correlated in such a manner.
+IDENTIFIER MANAGEMENT | ATTRIBUTE MAINTENANCE AND PROTECTION
+Maintain the attributes for each uniquely identified individual, device, or service in
+[Assignment: organization-defined protected central storage].
+Discussion: For each of the entities covered in IA-2, IA-3, IA-8, and IA-9, it is important to
+maintain the attributes for each authenticated entity on an ongoing basis in a central
+(protected) store.
+AUTHENTICATOR MANAGEMENT
+Control: Manage system authenticators by:
+a. Verifying, as part of the initial authenticator distribution, the identity of the individual,
+group, role, service, or device receiving the authenticator;
+b. Establishing initial authenticator content for any authenticators issued by the organization;
+c. Ensuring that authenticators have sufficient strength of mechanism for their intended use;
+d. Establishing and implementing administrative procedures for initial authenticator
+distribution, for lost or compromised or damaged authenticators, and for revoking
+authenticators;
+e. Changing default authenticators prior to first use;
+f. Changing or refreshing authenticators [Assignment: organization-defined time period by
+authenticator type] or when [Assignment: organization-defined events] occur;
+g. Protecting authenticator content from unauthorized disclosure and modification;
+h. Requiring individuals to take, and having devices implement, specific controls to protect
+authenticators; and
+i. Changing authenticators for group or role accounts when membership to those accounts
+changes.
+Discussion: Authenticators include passwords, cryptographic devices, biometrics, certificates,
+one-time password devices, and ID badges. Device authenticators include certificates and
+passwords. Initial authenticator content is the actual content of the authenticator (e.g., the initial
+password). In contrast, the requirements for authenticator content contain specific criteria or
+characteristics (e.g., minimum password length). Developers may deliver system components
+with factory default authentication credentials (i.e., passwords) to allow for initial installation
+and configuration. Default authentication credentials are often well known, easily discoverable,
+and present a significant risk. The requirement to protect individual authenticators may be
+implemented via control PL-4 or PS-6 for authenticators in the possession of individuals and by
+controls AC-3, AC-6, and SC-28 for authenticators stored in organizational systems, including
+passwords stored in hashed or encrypted formats or files containing encrypted or hashed
+passwords accessible with administrator privileges.
+Systems support authenticator management by organization-defined settings and restrictions for
+various authenticator characteristics (e.g., minimum password length, validation time window for
+time synchronous one-time tokens, and number of allowed rejections during the verification
+stage of biometric authentication). Actions can be taken to safeguard individual authenticators,
+including maintaining possession of authenticators, not sharing authenticators with others, and
+immediately reporting lost, stolen, or compromised authenticators. Authenticator management
+includes issuing and revoking authenticators for temporary access when no longer needed.
+(1) AUTHENTICATOR MANAGEMENT | PASSWORD-BASED AUTHENTICATION
+For password-based authentication:
+(a) Maintain a list of commonly-used, expected, or compromised passwords and update
+the list [Assignment: organization-defined frequency] and when organizational
+passwords are suspected to have been compromised directly or indirectly;
+(b) Verify, when users create or update passwords, that the passwords are not found on
+the list of commonly-used, expected, or compromised passwords in IA-5(1)(a);
+(c) Transmit passwords only over cryptographically-protected channels;
+(d) Store passwords using an approved salted key derivation function, preferably using a
+keyed hash;
+(e) Require immediate selection of a new password upon account recovery;
+(f) Allow user selection of long passwords and passphrases, including spaces and all
+printable characters;
+(g) Employ automated tools to assist the user in selecting strong password
+authenticators; and
+(h) Enforce the following composition and complexity rules: [Assignment: organizationdefined composition and complexity rules].
+Discussion: Password-based authentication applies to passwords regardless of whether they
+are used in single-factor or multi-factor authentication. Long passwords or passphrases are
+preferable over shorter passwords. Enforced composition rules provide marginal security
+benefits while decreasing usability. However, organizations may choose to establish certain
+rules for password generation (e.g., minimum character length for long passwords) under
+certain circumstances and can enforce this requirement in IA-5(1)(h). Account recovery can
+occur, for example, in situations when a password is forgotten. Cryptographically protected
+passwords include salted one-way cryptographic hashes of passwords. The list of commonly
+used, compromised, or expected passwords includes passwords obtained from previous
+breach corpuses, dictionary words, and repetitive or sequential characters. The list includes
+context-specific words, such as the name of the service, username, and derivatives thereof
+AUTHENTICATOR MANAGEMENT | PUBLIC KEY-BASED AUTHENTICATION
+(a) For public key-based authentication:
+(1) Enforce authorized access to the corresponding private key; and
+(2) Map the authenticated identity to the account of the individual or group; and
+(b) When public key infrastructure (PKI) is used:
+(1) Validate certificates by constructing and verifying a certification path to an
+accepted trust anchor, including checking certificate status information; and
+(2) Implement a local cache of revocation data to support path discovery and
+validation.
+Discussion: Public key cryptography is a valid authentication mechanism for individuals,
+machines, and devices. For PKI solutions, status information for certification paths includes
+certificate revocation lists or certificate status protocol responses. For PIV cards, certificate
+validation involves the construction and verification of a certification path to the Common
+Policy Root trust anchor, which includes certificate policy processing. Implementing a local
+cache of revocation data to support path discovery and validation also supports system
+availability in situations where organizations are unable to access revocation information via
+the network
+AUTHENTICATOR MANAGEMENT | CHANGE AUTHENTICATORS PRIOR TO DELIVERY
+Require developers and installers of system components to provide unique authenticators
+or change default authenticators prior to delivery and installation.
+Discussion: Changing authenticators prior to the delivery and installation of system
+components extends the requirement for organizations to change default authenticators
+upon system installation by requiring developers and/or installers to provide unique
+authenticators or change default authenticators for system components prior to delivery
+and/or installation. However, it typically does not apply to developers of commercial off-theshelf information technology products. Requirements for unique authenticators can be
+included in acquisition documents prepared by organizations when procuring systems or
+system components.
+AUTHENTICATOR MANAGEMENT | PROTECTION OF AUTHENTICATORS
+Protect authenticators commensurate with the security category of the information to
+which use of the authenticator permits access.
+Discussion: For systems that contain multiple security categories of information without
+reliable physical or logical separation between categories, authenticators used to grant
+access to the systems are protected commensurate with the highest security category of
+information on the systems. Security categories of information are determined as part of the
+security categorization process.
+AUTHENTICATOR MANAGEMENT | NO EMBEDDED UNENCRYPTED STATIC AUTHENTICATORS
+Ensure that unencrypted static authenticators are not embedded in applications or other
+forms of static storage.
+Discussion: In addition to applications, other forms of static storage include access scripts
+and function keys. Organizations exercise caution when determining whether embedded or
+stored authenticators are in encrypted or unencrypted form. If authenticators are used in
+the manner stored, then those representations are considered unencrypted authenticators.
+AUTHENTICATOR MANAGEMENT | MULTIPLE SYSTEM ACCOUNTS
+Implement [Assignment: organization-defined security controls] to manage the risk of
+compromise due to individuals having accounts on multiple systems.
+Discussion: When individuals have accounts on multiple systems and use the same
+authenticators such as passwords, there is the risk that a compromise of one account may
+lead to the compromise of other accounts. Alternative approaches include having different
+authenticators (passwords) on all systems, employing a single sign-on or federation
+mechanism, or using some form of one-time passwords on all systems. Organizations can
+also use rules of behavior (see PL-4) and access agreements (see PS-6) to mitigate the risk of
+multiple system accounts.
+AUTHENTICATOR MANAGEMENT | FEDERATED CREDENTIAL MANAGEMENT
+Use the following external organizations to federate credentials: [Assignment:
+organization-defined external organizations].
+Discussion: Federation provides organizations with the capability to authenticate individuals
+and devices when conducting cross-organization activities involving the processing, storage,
+or transmission of information. Using a specific list of approved external organizations for
+authentication helps to ensure that those organizations are vetted and trusted.
+AUTHENTICATOR MANAGEMENT | DYNAMIC CREDENTIAL BINDING
+Bind identities and authenticators dynamically using the following rules: [Assignment:
+organization-defined binding rules].
+Discussion: Authentication requires some form of binding between an identity and the
+authenticator that is used to confirm the identity. In conventional approaches, binding is
+established by pre-provisioning both the identity and the authenticator to the system. For
+example, the binding between a username (i.e., identity) and a password (i.e., authenticator)
+is accomplished by provisioning the identity and authenticator as a pair in the system. New
+authentication techniques allow the binding between the identity and the authenticator to
+be implemented external to a system. For example, with smartcard credentials, the identity
+and authenticator are bound together on the smartcard. Using these credentials, systems
+can authenticate identities that have not been pre-provisioned, dynamically provisioning the
+identity after authentication. In these situations, organizations can anticipate the dynamic
+provisioning of identities. Pre-established trust relationships and mechanisms with
+appropriate authorities to validate identities and related credentials are essential.
+AUTHENTICATOR MANAGEMENT | BIOMETRIC AUTHENTICATION PERFORMANCE
+For biometric-based authentication, employ mechanisms that satisfy the following
+biometric quality requirements [Assignment: organization-defined biometric quality
+requirements].
+Discussion: Unlike password-based authentication, which provides exact matches of userinput passwords to stored passwords, biometric authentication does not provide exact
+matches. Depending on the type of biometric and the type of collection mechanism, there is
+likely to be some divergence from the presented biometric and the stored biometric that
+serves as the basis for comparison. Matching performance is the rate at which a biometric
+algorithm correctly results in a match for a genuine user and rejects other users. Biometric
+performance requirements include the match rate, which reflects the accuracy of the
+biometric matching algorithm used by a system.
+AUTHENTICATOR MANAGEMENT | EXPIRATION OF CACHED AUTHENTICATORS
+Prohibit the use of cached authenticators after [Assignment: organization-defined time
+period].
+Discussion: Cached authenticators are used to authenticate to the local machine when the
+network is not available. If cached authentication information is out of date, the validity of
+the authentication information may be questionable.
+AUTHENTICATOR MANAGEMENT | MANAGING CONTENT OF PKI TRUST STORES
+For PKI-based authentication, employ an organization-wide methodology for managing the
+content of PKI trust stores installed across all platforms, including networks, operating
+systems, browsers, and applications.
+Discussion: An organization-wide methodology for managing the content of PKI trust stores
+helps improve the accuracy and currency of PKI-based authentication credentials across the
+organization.
+AUTHENTICATOR MANAGEMENT | GSA-APPROVED PRODUCTS AND SERVICES
+Use only General Services Administration-approved products and services for identity,
+credential, and access management.
+Discussion: General Services Administration (GSA)-approved products and services are
+products and services that have been approved through the GSA conformance program,
+where applicable, and posted to the GSA Approved Products List. GSA provides guidance for
+teams to design and build functional and secure systems that comply with Federal Identity,
+Credential, and Access Management (FICAM) policies, technologies, and implementation
+patterns.
+AUTHENTICATOR MANAGEMENT | IN-PERSON OR TRUSTED EXTERNAL PARTY AUTHENTICATOR
+ISSUANCE
+Require that the issuance of [Assignment: organization-defined types of and/or specific
+authenticators] be conducted [Selection: in person; by a trusted external party] before
+[Assignment: organization-defined registration authority] with authorization by
+[Assignment: organization-defined personnel or roles].
+Discussion: Issuing authenticators in person or by a trusted external party enhances and
+reinforces the trustworthiness of the identity proofing process.
+AUTHENTICATOR MANAGEMENT | PRESENTATION ATTACK DETECTION FOR BIOMETRIC
+AUTHENTICATORS
+Employ presentation attack detection mechanisms for biometric-based authentication.
+Discussion: Biometric characteristics do not constitute secrets. Such characteristics can be
+obtained by online web accesses, taking a picture of someone with a camera phone to
+obtain facial images with or without their knowledge, lifting from objects that someone has
+touched (e.g., a latent fingerprint), or capturing a high-resolution image (e.g., an iris
+pattern). Presentation attack detection technologies including liveness detection, can
+mitigate the risk of these types of attacks by making it difficult to produce artifacts intended
+to defeat the biometric sensor
+AUTHENTICATOR MANAGEMENT | PASSWORD MANAGERS
+(a) Employ [Assignment: organization-defined password managers] to generate and
+manage passwords; and
+(b) Protect the passwords using [Assignment: organization-defined controls].
+Discussion: For systems where static passwords are employed, it is often a challenge to
+ensure that the passwords are suitably complex and that the same passwords are not
+employed on multiple systems. A password manager is a solution to this problem as it
+automatically generates and stores strong and different passwords for various accounts. A
+potential risk of using password managers is that adversaries can target the collection of
+passwords generated by the password manager. Therefore, the collection of passwords
+requires protection including encrypting the passwords (see IA-5(1)(d)) and storing the
+collection offline in a token.
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS)
+Control: Uniquely identify and authenticate non-organizational users or processes acting on
+behalf of non-organizational users.
+Discussion: Non-organizational users include system users other than organizational users
+explicitly covered by IA-2. Non-organizational users are uniquely identified and authenticated for
+accesses other than those explicitly identified and documented in AC-14. Identification and
+authentication of non-organizational users accessing federal systems may be required to protect
+federal, proprietary, or privacy-related information (with exceptions noted for national security
+systems). Organizations consider many factors—including security, privacy, scalability, and
+practicality—when balancing the need to ensure ease of use for access to federal information
+and systems with the need to protect and adequately mitigate risk.
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | ACCEPTANCE OF PIV
+CREDENTIALS FROM OTHER AGENCIES
+Accept and electronically verify Personal Identity Verification-compliant credentials from
+other federal agencies.
+Discussion: Acceptance of Personal Identity Verification (PIV) credentials from other federal
+agencies applies to both logical and physical access control systems. PIV credentials are
+those credentials issued by federal agencies that conform to FIPS Publication 201 and
+supporting guidelines. The adequacy and reliability of PIV card issuers are addressed and
+authorized using [SP 800-79-2].
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | ACCEPTANCE OF EXTERNAL
+AUTHENTICATORS
+(a) Accept only external authenticators that are NIST-compliant; and
+(b) Document and maintain a list of accepted external authenticators.
+Discussion: Acceptance of only NIST-compliant external authenticators applies to
+organizational systems that are accessible to the public (e.g., public-facing websites).
+External authenticators are issued by nonfederal government entities and are compliant
+with [SP 800-63B]. Approved external authenticators meet or exceed the minimum Federal
+Government-wide technical, security, privacy, and organizational maturity requirements.
+Meeting or exceeding Federal requirements allows Federal Government relying parties to
+trust external authenticators in connection with an authentication transaction at a specified
+authenticator assurance level.
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | USE OF DEFINED PROFILES
+Conform to the following profiles for identity management [Assignment: organizationdefined identity management profiles].
+Discussion: Organizations define profiles for identity management based on open identity
+management standards. To ensure that open identity management standards are viable,
+robust, reliable, sustainable, and interoperable as documented, the Federal Government
+assesses and scopes the standards and technology implementations against applicable laws,
+executive orders, directives, policies, regulations, standards, and guidelines.
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | ACCEPTANCE OF PIV-I
+CREDENTIALS
+Accept and verify federated or PKI credentials that meet [Assignment: organizationdefined policy].
+Discussion: Acceptance of PIV-I credentials can be implemented by PIV, PIV-I, and other
+commercial or external identity providers. The acceptance and verification of PIV-I-compliant
+credentials apply to both logical and physical access control systems. The acceptance and
+verification of PIV-I credentials address nonfederal issuers of identity cards that desire to
+interoperate with United States Government PIV systems and that can be trusted by Federal
+Government-relying parties. The X.509 certificate policy for the Federal Bridge Certification
+Authority (FBCA) addresses PIV-I requirements. The PIV-I card is commensurate with the PIV
+credentials as defined in cited references. PIV-I credentials are the credentials issued by a
+PIV-I provider whose PIV-I certificate policy maps to the Federal Bridge PIV-I Certificate
+Policy. A PIV-I provider is cross-certified with the FBCA (directly or through another PKI
+bridge) with policies that have been mapped and approved as meeting the requirements of
+the PIV-I policies defined in the FBCA certificate policy
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | DISASSOCIABILITY
+Implement the following measures to disassociate user attributes or identifier assertion
+relationships among individuals, credential service providers, and relying parties:
+[Assignment: organization-defined measures].
+Discussion: Federated identity solutions can create increased privacy risks due to the
+tracking and profiling of individuals. Using identifier mapping tables or cryptographic
+techniques to blind credential service providers and relying parties from each other or to
+make identity attributes less visible to transmitting parties can reduce these privacy risks.
+SERVICE IDENTIFICATION AND AUTHENTICATION
+Control: Uniquely identify and authenticate [Assignment: organization-defined system services
+and applications] before establishing communications with devices, users, or other services or
+applications.
+Discussion: Services that may require identification and authentication include web applications
+using digital certificates or services or applications that query a database. Identification and
+authentication methods for system services and applications include information or code signing,
+provenance graphs, and electronic signatures that indicate the sources of services. Decisions
+regarding the validity of identification and authentication claims can be made by services
+separate from the services acting on those decisions. This can occur in distributed system
+architectures. In such situations, the identification and authentication decisions (instead of actual
+identifiers and authentication data) are provided to the services that need to act on those
+decisions.
+ADAPTIVE AUTHENTICATION
+Control: Require individuals accessing the system to employ [Assignment: organization-defined
+supplemental authentication techniques or mechanisms] under specific [Assignment:
+organization-defined circumstances or situations].
+Discussion: Adversaries may compromise individual authentication mechanisms employed by
+organizations and subsequently attempt to impersonate legitimate users. To address this threat,
+organizations may employ specific techniques or mechanisms and establish protocols to assess
+suspicious behavior. Suspicious behavior may include accessing information that individuals do
+not typically access as part of their duties, roles, or responsibilities; accessing greater quantities
+of information than individuals would routinely access; or attempting to access information from
+suspicious network addresses. When pre-established conditions or triggers occur, organizations
+can require individuals to provide additional authentication information. Another potential use
+for adaptive authentication is to increase the strength of mechanism based on the number or
+types of records being accessed. Adaptive authentication does not replace and is not used to
+avoid the use of multi-factor authentication mechanisms but can augment implementations of
+multi-factor authentication.
+RE-AUTHENTICATION
+Control: Require users to re-authenticate when [Assignment: organization-defined
+circumstances or situations requiring re-authentication].
+Discussion: In addition to the re-authentication requirements associated with device locks,
+organizations may require re-authentication of individuals in certain situations, including when
+roles, authenticators or credentials change, when security categories of systems change, when
+the execution of privileged functions occurs, after a fixed time period, or periodically.

@@ -1,0 +1,645 @@
+DE.AE-4: Impact of events is determined
+CONTINGENCY PLAN
+Control:
+a. Develop a contingency plan for the system that:
+1. Identifies essential mission and business functions and associated contingency
+requirements;
+2. Provides recovery objectives, restoration priorities, and metrics;
+3. Addresses contingency roles, responsibilities, assigned individuals with contact
+information;
+4. Addresses maintaining essential mission and business functions despite a system
+disruption, compromise, or failure;
+5. Addresses eventual, full system restoration without deterioration of the controls
+originally planned and implemented;
+6. Addresses the sharing of contingency information; and
+7. Is reviewed and approved by [Assignment: organization-defined personnel or roles];
+b. Distribute copies of the contingency plan to [Assignment: organization-defined key
+contingency personnel (identified by name and/or by role) and organizational elements];
+c. Coordinate contingency planning activities with incident handling activities;
+d. Review the contingency plan for the system [Assignment: organization-defined frequency];
+e. Update the contingency plan to address changes to the organization, system, or
+environment of operation and problems encountered during contingency plan
+implementation, execution, or testing;
+f. Communicate contingency plan changes to [Assignment: organization-defined key
+contingency personnel (identified by name and/or by role) and organizational elements];
+g. Incorporate lessons learned from contingency plan testing, training, or actual contingency
+activities into contingency testing and training; and
+h. Protect the contingency plan from unauthorized disclosure and modification.
+Discussion: Contingency planning for systems is part of an overall program for achieving
+continuity of operations for organizational mission and business functions. Contingency planning
+addresses system restoration and implementation of alternative mission or business processes
+when systems are compromised or breached. Contingency planning is considered throughout the
+system development life cycle and is a fundamental part of the system design. Systems can be
+designed for redundancy, to provide backup capabilities, and for resilience. Contingency plans
+reflect the degree of restoration required for organizational systems since not all systems need
+to fully recover to achieve the level of continuity of operations desired. System recovery
+objectives reflect applicable laws, executive orders, directives, regulations, policies, standards,
+guidelines, organizational risk tolerance, and system impact level.
+Actions addressed in contingency plans include orderly system degradation, system shutdown,
+fallback to a manual mode, alternate information flows, and operating in modes reserved for
+when systems are under attack. By coordinating contingency planning with incident handling
+activities, organizations ensure that the necessary planning activities are in place and activated in
+the event of an incident. Organizations consider whether continuity of operations during an
+incident conflicts with the capability to automatically disable the system, as specified in IR-4(5).
+Incident response planning is part of contingency planning for organizations and is addressed in
+the IR (Incident Response) family.
+CONTINGENCY PLAN | COORDINATE WITH RELATED PLANS
+Coordinate contingency plan development with organizational elements responsible for
+related plans.
+Discussion: Plans that are related to contingency plans include Business Continuity Plans,
+Disaster Recovery Plans, Critical Infrastructure Plans, Continuity of Operations Plans, Crisis
+Communications Plans, Insider Threat Implementation Plans, Data Breach Response Plans,
+Cyber Incident Response Plans, Breach Response Plans, and Occupant Emergency Plans.
+CONTINGENCY PLAN | CAPACITY PLANNING
+Conduct capacity planning so that necessary capacity for information processing,
+telecommunications, and environmental support exists during contingency operations.
+Discussion: Capacity planning is needed because different threats can result in a reduction
+of the available processing, telecommunications, and support services intended to support
+essential mission and business functions. Organizations anticipate degraded operations
+during contingency operations and factor the degradation into capacity planning. For
+capacity planning, environmental support refers to any environmental factor for which the
+organization determines that it needs to provide support in a contingency situation, even if
+in a degraded state. Such determinations are based on an organizational assessment of risk,
+system categorization (impact level), and organizational risk tolerance.
+CONTINGENCY PLAN | RESUME MISSION AND BUSINESS FUNCTIONS
+Plan for the resumption of [Selection: all; essential] mission and business functions within
+[Assignment: organization-defined time period] of contingency plan activation.
+Discussion: Organizations may choose to conduct contingency planning activities to resume
+mission and business functions as part of business continuity planning or as part of business
+impact analyses. Organizations prioritize the resumption of mission and business functions.
+The time period for resuming mission and business functions may be dependent on the
+severity and extent of the disruptions to the system and its supporting infrastructure.
+CONTINGENCY PLAN | CONTINUE MISSION AND BUSINESS FUNCTIONS
+Plan for the continuance of [Selection: all; essential] mission and business functions with
+minimal or no loss of operational continuity and sustains that continuity until full system
+restoration at primary processing and/or storage sites.
+Discussion: Organizations may choose to conduct the contingency planning activities to
+continue mission and business functions as part of business continuity planning or business
+impact analyses. Primary processing and/or storage sites defined by organizations as part of
+contingency planning may change depending on the circumstances associated with the
+contingency.
+CONTINGENCY PLAN | ALTERNATE PROCESSING AND STORAGE SITES
+Plan for the transfer of [Selection: all; essential] mission and business functions to
+alternate processing and/or storage sites with minimal or no loss of operational continuity
+and sustain that continuity through system restoration to primary processing and/or
+storage sites.
+Discussion: Organizations may choose to conduct contingency planning activities for
+alternate processing and storage sites as part of business continuity planning or business
+impact analyses. Primary processing and/or storage sites defined by organizations as part of
+contingency planning may change depending on the circumstances associated with the
+contingency.
+CONTINGENCY PLAN | COORDINATE WITH EXTERNAL SERVICE PROVIDERS
+Coordinate the contingency plan with the contingency plans of external service providers
+to ensure that contingency requirements can be satisfied.
+Discussion: When the capability of an organization to carry out its mission and business
+functions is dependent on external service providers, developing a comprehensive and
+timely contingency plan may become more challenging. When mission and business
+functions are dependent on external service providers, organizations coordinate contingency
+planning activities with the external entities to ensure that the individual plans reflect the
+overall contingency needs of the organization.
+CONTINGENCY PLAN | IDENTIFY CRITICAL ASSETS
+Identify critical system assets supporting [Selection: all; essential] mission and business
+functions.
+Discussion: Organizations may choose to identify critical assets as part of criticality analysis,
+business continuity planning, or business impact analyses. Organizations identify critical
+system assets so that additional controls can be employed (beyond the controls routinely
+implemented) to help ensure that organizational mission and business functions can
+continue to be conducted during contingency operations. The identification of critical
+information assets also facilitates the prioritization of organizational resources. Critical
+system assets include technical and operational aspects. Technical aspects include system
+components, information technology services, information technology products, and
+mechanisms. Operational aspects include procedures (i.e., manually executed operations)
+and personnel (i.e., individuals operating technical controls and/or executing manual
+procedures). Organizational program protection plans can assist in identifying critical assets.
+If critical assets are resident within or supported by external service providers, organizations
+consider implementing CP-2(7) as a control enhancement.
+INCIDENT HANDLING
+Control:
+a. Implement an incident handling capability for incidents that is consistent with the incident
+response plan and includes preparation, detection and analysis, containment, eradication,
+and recovery;
+b. Coordinate incident handling activities with contingency planning activities;
+c. Incorporate lessons learned from ongoing incident handling activities into incident response
+procedures, training, and testing, and implement the resulting changes accordingly; and
+d. Ensure the rigor, intensity, scope, and results of incident handling activities are comparable
+and predictable across the organization.
+Discussion: Organizations recognize that incident response capabilities are dependent on the
+capabilities of organizational systems and the mission and business processes being supported by
+those systems. Organizations consider incident response as part of the definition, design, and
+development of mission and business processes and systems. Incident-related information can
+be obtained from a variety of sources, including audit monitoring, physical access monitoring,
+and network monitoring; user or administrator reports; and reported supply chain events. An
+effective incident handling capability includes coordination among many organizational entities
+(e.g., mission or business owners, system owners, authorizing officials, human resources offices,
+physical security offices, personnel security offices, legal departments, risk executive [function],
+operations personnel, procurement offices). Suspected security incidents include the receipt of
+suspicious email communications that can contain malicious code. Suspected supply chain
+incidents include the insertion of counterfeit hardware or malicious code into organizational
+systems or system components. For federal agencies, an incident that involves personally
+identifiable information is considered a breach. A breach results in unauthorized disclosure, the
+loss of control, unauthorized acquisition, compromise, or a similar occurrence where a person
+other than an authorized user accesses or potentially accesses personally identifiable
+information or an authorized user accesses or potentially accesses such information for other
+than authorized purposes.
+INCIDENT HANDLING | AUTOMATED INCIDENT HANDLING PROCESSES
+Support the incident handling process using [Assignment: organization-defined automated
+mechanisms].
+Discussion: Automated mechanisms that support incident handling processes include online
+incident management systems and tools that support the collection of live response data,
+full network packet capture, and forensic analysis.
+INCIDENT HANDLING | DYNAMIC RECONFIGURATION
+Include the following types of dynamic reconfiguration for [Assignment: organizationdefined system components] as part of the incident response capability: [Assignment:
+organization-defined types of dynamic reconfiguration].
+Discussion: Dynamic reconfiguration includes changes to router rules, access control lists,
+intrusion detection or prevention system parameters, and filter rules for guards or firewalls.
+Organizations may perform dynamic reconfiguration of systems to stop attacks, misdirect
+attackers, and isolate components of systems, thus limiting the extent of the damage from
+breaches or compromises. Organizations include specific time frames for achieving the
+reconfiguration of systems in the definition of the reconfiguration capability, considering the
+potential need for rapid response to effectively address cyber threats.
+) INCIDENT HANDLING | CONTINUITY OF OPERATIONS
+Identify [Assignment: organization-defined classes of incidents] and take the following
+actions in response to those incidents to ensure continuation of organizational mission and
+business functions: [Assignment: organization-defined actions to take in response to
+classes of incidents].
+Discussion: Classes of incidents include malfunctions due to design or implementation
+errors and omissions, targeted malicious attacks, and untargeted malicious attacks. Incident
+response actions include orderly system degradation, system shutdown, fall back to manual
+mode or activation of alternative technology whereby the system operates differently,
+employing deceptive measures, alternate information flows, or operating in a mode that is
+reserved for when systems are under attack. Organizations consider whether continuity of
+operations requirements during an incident conflict with the capability to automatically
+disable the system as specified as part of IR-4(5)
+INCIDENT HANDLING | INFORMATION CORRELATION
+Correlate incident information and individual incident responses to achieve an
+organization-wide perspective on incident awareness and response.
+Discussion: Sometimes, a threat event, such as a hostile cyber-attack, can only be observed
+by bringing together information from different sources, including various reports and
+reporting procedures established by organizations.
+INCIDENT HANDLING | AUTOMATIC DISABLING OF SYSTEM
+Implement a configurable capability to automatically disable the system if [Assignment:
+organization-defined security violations] are detected.
+Discussion: Organizations consider whether the capability to automatically disable the
+system conflicts with continuity of operations requirements specified as part of CP-2 or IR4(3). Security violations include cyber-attacks that have compromised the integrity of the
+system or exfiltrated organizational information and serious errors in software programs
+that could adversely impact organizational missions or functions or jeopardize the safety of
+individuals.
+INCIDENT HANDLING | INSIDER THREATS
+Implement an incident handling capability for incidents involving insider threats.
+Discussion: Explicit focus on handling incidents involving insider threats provides additional
+emphasis on this type of threat and the need for specific incident handling capabilities to
+provide appropriate and timely responses.
+INCIDENT HANDLING | INSIDER THREATS — INTRA-ORGANIZATION COORDINATION
+Coordinate an incident handling capability for insider threats that includes the following
+organizational entities [Assignment: organization-defined entities].
+Discussion: Incident handling for insider threat incidents (e.g., preparation, detection and
+analysis, containment, eradication, and recovery) requires coordination among many
+organizational entities, including mission or business owners, system owners, human
+resources offices, procurement offices, personnel offices, physical security offices, senior
+agency information security officer, operations personnel, risk executive (function), senior
+agency official for privacy, and legal counsel. In addition, organizations may require external
+support from federal, state, and local law enforcement agencies.
+INCIDENT HANDLING | CORRELATION WITH EXTERNAL ORGANIZATIONS
+Coordinate with [Assignment: organization-defined external organizations] to correlate
+and share [Assignment: organization-defined incident information] to achieve a crossorganization perspective on incident awareness and more effective incident responses.
+Discussion: The coordination of incident information with external organizations—including
+mission or business partners, military or coalition partners, customers, and developers—can
+provide significant benefits. Cross-organizational coordination can serve as an important risk
+management capability. This capability allows organizations to leverage information from a
+variety of sources to effectively respond to incidents and breaches that could potentially
+affect the organization’s operations, assets, and individuals.
+INCIDENT HANDLING | DYNAMIC RESPONSE CAPABILITY
+Employ [Assignment: organization-defined dynamic response capabilities] to respond to
+incidents.
+Discussion: The dynamic response capability addresses the timely deployment of new or
+replacement organizational capabilities in response to incidents. This includes capabilities
+implemented at the mission and business process level and at the system level.
+INCIDENT HANDLING | SUPPLY CHAIN COORDINATION
+Coordinate incident handling activities involving supply chain events with other
+organizations involved in the supply chain.
+Discussion: Organizations involved in supply chain activities include product developers,
+system integrators, manufacturers, packagers, assemblers, distributors, vendors, and
+resellers. Supply chain incidents can occur anywhere through or to the supply chain and
+include compromises or breaches that involve primary or sub-tier providers, information
+technology products, system components, development processes or personnel, and
+distribution processes or warehousing facilities. Organizations consider including processes
+for protecting and sharing incident information in information exchange agreements and
+their obligations for reporting incidents to government oversight bodies (e.g., Federal
+Acquisition Security Council).
+INCIDENT HANDLING | INTEGRATED INCIDENT RESPONSE TEAM
+Establish and maintain an integrated incident response team that can be deployed to any
+location identified by the organization in [Assignment: organization-defined time period].
+Discussion: An integrated incident response team is a team of experts that assesses,
+documents, and responds to incidents so that organizational systems and networks can
+recover quickly and implement the necessary controls to avoid future incidents. Incident
+response team personnel include forensic and malicious code analysts, tool developers,
+systems security and privacy engineers, and real-time operations personnel. The incident
+handling capability includes performing rapid forensic preservation of evidence and analysis
+of and response to intrusions. For some organizations, the incident response team can be a
+cross-organizational entity.
+An integrated incident response team facilitates information sharing and allows
+organizational personnel (e.g., developers, implementers, and operators) to leverage team
+knowledge of the threat and implement defensive measures that enable organizations to
+deter intrusions more effectively. Moreover, integrated teams promote the rapid detection
+of intrusions, the development of appropriate mitigations, and the deployment of effective
+defensive measures. For example, when an intrusion is detected, the integrated team can
+rapidly develop an appropriate response for operators to implement, correlate the new
+incident with information on past intrusions, and augment ongoing cyber intelligence
+development. Integrated incident response teams are better able to identify adversary
+tactics, techniques, and procedures that are linked to the operations tempo or specific
+mission and business functions and to define responsive actions in a way that does not
+disrupt those mission and business functions. Incident response teams can be distributed
+within organizations to make the capability resilient
+INCIDENT HANDLING | MALICIOUS CODE AND FORENSIC ANALYSIS
+Analyze malicious code and/or other residual artifacts remaining in the system after the
+incident.
+Discussion: When conducted carefully in an isolated environment, analysis of malicious code
+and other residual artifacts of a security incident or breach can give the organization insight
+into adversary tactics, techniques, and procedures. It can also indicate the identity or some
+defining characteristics of the adversary. In addition, malicious code analysis can help the
+organization develop responses to future incidents.
+)INCIDENT HANDLING | BEHAVIOR ANALYSIS
+Analyze anomalous or suspected adversarial behavior in or related to [Assignment:
+organization-defined environments or resources].
+Discussion: If the organization maintains a deception environment, an analysis of behaviors
+in that environment, including resources targeted by the adversary and timing of the
+incident or event, can provide insight into adversarial tactics, techniques, and procedures.
+External to a deception environment, the analysis of anomalous adversarial behavior (e.g.,
+changes in system performance or usage patterns) or suspected behavior (e.g., changes in
+searches for the location of specific resources) can give the organization such insight.
+)INCIDENT HANDLING | SECURITY OPERATIONS CENTER
+Establish and maintain a security operations center.
+Discussion: A security operations center (SOC) is the focal point for security operations and
+computer network defense for an organization. The purpose of the SOC is to defend and
+monitor an organization’s systems and networks (i.e., cyber infrastructure) on an ongoing
+basis. The SOC is also responsible for detecting, analyzing, and responding to cybersecurity
+incidents in a timely manner. The organization staffs the SOC with skilled technical and
+operational personnel (e.g., security analysts, incident response personnel, systems security
+engineers) and implements a combination of technical, management, and operational
+controls (including monitoring, scanning, and forensics tools) to monitor, fuse, correlate,
+analyze, and respond to threat and security-relevant event data from multiple sources.
+These sources include perimeter defenses, network devices (e.g., routers, switches), and
+endpoint agent data feeds. The SOC provides a holistic situational awareness capability to
+help organizations determine the security posture of the system and organization. A SOC
+capability can be obtained in a variety of ways. Larger organizations may implement a
+dedicated SOC while smaller organizations may employ third-party organizations to provide
+such a capability.
+INCIDENT HANDLING | PUBLIC RELATIONS AND REPUTATION REPAIR
+(a) Manage public relations associated with an incident; and
+(b) Employ measures to repair the reputation of the organization.
+Discussion: It is important for an organization to have a strategy in place for addressing
+incidents that have been brought to the attention of the general public, have cast the
+organization in a negative light, or have affected the organization’s constituents (e.g.,
+partners, customers). Such publicity can be extremely harmful to the organization and affect
+its ability to carry out its mission and business functions. Taking proactive steps to repair the
+organization’s reputation is an essential aspect of reestablishing the trust and confidence of
+its constituents.
+RISK ASSESSMENT
+Control:
+a. Conduct a risk assessment, including:
+1. Identifying threats to and vulnerabilities in the system;
+2. Determining the likelihood and magnitude of harm from unauthorized access, use,
+disclosure, disruption, modification, or destruction of the system, the information it
+processes, stores, or transmits, and any related information; and
+3. Determining the likelihood and impact of adverse effects on individuals arising from the
+processing of personally identifiable information;
+b. Integrate risk assessment results and risk management decisions from the organization and
+mission or business process perspectives with system-level risk assessments;
+c. Document risk assessment results in [Selection: security and privacy plans; risk assessment
+report; [Assignment: organization-defined document]];
+d. Review risk assessment results [Assignment: organization-defined frequency];
+e. Disseminate risk assessment results to [Assignment: organization-defined personnel or
+roles]; and
+f. Update the risk assessment [Assignment: organization-defined frequency] or when there are
+significant changes to the system, its environment of operation, or other conditions that may
+impact the security or privacy state of the system.
+Discussion: Risk assessments consider threats, vulnerabilities, likelihood, and impact to
+organizational operations and assets, individuals, other organizations, and the Nation. Risk
+assessments also consider risk from external parties, including contractors who operate systems
+on behalf of the organization, individuals who access organizational systems, service providers,
+and outsourcing entities.
+Organizations can conduct risk assessments at all three levels in the risk management hierarchy
+(i.e., organization level, mission/business process level, or information system level) and at any
+stage in the system development life cycle. Risk assessments can also be conducted at various
+steps in the Risk Management Framework, including preparation, categorization, control
+selection, control implementation, control assessment, authorization, and control monitoring.
+Risk assessment is an ongoing activity carried out throughout the system development life cycle.
+Risk assessments can also address information related to the system, including system design,
+the intended use of the system, testing results, and supply chain-related information or artifacts.
+Risk assessments can play an important role in control selection processes, particularly during
+the application of tailoring guidance and in the earliest phases of capability determination.
+RISK ASSESSMENT | SUPPLY CHAIN RISK ASSESSMENT
+(a) Assess supply chain risks associated with [Assignment: organization-defined systems,
+system components, and system services]; and
+(b) Update the supply chain risk assessment [Assignment: organization-defined
+frequency], when there are significant changes to the relevant supply chain, or when
+changes to the system, environments of operation, or other conditions may
+necessitate a change in the supply chain.
+Discussion: Supply chain-related events include disruption, use of defective components,
+insertion of counterfeits, theft, malicious development practices, improper delivery
+practices, and insertion of malicious code. These events can have a significant impact on the
+confidentiality, integrity, or availability of a system and its information and, therefore, can
+also adversely impact organizational operations (including mission, functions, image, or
+reputation), organizational assets, individuals, other organizations, and the Nation. The
+supply chain-related events may be unintentional or malicious and can occur at any point
+during the system life cycle. An analysis of supply chain risk can help an organization identify
+systems or components for which additional supply chain risk mitigations are required.
+RISK ASSESSMENT | USE OF ALL-SOURCE INTELLIGENCE
+Use all-source intelligence to assist in the analysis of risk.
+Discussion: Organizations employ all-source intelligence to inform engineering, acquisition,
+and risk management decisions. All-source intelligence consists of information derived from
+all available sources, including publicly available or open-source information, measurement
+and signature intelligence, human intelligence, signals intelligence, and imagery intelligence.
+All-source intelligence is used to analyze the risk of vulnerabilities (both intentional and
+unintentional) from development, manufacturing, and delivery processes, people, and the
+environment. The risk analysis may be performed on suppliers at multiple tiers in the supply
+chain sufficient to manage risks. Organizations may develop agreements to share all-source
+intelligence information or resulting decisions with other organizations, as appropriate.
+RISK ASSESSMENT | DYNAMIC THREAT AWARENESS
+Determine the current cyber threat environment on an ongoing basis using [Assignment:
+organization-defined means].
+Discussion: The threat awareness information that is gathered feeds into the organization’s
+information security operations to ensure that procedures are updated in response to the
+changing threat environment. For example, at higher threat levels, organizations may
+change the privilege or authentication thresholds required to perform certain operations.
+RISK ASSESSMENT | PREDICTIVE CYBER ANALYTICS
+Employ the following advanced automation and analytics capabilities to predict and
+identify risks to [Assignment: organization-defined systems or system components]:
+[Assignment: organization-defined advanced automation and analytics capabilities].
+Discussion: A properly resourced Security Operations Center (SOC) or Computer Incident
+Response Team (CIRT) may be overwhelmed by the volume of information generated by the
+proliferation of security tools and appliances unless it employs advanced automation and
+analytics to analyze the data. Advanced automation and analytics capabilities are typically
+supported by artificial intelligence concepts, including machine learning. Examples include
+Automated Threat Discovery and Response (which includes broad-based collection, contextbased analysis, and adaptive response capabilities), automated workflow operations, and
+machine assisted decision tools. Note, however, that sophisticated adversaries may be able
+to extract information related to analytic parameters and retrain the machine learning to
+classify malicious activity as benign. Accordingly, machine learning is augmented by human
+monitoring to ensure that sophisticated adversaries are not able to conceal their activities.
+SYSTEM MONITORING
+Control:
+a. Monitor the system to detect:
+1. Attacks and indicators of potential attacks in accordance with the following monitoring
+objectives: [Assignment: organization-defined monitoring objectives]; and
+2. Unauthorized local, network, and remote connections;
+b. Identify unauthorized use of the system through the following techniques and methods:
+[Assignment: organization-defined techniques and methods];
+c. Invoke internal monitoring capabilities or deploy monitoring devices:
+1. Strategically within the system to collect organization-determined essential information;
+and
+2. At ad hoc locations within the system to track specific types of transactions of interest
+to the organization;
+d. Analyze detected events and anomalies;
+e. Adjust the level of system monitoring activity when there is a change in risk to organizational
+operations and assets, individuals, other organizations, or the Nation;
+f. Obtain legal opinion regarding system monitoring activities; and
+g. Provide [Assignment: organization-defined system monitoring information] to [Assignment:
+organization-defined personnel or roles] [Selection (one or more): as needed; [Assignment:
+organization-defined frequency]].
+Discussion: System monitoring includes external and internal monitoring. External monitoring
+includes the observation of events occurring at external interfaces to the system. Internal
+monitoring includes the observation of events occurring within the system. Organizations
+monitor systems by observing audit activities in real time or by observing other system aspects
+such as access patterns, characteristics of access, and other actions. The monitoring objectives
+guide and inform the determination of the events. System monitoring capabilities are achieved
+through a variety of tools and techniques, including intrusion detection and prevention systems,
+malicious code protection software, scanning tools, audit record monitoring software, and
+network monitoring software.
+Depending on the security architecture, the distribution and configuration of monitoring devices
+may impact throughput at key internal and external boundaries as well as at other locations
+across a network due to the introduction of network throughput latency. If throughput
+management is needed, such devices are strategically located and deployed as part of an
+established organization-wide security architecture. Strategic locations for monitoring devices
+include selected perimeter locations and near key servers and server farms that support critical
+applications. Monitoring devices are typically employed at the managed interfaces associated
+with controls SC-7 and AC-17. The information collected is a function of the organizational
+monitoring objectives and the capability of systems to support such objectives. Specific types of
+transactions of interest include Hypertext Transfer Protocol (HTTP) traffic that bypasses HTTP
+proxies. System monitoring is an integral part of organizational continuous monitoring and
+incident response programs, and output from system monitoring serves as input to those
+programs. System monitoring requirements, including the need for specific types of system
+monitoring, may be referenced in other controls
+Adjustments to levels of system monitoring are based on law enforcement information,
+intelligence information, or other sources of information. The legality of system monitoring
+activities is based on applicable laws, executive orders, directives, regulations, policies,
+standards, and guidelines.
+SYSTEM MONITORING | SYSTEM-WIDE INTRUSION DETECTION SYSTEM
+Connect and configure individual intrusion detection tools into a system-wide intrusion
+detection system.
+Discussion: Linking individual intrusion detection tools into a system-wide intrusion
+detection system provides additional coverage and effective detection capabilities. The
+information contained in one intrusion detection tool can be shared widely across the
+organization, making the system-wide detection capability more robust and powerful.
+SYSTEM MONITORING | AUTOMATED TOOLS AND MECHANISMS FOR REAL-TIME ANALYSIS
+Employ automated tools and mechanisms to support near real-time analysis of events.
+Discussion: Automated tools and mechanisms include host-based, network-based,
+transport-based, or storage-based event monitoring tools and mechanisms or security
+information and event management (SIEM) technologies that provide real-time analysis of
+alerts and notifications generated by organizational systems. Automated monitoring
+techniques can create unintended privacy risks because automated controls may connect to
+external or otherwise unrelated systems. The matching of records between these systems
+may create linkages with unintended consequences. Organizations assess and document
+these risks in their privacy impact assessment and make determinations that are in
+alignment with their privacy program plan.
+SYSTEM MONITORING | AUTOMATED TOOL AND MECHANISM INTEGRATION
+Employ automated tools and mechanisms to integrate intrusion detection tools and
+mechanisms into access control and flow control mechanisms.
+Discussion: Using automated tools and mechanisms to integrate intrusion detection tools
+and mechanisms into access and flow control mechanisms facilitates a rapid response to
+attacks by enabling the reconfiguration of mechanisms in support of attack isolation and
+elimination.
+SYSTEM MONITORING | INBOUND AND OUTBOUND COMMUNICATIONS TRAFFIC
+(a) Determine criteria for unusual or unauthorized activities or conditions for inbound
+and outbound communications traffic;
+(b) Monitor inbound and outbound communications traffic [Assignment: organizationdefined frequency] for [Assignment: organization-defined unusual or unauthorized
+activities or conditions].
+Discussion: Unusual or unauthorized activities or conditions related to system inbound and
+outbound communications traffic includes internal traffic that indicates the presence of
+malicious code or unauthorized use of legitimate code or credentials within organizational
+systems or propagating among system components, signaling to external systems, and the
+unauthorized exporting of information. Evidence of malicious code or unauthorized use of
+legitimate code or credentials is used to identify potentially compromised systems or system
+components
+SYSTEM MONITORING | SYSTEM-GENERATED ALERTS
+Alert [Assignment: organization-defined personnel or roles] when the following systemgenerated indications of compromise or potential compromise occur: [Assignment:
+organization-defined compromise indicators].
+Discussion: Alerts may be generated from a variety of sources, including audit records or
+inputs from malicious code protection mechanisms, intrusion detection or prevention
+mechanisms, or boundary protection devices such as firewalls, gateways, and routers. Alerts
+can be automated and may be transmitted telephonically, by electronic mail messages, or by
+text messaging. Organizational personnel on the alert notification list can include system
+administrators, mission or business owners, system owners, information owners/stewards,
+senior agency information security officers, senior agency officials for privacy, system
+security officers, or privacy officers. In contrast to alerts generated by the system, alerts
+generated by organizations in SI-4(12) focus on information sources external to the system,
+such as suspicious activity reports and reports on potential insider threats.
+SYSTEM MONITORING | AUTOMATED RESPONSE TO SUSPICIOUS EVENTS
+(a) Notify [Assignment: organization-defined incident response personnel (identified by
+name and/or by role)] of detected suspicious events; and
+(b) Take the following actions upon detection: [Assignment: organization-defined leastdisruptive actions to terminate suspicious events].
+Discussion: Least-disruptive actions include initiating requests for human responses.
+SYSTEM MONITORING | TESTING OF MONITORING TOOLS AND MECHANISMS
+Test intrusion-monitoring tools and mechanisms [Assignment: organization-defined
+frequency].
+Discussion: Testing intrusion-monitoring tools and mechanisms is necessary to ensure that
+the tools and mechanisms are operating correctly and continue to satisfy the monitoring
+objectives of organizations. The frequency and depth of testing depends on the types of
+tools and mechanisms used by organizations and the methods of deployment.
+SYSTEM MONITORING | VISIBILITY OF ENCRYPTED COMMUNICATIONS
+Make provisions so that [Assignment: organization-defined encrypted communications
+traffic] is visible to [Assignment: organization-defined system monitoring tools and
+mechanisms].
+Discussion: Organizations balance the need to encrypt communications traffic to protect
+data confidentiality with the need to maintain visibility into such traffic from a monitoring
+perspective. Organizations determine whether the visibility requirement applies to internal
+encrypted traffic, encrypted traffic intended for external destinations, or a subset of the
+traffic types.
+SYSTEM MONITORING | ANALYZE COMMUNICATIONS TRAFFIC ANOMALIES
+Analyze outbound communications traffic at the external interfaces to the system and
+selected [Assignment: organization-defined interior points within the system] to discover
+anomalies.
+Discussion: Organization-defined interior points include subnetworks and subsystems.
+Anomalies within organizational systems include large file transfers, long-time persistent
+connections, attempts to access information from unexpected locations, the use of unusual
+protocols and ports, the use of unmonitored network protocols (e.g., IPv6 usage during IPv4
+transition), and attempted communications with suspected malicious external addresses.
+SYSTEM MONITORING | AUTOMATED ORGANIZATION-GENERATED ALERTS
+Alert [Assignment: organization-defined personnel or roles] using [Assignment:
+organization-defined automated mechanisms] when the following indications of
+inappropriate or unusual activities with security or privacy implications occur:
+[Assignment: organization-defined activities that trigger alerts].
+Discussion: Organizational personnel on the system alert notification list include system
+administrators, mission or business owners, system owners, senior agency information
+security officer, senior agency official for privacy, system security officers, or privacy officers.
+Automated organization-generated alerts are the security alerts generated by organizations
+and transmitted using automated means. The sources for organization-generated alerts are
+focused on other entities such as suspicious activity reports and reports on potential insider
+threats. In contrast to alerts generated by the organization, alerts generated by the system
+in SI-4(5) focus on information sources that are internal to the systems, such as audit
+records.
+SYSTEM MONITORING | ANALYZE TRAFFIC AND EVENT PATTERNS
+(a) Analyze communications traffic and event patterns for the system;
+(b) Develop profiles representing common traffic and event patterns; and
+(c) Use the traffic and event profiles in tuning system-monitoring devices.
+Discussion: Identifying and understanding common communications traffic and event
+patterns help organizations provide useful information to system monitoring devices to
+more effectively identify suspicious or anomalous traffic and events when they occur. Such
+information can help reduce the number of false positives and false negatives during system
+monitoring.
+SYSTEM MONITORING | WIRELESS INTRUSION DETECTION
+Employ a wireless intrusion detection system to identify rogue wireless devices and to
+detect attack attempts and potential compromises or breaches to the system.
+Discussion: Wireless signals may radiate beyond organizational facilities. Organizations
+proactively search for unauthorized wireless connections, including the conduct of thorough
+scans for unauthorized wireless access points. Wireless scans are not limited to those areas
+within facilities containing systems but also include areas outside of facilities to verify that
+unauthorized wireless access points are not connected to organizational systems.
+SYSTEM MONITORING | WIRELESS TO WIRELINE COMMUNICATIONS
+Employ an intrusion detection system to monitor wireless communications traffic as the
+traffic passes from wireless to wireline networks.
+Discussion: Wireless networks are inherently less secure than wired networks. For example,
+wireless networks are more susceptible to eavesdroppers or traffic analysis than wireline
+networks. When wireless to wireline communications exist, the wireless network could
+become a port of entry into the wired network. Given the greater facility of unauthorized
+network access via wireless access points compared to unauthorized wired network access
+from within the physical boundaries of the system, additional monitoring of transitioning
+traffic between wireless and wired networks may be necessary to detect malicious activities.
+Employing intrusion detection systems to monitor wireless communications traffic helps to
+ensure that the traffic does not contain malicious code prior to transitioning to the wireline
+network.
+SYSTEM MONITORING | CORRELATE MONITORING INFORMATION
+Correlate information from monitoring tools and mechanisms employed throughout the
+system.
+Discussion: Correlating information from different system monitoring tools and mechanisms
+can provide a more comprehensive view of system activity. Correlating system monitoring
+tools and mechanisms that typically work in isolation—including malicious code protection
+software, host monitoring, and network monitoring—can provide an organization-wide
+monitoring view and may reveal otherwise unseen attack patterns. Understanding the
+capabilities and limitations of diverse monitoring tools and mechanisms and how to
+maximize the use of information generated by those tools and mechanisms can help
+organizations develop, operate, and maintain effective monitoring programs. The correlation
+of monitoring information is especially important during the transition from older to newer
+technologies (e.g., transitioning from IPv4 to IPv6 network protocols).
+SYSTEM MONITORING | INTEGRATED SITUATIONAL AWARENESS
+Correlate information from monitoring physical, cyber, and supply chain activities to
+achieve integrated, organization-wide situational awareness.
+Discussion: Correlating monitoring information from a more diverse set of information
+sources helps to achieve integrated situational awareness. Integrated situational awareness
+from a combination of physical, cyber, and supply chain monitoring activities enhances the
+capability of organizations to more quickly detect sophisticated attacks and investigate the
+methods and techniques employed to carry out such attacks. In contrast to SI-4(16), which
+correlates the various cyber monitoring information, integrated situational awareness is
+intended to correlate monitoring beyond the cyber domain. Correlation of monitoring
+information from multiple activities may help reveal attacks on organizations that are
+operating across multiple attack vectors.
+SYSTEM MONITORING | ANALYZE TRAFFIC AND COVERT EXFILTRATION
+Analyze outbound communications traffic at external interfaces to the system and at the
+following interior points to detect covert exfiltration of information: [Assignment:
+organization-defined interior points within the system].
+Discussion: Organization-defined interior points include subnetworks and subsystems.
+Covert means that can be used to exfiltrate information include steganography
+SYSTEM MONITORING | RISK FOR INDIVIDUALS
+Implement [Assignment: organization-defined additional monitoring] of individuals who
+have been identified by [Assignment: organization-defined sources] as posing an increased
+level of risk.
+Discussion: Indications of increased risk from individuals can be obtained from different
+sources, including personnel records, intelligence agencies, law enforcement organizations,
+and other sources. The monitoring of individuals is coordinated with the management, legal,
+security, privacy, and human resource officials who conduct such monitoring. Monitoring is
+conducted in accordance with applicable laws, executive orders, directives, regulations,
+policies, standards, and guidelines.
+SYSTEM MONITORING | PRIVILEGED USERS
+Implement the following additional monitoring of privileged users: [Assignment:
+organization-defined additional monitoring].
+Discussion: Privileged users have access to more sensitive information, including securityrelated information, than the general user population. Access to such information means
+that privileged users can potentially do greater damage to systems and organizations than
+non-privileged users. Therefore, implementing additional monitoring on privileged users
+helps to ensure that organizations can identify malicious activity at the earliest possible time
+and take appropriate actions.
+SYSTEM MONITORING | PROBATIONARY PERIODS
+Implement the following additional monitoring of individuals during [Assignment:
+organization-defined probationary period]: [Assignment: organization-defined additional
+monitoring].
+Discussion: During probationary periods, employees do not have permanent employment
+status within organizations. Without such status or access to information that is resident on
+the system, additional monitoring can help identify any potentially malicious activity or
+inappropriate behavior
+SYSTEM MONITORING | UNAUTHORIZED NETWORK SERVICES
+(a) Detect network services that have not been authorized or approved by [Assignment:
+organization-defined authorization or approval processes]; and
+(b) [Selection (one or more): Audit; Alert [Assignment: organization-defined personnel or
+roles]] when detected.
+Discussion: Unauthorized or unapproved network services include services in serviceoriented architectures that lack organizational verification or validation and may therefore
+be unreliable or serve as malicious rogues for valid services
+SYSTEM MONITORING | HOST-BASED DEVICES
+Implement the following host-based monitoring mechanisms at [Assignment:
+organization-defined system components]: [Assignment: organization-defined host-based
+monitoring mechanisms].
+Discussion: Host-based monitoring collects information about the host (or system in which it
+resides). System components in which host-based monitoring can be implemented include
+servers, notebook computers, and mobile devices. Organizations may consider employing
+host-based monitoring mechanisms from multiple product developers or vendors.
+SYSTEM MONITORING | INDICATORS OF COMPROMISE
+Discover, collect, and distribute to [Assignment: organization-defined personnel or roles],
+indicators of compromise provided by [Assignment: organization-defined sources].
+Discussion: Indicators of compromise (IOC) are forensic artifacts from intrusions that are
+identified on organizational systems at the host or network level. IOCs provide valuable
+information on systems that have been compromised. IOCs can include the creation of
+registry key values. IOCs for network traffic include Universal Resource Locator or protocol
+elements that indicate malicious code command and control servers. The rapid distribution
+and adoption of IOCs can improve information security by reducing the time that systems
+and organizations are vulnerable to the same exploit or attack. Threat indicators, signatures,
+tactics, techniques, procedures, and other indicators of compromise may be available via
+government and non-government cooperatives, including the Forum of Incident Response
+and Security Teams, the United States Computer Emergency Readiness Team, the Defense
+Industrial Base Cybersecurity Information Sharing Program, and the CERT Coordination
+Center.
+SYSTEM MONITORING | OPTIMIZE NETWORK TRAFFIC ANALYSIS
+Provide visibility into network traffic at external and key internal system interfaces to
+optimize the effectiveness of monitoring devices.
+Discussion: Encrypted traffic, asymmetric routing architectures, capacity and latency
+limitations, and transitioning from older to newer technologies (e.g., IPv4 to IPv6 network
+protocol transition) may result in blind spots for organizations when analyzing network
+traffic. Collecting, decrypting, pre-processing, and distributing only relevant traffic to
+monitoring devices can streamline the efficiency and use of devices and optimize traffic
+analysis.

@@ -1,0 +1,112 @@
+PR.DS-1: Data-at-rest is protected
+MEDIA DOWNGRADING
+Control:
+a. Establish [Assignment: organization-defined system media downgrading process] that
+includes employing downgrading mechanisms with strength and integrity commensurate
+with the security category or classification of the information;
+b. Verify that the system media downgrading process is commensurate with the security
+category and/or classification level of the information to be removed and the access
+authorizations of the potential recipients of the downgraded information;
+c. Identify [Assignment: organization-defined system media requiring downgrading]; and
+d. Downgrade the identified system media using the established process.
+Discussion: Media downgrading applies to digital and non-digital media subject to release
+outside of the organization, whether the media is considered removable or not. When applied to
+system media, the downgrading process removes information from the media, typically by
+security category or classification level, such that the information cannot be retrieved or
+reconstructed. Downgrading of media includes redacting information to enable wider release
+and distribution. Downgrading ensures that empty space on the media is devoid of information.
+MEDIA DOWNGRADING | DOCUMENTATION OF PROCESS
+Document system media downgrading actions
+Discussion: Organizations can document the media downgrading process by providing
+information, such as the downgrading technique employed, the identification number of the
+downgraded media, and the identity of the individual that authorized and/or performed the
+downgrading action.
+MEDIA DOWNGRADING | EQUIPMENT TESTING
+Test downgrading equipment and procedures [Assignment: organization-defined
+frequency] to ensure that downgrading actions are being achieved.
+MEDIA DOWNGRADING | CONTROLLED UNCLASSIFIED INFORMATION
+Downgrade system media containing controlled unclassified information prior to public
+release.
+Discussion: The downgrading of controlled unclassified information uses approved
+sanitization tools, techniques, and procedures.
+MEDIA DOWNGRADING | CLASSIFIED INFORMATION
+Downgrade system media containing classified information prior to release to individuals
+without required access authorizations.
+Discussion: Downgrading of classified information uses approved sanitization tools,
+techniques, and procedures to transfer information confirmed to be unclassified from
+classified systems to unclassified media
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT
+Control: Establish and manage cryptographic keys when cryptography is employed within the
+system in accordance with the following key management requirements: [Assignment:
+organization-defined requirements for key generation, distribution, storage, access, and
+destruction].
+Discussion: Cryptographic key management and establishment can be performed using manual
+procedures or automated mechanisms with supporting manual procedures. Organizations define
+key management requirements in accordance with applicable laws, executive orders, directives,
+regulations, policies, standards, and guidelines and specify appropriate options, parameters, and
+levels. Organizations manage trust stores to ensure that only approved trust anchors are part of
+such trust stores. This includes certificates with visibility external to organizational systems and
+certificates related to the internal operations of systems. [NIST CMVP] and [NIST CAVP] provide
+additional information on validated cryptographic modules and algorithms that can be used in
+cryptographic key management and establishment
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | AVAILABILITY
+Maintain availability of information in the event of the loss of cryptographic keys by users.
+Discussion: Escrowing of encryption keys is a common practice for ensuring availability in
+the event of key loss. A forgotten passphrase is an example of losing a cryptographic key
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | SYMMETRIC KEYS
+Produce, control, and distribute symmetric cryptographic keys using [Selection: NIST FIPSvalidated; NSA-approved] key management technology and processes.
+Discussion: [SP 800-56A], [SP 800-56B], and [SP 800-56C] provide guidance on cryptographic
+key establishment schemes and key derivation methods. [SP 800-57-1], [SP 800-57-2], and
+[SP 800-57-3] provide guidance on cryptographic key management.
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | ASYMMETRIC KEYS
+Produce, control, and distribute asymmetric cryptographic keys using [Selection: NSAapproved key management technology and processes; prepositioned keying material;
+DoD-approved or DoD-issued Medium Assurance PKI certificates; DoD-approved or DoDissued Medium Hardware Assurance PKI certificates and hardware security tokens that
+protect the user’s private key; certificates issued in accordance with organization-defined
+requirements].
+Discussion: [SP 800-56A], [SP 800-56B], and [SP 800-56C] provide guidance on cryptographic
+key establishment schemes and key derivation methods. [SP 800-57-1], [SP 800-57-2], and
+[SP 800-57-3] provide guidance on cryptographic key management.
+CRYPTOGRAPHIC KEY ESTABLISHMENT AND MANAGEMENT | PHYSICAL CONTROL OF KEYS
+Maintain physical control of cryptographic keys when stored information is encrypted by
+external service providers.
+Discussion: For organizations that use external service providers (e.g., cloud service or data
+center providers), physical control of cryptographic keys provides additional assurance that
+information stored by such external providers is not subject to unauthorized disclosure or
+modification
+PROTECTION OF INFORMATION AT REST
+Control: Protect the [Selection (one or more): confidentiality; integrity] of the following
+information at rest: [Assignment: organization-defined information at rest].
+Discussion: Information at rest refers to the state of information when it is not in process or in
+transit and is located on system components. Such components include internal or external hard
+disk drives, storage area network devices, or databases. However, the focus of protecting
+information at rest is not on the type of storage device or frequency of access but rather on the
+state of the information. Information at rest addresses the confidentiality and integrity of
+information and covers user information and system information. System-related information
+that requires protection includes configurations or rule sets for firewalls, intrusion detection and
+prevention systems, filtering routers, and authentication information. Organizations may employ
+different mechanisms to achieve confidentiality and integrity protections, including the use of
+cryptographic mechanisms and file share scanning. Integrity protection can be achieved, for
+example, by implementing write-once-read-many (WORM) technologies. When adequate
+protection of information at rest cannot otherwise be achieved, organizations may employ other
+controls, including frequent scanning to identify malicious code at rest and secure offline storage
+in lieu of online storage.
+PROTECTION OF INFORMATION AT REST | CRYPTOGRAPHIC PROTECTION
+Implement cryptographic mechanisms to prevent unauthorized disclosure and
+modification of the following information at rest on [Assignment: organization-defined
+system components or media]: [Assignment: organization-defined information].
+Discussion: The selection of cryptographic mechanisms is based on the need to protect the
+confidentiality and integrity of organizational information. The strength of mechanism is
+commensurate with the security category or classification of the information. Organizations
+have the flexibility to encrypt information on system components or media or encrypt data
+structures, including files, records, or fields.
+PROTECTION OF INFORMATION AT REST | OFFLINE STORAGE
+Remove the following information from online storage and store offline in a secure
+location: [Assignment: organization-defined information].
+Discussion: Removing organizational information from online storage to offline storage
+eliminates the possibility of individuals gaining unauthorized access to the information
+through a network. Therefore, organizations may choose to move information to offline
+storage in lieu of protecting such information in online storage
+PROTECTION OF INFORMATION AT REST | CRYPTOGRAPHIC KEYS
+Provide protected storage for cryptographic keys [Selection: [Assignment: organizationdefined safeguards]; hardware-protected key store].
+Discussion: A Trusted Platform Module (TPM) is an example of a hardware-protected data
+store that can be used to protect cryptographic keys.

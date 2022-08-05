@@ -1,0 +1,1232 @@
+PR.AC-6: Identities are proofed and bound to credentials and asserted in interactions
+POLICY AND PROCEDURES
+Control:
+a. Develop, document, and disseminate to [Assignment: organization-defined personnel or
+roles]:
+1. [Selection (one or more): Organization-level; Mission/business process-level; Systemlevel] access control policy that:
+(a) Addresses purpose, scope, roles, responsibilities, management commitment,
+coordination among organizational entities, and compliance; and
+(b) Is consistent with applicable laws, executive orders, directives, regulations, policies,
+standards, and guidelines; and
+2. Procedures to facilitate the implementation of the access control policy and the
+associated access controls;
+b. Designate an [Assignment: organization-defined official] to manage the development,
+documentation, and dissemination of the access control policy and procedures; and
+c. Review and update the current access control:
+1. Policy [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events]; and
+2. Procedures [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events].
+Discussion: Access control policy and procedures address the controls in the AC family that are
+implemented within systems and organizations. The risk management strategy is an important
+factor in establishing such policies and procedures. Policies and procedures contribute to security
+and privacy assurance. Therefore, it is important that security and privacy programs collaborate
+on the development of access control policy and procedures. Security and privacy program
+policies and procedures at the organization level are preferable, in general, and may obviate the
+need for mission- or system-specific policies and procedures. The policy can be included as part
+of the general security and privacy policy or be represented by multiple policies reflecting the
+complex nature of organizations. Procedures can be established for security and privacy
+programs, for mission or business processes, and for systems, if needed. Procedures describe
+how the policies or controls are implemented and can be directed at the individual or role that is
+the object of the procedure. Procedures can be documented in system security and privacy plans
+or in one or more separate documents. Events that may precipitate an update to access control
+policy and procedures include assessment or audit findings, security incidents or breaches, or
+changes in laws, executive orders, directives, regulations, policies, standards, and guidelines.
+Simply restating controls does not constitute an organizational policy or procedure.
+ACCOUNT MANAGEMENT
+Control:
+a. Define and document the types of accounts allowed and specifically prohibited for use
+within the system;
+b. Assign account managers;
+c. Require [Assignment: organization-defined prerequisites and criteria] for group and role
+membership;
+d. Specify:
+1. Authorized users of the system;
+2. Group and role membership; and
+3. Access authorizations (i.e., privileges) and [Assignment: organization-defined attributes
+(as required)] for each account;
+e. Require approvals by [Assignment: organization-defined personnel or roles] for requests to
+create accounts;
+f. Create, enable, modify, disable, and remove accounts in accordance with [Assignment:
+organization-defined policy, procedures, prerequisites, and criteria];
+g. Monitor the use of accounts;
+h. Notify account managers and [Assignment: organization-defined personnel or roles] within:
+1. [Assignment: organization-defined time period] when accounts are no longer required;
+2. [Assignment: organization-defined time period] when users are terminated or
+transferred; and
+3. [Assignment: organization-defined time period] when system usage or need-to-know
+changes for an individual;
+i. Authorize access to the system based on:
+1. A valid access authorization;
+2. Intended system usage; and
+3. [Assignment: organization-defined attributes (as required)];
+j. Review accounts for compliance with account management requirements [Assignment:
+organization-defined frequency];
+k. Establish and implement a process for changing shared or group account authenticators (if
+deployed) when individuals are removed from the group; and
+l. Align account management processes with personnel termination and transfer processes.
+Discussion: Examples of system account types include individual, shared, group, system, guest,
+anonymous, emergency, developer, temporary, and service. Identification of authorized system
+users and the specification of access privileges reflect the requirements in other controls in the
+security plan. Users requiring administrative privileges on system accounts receive additional
+scrutiny by organizational personnel responsible for approving such accounts and privileged
+access, including system owner, mission or business owner, senior agency information security
+officer, or senior agency official for privacy. Types of accounts that organizations may wish to
+prohibit due to increased risk include shared, group, emergency, anonymous, temporary, and
+guest accounts
+Where access involves personally identifiable information, security programs collaborate with
+the senior agency official for privacy to establish the specific conditions for group and role
+membership; specify authorized users, group and role membership, and access authorizations for
+each account; and create, adjust, or remove system accounts in accordance with organizational
+policies. Policies can include such information as account expiration dates or other factors that
+trigger the disabling of accounts. Organizations may choose to define access privileges or other
+attributes by account, type of account, or a combination of the two. Examples of other attributes
+required for authorizing access include restrictions on time of day, day of week, and point of
+origin. In defining other system account attributes, organizations consider system-related
+requirements and mission/business requirements. Failure to consider these factors could affect
+system availability.
+Temporary and emergency accounts are intended for short-term use. Organizations establish
+temporary accounts as part of normal account activation procedures when there is a need for
+short-term accounts without the demand for immediacy in account activation. Organizations
+establish emergency accounts in response to crisis situations and with the need for rapid account
+activation. Therefore, emergency account activation may bypass normal account authorization
+processes. Emergency and temporary accounts are not to be confused with infrequently used
+accounts, including local logon accounts used for special tasks or when network resources are
+unavailable (may also be known as accounts of last resort). Such accounts remain available and
+are not subject to automatic disabling or removal dates. Conditions for disabling or deactivating
+accounts include when shared/group, emergency, or temporary accounts are no longer required
+and when individuals are transferred or terminated. Changing shared/group authenticators when
+members leave the group is intended to ensure that former group members do not retain access
+to the shared or group account. Some types of system accounts may require specialized training.
+ACCOUNT MANAGEMENT | AUTOMATED SYSTEM ACCOUNT MANAGEMENT
+Support the management of system accounts using [Assignment: organization-defined
+automated mechanisms].
+Discussion: Automated system account management includes using automated mechanisms
+to create, enable, modify, disable, and remove accounts; notify account managers when an
+account is created, enabled, modified, disabled, or removed, or when users are terminated
+or transferred; monitor system account usage; and report atypical system account usage.
+Automated mechanisms can include internal system functions and email, telephonic, and
+text messaging notifications.
+ACCOUNT MANAGEMENT | AUTOMATED TEMPORARY AND EMERGENCY ACCOUNT MANAGEMENT
+Automatically [Selection: remove; disable] temporary and emergency accounts after
+[Assignment: organization-defined time period for each type of account].
+Discussion: Management of temporary and emergency accounts includes the removal or
+disabling of such accounts automatically after a predefined time period rather than at the
+convenience of the system administrator. Automatic removal or disabling of accounts
+provides a more consistent implementation
+ACCOUNT MANAGEMENT | DISABLE ACCOUNTS
+Disable accounts within [Assignment: organization-defined time period] when the
+accounts:
+(a) Have expired;
+(b) Are no longer associated with a user or individual;
+(c) Are in violation of organizational policy; or
+(d) Have been inactive for [Assignment: organization-defined time period].
+Discussion: Disabling expired, inactive, or otherwise anomalous accounts supports the
+concepts of least privilege and least functionality which reduce the attack surface of the
+system.
+ACCOUNT MANAGEMENT | AUTOMATED AUDIT ACTIONS
+Automatically audit account creation, modification, enabling, disabling, and removal
+actions.
+Discussion: Account management audit records are defined in accordance with AU-2 and
+reviewed, analyzed, and reported in accordance with AU-6.
+ACCOUNT MANAGEMENT | INACTIVITY LOGOUT
+Require that users log out when [Assignment: organization-defined time period of
+expected inactivity or description of when to log out].
+Discussion: Inactivity logout is behavior- or policy-based and requires users to take physical
+action to log out when they are expecting inactivity longer than the defined period.
+Automatic enforcement of inactivity logout is addressed by AC-11.
+ACCOUNT MANAGEMENT | DYNAMIC PRIVILEGE MANAGEMENT
+Implement [Assignment: organization-defined dynamic privilege management
+capabilities].
+Discussion: In contrast to access control approaches that employ static accounts and
+predefined user privileges, dynamic access control approaches rely on runtime access
+control decisions facilitated by dynamic privilege management, such as attribute-based
+access control. While user identities remain relatively constant over time, user privileges
+typically change more frequently based on ongoing mission or business requirements and
+the operational needs of organizations. An example of dynamic privilege management is the
+immediate revocation of privileges from users as opposed to requiring that users terminate
+and restart their sessions to reflect changes in privileges. Dynamic privilege management can
+also include mechanisms that change user privileges based on dynamic rules as opposed to
+editing specific user profiles. Examples include automatic adjustments of user privileges if
+they are operating out of their normal work times, if their job function or assignment
+changes, or if systems are under duress or in emergency situations. Dynamic privilege
+management includes the effects of privilege changes, for example, when there are changes
+to encryption keys used for communications.
+ACCOUNT MANAGEMENT | PRIVILEGED USER ACCOUNTS
+(a) Establish and administer privileged user accounts in accordance with [Selection: a rolebased access scheme; an attribute-based access scheme];
+(b) Monitor privileged role or attribute assignments;
+(c) Monitor changes to roles or attributes; and
+(d) Revoke access when privileged role or attribute assignments are no longer
+appropriate.
+Discussion: Privileged roles are organization-defined roles assigned to individuals that allow
+those individuals to perform certain security-relevant functions that ordinary users are not
+authorized to perform. Privileged roles include key management, account management,
+database administration, system and network administration, and web administration. A
+role-based access scheme organizes permitted system access and privileges into roles. In
+contrast, an attribute-based access scheme specifies allowed system access and privileges
+based on attributes.
+ACCOUNT MANAGEMENT | DYNAMIC ACCOUNT MANAGEMENT
+Create, activate, manage, and deactivate [Assignment: organization-defined system
+accounts] dynamically.
+Discussion: Approaches for dynamically creating, activating, managing, and deactivating
+system accounts rely on automatically provisioning the accounts at runtime for entities that
+were previously unknown. Organizations plan for the dynamic management, creation,
+activation, and deactivation of system accounts by establishing trust relationships, business
+rules, and mechanisms with appropriate authorities to validate related authorizations and
+privileges
+ACCOUNT MANAGEMENT | RESTRICTIONS ON USE OF SHARED AND GROUP ACCOUNTS
+Only permit the use of shared and group accounts that meet [Assignment: organizationdefined conditions for establishing shared and group accounts].
+Discussion: Before permitting the use of shared or group accounts, organizations consider
+the increased risk due to the lack of accountability with such accounts.
+ACCOUNT MANAGEMENT | USAGE CONDITIONS
+Enforce [Assignment: organization-defined circumstances and/or usage conditions] for
+[Assignment: organization-defined system accounts].
+Discussion: Specifying and enforcing usage conditions helps to enforce the principle of least
+privilege, increase user accountability, and enable effective account monitoring. Account
+monitoring includes alerts generated if the account is used in violation of organizational
+parameters. Organizations can describe specific conditions or circumstances under which
+system accounts can be used, such as by restricting usage to certain days of the week, time
+of day, or specific durations of time.
+ACCOUNT MANAGEMENT | ACCOUNT MONITORING FOR ATYPICAL USAGE
+(a) Monitor system accounts for [Assignment: organization-defined atypical usage]; and
+(b) Report atypical usage of system accounts to [Assignment: organization-defined
+personnel or roles].
+Discussion: Atypical usage includes accessing systems at certain times of the day or from
+locations that are not consistent with the normal usage patterns of individuals. Monitoring
+for atypical usage may reveal rogue behavior by individuals or an attack in progress. Account
+monitoring may inadvertently create privacy risks since data collected to identify atypical
+usage may reveal previously unknown information about the behavior of individuals.
+Organizations assess and document privacy risks from monitoring accounts for atypical
+usage in their privacy impact assessment and make determinations that are in alignment
+with their privacy program plan.
+ACCOUNT MANAGEMENT | DISABLE ACCOUNTS FOR HIGH-RISK INDIVIDUALS
+Disable accounts of individuals within [Assignment: organization-defined time period] of
+discovery of [Assignment: organization-defined significant risks].
+Discussion: Users who pose a significant security and/or privacy risk include individuals for
+whom reliable evidence indicates either the intention to use authorized access to systems to
+cause harm or through whom adversaries will cause harm. Such harm includes adverse
+impacts to organizational operations, organizational assets, individuals, other organizations,
+or the Nation. Close coordination among system administrators, legal staff, human resource
+managers, and authorizing officials is essential when disabling system accounts for high-risk
+individuals
+ACCESS ENFORCEMENT
+Control: Enforce approved authorizations for logical access to information and system resources
+in accordance with applicable access control policies.
+Discussion: Access control policies control access between active entities or subjects (i.e., users
+or processes acting on behalf of users) and passive entities or objects (i.e., devices, files, records,
+domains) in organizational systems. In addition to enforcing authorized access at the system level
+and recognizing that systems can host many applications and services in support of mission and
+business functions, access enforcement mechanisms can also be employed at the application and
+service level to provide increased information security and privacy. In contrast to logical access
+controls that are implemented within the system, physical access controls are addressed by the
+controls in the Physical and Environmental Protection (PE) family
+ACCESS ENFORCEMENT | DUAL AUTHORIZATION
+Enforce dual authorization for [Assignment: organization-defined privileged commands
+and/or other organization-defined actions].
+Discussion: Dual authorization, also known as two-person control, reduces risk related to
+insider threats. Dual authorization mechanisms require the approval of two authorized
+individuals to execute. To reduce the risk of collusion, organizations consider rotating dual
+authorization duties. Organizations consider the risk associated with implementing dual
+authorization mechanisms when immediate responses are necessary to ensure public and
+environmental safety.
+ACCESS ENFORCEMENT | MANDATORY ACCESS CONTROL
+Enforce [Assignment: organization-defined mandatory access control policy] over the set
+of covered subjects and objects specified in the policy, and where the policy:
+(a) Is uniformly enforced across the covered subjects and objects within the system;
+(b) Specifies that a subject that has been granted access to information is constrained
+from doing any of the following;
+(1) Passing the information to unauthorized subjects or objects;
+(2) Granting its privileges to other subjects;
+(3) Changing one or more security attributes (specified by the policy) on subjects,
+objects, the system, or system components;
+(4) Choosing the security attributes and attribute values (specified by the policy) to
+be associated with newly created or modified objects; and
+(5) Changing the rules governing access control; and
+(c) Specifies that [Assignment: organization-defined subjects] may explicitly be granted
+[Assignment: organization-defined privileges] such that they are not limited by any
+defined subset (or all) of the above constraints.
+Discussion: Mandatory access control is a type of nondiscretionary access control.
+Mandatory access control policies constrain what actions subjects can take with information
+obtained from objects for which they have already been granted access. This prevents the
+subjects from passing the information to unauthorized subjects and objects. Mandatory
+access control policies constrain actions that subjects can take with respect to the
+propagation of access control privileges; that is, a subject with a privilege cannot pass that
+privilege to other subjects. The policy is uniformly enforced over all subjects and objects to
+which the system has control. Otherwise, the access control policy can be circumvented. This
+enforcement is provided by an implementation that meets the reference monitor concept as
+described in AC-25. The policy is bounded by the system (i.e., once the information is passed
+outside of the control of the system, additional means may be required to ensure that the
+constraints on the information remain in effect).
+The trusted subjects described above are granted privileges consistent with the concept of
+least privilege (see AC-6). Trusted subjects are only given the minimum privileges necessary
+for satisfying organizational mission/business needs relative to the above policy. The control
+is most applicable when there is a mandate that establishes a policy regarding access to
+controlled unclassified information or classified information and some users of the system
+are not authorized access to all such information resident in the system. Mandatory access
+control can operate in conjunction with discretionary access control as described in AC-3(4).
+A subject constrained in its operation by mandatory access control policies can still operate
+under the less rigorous constraints of AC-3(4), but mandatory access control policies take
+precedence over the less rigorous constraints of AC-3(4). For example, while a mandatory
+access control policy imposes a constraint that prevents a subject from passing information
+to another subject operating at a different impact or classification level, AC-3(4) permits the
+subject to pass the information to any other subject with the same impact or classification
+level as the subject. Examples of mandatory access control policies include the Bell-LaPadula
+policy to protect confidentiality of information and the Biba policy to protect the integrity of
+information.
+ACCESS ENFORCEMENT | DISCRETIONARY ACCESS CONTROL
+Enforce [Assignment: organization-defined discretionary access control policy] over the set
+of covered subjects and objects specified in the policy, and where the policy specifies that
+a subject that has been granted access to information can do one or more of the following:
+(a) Pass the information to any other subjects or objects;
+(b) Grant its privileges to other subjects;
+(c) Change security attributes on subjects, objects, the system, or the system’s
+components;
+(d) Choose the security attributes to be associated with newly created or revised objects;
+or
+(e) Change the rules governing access control.
+Discussion: When discretionary access control policies are implemented, subjects are not
+constrained with regard to what actions they can take with information for which they have
+already been granted access. Thus, subjects that have been granted access to information
+are not prevented from passing the information to other subjects or objects (i.e., subjects
+have the discretion to pass). Discretionary access control can operate in conjunction with
+mandatory access control as described in AC-3(3) and AC-3(15). A subject that is constrained
+in its operation by mandatory access control policies can still operate under the less rigorous
+constraints of discretionary access control. Therefore, while AC-3(3) imposes constraints that
+prevent a subject from passing information to another subject operating at a different
+impact or classification level, AC-3(4) permits the subject to pass the information to any
+subject at the same impact or classification level. The policy is bounded by the system. Once
+the information is passed outside of system control, additional means may be required to
+ensure that the constraints remain in effect. While traditional definitions of discretionary
+access control require identity-based access control, that limitation is not required for this
+particular use of discretionary access control.
+ACCESS ENFORCEMENT | SECURITY-RELEVANT INFORMATION
+Prevent access to [Assignment: organization-defined security-relevant information] except
+during secure, non-operable system states.
+Discussion: Security-relevant information is information within systems that can potentially
+impact the operation of security functions or the provision of security services in a manner
+that could result in failure to enforce system security and privacy policies or maintain the
+separation of code and data. Security-relevant information includes access control lists,
+filtering rules for routers or firewalls, configuration parameters for security services, and
+cryptographic key management information. Secure, non-operable system states include the
+times in which systems are not performing mission or business-related processing, such as
+when the system is offline for maintenance, boot-up, troubleshooting, or shut down.
+ACCESS ENFORCEMENT | PROTECTION OF USER AND SYSTEM INFORMATION
+ACCESS ENFORCEMENT | ROLE-BASED ACCESS CONTROL
+Enforce a role-based access control policy over defined subjects and objects and control
+access based upon [Assignment: organization-defined roles and users authorized to
+assume such roles].
+Discussion: Role-based access control (RBAC) is an access control policy that enforces access
+to objects and system functions based on the defined role (i.e., job function) of the subject.
+Organizations can create specific roles based on job functions and the authorizations (i.e.,
+privileges) to perform needed operations on the systems associated with the organizationdefined roles. When users are assigned to specific roles, they inherit the authorizations or
+privileges defined for those roles. RBAC simplifies privilege administration for organizations
+because privileges are not assigned directly to every user (which can be a large number of
+individuals) but are instead acquired through role assignments. RBAC can also increase
+privacy and security risk if individuals assigned to a role are given access to information
+beyond what they need to support organizational missions or business functions. RBAC can
+be implemented as a mandatory or discretionary form of access control. For organizations
+implementing RBAC with mandatory access controls, the requirements in AC-3(3) define the
+scope of the subjects and objects covered by the policy.
+ACCESS ENFORCEMENT | REVOCATION OF ACCESS AUTHORIZATIONS
+Enforce the revocation of access authorizations resulting from changes to the security
+attributes of subjects and objects based on [Assignment: organization-defined rules
+governing the timing of revocations of access authorizations].
+Discussion: Revocation of access rules may differ based on the types of access revoked. For
+example, if a subject (i.e., user or process acting on behalf of a user) is removed from a
+group, access may not be revoked until the next time the object is opened or the next time
+the subject attempts to access the object. Revocation based on changes to security labels
+may take effect immediately. Organizations provide alternative approaches on how to make
+revocations immediate if systems cannot provide such capability and immediate revocation
+is necessary.
+ACCESS ENFORCEMENT | CONTROLLED RELEASE
+Release information outside of the system only if:
+(a) The receiving [Assignment: organization-defined system or system component]
+provides [Assignment: organization-defined controls]; and
+(b) [Assignment: organization-defined controls] are used to validate the appropriateness
+of the information designated for release.
+Discussion: Organizations can only directly protect information when it resides within the
+system. Additional controls may be needed to ensure that organizational information is
+adequately protected once it is transmitted outside of the system. In situations where the
+system is unable to determine the adequacy of the protections provided by external entities,
+as a mitigation measure, organizations procedurally determine whether the external systems
+are providing adequate controls. The means used to determine the adequacy of controls
+provided by external systems include conducting periodic assessments (inspections/tests),
+establishing agreements between the organization and its counterpart organizations, or
+some other process. The means used by external entities to protect the information received
+need not be the same as those used by the organization, but the means employed are
+sufficient to provide consistent adjudication of the security and privacy policy to protect the
+information and individuals’ privacy.
+Controlled release of information requires systems to implement technical or procedural
+means to validate the information prior to releasing it to external systems. For example, if
+the system passes information to a system controlled by another organization, technical
+means are employed to validate that the security and privacy attributes associated with the
+exported information are appropriate for the receiving system. Alternatively, if the system
+passes information to a printer in organization-controlled space, procedural means can be
+employed to ensure that only authorized individuals gain access to the printer.
+ACCESS ENFORCEMENT | AUDITED OVERRIDE OF ACCESS CONTROL MECHANISMS
+Employ an audited override of automated access control mechanisms under [Assignment:
+organization-defined conditions] by [Assignment: organization-defined roles].
+Discussion: In certain situations, such as when there is a threat to human life or an event
+that threatens the organization’s ability to carry out critical missions or business functions,
+an override capability for access control mechanisms may be needed. Override conditions
+are defined by organizations and used only in those limited circumstances. Audit events are
+defined in AU-2. Audit records are generated in AU-12.
+ACCESS ENFORCEMENT | RESTRICT ACCESS TO SPECIFIC INFORMATION TYPES
+Restrict access to data repositories containing [Assignment: organization-defined
+information types].
+Discussion: Restricting access to specific information is intended to provide flexibility
+regarding access control of specific information types within a system. For example, rolebased access could be employed to allow access to only a specific type of personally
+identifiable information within a database rather than allowing access to the database in its
+entirety. Other examples include restricting access to cryptographic keys, authentication
+information, and selected system information.
+ACCESS ENFORCEMENT | ASSERT AND ENFORCE APPLICATION ACCESS
+(a) Require applications to assert, as part of the installation process, the access needed to
+the following system applications and functions: [Assignment: organization-defined
+system applications and functions];
+(b) Provide an enforcement mechanism to prevent unauthorized access; and
+(c) Approve access changes after initial installation of the application.
+Discussion: Asserting and enforcing application access is intended to address applications
+that need to access existing system applications and functions, including user contacts,
+global positioning systems, cameras, keyboards, microphones, networks, phones, or other
+files.
+ACCESS ENFORCEMENT | ATTRIBUTE-BASED ACCESS CONTROL
+Enforce attribute-based access control policy over defined subjects and objects and control
+access based upon [Assignment: organization-defined attributes to assume access
+permissions].
+Discussion: Attribute-based access control is an access control policy that restricts system
+access to authorized users based on specified organizational attributes (e.g., job function,
+identity), action attributes (e.g., read, write, delete), environmental attributes (e.g., time of
+day, location), and resource attributes (e.g., classification of a document). Organizations can
+create rules based on attributes and the authorizations (i.e., privileges) to perform needed
+operations on the systems associated with organization-defined attributes and rules. When
+users are assigned to attributes defined in attribute-based access control policies or rules,
+they can be provisioned to a system with the appropriate privileges or dynamically granted
+access to a protected resource. Attribute-based access control can be implemented as either
+a mandatory or discretionary form of access control. When implemented with mandatory
+access controls, the requirements in AC-3(3) define the scope of the subjects and objects
+covered by the policy.
+ACCESS ENFORCEMENT | INDIVIDUAL ACCESS
+Provide [Assignment: organization-defined mechanisms] to enable individuals to have
+access to the following elements of their personally identifiable information: [Assignment:
+organization-defined elements].
+Discussion: Individual access affords individuals the ability to review personally identifiable
+information about them held within organizational records, regardless of format. Access
+helps individuals to develop an understanding about how their personally identifiable
+information is being processed. It can also help individuals ensure that their data is accurate.
+Access mechanisms can include request forms and application interfaces. For federal
+agencies, [PRIVACT] processes can be located in systems of record notices and on agency
+websites. Access to certain types of records may not be appropriate (e.g., for federal
+agencies, law enforcement records within a system of records may be exempt from
+disclosure under the [PRIVACT]) or may require certain levels of authentication assurance.
+Organizational personnel consult with the senior agency official for privacy and legal counsel
+to determine appropriate mechanisms and access rights or limitations
+ACCESS ENFORCEMENT | DISCRETIONARY AND MANDATORY ACCESS CONTROL
+(a) Enforce [Assignment: organization-defined mandatory access control policy] over the
+set of covered subjects and objects specified in the policy; and
+(b) Enforce [Assignment: organization-defined discretionary access control policy] over
+the set of covered subjects and objects specified in the policy.
+Discussion: Simultaneously implementing a mandatory access control policy and a
+discretionary access control policy can provide additional protection against the
+unauthorized execution of code by users or processes acting on behalf of users. This helps
+prevent a single compromised user or process from compromising the entire system.
+SECURITY AND PRIVACY ATTRIBUTES
+Control:
+a. Provide the means to associate [Assignment: organization-defined types of security and
+privacy attributes] with [Assignment: organization-defined security and privacy attribute
+values] for information in storage, in process, and/or in transmission;
+b. Ensure that the attribute associations are made and retained with the information;
+c. Establish the following permitted security and privacy attributes from the attributes defined
+in AC-16a for [Assignment: organization-defined systems]: [Assignment: organization-defined
+security and privacy attributes];
+d. Determine the following permitted attribute values or ranges for each of the established
+attributes: [Assignment: organization-defined attribute values or ranges for established
+attributes];
+e. Audit changes to attributes; and
+f. Review [Assignment: organization-defined security and privacy attributes] for applicability
+[Assignment: organization-defined frequency].
+Discussion: Information is represented internally within systems using abstractions known as
+data structures. Internal data structures can represent different types of entities, both active and
+passive. Active entities, also known as subjects, are typically associated with individuals, devices,
+or processes acting on behalf of individuals. Passive entities, also known as objects, are typically
+associated with data structures, such as records, buffers, tables, files, inter-process pipes, and
+communications ports. Security attributes, a form of metadata, are abstractions that represent
+the basic properties or characteristics of active and passive entities with respect to safeguarding
+information. Privacy attributes, which may be used independently or in conjunction with security
+attributes, represent the basic properties or characteristics of active or passive entities with
+respect to the management of personally identifiable information. Attributes can be either
+explicitly or implicitly associated with the information contained in organizational systems or
+system components.
+Attributes may be associated with active entities (i.e., subjects) that have the potential to send or
+receive information, cause information to flow among objects, or change the system state. These
+attributes may also be associated with passive entities (i.e., objects) that contain or receive
+information. The association of attributes to subjects and objects by a system is referred to as
+binding and is inclusive of setting the attribute value and the attribute type. Attributes, when
+bound to data or information, permit the enforcement of security and privacy policies for access
+control and information flow control, including data retention limits, permitted uses of
+personally identifiable information, and identification of personal information within data
+objects. Such enforcement occurs through organizational processes or system functions or
+mechanisms. The binding techniques implemented by systems affect the strength of attribute
+binding to information. Binding strength and the assurance associated with binding techniques
+play important parts in the trust that organizations have in the information flow enforcement
+process. The binding techniques affect the number and degree of additional reviews required by
+organizations. The content or assigned values of attributes can directly affect the ability of
+individuals to access organizational information.
+Organizations can define the types of attributes needed for systems to support missions or
+business functions. There are many values that can be assigned to a security attribute. By
+specifying the permitted attribute ranges and values, organizations ensure that attribute values
+are meaningful and relevant. Labeling refers to the association of attributes with the subjects
+and objects represented by the internal data structures within systems. This facilitates systembased enforcement of information security and privacy policies. Labels include classification of
+information in accordance with legal and compliance requirements (e.g., top secret, secret,
+confidential, controlled unclassified), information impact level; high value asset information,
+access authorizations, nationality; data life cycle protection (i.e., encryption and data expiration),
+personally identifiable information processing permissions, including individual consent to
+personally identifiable information processing, and contractor affiliation. A related term to
+labeling is marking. Marking refers to the association of attributes with objects in a humanreadable form and displayed on system media. Marking enables manual, procedural, or processbased enforcement of information security and privacy policies. Security and privacy labels may
+have the same value as media markings (e.g., top secret, secret, confidential). See MP-3 (Media
+Marking).
+SECURITY AND PRIVACY ATTRIBUTES | DYNAMIC ATTRIBUTE ASSOCIATION
+Dynamically associate security and privacy attributes with [Assignment: organizationdefined subjects and objects] in accordance with the following security and privacy policies
+as information is created and combined: [Assignment: organization-defined security and
+privacy policies].
+Discussion: Dynamic association of attributes is appropriate whenever the security or
+privacy characteristics of information change over time. Attributes may change due to
+information aggregation issues (i.e., characteristics of individual data elements are different
+from the combined elements), changes in individual access authorizations (i.e., privileges),
+changes in the security category of information, or changes in security or privacy policies.
+Attributes may also change situationally.
+SECURITY AND PRIVACY ATTRIBUTES | ATTRIBUTE VALUE CHANGES BY AUTHORIZED INDIVIDUALS
+Provide authorized individuals (or processes acting on behalf of individuals) the capability
+to define or change the value of associated security and privacy attributes.
+Discussion: The content or assigned values of attributes can directly affect the ability of
+individuals to access organizational information. Therefore, it is important for systems to be
+able to limit the ability to create or modify attributes to authorized individuals.
+SECURITY AND PRIVACY ATTRIBUTES | MAINTENANCE OF ATTRIBUTE ASSOCIATIONS BY SYSTEM
+Maintain the association and integrity of [Assignment: organization-defined security and
+privacy attributes] to [Assignment: organization-defined subjects and objects].
+Discussion: Maintaining the association and integrity of security and privacy attributes to
+subjects and objects with sufficient assurance helps to ensure that the attribute associations
+can be used as the basis of automated policy actions. The integrity of specific items, such as
+security configuration files, may be maintained through the use of an integrity monitoring
+mechanism that detects anomalies and changes that deviate from “known good” baselines.
+Automated policy actions include retention date expirations, access control decisions,
+information flow control decisions, and information disclosure decisions.
+SECURITY AND PRIVACY ATTRIBUTES | ASSOCIATION OF ATTRIBUTES BY AUTHORIZED INDIVIDUALS
+Provide the capability to associate [Assignment: organization-defined security and privacy
+attributes] with [Assignment: organization-defined subjects and objects] by authorized
+individuals (or processes acting on behalf of individuals).
+Discussion: Systems, in general, provide the capability for privileged users to assign security
+and privacy attributes to system-defined subjects (e.g., users) and objects (e.g., directories,
+files, and ports). Some systems provide additional capability for general users to assign
+security and privacy attributes to additional objects (e.g., files, emails). The association of
+attributes by authorized individuals is described in the design documentation. The support
+provided by systems can include prompting users to select security and privacy attributes to
+be associated with information objects, employing automated mechanisms to categorize
+information with attributes based on defined policies, or ensuring that the combination of
+the security or privacy attributes selected is valid. Organizations consider the creation,
+deletion, or modification of attributes when defining auditable events.
+SECURITY AND PRIVACY ATTRIBUTES | ATTRIBUTE DISPLAYS ON OBJECTS TO BE OUTPUT
+Display security and privacy attributes in human-readable form on each object that the
+system transmits to output devices to identify [Assignment: organization-defined special
+dissemination, handling, or distribution instructions] using [Assignment: organizationdefined human-readable, standard naming conventions].
+Discussion: System outputs include printed pages, screens, or equivalent items. System
+output devices include printers, notebook computers, video displays, smart phones, and
+tablets. To mitigate the risk of unauthorized exposure of information (e.g., shoulder surfing),
+the outputs display full attribute values when unmasked by the subscriber.
+SECURITY AND PRIVACY ATTRIBUTES | MAINTENANCE OF ATTRIBUTE ASSOCIATION
+Require personnel to associate and maintain the association of [Assignment: organizationdefined security and privacy attributes] with [Assignment: organization-defined subjects
+and objects] in accordance with [Assignment: organization-defined security and privacy
+policies].
+Discussion: Maintaining attribute association requires individual users (as opposed to the
+system) to maintain associations of defined security and privacy attributes with subjects and
+objects.
+SECURITY AND PRIVACY ATTRIBUTES | CONSISTENT ATTRIBUTE INTERPRETATION
+Provide a consistent interpretation of security and privacy attributes transmitted between
+distributed system components.
+Discussion: To enforce security and privacy policies across multiple system components in
+distributed systems, organizations provide a consistent interpretation of security and privacy
+attributes employed in access enforcement and flow enforcement decisions. Organizations
+can establish agreements and processes to help ensure that distributed system components
+implement attributes with consistent interpretations in automated access enforcement and
+flow enforcement actions.
+SECURITY AND PRIVACY ATTRIBUTES | ASSOCIATION TECHNIQUES AND TECHNOLOGIES
+Implement [Assignment: organization-defined techniques and technologies] in associating
+security and privacy attributes to information.
+Discussion: The association of security and privacy attributes to information within systems
+is important for conducting automated access enforcement and flow enforcement actions.
+The association of such attributes to information (i.e., binding) can be accomplished with
+technologies and techniques that provide different levels of assurance. For example, systems
+can cryptographically bind attributes to information using digital signatures that support
+cryptographic keys protected by hardware devices (sometimes known as hardware roots of
+trust).
+SECURITY AND PRIVACY ATTRIBUTES | ATTRIBUTE REASSIGNMENT — REGRADING MECHANISMS
+Change security and privacy attributes associated with information only via regrading
+mechanisms validated using [Assignment: organization-defined techniques or procedures].
+Discussion: A regrading mechanism is a trusted process authorized to re-classify and re-label
+data in accordance with a defined policy exception. Validated regrading mechanisms are
+used by organizations to provide the requisite levels of assurance for attribute reassignment
+activities. The validation is facilitated by ensuring that regrading mechanisms are single
+purpose and of limited function. Since security and privacy attribute changes can directly
+affect policy enforcement actions, implementing trustworthy regrading mechanisms is
+necessary to help ensure that such mechanisms perform in a consistent and correct mode of
+operation.
+SECURITY AND PRIVACY ATTRIBUTES | ATTRIBUTE CONFIGURATION BY AUTHORIZED INDIVIDUALS
+Provide authorized individuals the capability to define or change the type and value of
+security and privacy attributes available for association with subjects and objects.
+Discussion: The content or assigned values of security and privacy attributes can directly
+affect the ability of individuals to access organizational information. Thus, it is important for
+systems to be able to limit the ability to create or modify the type and value of attributes
+available for association with subjects and objects to authorized individuals only.
+ACCESS CONTROL FOR MOBILE DEVICES
+Control:
+a. Establish configuration requirements, connection requirements, and implementation
+guidance for organization-controlled mobile devices, to include when such devices are
+outside of controlled areas; and
+b. Authorize the connection of mobile devices to organizational systems.
+Discussion: A mobile device is a computing device that has a small form factor such that it can
+easily be carried by a single individual; is designed to operate without a physical connection;
+possesses local, non-removable or removable data storage; and includes a self-contained power
+source. Mobile device functionality may also include voice communication capabilities, on-board
+sensors that allow the device to capture information, and/or built-in features for synchronizing
+local data with remote locations. Examples include smart phones and tablets. Mobile devices are
+typically associated with a single individual. The processing, storage, and transmission capability
+of the mobile device may be comparable to or merely a subset of notebook/desktop systems,
+depending on the nature and intended purpose of the device. Protection and control of mobile
+devices is behavior or policy-based and requires users to take physical action to protect and
+control such devices when outside of controlled areas. Controlled areas are spaces for which
+organizations provide physical or procedural controls to meet the requirements established for
+protecting information and systems.
+Due to the large variety of mobile devices with different characteristics and capabilities,
+organizational restrictions may vary for the different classes or types of such devices. Usage
+restrictions and specific implementation guidance for mobile devices include configuration
+management, device identification and authentication, implementation of mandatory protective
+software, scanning devices for malicious code, updating virus protection software, scanning for
+critical software updates and patches, conducting primary operating system (and possibly other
+resident software) integrity checks, and disabling unnecessary hardware.
+Usage restrictions and authorization to connect may vary among organizational systems. For
+example, the organization may authorize the connection of mobile devices to its network and
+impose a set of usage restrictions, while a system owner may withhold authorization for mobile
+device connection to specific applications or impose additional usage restrictions before allowing
+mobile device connections to a system. Adequate security for mobile devices goes beyond the
+requirements specified in AC-19. Many safeguards for mobile devices are reflected in other
+controls. AC-20 addresses mobile devices that are not organization-controlled.
+ACCESS CONTROL FOR MOBILE DEVICES | RESTRICTIONS FOR CLASSIFIED INFORMATION
+(a) Prohibit the use of unclassified mobile devices in facilities containing systems
+processing, storing, or transmitting classified information unless specifically permitted
+by the authorizing official; and
+(b) Enforce the following restrictions on individuals permitted by the authorizing official
+to use unclassified mobile devices in facilities containing systems processing, storing,
+or transmitting classified information:
+(1) Connection of unclassified mobile devices to classified systems is prohibited;
+(2) Connection of unclassified mobile devices to unclassified systems requires
+approval from the authorizing official;
+(3) Use of internal or external modems or wireless interfaces within the unclassified
+mobile devices is prohibited; and
+(4) Unclassified mobile devices and the information stored on those devices are
+subject to random reviews and inspections by [Assignment: organization-defined
+security officials], and if classified information is found, the incident handling
+policy is followed.
+(c) Restrict the connection of classified mobile devices to classified systems in accordance
+with [Assignment: organization-defined security policies].
+ACCESS CONTROL FOR MOBILE DEVICES | FULL DEVICE OR CONTAINER-BASED ENCRYPTION
+Employ [Selection: full-device encryption; container-based encryption] to protect the
+confidentiality and integrity of information on [Assignment: organization-defined mobile
+devices].
+Discussion: Container-based encryption provides a more fine-grained approach to data and
+information encryption on mobile devices, including encrypting selected data structures
+such as files, records, or fields.
+ACCESS CONTROL DECISIONS
+Control: [Selection: Establish procedures; Implement mechanisms] to ensure [Assignment:
+organization-defined access control decisions] are applied to each access request prior to access
+enforcement.
+Discussion: Access control decisions (also known as authorization decisions) occur when
+authorization information is applied to specific accesses. In contrast, access enforcement occurs
+when systems enforce access control decisions. While it is common to have access control
+decisions and access enforcement implemented by the same entity, it is not required, and it is
+not always an optimal implementation choice. For some architectures and distributed systems,
+different entities may make access control decisions and enforce access.
+ACCESS CONTROL DECISIONS | TRANSMIT ACCESS AUTHORIZATION INFORMATION
+Transmit [Assignment: organization-defined access authorization information] using
+[Assignment: organization-defined controls] to [Assignment: organization-defined
+systems] that enforce access control decisions.
+Discussion: Authorization processes and access control decisions may occur in separate
+parts of systems or in separate systems. In such instances, authorization information is
+transmitted securely (e.g., using cryptographic mechanisms) so that timely access control
+decisions can be enforced at the appropriate locations. To support the access control
+decisions, it may be necessary to transmit as part of the access authorization information
+supporting security and privacy attributes. This is because in distributed systems, there are
+various access control decisions that need to be made, and different entities make these
+decisions in a serial fashion, each requiring those attributes to make the decisions.
+Protecting access authorization information ensures that such information cannot be
+altered, spoofed, or compromised during transmission.
+ACCESS CONTROL DECISIONS | NO USER OR PROCESS IDENTITY
+Enforce access control decisions based on [Assignment: organization-defined security or
+privacy attributes] that do not include the identity of the user or process acting on behalf
+of the user.
+Discussion: In certain situations, it is important that access control decisions can be made
+without information regarding the identity of the users issuing the requests. These are
+generally instances where preserving individual privacy is of paramount importance. In other
+situations, user identification information is simply not needed for access control decisions,
+and especially in the case of distributed systems, transmitting such information with the
+needed degree of assurance may be very expensive or difficult to accomplish. MAC, RBAC,
+ABAC, and label-based control policies, for example, might not include user identity as an
+attribute.
+POLICY AND PROCEDURES
+Control:
+a. Develop, document, and disseminate to [Assignment: organization-defined personnel or
+roles]:
+1. [Selection (one or more): Organization-level; Mission/business process-level; Systemlevel] identification and authentication policy that:
+(a) Addresses purpose, scope, roles, responsibilities, management commitment,
+coordination among organizational entities, and compliance; and
+(b) Is consistent with applicable laws, executive orders, directives, regulations, policies,
+standards, and guidelines; and
+2. Procedures to facilitate the implementation of the identification and authentication
+policy and the associated identification and authentication controls;
+b. Designate an [Assignment: organization-defined official] to manage the development,
+documentation, and dissemination of the identification and authentication policy and
+procedures; and
+c. Review and update the current identification and authentication:
+1. Policy [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events]; and
+2. Procedures [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events].
+Discussion: Identification and authentication policy and procedures address the controls in the
+IA family that are implemented within systems and organizations. The risk management strategy
+is an important factor in establishing such policies and procedures. Policies and procedures
+contribute to security and privacy assurance. Therefore, it is important that security and privacy
+programs collaborate on the development of identification and authentication policy and
+procedures. Security and privacy program policies and procedures at the organization level are
+preferable, in general, and may obviate the need for mission- or system-specific policies and
+procedures. The policy can be included as part of the general security and privacy policy or be
+represented by multiple policies that reflect the complex nature of organizations. Procedures can
+be established for security and privacy programs, for mission or business processes, and for
+systems, if needed. Procedures describe how the policies or controls are implemented and can
+be directed at the individual or role that is the object of the procedure. Procedures can be
+documented in system security and privacy plans or in one or more separate documents. Events
+that may precipitate an update to identification and authentication policy and procedures
+include assessment or audit findings, security incidents or breaches, or changes in applicable
+laws, executive orders, directives, regulations, policies, standards, and guidelines. Simply
+restating controls does not constitute an organizational policy or procedure.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS)
+Control: Uniquely identify and authenticate organizational users and associate that unique
+identification with processes acting on behalf of those users.
+Discussion: Organizations can satisfy the identification and authentication requirements by
+complying with the requirements in [HSPD 12]. Organizational users include employees or
+individuals who organizations consider to have an equivalent status to employees (e.g.,
+contractors and guest researchers). Unique identification and authentication of users applies to
+all accesses other than those that are explicitly identified in AC-14 and that occur through the
+authorized use of group authenticators without individual authentication. Since processes
+execute on behalf of groups and roles, organizations may require unique identification of
+individuals in group accounts or for detailed accountability of individual activity.
+Organizations employ passwords, physical authenticators, or biometrics to authenticate user
+identities or, in the case of multi-factor authentication, some combination thereof. Access to
+organizational systems is defined as either local access or network access. Local access is any
+access to organizational systems by users or processes acting on behalf of users, where access is
+obtained through direct connections without the use of networks. Network access is access to
+organizational systems by users (or processes acting on behalf of users) where access is obtained
+through network connections (i.e., nonlocal accesses). Remote access is a type of network access
+that involves communication through external networks. Internal networks include local area
+networks and wide area networks.
+The use of encrypted virtual private networks for network connections between organizationcontrolled endpoints and non-organization-controlled endpoints may be treated as internal
+networks with respect to protecting the confidentiality and integrity of information traversing
+the network. Identification and authentication requirements for non-organizational users are
+described in IA-8.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | MULTI-FACTOR
+AUTHENTICATION TO PRIVILEGED ACCOUNTS
+Implement multi-factor authentication for access to privileged accounts.
+Discussion: Multi-factor authentication requires the use of two or more different factors to
+achieve authentication. The authentication factors are defined as follows: something you
+know (e.g., a personal identification number [PIN]), something you have (e.g., a physical
+authenticator such as a cryptographic private key), or something you are (e.g., a biometric).
+Multi-factor authentication solutions that feature physical authenticators include hardware
+authenticators that provide time-based or challenge-response outputs and smart cards such
+as the U.S. Government Personal Identity Verification (PIV) card or the Department of
+Defense (DoD) Common Access Card (CAC). In addition to authenticating users at the system
+level (i.e., at logon), organizations may employ authentication mechanisms at the application
+level, at their discretion, to provide increased security. Regardless of the type of access (i.e.,
+local, network, remote), privileged accounts are authenticated using multi-factor options
+appropriate for the level of risk. Organizations can add additional security measures, such as
+additional or more rigorous authentication mechanisms, for specific types of access.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | MULTI-FACTOR
+AUTHENTICATION TO NON-PRIVILEGED ACCOUNTS
+Implement multi-factor authentication for access to non-privileged accounts.
+Discussion: Multi-factor authentication requires the use of two or more different factors to
+achieve authentication. The authentication factors are defined as follows: something you
+know (e.g., a personal identification number [PIN]), something you have (e.g., a physical
+authenticator such as a cryptographic private key), or something you are (e.g., a biometric).
+Multi-factor authentication solutions that feature physical authenticators include hardware
+authenticators that provide time-based or challenge-response outputs and smart cards such
+as the U.S. Government Personal Identity Verification card or the DoD Common Access Card.
+In addition to authenticating users at the system level, organizations may also employ
+authentication mechanisms at the application level, at their discretion, to provide increased
+information security. Regardless of the type of access (i.e., local, network, remote), nonprivileged accounts are authenticated using multi-factor options appropriate for the level of
+risk. Organizations can provide additional security measures, such as additional or more
+rigorous authentication mechanisms, for specific types of access.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | INDIVIDUAL AUTHENTICATION
+WITH GROUP AUTHENTICATION
+When shared accounts or authenticators are employed, require users to be individually
+authenticated before granting access to the shared accounts or resources.
+Discussion: Individual authentication prior to shared group authentication mitigates the risk
+of using group accounts or authenticators.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | ACCESS TO ACCOUNTS —
+SEPARATE DEVICE
+Implement multi-factor authentication for [Selection (one or more): local; network;
+remote] access to [Selection (one or more): privileged accounts; non-privileged accounts]
+such that:
+(a) One of the factors is provided by a device separate from the system gaining access;
+and
+(b) The device meets [Assignment: organization-defined strength of mechanism
+requirements].
+Discussion: The purpose of requiring a device that is separate from the system to which the
+user is attempting to gain access for one of the factors during multi-factor authentication is
+to reduce the likelihood of compromising authenticators or credentials stored on the
+system. Adversaries may be able to compromise such authenticators or credentials and
+subsequently impersonate authorized users. Implementing one of the factors on a separate
+device (e.g., a hardware token), provides a greater strength of mechanism and an increased
+level of assurance in the authentication process.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | ACCESS TO ACCOUNTS —
+REPLAY RESISTANT
+Implement replay-resistant authentication mechanisms for access to [Selection (one or
+more): privileged accounts; non-privileged accounts].
+Discussion: Authentication processes resist replay attacks if it is impractical to achieve
+successful authentications by replaying previous authentication messages. Replay-resistant
+techniques include protocols that use nonces or challenges such as time synchronous or
+cryptographic authenticators.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | SINGLE SIGN-ON
+Provide a single sign-on capability for [Assignment: organization-defined system accounts
+and services].
+Discussion: Single sign-on enables users to log in once and gain access to multiple system
+resources. Organizations consider the operational efficiencies provided by single sign-on
+capabilities with the risk introduced by allowing access to multiple systems via a single
+authentication event. Single sign-on can present opportunities to improve system security,
+for example by providing the ability to add multi-factor authentication for applications and
+systems (existing and new) that may not be able to natively support multi-factor
+authentication.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | ACCEPTANCE OF PIV
+CREDENTIALS
+Accept and electronically verify Personal Identity Verification-compliant credentials.
+Discussion: Acceptance of Personal Identity Verification (PIV)-compliant credentials applies
+to organizations implementing logical access control and physical access control systems.
+PIV-compliant credentials are those credentials issued by federal agencies that conform to
+FIPS Publication 201 and supporting guidance documents. The adequacy and reliability of PIV
+card issuers are authorized using [SP 800-79-2]. Acceptance of PIV-compliant credentials
+includes derived PIV credentials, the use of which is addressed in [SP 800-166]. The DOD
+Common Access Card (CAC) is an example of a PIV credential.
+IDENTIFICATION AND AUTHENTICATION (ORGANIZATIONAL USERS) | OUT-OF-BAND
+AUTHENTICATION
+Implement the following out-of-band authentication mechanisms under [Assignment:
+organization-defined conditions]: [Assignment: organization-defined out-of-band
+authentication].
+Discussion: Out-of-band authentication refers to the use of two separate communication
+paths to identify and authenticate users or devices to an information system. The first path
+(i.e., the in-band path) is used to identify and authenticate users or devices and is generally
+the path through which information flows. The second path (i.e., the out-of-band path) is
+used to independently verify the authentication and/or requested action. For example, a
+user authenticates via a notebook computer to a remote server to which the user desires
+access and requests some action of the server via that communication path. Subsequently,
+the server contacts the user via the user’s cell phone to verify that the requested action
+originated from the user. The user may confirm the intended action to an individual on the
+telephone or provide an authentication code via the telephone. Out-of-band authentication
+can be used to mitigate actual or suspected “man-in the-middle” attacks. The conditions or
+criteria for activation include suspicious activities, new threat indicators, elevated threat
+levels, or the impact or classification level of information in requested transactions.
+IDENTIFIER MANAGEMENT
+Control: Manage system identifiers by:
+a. Receiving authorization from [Assignment: organization-defined personnel or roles] to assign
+an individual, group, role, service, or device identifier;
+b. Selecting an identifier that identifies an individual, group, role, service, or device;
+c. Assigning the identifier to the intended individual, group, role, service, or device; and
+d. Preventing reuse of identifiers for [Assignment: organization-defined time period].
+Discussion: Common device identifiers include Media Access Control (MAC) addresses, Internet
+Protocol (IP) addresses, or device-unique token identifiers. The management of individual
+identifiers is not applicable to shared system accounts. Typically, individual identifiers are the
+usernames of the system accounts assigned to those individuals. In such instances, the account
+management activities of AC-2 use account names provided by IA-4. Identifier management also
+addresses individual identifiers not necessarily associated with system accounts. Preventing the
+reuse of identifiers implies preventing the assignment of previously used individual, group, role,
+service, or device identifiers to different individuals, groups, roles, services, or devices.
+IDENTIFIER MANAGEMENT | PROHIBIT ACCOUNT IDENTIFIERS AS PUBLIC IDENTIFIERS
+Prohibit the use of system account identifiers that are the same as public identifiers for
+individual accounts.
+Discussion: Prohibiting account identifiers as public identifiers applies to any publicly
+disclosed account identifier used for communication such as, electronic mail and instant
+messaging. Prohibiting the use of systems account identifiers that are the same as some
+public identifier, such as the individual identifier section of an electronic mail address, makes
+it more difficult for adversaries to guess user identifiers. Prohibiting account identifiers as
+public identifiers without the implementation of other supporting controls only complicates
+guessing of identifiers. Additional protections are required for authenticators and credentials
+to protect the account.
+IDENTIFIER MANAGEMENT | IDENTIFY USER STATUS
+Manage individual identifiers by uniquely identifying each individual as [Assignment:
+organization-defined characteristic identifying individual status].
+Discussion: Characteristics that identify the status of individuals include contractors, foreign
+nationals, and non-organizational users. Identifying the status of individuals by these
+characteristics provides additional information about the people with whom organizational
+personnel are communicating. For example, it might be useful for a government employee
+to know that one of the individuals on an email message is a contractor.
+IDENTIFIER MANAGEMENT | DYNAMIC MANAGEMENT
+Manage individual identifiers dynamically in accordance with [Assignment: organizationdefined dynamic identifier policy].
+Discussion: In contrast to conventional approaches to identification that presume static
+accounts for preregistered users, many distributed systems establish identifiers at runtime
+for entities that were previously unknown. When identifiers are established at runtime for
+previously unknown entities, organizations can anticipate and provision for the dynamic
+establishment of identifiers. Pre-established trust relationships and mechanisms with
+appropriate authorities to validate credentials and related identifiers are essential.
+IDENTIFIER MANAGEMENT | CROSS-ORGANIZATION MANAGEMENT
+Coordinate with the following external organizations for cross-organization management
+of identifiers: [Assignment: organization-defined external organizations].
+Discussion: Cross-organization identifier management provides the capability to identify
+individuals, groups, roles, or devices when conducting cross-organization activities involving
+the processing, storage, or transmission of information.
+IDENTIFIER MANAGEMENT | PAIRWISE PSEUDONYMOUS IDENTIFIERS
+Generate pairwise pseudonymous identifiers.
+Discussion: A pairwise pseudonymous identifier is an opaque unguessable subscriber
+identifier generated by an identity provider for use at a specific individual relying party.
+Generating distinct pairwise pseudonymous identifiers with no identifying information about
+a subscriber discourages subscriber activity tracking and profiling beyond the operational
+requirements established by an organization. The pairwise pseudonymous identifiers are
+unique to each relying party except in situations where relying parties can show a
+demonstrable relationship justifying an operational need for correlation, or all parties
+consent to being correlated in such a manner.
+IDENTIFIER MANAGEMENT | ATTRIBUTE MAINTENANCE AND PROTECTION
+Maintain the attributes for each uniquely identified individual, device, or service in
+[Assignment: organization-defined protected central storage].
+Discussion: For each of the entities covered in IA-2, IA-3, IA-8, and IA-9, it is important to
+maintain the attributes for each authenticated entity on an ongoing basis in a central
+(protected) store.
+AUTHENTICATOR MANAGEMENT
+Control: Manage system authenticators by:
+a. Verifying, as part of the initial authenticator distribution, the identity of the individual,
+group, role, service, or device receiving the authenticator;
+b. Establishing initial authenticator content for any authenticators issued by the organization;
+c. Ensuring that authenticators have sufficient strength of mechanism for their intended use;
+d. Establishing and implementing administrative procedures for initial authenticator
+distribution, for lost or compromised or damaged authenticators, and for revoking
+authenticators;
+e. Changing default authenticators prior to first use;
+f. Changing or refreshing authenticators [Assignment: organization-defined time period by
+authenticator type] or when [Assignment: organization-defined events] occur;
+g. Protecting authenticator content from unauthorized disclosure and modification;
+h. Requiring individuals to take, and having devices implement, specific controls to protect
+authenticators; and
+i. Changing authenticators for group or role accounts when membership to those accounts
+changes.
+Discussion: Authenticators include passwords, cryptographic devices, biometrics, certificates,
+one-time password devices, and ID badges. Device authenticators include certificates and
+passwords. Initial authenticator content is the actual content of the authenticator (e.g., the initial
+password). In contrast, the requirements for authenticator content contain specific criteria or
+characteristics (e.g., minimum password length). Developers may deliver system components
+with factory default authentication credentials (i.e., passwords) to allow for initial installation
+and configuration. Default authentication credentials are often well known, easily discoverable,
+and present a significant risk. The requirement to protect individual authenticators may be
+implemented via control PL-4 or PS-6 for authenticators in the possession of individuals and by
+controls AC-3, AC-6, and SC-28 for authenticators stored in organizational systems, including
+passwords stored in hashed or encrypted formats or files containing encrypted or hashed
+passwords accessible with administrator privileges.
+Systems support authenticator management by organization-defined settings and restrictions for
+various authenticator characteristics (e.g., minimum password length, validation time window for
+time synchronous one-time tokens, and number of allowed rejections during the verification
+stage of biometric authentication). Actions can be taken to safeguard individual authenticators,
+including maintaining possession of authenticators, not sharing authenticators with others, and
+immediately reporting lost, stolen, or compromised authenticators. Authenticator management
+includes issuing and revoking authenticators for temporary access when no longer needed
+AUTHENTICATOR MANAGEMENT | PASSWORD-BASED AUTHENTICATION
+For password-based authentication:
+(a) Maintain a list of commonly-used, expected, or compromised passwords and update
+the list [Assignment: organization-defined frequency] and when organizational
+passwords are suspected to have been compromised directly or indirectly;
+(b) Verify, when users create or update passwords, that the passwords are not found on
+the list of commonly-used, expected, or compromised passwords in IA-5(1)(a);
+(c) Transmit passwords only over cryptographically-protected channels;
+(d) Store passwords using an approved salted key derivation function, preferably using a
+keyed hash;
+(e) Require immediate selection of a new password upon account recovery;
+(f) Allow user selection of long passwords and passphrases, including spaces and all
+printable characters;
+(g) Employ automated tools to assist the user in selecting strong password
+authenticators; and
+(h) Enforce the following composition and complexity rules: [Assignment: organizationdefined composition and complexity rules].
+Discussion: Password-based authentication applies to passwords regardless of whether they
+are used in single-factor or multi-factor authentication. Long passwords or passphrases are
+preferable over shorter passwords. Enforced composition rules provide marginal security
+benefits while decreasing usability. However, organizations may choose to establish certain
+rules for password generation (e.g., minimum character length for long passwords) under
+certain circumstances and can enforce this requirement in IA-5(1)(h). Account recovery can
+occur, for example, in situations when a password is forgotten. Cryptographically protected
+passwords include salted one-way cryptographic hashes of passwords. The list of commonly
+used, compromised, or expected passwords includes passwords obtained from previous
+breach corpuses, dictionary words, and repetitive or sequential characters. The list includes
+context-specific words, such as the name of the service, username, and derivatives thereof.
+AUTHENTICATOR MANAGEMENT | PUBLIC KEY-BASED AUTHENTICATION
+(a) For public key-based authentication:
+(1) Enforce authorized access to the corresponding private key; and
+(2) Map the authenticated identity to the account of the individual or group; and
+(b) When public key infrastructure (PKI) is used:
+(1) Validate certificates by constructing and verifying a certification path to an
+accepted trust anchor, including checking certificate status information; and
+(2) Implement a local cache of revocation data to support path discovery and
+validation.
+Discussion: Public key cryptography is a valid authentication mechanism for individuals,
+machines, and devices. For PKI solutions, status information for certification paths includes
+certificate revocation lists or certificate status protocol responses. For PIV cards, certificate
+validation involves the construction and verification of a certification path to the Common
+Policy Root trust anchor, which includes certificate policy processing. Implementing a local
+cache of revocation data to support path discovery and validation also supports system
+availability in situations where organizations are unable to access revocation information via
+the network.
+AUTHENTICATOR MANAGEMENT | CHANGE AUTHENTICATORS PRIOR TO DELIVERY
+Require developers and installers of system components to provide unique authenticators
+or change default authenticators prior to delivery and installation.
+Discussion: Changing authenticators prior to the delivery and installation of system
+components extends the requirement for organizations to change default authenticators
+upon system installation by requiring developers and/or installers to provide unique
+authenticators or change default authenticators for system components prior to delivery
+and/or installation. However, it typically does not apply to developers of commercial off-theshelf information technology products. Requirements for unique authenticators can be
+included in acquisition documents prepared by organizations when procuring systems or
+system components.
+AUTHENTICATOR MANAGEMENT | PROTECTION OF AUTHENTICATORS
+Protect authenticators commensurate with the security category of the information to
+which use of the authenticator permits access.
+Discussion: For systems that contain multiple security categories of information without
+reliable physical or logical separation between categories, authenticators used to grant
+access to the systems are protected commensurate with the highest security category of
+information on the systems. Security categories of information are determined as part of the
+security categorization process.
+AUTHENTICATOR MANAGEMENT | NO EMBEDDED UNENCRYPTED STATIC AUTHENTICATORS
+Ensure that unencrypted static authenticators are not embedded in applications or other
+forms of static storage.
+Discussion: In addition to applications, other forms of static storage include access scripts
+and function keys. Organizations exercise caution when determining whether embedded or
+stored authenticators are in encrypted or unencrypted form. If authenticators are used in
+the manner stored, then those representations are considered unencrypted authenticators.
+AUTHENTICATOR MANAGEMENT | MULTIPLE SYSTEM ACCOUNTS
+Implement [Assignment: organization-defined security controls] to manage the risk of
+compromise due to individuals having accounts on multiple systems.
+Discussion: When individuals have accounts on multiple systems and use the same
+authenticators such as passwords, there is the risk that a compromise of one account may
+lead to the compromise of other accounts. Alternative approaches include having different
+authenticators (passwords) on all systems, employing a single sign-on or federation
+mechanism, or using some form of one-time passwords on all systems. Organizations can
+also use rules of behavior (see PL-4) and access agreements (see PS-6) to mitigate the risk of
+multiple system accounts.
+AUTHENTICATOR MANAGEMENT | FEDERATED CREDENTIAL MANAGEMENT
+Use the following external organizations to federate credentials: [Assignment:
+organization-defined external organizations].
+Discussion: Federation provides organizations with the capability to authenticate individuals
+and devices when conducting cross-organization activities involving the processing, storage,
+or transmission of information. Using a specific list of approved external organizations for
+authentication helps to ensure that those organizations are vetted and trusted.
+AUTHENTICATOR MANAGEMENT | DYNAMIC CREDENTIAL BINDING
+Bind identities and authenticators dynamically using the following rules: [Assignment:
+organization-defined binding rules].
+Discussion: Authentication requires some form of binding between an identity and the
+authenticator that is used to confirm the identity. In conventional approaches, binding is
+established by pre-provisioning both the identity and the authenticator to the system. For
+example, the binding between a username (i.e., identity) and a password (i.e., authenticator)
+is accomplished by provisioning the identity and authenticator as a pair in the system. New
+authentication techniques allow the binding between the identity and the authenticator to
+be implemented external to a system. For example, with smartcard credentials, the identity
+and authenticator are bound together on the smartcard. Using these credentials, systems
+can authenticate identities that have not been pre-provisioned, dynamically provisioning the
+identity after authentication. In these situations, organizations can anticipate the dynamic
+provisioning of identities. Pre-established trust relationships and mechanisms with
+appropriate authorities to validate identities and related credentials are essential
+AUTHENTICATOR MANAGEMENT | BIOMETRIC AUTHENTICATION PERFORMANCE
+For biometric-based authentication, employ mechanisms that satisfy the following
+biometric quality requirements [Assignment: organization-defined biometric quality
+requirements].
+Discussion: Unlike password-based authentication, which provides exact matches of userinput passwords to stored passwords, biometric authentication does not provide exact
+matches. Depending on the type of biometric and the type of collection mechanism, there is
+likely to be some divergence from the presented biometric and the stored biometric that
+serves as the basis for comparison. Matching performance is the rate at which a biometric
+algorithm correctly results in a match for a genuine user and rejects other users. Biometric
+performance requirements include the match rate, which reflects the accuracy of the
+biometric matching algorithm used by a system
+AUTHENTICATOR MANAGEMENT | EXPIRATION OF CACHED AUTHENTICATORS
+Prohibit the use of cached authenticators after [Assignment: organization-defined time
+period].
+Discussion: Cached authenticators are used to authenticate to the local machine when the
+network is not available. If cached authentication information is out of date, the validity of
+the authentication information may be questionable.
+AUTHENTICATOR MANAGEMENT | MANAGING CONTENT OF PKI TRUST STORES
+For PKI-based authentication, employ an organization-wide methodology for managing the
+content of PKI trust stores installed across all platforms, including networks, operating
+systems, browsers, and applications.
+Discussion: An organization-wide methodology for managing the content of PKI trust stores
+helps improve the accuracy and currency of PKI-based authentication credentials across the
+organization
+AUTHENTICATOR MANAGEMENT | GSA-APPROVED PRODUCTS AND SERVICES
+Use only General Services Administration-approved products and services for identity,
+credential, and access management.
+Discussion: General Services Administration (GSA)-approved products and services are
+products and services that have been approved through the GSA conformance program,
+where applicable, and posted to the GSA Approved Products List. GSA provides guidance for
+teams to design and build functional and secure systems that comply with Federal Identity,
+Credential, and Access Management (FICAM) policies, technologies, and implementation
+patterns
+AUTHENTICATOR MANAGEMENT | IN-PERSON OR TRUSTED EXTERNAL PARTY AUTHENTICATOR
+ISSUANCE
+Require that the issuance of [Assignment: organization-defined types of and/or specific
+authenticators] be conducted [Selection: in person; by a trusted external party] before
+[Assignment: organization-defined registration authority] with authorization by
+[Assignment: organization-defined personnel or roles].
+Discussion: Issuing authenticators in person or by a trusted external party enhances and
+reinforces the trustworthiness of the identity proofing process
+AUTHENTICATOR MANAGEMENT | PRESENTATION ATTACK DETECTION FOR BIOMETRIC
+AUTHENTICATORS
+Employ presentation attack detection mechanisms for biometric-based authentication.
+Discussion: Biometric characteristics do not constitute secrets. Such characteristics can be
+obtained by online web accesses, taking a picture of someone with a camera phone to
+obtain facial images with or without their knowledge, lifting from objects that someone has
+touched (e.g., a latent fingerprint), or capturing a high-resolution image (e.g., an iris
+pattern). Presentation attack detection technologies including liveness detection, can
+mitigate the risk of these types of attacks by making it difficult to produce artifacts intended
+to defeat the biometric sensor.
+AUTHENTICATOR MANAGEMENT | PASSWORD MANAGERS
+(a) Employ [Assignment: organization-defined password managers] to generate and
+manage passwords; and
+(b) Protect the passwords using [Assignment: organization-defined controls].
+Discussion: For systems where static passwords are employed, it is often a challenge to
+ensure that the passwords are suitably complex and that the same passwords are not
+employed on multiple systems. A password manager is a solution to this problem as it
+automatically generates and stores strong and different passwords for various accounts. A
+potential risk of using password managers is that adversaries can target the collection of
+passwords generated by the password manager. Therefore, the collection of passwords
+requires protection including encrypting the passwords (see IA-5(1)(d)) and storing the
+collection offline in a token.
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS)
+Control: Uniquely identify and authenticate non-organizational users or processes acting on
+behalf of non-organizational users.
+Discussion: Non-organizational users include system users other than organizational users
+explicitly covered by IA-2. Non-organizational users are uniquely identified and authenticated for
+accesses other than those explicitly identified and documented in AC-14. Identification and
+authentication of non-organizational users accessing federal systems may be required to protect
+federal, proprietary, or privacy-related information (with exceptions noted for national security
+systems). Organizations consider many factors—including security, privacy, scalability, and
+practicality—when balancing the need to ensure ease of use for access to federal information
+and systems with the need to protect and adequately mitigate risk.
+Control Enhancements:
+(1) IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | ACCEPTANCE OF PIV
+CREDENTIALS FROM OTHER AGENCIES
+Accept and electronically verify Personal Identity Verification-compliant credentials from
+other federal agencies.
+Discussion: Acceptance of Personal Identity Verification (PIV) credentials from other federal
+agencies applies to both logical and physical access control systems. PIV credentials are
+those credentials issued by federal agencies that conform to FIPS Publication 201 and
+supporting guidelines. The adequacy and reliability of PIV card issuers are addressed and
+authorized using [SP 800-79-2].
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | ACCEPTANCE OF EXTERNAL
+AUTHENTICATORS
+(a) Accept only external authenticators that are NIST-compliant; and
+(b) Document and maintain a list of accepted external authenticators.
+Discussion: Acceptance of only NIST-compliant external authenticators applies to
+organizational systems that are accessible to the public (e.g., public-facing websites).
+External authenticators are issued by nonfederal government entities and are compliant
+with [SP 800-63B]. Approved external authenticators meet or exceed the minimum Federal
+Government-wide technical, security, privacy, and organizational maturity requirements.
+Meeting or exceeding Federal requirements allows Federal Government relying parties to
+trust external authenticators in connection with an authentication transaction at a specified
+authenticator assurance level.
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | USE OF DEFINED PROFILES
+Conform to the following profiles for identity management [Assignment: organizationdefined identity management profiles].
+Discussion: Organizations define profiles for identity management based on open identity
+management standards. To ensure that open identity management standards are viable,
+robust, reliable, sustainable, and interoperable as documented, the Federal Government
+assesses and scopes the standards and technology implementations against applicable laws,
+executive orders, directives, policies, regulations, standards, and guidelines.
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | ACCEPTANCE OF PIV-I
+CREDENTIALS
+Accept and verify federated or PKI credentials that meet [Assignment: organizationdefined policy].
+Discussion: Acceptance of PIV-I credentials can be implemented by PIV, PIV-I, and other
+commercial or external identity providers. The acceptance and verification of PIV-I-compliant
+credentials apply to both logical and physical access control systems. The acceptance and
+verification of PIV-I credentials address nonfederal issuers of identity cards that desire to
+interoperate with United States Government PIV systems and that can be trusted by Federal
+Government-relying parties. The X.509 certificate policy for the Federal Bridge Certification
+Authority (FBCA) addresses PIV-I requirements. The PIV-I card is commensurate with the PIV
+credentials as defined in cited references. PIV-I credentials are the credentials issued by a
+PIV-I provider whose PIV-I certificate policy maps to the Federal Bridge PIV-I Certificate
+Policy. A PIV-I provider is cross-certified with the FBCA (directly or through another PKI
+bridge) with policies that have been mapped and approved as meeting the requirements of
+the PIV-I policies defined in the FBCA certificate policy
+IDENTIFICATION AND AUTHENTICATION (NON-ORGANIZATIONAL USERS) | DISASSOCIABILITY
+Implement the following measures to disassociate user attributes or identifier assertion
+relationships among individuals, credential service providers, and relying parties:
+[Assignment: organization-defined measures].
+Discussion: Federated identity solutions can create increased privacy risks due to the
+tracking and profiling of individuals. Using identifier mapping tables or cryptographic
+techniques to blind credential service providers and relying parties from each other or to
+make identity attributes less visible to transmitting parties can reduce these privacy risks
+PHYSICAL ACCESS AUTHORIZATIONS
+Control:
+a. Develop, approve, and maintain a list of individuals with authorized access to the facility
+where the system resides;
+b. Issue authorization credentials for facility access;
+c. Review the access list detailing authorized facility access by individuals [Assignment:
+organization-defined frequency]; and
+d. Remove individuals from the facility access list when access is no longer required.
+Discussion: Physical access authorizations apply to employees and visitors. Individuals with
+permanent physical access authorization credentials are not considered visitors. Authorization
+credentials include ID badges, identification cards, and smart cards. Organizations determine the
+strength of authorization credentials needed consistent with applicable laws, executive orders,
+directives, regulations, policies, standards, and guidelines. Physical access authorizations may not
+be necessary to access certain areas within facilities that are designated as publicly accessible.
+PHYSICAL ACCESS AUTHORIZATIONS | ACCESS BY POSITION OR ROLE
+Authorize physical access to the facility where the system resides based on position or
+role.
+Discussion: Role-based facility access includes access by authorized permanent and
+regular/routine maintenance personnel, duty officers, and emergency medical staff.
+PHYSICAL ACCESS AUTHORIZATIONS | TWO FORMS OF IDENTIFICATION
+Require two forms of identification from the following forms of identification for visitor
+access to the facility where the system resides: [Assignment: organization-defined list of
+acceptable forms of identification].
+Discussion: Acceptable forms of identification include passports, REAL ID-compliant drivers’
+licenses, and Personal Identity Verification (PIV) cards. For gaining access to facilities using
+automated mechanisms, organizations may use PIV cards, key cards, PINs, and biometrics.
+PHYSICAL ACCESS AUTHORIZATIONS | RESTRICT UNESCORTED ACCESS
+Restrict unescorted access to the facility where the system resides to personnel with
+[Selection (one or more): security clearances for all information contained within the
+system; formal access authorizations for all information contained within the system; need
+for access to all information contained within the system; [Assignment: organizationdefined physical access authorizations]].
+Discussion: Individuals without required security clearances, access approvals, or need to
+know are escorted by individuals with appropriate physical access authorizations to ensure
+that information is not exposed or otherwise compromised.
+PERSONNEL SCREENING
+Control:
+a. Screen individuals prior to authorizing access to the system; and
+b. Rescreen individuals in accordance with [Assignment: organization-defined conditions
+requiring rescreening and, where rescreening is so indicated, the frequency of rescreening].
+Discussion: Personnel screening and rescreening activities reflect applicable laws, executive
+orders, directives, regulations, policies, standards, guidelines, and specific criteria established for
+the risk designations of assigned positions. Examples of personnel screening include background
+investigations and agency checks. Organizations may define different rescreening conditions and
+frequencies for personnel accessing systems based on types of information processed, stored, or
+transmitted by the systems.
+PERSONNEL SCREENING | CLASSIFIED INFORMATION
+Verify that individuals accessing a system processing, storing, or transmitting classified
+information are cleared and indoctrinated to the highest classification level of the
+information to which they have access on the system.
+Discussion: Classified information is the most sensitive information that the Federal
+Government processes, stores, or transmits. It is imperative that individuals have the
+requisite security clearances and system access authorizations prior to gaining access to such
+information. Access authorizations are enforced by system access controls (see AC-3) and
+flow controls (see AC-4).
+PERSONNEL SCREENING | FORMAL INDOCTRINATION
+Verify that individuals accessing a system processing, storing, or transmitting types of
+classified information that require formal indoctrination, are formally indoctrinated for all
+the relevant types of information to which they have access on the system.
+Discussion: Types of classified information that require formal indoctrination include Special
+Access Program (SAP), Restricted Data (RD), and Sensitive Compartmented Information (SCI).
+PERSONNEL SCREENING | INFORMATION REQUIRING SPECIAL PROTECTIVE MEASURES
+Verify that individuals accessing a system processing, storing, or transmitting information
+requiring special protection:
+(a) Have valid access authorizations that are demonstrated by assigned official
+government duties; and
+(b) Satisfy [Assignment: organization-defined additional personnel screening criteria].
+Discussion: Organizational information that requires special protection includes controlled
+unclassified information. Personnel security criteria include position sensitivity background
+screening requirements.
+PERSONNEL SCREENING | CITIZENSHIP REQUIREMENTS
+Verify that individuals accessing a system processing, storing, or transmitting [Assignment:
+organization-defined information types] meet [Assignment: organization-defined
+citizenship requirements].
+Discussion: None.

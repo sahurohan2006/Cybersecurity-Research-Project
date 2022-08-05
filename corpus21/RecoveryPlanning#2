@@ -1,0 +1,131 @@
+RC.RP-1: Recovery plan is executed during or after a cybersecurity incident
+SYSTEM RECOVERY AND RECONSTITUTION
+Control: Provide for the recovery and reconstitution of the system to a known state within
+[Assignment: organization-defined time period consistent with recovery time and recovery point
+objectives] after a disruption, compromise, or failure.
+Discussion: Recovery is executing contingency plan activities to restore organizational mission
+and business functions. Reconstitution takes place following recovery and includes activities for
+returning systems to fully operational states. Recovery and reconstitution operations reflect
+mission and business priorities; recovery point, recovery time, and reconstitution objectives; and
+organizational metrics consistent with contingency plan requirements. Reconstitution includes
+the deactivation of interim system capabilities that may have been needed during recovery
+operations. Reconstitution also includes assessments of fully restored system capabilities,
+reestablishment of continuous monitoring activities, system reauthorization (if required), and
+activities to prepare the system and organization for future disruptions, breaches, compromises,
+or failures. Recovery and reconstitution capabilities can include automated mechanisms and
+manual procedures. Organizations establish recovery time and recovery point objectives as part
+of contingency planning
+SYSTEM RECOVERY AND RECONSTITUTION | TRANSACTION RECOVERY
+Implement transaction recovery for systems that are transaction-based.
+Discussion: Transaction-based systems include database management systems and
+transaction processing systems. Mechanisms supporting transaction recovery include
+transaction rollback and transaction journaling.
+SYSTEM RECOVERY AND RECONSTITUTION | RESTORE WITHIN TIME PERIOD
+Provide the capability to restore system components within [Assignment: organizationdefined restoration time periods] from configuration-controlled and integrity-protected
+information representing a known, operational state for the components.
+Discussion: Restoration of system components includes reimaging, which restores the
+components to known, operational states.
+SYSTEM RECOVERY AND RECONSTITUTION | COMPONENT PROTECTION
+Protect system components used for recovery and reconstitution.
+Discussion: Protection of system recovery and reconstitution components (i.e., hardware,
+firmware, and software) includes physical and technical controls. Backup and restoration
+components used for recovery and reconstitution include router tables, compilers, and other
+system software.
+INCIDENT HANDLING
+Control:
+a. Implement an incident handling capability for incidents that is consistent with the incident
+response plan and includes preparation, detection and analysis, containment, eradication,
+and recovery;
+b. Coordinate incident handling activities with contingency planning activities;
+c. Incorporate lessons learned from ongoing incident handling activities into incident response
+procedures, training, and testing, and implement the resulting changes accordingly; and
+d. Ensure the rigor, intensity, scope, and results of incident handling activities are comparable
+and predictable across the organization.
+Discussion: Organizations recognize that incident response capabilities are dependent on the
+capabilities of organizational systems and the mission and business processes being supported by
+those systems. Organizations consider incident response as part of the definition, design, and
+development of mission and business processes and systems. Incident-related information can
+be obtained from a variety of sources, including audit monitoring, physical access monitoring,
+and network monitoring; user or administrator reports; and reported supply chain events. An
+effective incident handling capability includes coordination among many organizational entities
+(e.g., mission or business owners, system owners, authorizing officials, human resources offices,
+physical security offices, personnel security offices, legal departments, risk executive [function],
+operations personnel, procurement offices). Suspected security incidents include the receipt of
+suspicious email communications that can contain malicious code. Suspected supply chain
+incidents include the insertion of counterfeit hardware or malicious code into organizational
+systems or system components. For federal agencies, an incident that involves personally
+identifiable information is considered a breach. A breach results in unauthorized disclosure, the
+loss of control, unauthorized acquisition, compromise, or a similar occurrence where a person
+other than an authorized user accesses or potentially accesses personally identifiable
+information or an authorized user accesses or potentially accesses such information for other
+than authorized purposes.
+) INCIDENT HANDLING | AUTOMATED INCIDENT HANDLING PROCESSES
+Support the incident handling process using [Assignment: organization-defined automated
+mechanisms].
+Discussion: Automated mechanisms that support incident handling processes include online
+incident management systems and tools that support the collection of live response data,
+full network packet capture, and forensic analysis.
+INCIDENT HANDLING | DYNAMIC RECONFIGURATION
+Include the following types of dynamic reconfiguration for [Assignment: organizationdefined system components] as part of the incident response capability: [Assignment:
+organization-defined types of dynamic reconfiguration].
+Discussion: Dynamic reconfiguration includes changes to router rules, access control lists,
+intrusion detection or prevention system parameters, and filter rules for guards or firewalls.
+Organizations may perform dynamic reconfiguration of systems to stop attacks, misdirect
+attackers, and isolate components of systems, thus limiting the extent of the damage from
+breaches or compromises. Organizations include specific time frames for achieving the
+reconfiguration of systems in the definition of the reconfiguration capability, considering the
+potential need for rapid response to effectively address cyber threats.
+INCIDENT HANDLING | CONTINUITY OF OPERATIONS
+Identify [Assignment: organization-defined classes of incidents] and take the following
+actions in response to those incidents to ensure continuation of organizational mission and
+business functions: [Assignment: organization-defined actions to take in response to
+classes of incidents].
+Discussion: Classes of incidents include malfunctions due to design or implementation
+errors and omissions, targeted malicious attacks, and untargeted malicious attacks. Incident
+response actions include orderly system degradation, system shutdown, fall back to manual
+mode or activation of alternative technology whereby the system operates differently,
+employing deceptive measures, alternate information flows, or operating in a mode that is
+reserved for when systems are under attack. Organizations consider whether continuity of
+operations requirements during an incident conflict with the capability to automatically
+disable the system as specified as part of IR-4(5).
+INCIDENT HANDLING | INFORMATION CORRELATION
+Correlate incident information and individual incident responses to achieve an
+organization-wide perspective on incident awareness and response.
+Discussion: Sometimes, a threat event, such as a hostile cyber-attack, can only be observed
+by bringing together information from different sources, including various reports and
+reporting procedures established by organizations.
+INCIDENT HANDLING | AUTOMATIC DISABLING OF SYSTEM
+Implement a configurable capability to automatically disable the system if [Assignment:
+organization-defined security violations] are detected.
+Discussion: Organizations consider whether the capability to automatically disable the
+system conflicts with continuity of operations requirements specified as part of CP-2 or IR4(3). Security violations include cyber-attacks that have compromised the integrity of the
+system or exfiltrated organizational information and serious errors in software programs
+that could adversely impact organizational missions or functions or jeopardize the safety of
+individuals.
+INCIDENT HANDLING | INSIDER THREATS
+Implement an incident handling capability for incidents involving insider threats.
+Discussion: Explicit focus on handling incidents involving insider threats provides additional
+emphasis on this type of threat and the need for specific incident handling capabilities to
+provide appropriate and timely responses.
+INCIDENT HANDLING | INSIDER THREATS — INTRA-ORGANIZATION COORDINATION
+Coordinate an incident handling capability for insider threats that includes the following
+organizational entities [Assignment: organization-defined entities].
+Discussion: Incident handling for insider threat incidents (e.g., preparation, detection and
+analysis, containment, eradication, and recovery) requires coordination among many
+organizational entities, including mission or business owners, system owners, human
+resources offices, procurement offices, personnel offices, physical security offices, senior
+agency information security officer, operations personnel, risk executive (function), senior
+agency official for privacy, and legal counsel. In addition, organizations may require external
+support from federal, state, and local law enforcement agencies.
+INCIDENT HANDLING | CORRELATION WITH EXTERNAL ORGANIZATIONS
+Coordinate with [Assignment: organization-defined external organizations] to correlate
+and share [Assignment: organization-defined incident information] to achieve a crossorganization perspective on incident awareness and more effective incident responses.
+Discussion: The coordination of incident information with external organizations—including
+mission or business partners, military or coalition partners, customers, and developers—can
+provide significant benefits. Cross-organizational coordination can serve as an important risk
+management capability. This capability allows organizations to leverage information from a
+variety of sources to effectively respond to incidents and breaches that could potentially
+affect the organization’s operations, assets, and individuals.
+INCIDENT HANDLING | DYNAMIC RESPONSE CAPABILITY
+Employ [Assignment: organization-defined dynamic response capabilities] to respond to
+incidents.

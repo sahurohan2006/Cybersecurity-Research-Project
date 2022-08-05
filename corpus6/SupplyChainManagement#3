@@ -1,0 +1,324 @@
+ID.SC-2: Suppliers and third party partners of information systems, components, and services are identified, prioritized, and assessed using a cyber supply chain risk assessment process
+SECURITY CATEGORIZATION
+Control:
+a. Categorize the system and information it processes, stores, and transmits;
+b. Document the security categorization results, including supporting rationale, in the security
+plan for the system; and
+c. Verify that the authorizing official or authorizing official designated representative reviews
+and approves the security categorization decision.
+Discussion: Security categories describe the potential adverse impacts or negative consequences
+to organizational operations, organizational assets, and individuals if organizational information
+and systems are compromised through a loss of confidentiality, integrity, or availability. Security
+categorization is also a type of asset loss characterization in systems security engineering
+processes that is carried out throughout the system development life cycle. Organizations can
+use privacy risk assessments or privacy impact assessments to better understand the potential
+adverse effects on individuals. [CNSSI 1253] provides additional guidance on categorization for
+national security systems.
+Organizations conduct the security categorization process as an organization-wide activity with
+the direct involvement of chief information officers, senior agency information security officers,
+senior agency officials for privacy, system owners, mission and business owners, and information
+owners or stewards. Organizations consider the potential adverse impacts to other organizations
+and, in accordance with [USA PATRIOT] and Homeland Security Presidential Directives, potential
+national-level adverse impacts.
+Security categorization processes facilitate the development of inventories of information assets
+and, along with CM-8, mappings to specific system components where information is processed,
+stored, or transmitted. The security categorization process is revisited throughout the system
+development life cycle to ensure that the security categories remain accurate and relevant.
+Related Controls: CM-8, MP-4, PL-2, PL-10, PL-11, PM-7, RA-3, RA-5, RA-7, RA-8, SA-8, SC-7, SC38, SI-12.
+Control Enhancements:
+(1) SECURITY CATEGORIZATION | IMPACT-LEVEL PRIORITIZATION
+Conduct an impact-level prioritization of organizational systems to obtain additional
+granularity on system impact levels.
+Discussion: Organizations apply the “high-water mark” concept to each system categorized
+in accordance with [FIPS 199], resulting in systems designated as low impact, moderate
+impact, or high impact. Organizations that desire additional granularity in the system impact
+designations for risk-based decision-making, can further partition the systems into subcategories of the initial system categorization. For example, an impact-level prioritization on
+a moderate-impact system can produce three new sub-categories: low-moderate systems,
+moderate-moderate systems, and high-moderate systems. Impact-level prioritization and
+the resulting sub-categories of the system give organizations an opportunity to focus their
+investments related to security control selection and the tailoring of control baselines in
+responding to identified risks. Impact-level prioritization can also be used to determine
+those systems that may be of heightened interest or value to adversaries or represent a
+critical loss to the federal enterprise, sometimes described as high value assets. For such
+high value assets, organizations may be more focused on complexity, aggregation, and
+information exchanges. Systems with high value assets can be prioritized by partitioning
+high-impact systems into low-high systems, moderate-high systems, and high-high systems.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 240
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Alternatively, organizations can apply the guidance in [CNSSI 1253] for security objectiverelated categorization
+RISK ASSESSMENT
+Control:
+a. Conduct a risk assessment, including:
+1. Identifying threats to and vulnerabilities in the system;
+2. Determining the likelihood and magnitude of harm from unauthorized access, use,
+disclosure, disruption, modification, or destruction of the system, the information it
+processes, stores, or transmits, and any related information; and
+3. Determining the likelihood and impact of adverse effects on individuals arising from the
+processing of personally identifiable information;
+b. Integrate risk assessment results and risk management decisions from the organization and
+mission or business process perspectives with system-level risk assessments;
+c. Document risk assessment results in [Selection: security and privacy plans; risk assessment
+report; [Assignment: organization-defined document]];
+d. Review risk assessment results [Assignment: organization-defined frequency];
+e. Disseminate risk assessment results to [Assignment: organization-defined personnel or
+roles]; and
+f. Update the risk assessment [Assignment: organization-defined frequency] or when there are
+significant changes to the system, its environment of operation, or other conditions that may
+impact the security or privacy state of the system.
+Discussion: Risk assessments consider threats, vulnerabilities, likelihood, and impact to
+organizational operations and assets, individuals, other organizations, and the Nation. Risk
+assessments also consider risk from external parties, including contractors who operate systems
+on behalf of the organization, individuals who access organizational systems, service providers,
+and outsourcing entities.
+Organizations can conduct risk assessments at all three levels in the risk management hierarchy
+(i.e., organization level, mission/business process level, or information system level) and at any
+stage in the system development life cycle. Risk assessments can also be conducted at various
+steps in the Risk Management Framework, including preparation, categorization, control
+selection, control implementation, control assessment, authorization, and control monitoring.
+Risk assessment is an ongoing activity carried out throughout the system development life cycle.
+Risk assessments can also address information related to the system, including system design,
+the intended use of the system, testing results, and supply chain-related information or artifacts.
+Risk assessments can play an important role in control selection processes, particularly during
+the application of tailoring guidance and in the earliest phases of capability determination.
+Related Controls: CA-3, CA-6, CM-4, CM-13, CP-6, CP-7, IA-8, MA-5, PE-3, PE-8, PE-18, PL-2, PL10, PL-11, PM-8, PM-9, PM-28, PT-2, PT-7, RA-2, RA-5, RA-7, SA-8, SA-9, SC-38, SI-12.
+Control Enhancements:
+(1) RISK ASSESSMENT | SUPPLY CHAIN RISK ASSESSMENT
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 241
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(a) Assess supply chain risks associated with [Assignment: organization-defined systems,
+system components, and system services]; and
+(b) Update the supply chain risk assessment [Assignment: organization-defined
+frequency], when there are significant changes to the relevant supply chain, or when
+changes to the system, environments of operation, or other conditions may
+necessitate a change in the supply chain.
+Discussion: Supply chain-related events include disruption, use of defective components,
+insertion of counterfeits, theft, malicious development practices, improper delivery
+practices, and insertion of malicious code. These events can have a significant impact on the
+confidentiality, integrity, or availability of a system and its information and, therefore, can
+also adversely impact organizational operations (including mission, functions, image, or
+reputation), organizational assets, individuals, other organizations, and the Nation. The
+supply chain-related events may be unintentional or malicious and can occur at any point
+during the system life cycle. An analysis of supply chain risk can help an organization identify
+systems or components for which additional supply chain risk mitigations are required.
+Related Controls: RA-2, RA-9, PM-17, PM-30, SR-2.
+(2) RISK ASSESSMENT | USE OF ALL-SOURCE INTELLIGENCE
+Use all-source intelligence to assist in the analysis of risk.
+Discussion: Organizations employ all-source intelligence to inform engineering, acquisition,
+and risk management decisions. All-source intelligence consists of information derived from
+all available sources, including publicly available or open-source information, measurement
+and signature intelligence, human intelligence, signals intelligence, and imagery intelligence.
+All-source intelligence is used to analyze the risk of vulnerabilities (both intentional and
+unintentional) from development, manufacturing, and delivery processes, people, and the
+environment. The risk analysis may be performed on suppliers at multiple tiers in the supply
+chain sufficient to manage risks. Organizations may develop agreements to share all-source
+intelligence information or resulting decisions with other organizations, as appropriate.
+Related Controls: None.
+(3) RISK ASSESSMENT | DYNAMIC THREAT AWARENESS
+Determine the current cyber threat environment on an ongoing basis using [Assignment:
+organization-defined means].
+Discussion: The threat awareness information that is gathered feeds into the organization’s
+information security operations to ensure that procedures are updated in response to the
+changing threat environment. For example, at higher threat levels, organizations may
+change the privilege or authentication thresholds required to perform certain operations.
+Related Controls: AT-2.
+(4) RISK ASSESSMENT | PREDICTIVE CYBER ANALYTICS
+Employ the following advanced automation and analytics capabilities to predict and
+identify risks to [Assignment: organization-defined systems or system components]:
+[Assignment: organization-defined advanced automation and analytics capabilities].
+Discussion: A properly resourced Security Operations Center (SOC) or Computer Incident
+Response Team (CIRT) may be overwhelmed by the volume of information generated by the
+proliferation of security tools and appliances unless it employs advanced automation and
+analytics to analyze the data. Advanced automation and analytics capabilities are typically
+supported by artificial intelligence concepts, including machine learning. Examples include
+Automated Threat Discovery and Response (which includes broad-based collection, contextbased analysis, and adaptive response capabilities), automated workflow operations, and
+machine assisted decision tools. Note, however, that sophisticated adversaries may be able
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 242
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+to extract information related to analytic parameters and retrain the machine learning to
+classify malicious activity as benign. Accordingly, machine learning is augmented by human
+monitoring to ensure that sophisticated adversaries are not able to conceal their activities.
+DEVELOPMENT PROCESS, STANDARDS, AND TOOLS
+Control:
+a. Require the developer of the system, system component, or system service to follow a
+documented development process that:
+1. Explicitly addresses security and privacy requirements;
+2. Identifies the standards and tools used in the development process;
+3. Documents the specific tool options and tool configurations used in the development
+process; and
+4. Documents, manages, and ensures the integrity of changes to the process and/or tools
+used in development; and
+b. Review the development process, standards, tools, tool options, and tool configurations
+[Assignment: organization-defined frequency] to determine if the process, standards, tools,
+tool options and tool configurations selected and employed can satisfy the following security
+and privacy requirements: [Assignment: organization-defined security and privacy
+requirements].
+Discussion: Development tools include programming languages and computer-aided design
+systems. Reviews of development processes include the use of maturity models to determine the
+potential effectiveness of such processes. Maintaining the integrity of changes to tools and
+processes facilitates effective supply chain risk assessment and mitigation. Such integrity requires
+configuration control throughout the system development life cycle to track authorized changes
+and prevent unauthorized changes.
+Related Controls: MA-6, SA-3, SA-4, SA-8, SA-10, SA-11, SR-3, SR-4, SR-5, SR-6, SR-9.
+Control Enhancements:
+(1) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | QUALITY METRICS
+Require the developer of the system, system component, or system service to:
+(a) Define quality metrics at the beginning of the development process; and
+(b) Provide evidence of meeting the quality metrics [Selection (one or more):
+[Assignment: organization-defined frequency]; [Assignment: organization-defined
+program review milestones]; upon delivery].
+Discussion: Organizations use quality metrics to establish acceptable levels of system
+quality. Metrics can include quality gates, which are collections of completion criteria or
+sufficiency standards that represent the satisfactory execution of specific phases of the
+system development project. For example, a quality gate may require the elimination of all
+compiler warnings or a determination that such warnings have no impact on the
+effectiveness of required security or privacy capabilities. During the execution phases of
+development projects, quality gates provide clear, unambiguous indications of progress.
+Other metrics apply to the entire development project. Metrics can include defining the
+severity thresholds of vulnerabilities in accordance with organizational risk tolerance, such
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 282
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+as requiring no known vulnerabilities in the delivered system with a Common Vulnerability
+Scoring System (CVSS) severity of medium or high.
+Related Controls: None.
+(2) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | SECURITY AND PRIVACY TRACKING TOOLS
+Require the developer of the system, system component, or system service to select and
+employ security and privacy tracking tools for use during the development process.
+Discussion: System development teams select and deploy security and privacy tracking
+tools, including vulnerability or work item tracking systems that facilitate assignment,
+sorting, filtering, and tracking of completed work items or tasks associated with
+development processes.
+Related Controls: SA-11.
+(3) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | CRITICALITY ANALYSIS
+Require the developer of the system, system component, or system service to perform a
+criticality analysis:
+(a) At the following decision points in the system development life cycle: [Assignment:
+organization-defined decision points in the system development life cycle]; and
+(b) At the following level of rigor: [Assignment: organization-defined breadth and depth
+of criticality analysis].
+Discussion: Criticality analysis performed by the developer provides input to the criticality
+analysis performed by organizations. Developer input is essential to organizational criticality
+analysis because organizations may not have access to detailed design documentation for
+system components that are developed as commercial off-the-shelf products. Such design
+documentation includes functional specifications, high-level designs, low-level designs,
+source code, and hardware schematics. Criticality analysis is important for organizational
+systems that are designated as high value assets. High value assets can be moderate- or
+high-impact systems due to heightened adversarial interest or potential adverse effects on
+the federal enterprise. Developer input is especially important when organizations conduct
+supply chain criticality analyses.
+Related Controls: RA-9.
+(4) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | THREAT MODELING AND VULNERABILITY
+ANALYSIS
+[Withdrawn: Incorporated into SA-11(2).]
+(5) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | ATTACK SURFACE REDUCTION
+Require the developer of the system, system component, or system service to reduce
+attack surfaces to [Assignment: organization-defined thresholds].
+Discussion: Attack surface reduction is closely aligned with threat and vulnerability analyses
+and system architecture and design. Attack surface reduction is a means of reducing risk to
+organizations by giving attackers less opportunity to exploit weaknesses or deficiencies (i.e.,
+potential vulnerabilities) within systems, system components, and system services. Attack
+surface reduction includes implementing the concept of layered defenses, applying the
+principles of least privilege and least functionality, applying secure software development
+practices, deprecating unsafe functions, reducing entry points available to unauthorized
+users, reducing the amount of code that executes, and eliminating application programming
+interfaces (APIs) that are vulnerable to attacks.
+Related Controls: AC-6, CM-7, RA-3, SA-11.
+(6) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | CONTINUOUS IMPROVEMENT
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 283
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Require the developer of the system, system component, or system service to implement
+an explicit process to continuously improve the development process.
+Discussion: Developers of systems, system components, and system services consider the
+effectiveness and efficiency of their development processes for meeting quality objectives
+and addressing the security and privacy capabilities in current threat environments.
+Related Controls: None.
+(7) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | AUTOMATED VULNERABILITY ANALYSIS
+Require the developer of the system, system component, or system service [Assignment:
+organization-defined frequency] to:
+(a) Perform an automated vulnerability analysis using [Assignment: organization-defined
+tools];
+(b) Determine the exploitation potential for discovered vulnerabilities;
+(c) Determine potential risk mitigations for delivered vulnerabilities; and
+(d) Deliver the outputs of the tools and results of the analysis to [Assignment:
+organization-defined personnel or roles].
+Discussion: Automated tools can be more effective at analyzing exploitable weaknesses or
+deficiencies in large and complex systems, prioritizing vulnerabilities by severity, and
+providing recommendations for risk mitigations.
+Related Controls: RA-5, SA-11.
+(8) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | REUSE OF THREAT AND VULNERABILITY
+INFORMATION
+Require the developer of the system, system component, or system service to use threat
+modeling and vulnerability analyses from similar systems, components, or services to
+inform the current development process.
+Discussion: Analysis of vulnerabilities found in similar software applications can inform
+potential design and implementation issues for systems under development. Similar systems
+or system components may exist within developer organizations. Vulnerability information is
+available from a variety of public and private sector sources, including the NIST National
+Vulnerability Database.
+Related Controls: None.
+(9) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | USE OF LIVE DATA
+[Withdrawn: Incorporated into SA-3(2).]
+(10) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | INCIDENT RESPONSE PLAN
+Require the developer of the system, system component, or system service to provide,
+implement, and test an incident response plan.
+Discussion: The incident response plan provided by developers may provide information not
+readily available to organizations and be incorporated into organizational incident response
+plans. Developer information may also be extremely helpful, such as when organizations
+respond to vulnerabilities in commercial off-the-shelf products.
+Related Controls: IR-8.
+(11) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | ARCHIVE SYSTEM OR COMPONENT
+Require the developer of the system or system component to archive the system or
+component to be released or delivered together with the corresponding evidence
+supporting the final security and privacy review.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 284
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: Archiving system or system components requires the developer to retain key
+development artifacts, including hardware specifications, source code, object code, and
+relevant documentation from the development process that can provide a readily available
+configuration baseline for system and component upgrades or modifications.
+Related Controls: CM-2.
+(12) DEVELOPMENT PROCESS, STANDARDS, AND TOOLS | MINIMIZE PERSONALLY IDENTIFIABLE
+INFORMATION
+Require the developer of the system or system component to minimize the use of
+personally identifiable information in development and test environments.
+Discussion: Organizations can minimize the risk to an individual’s privacy by using
+techniques such as de-identification or synthetic data. Limiting the use of personally
+identifiable information in development and test environments helps reduce the level of
+privacy risk created by a system.
+RISK MANAGEMENT STRATEGY
+Control:
+a. Develops a comprehensive strategy to manage:
+1. Security risk to organizational operations and assets, individuals, other organizations,
+and the Nation associated with the operation and use of organizational systems; and
+2. Privacy risk to individuals resulting from the authorized processing of personally
+identifiable information;
+b. Implement the risk management strategy consistently across the organization; and
+c. Review and update the risk management strategy [Assignment: organization-defined
+frequency] or as required, to address organizational changes.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 208
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: An organization-wide risk management strategy includes an expression of the
+security and privacy risk tolerance for the organization, security and privacy risk mitigation
+strategies, acceptable risk assessment methodologies, a process for evaluating security and
+privacy risk across the organization with respect to the organization’s risk tolerance, and
+approaches for monitoring risk over time. The senior accountable official for risk management
+(agency head or designated official) aligns information security management processes with
+strategic, operational, and budgetary planning processes. The risk executive function, led by the
+senior accountable official for risk management, can facilitate consistent application of the risk
+management strategy organization-wide. The risk management strategy can be informed by
+security and privacy risk-related inputs from other sources, both internal and external to the
+organization, to ensure that the strategy is broad-based and comprehensive. The supply chain
+risk management strategy described in PM-30 can also provide useful inputs to the organizationwide risk management strategy

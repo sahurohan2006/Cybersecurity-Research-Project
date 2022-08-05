@@ -1,0 +1,111 @@
+PR.IP-5: Policy and regulations regarding the physical operating environment for organizational assets are met
+EMERGENCY SHUTOFF
+Control:
+a. Provide the capability of shutting off power to [Assignment: organization-defined system or
+individual system components] in emergency situations;
+b. Place emergency shutoff switches or devices in [Assignment: organization-defined location
+by system or system component] to facilitate access for authorized personnel; and
+c. Protect emergency power shutoff capability from unauthorized activation.
+Discussion: Emergency power shutoff primarily applies to organizational facilities that contain
+concentrations of system resources, including data centers, mainframe computer rooms, server
+rooms, and areas with computer-controlled machinery.
+EMERGENCY LIGHTING
+Control: Employ and maintain automatic emergency lighting for the system that activates in the
+event of a power outage or disruption and that covers emergency exits and evacuation routes
+within the facility.
+Discussion: The provision of emergency lighting applies primarily to organizational facilities that
+contain concentrations of system resources, including data centers, server rooms, and
+mainframe computer rooms. Emergency lighting provisions for the system are described in the
+contingency plan for the organization. If emergency lighting for the system fails or cannot be
+provided, organizations consider alternate processing sites for power-related contingencies.
+EMERGENCY LIGHTING | ESSENTIAL MISSION AND BUSINESS FUNCTIONS
+Provide emergency lighting for all areas within the facility supporting essential mission and
+business functions.
+Discussion: Organizations define their essential missions and functions
+FIRE PROTECTION
+Control: Employ and maintain fire detection and suppression systems that are supported by an
+independent energy source.
+Discussion: The provision of fire detection and suppression systems applies primarily to
+organizational facilities that contain concentrations of system resources, including data centers,
+server rooms, and mainframe computer rooms. Fire detection and suppression systems that may
+require an independent energy source include sprinkler systems and smoke detectors. An
+independent energy source is an energy source, such as a microgrid, that is separate, or can be
+separated, from the energy sources providing power for the other parts of the facility.
+FIRE PROTECTION | DETECTION SYSTEMS — AUTOMATIC ACTIVATION AND NOTIFICATION
+Employ fire detection systems that activate automatically and notify [Assignment:
+organization-defined personnel or roles] and [Assignment: organization-defined
+emergency responders] in the event of a fire.
+Discussion: Organizations can identify personnel, roles, and emergency responders if
+individuals on the notification list need to have access authorizations or clearances (e.g., to
+enter to facilities where access is restricted due to the classification or impact level of
+information within the facility). Notification mechanisms may require independent energy
+sources to ensure that the notification capability is not adversely affected by the fire.
+FIRE PROTECTION | SUPPRESSION SYSTEMS — AUTOMATIC ACTIVATION AND NOTIFICATION
+(a) Employ fire suppression systems that activate automatically and notify [Assignment:
+organization-defined personnel or roles] and [Assignment: organization-defined
+emergency responders]; and
+(b) Employ an automatic fire suppression capability when the facility is not staffed on a
+continuous basis.
+Discussion: Organizations can identify specific personnel, roles, and emergency responders
+if individuals on the notification list need to have appropriate access authorizations and/or
+clearances (e.g., to enter to facilities where access is restricted due to the impact level or
+classification of information within the facility). Notification mechanisms may require
+independent energy sources to ensure that the notification capability is not adversely
+affected by the fire.
+FIRE PROTECTION | INSPECTIONS
+Ensure that the facility undergoes [Assignment: organization-defined frequency] fire
+protection inspections by authorized and qualified inspectors and identified deficiencies
+are resolved within [Assignment: organization-defined time period].
+Discussion: Authorized and qualified personnel within the jurisdiction of the organization
+include state, county, and city fire inspectors and fire marshals. Organizations provide
+escorts during inspections in situations where the systems that reside within the facilities
+contain sensitive information.
+ENVIRONMENTAL CONTROLS
+Control:
+a. Maintain [Selection (one or more): temperature; humidity; pressure; radiation; [Assignment:
+organization-defined environmental control]] levels within the facility where the system
+resides at [Assignment: organization-defined acceptable levels]; and
+b. Monitor environmental control levels [Assignment: organization-defined frequency].
+Discussion: The provision of environmental controls applies primarily to organizational facilities
+that contain concentrations of system resources (e.g., data centers, mainframe computer rooms,
+and server rooms). Insufficient environmental controls, especially in very harsh environments,
+can have a significant adverse impact on the availability of systems and system components that
+are needed to support organizational mission and business functions.
+ENVIRONMENTAL CONTROLS | AUTOMATIC CONTROLS
+Employ the following automatic environmental controls in the facility to prevent
+fluctuations potentially harmful to the system: [Assignment: organization-defined
+automatic environmental controls].
+Discussion: The implementation of automatic environmental controls provides an
+immediate response to environmental conditions that can damage, degrade, or destroy
+organizational systems or systems components
+ENVIRONMENTAL CONTROLS | MONITORING WITH ALARMS AND NOTIFICATIONS
+Employ environmental control monitoring that provides an alarm or notification of
+changes potentially harmful to personnel or equipment to [Assignment: organizationdefined personnel or roles].
+Discussion: The alarm or notification may be an audible alarm or a visual message in real
+time to personnel or roles defined by the organization. Such alarms and notifications can
+help minimize harm to individuals and damage to organizational assets by facilitating a
+timely incident response.
+WATER DAMAGE PROTECTION
+Control: Protect the system from damage resulting from water leakage by providing master
+shutoff or isolation valves that are accessible, working properly, and known to key personnel.
+Discussion: The provision of water damage protection primarily applies to organizational
+facilities that contain concentrations of system resources, including data centers, server rooms,
+and mainframe computer rooms. Isolation valves can be employed in addition to or in lieu of
+master shutoff valves to shut off water supplies in specific areas of concern without affecting
+entire organizations
+WATER DAMAGE PROTECTION | AUTOMATION SUPPORT
+Detect the presence of water near the system and alert [Assignment: organization-defined
+personnel or roles] using [Assignment: organization-defined automated mechanisms].
+Discussion: Automated mechanisms include notification systems, water detection sensors,
+and alarms
+LOCATION OF SYSTEM COMPONENTS
+Control: Position system components within the facility to minimize potential damage from
+[Assignment: organization-defined physical and environmental hazards] and to minimize the
+opportunity for unauthorized access.
+Discussion: Physical and environmental hazards include floods, fires, tornadoes, earthquakes,
+hurricanes, terrorism, vandalism, an electromagnetic pulse, electrical interference, and other
+forms of incoming electromagnetic radiation. Organizations consider the location of entry points
+where unauthorized individuals, while not being granted access, might nonetheless be near
+systems. Such proximity can increase the risk of unauthorized access to organizational
+communications using wireless packet sniffers or microphones, or unauthorized disclosure of
+information.

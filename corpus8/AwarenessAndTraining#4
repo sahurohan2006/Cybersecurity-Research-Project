@@ -1,0 +1,149 @@
+PR.AT-3: Third-party stakeholders (e.g., suppliers, customers, partners) understand their roles and responsibilities
+EXTERNAL PERSONNEL SECURITY
+Control:
+a. Establish personnel security requirements, including security roles and responsibilities for
+external providers;
+b. Require external providers to comply with personnel security policies and procedures
+established by the organization;
+c. Document personnel security requirements;
+d. Require external providers to notify [Assignment: organization-defined personnel or roles] of
+any personnel transfers or terminations of external personnel who possess organizational
+credentials and/or badges, or who have system privileges within [Assignment: organizationdefined time period]; and
+e. Monitor provider compliance with personnel security requirements.
+Discussion: External provider refers to organizations other than the organization operating or
+acquiring the system. External providers include service bureaus, contractors, and other
+organizations that provide system development, information technology services, testing or
+assessment services, outsourced applications, and network/security management. Organizations
+explicitly include personnel security requirements in acquisition-related documents. External
+providers may have personnel working at organizational facilities with credentials, badges, or
+system privileges issued by organizations. Notifications of external personnel changes ensure the
+appropriate termination of privileges and credentials. Organizations define the transfers and
+terminations deemed reportable by security-related characteristics that include functions, roles,
+and the nature of credentials or privileges associated with transferred or terminated individuals
+EXTERNAL SYSTEM SERVICES
+Control:
+a. Require that providers of external system services comply with organizational security and
+privacy requirements and employ the following controls: [Assignment: organization-defined
+controls];
+b. Define and document organizational oversight and user roles and responsibilities with regard
+to external system services; and
+c. Employ the following processes, methods, and techniques to monitor control compliance by
+external service providers on an ongoing basis: [Assignment: organization-defined processes,
+methods, and techniques].
+Discussion: External system services are provided by an external provider, and the organization
+has no direct control over the implementation of the required controls or the assessment of
+control effectiveness. Organizations establish relationships with external service providers in a
+variety of ways, including through business partnerships, contracts, interagency agreements,
+lines of business arrangements, licensing agreements, joint ventures, and supply chain
+exchanges. The responsibility for managing risks from the use of external system services
+remains with authorizing officials. For services external to organizations, a chain of trust requires
+that organizations establish and retain a certain level of confidence that each provider in the
+consumer-provider relationship provides adequate protection for the services rendered. The
+extent and nature of this chain of trust vary based on relationships between organizations and
+the external providers. Organizations document the basis for the trust relationships so that the
+relationships can be monitored. External system services documentation includes government,
+service providers, end user security roles and responsibilities, and service-level agreements.
+Service-level agreements define the expectations of performance for implemented controls,
+describe measurable outcomes, and identify remedies and response requirements for identified
+instances of noncompliance.
+EXTERNAL SYSTEM SERVICES | RISK ASSESSMENTS AND ORGANIZATIONAL APPROVALS
+(a) Conduct an organizational assessment of risk prior to the acquisition or outsourcing of
+information security services; and
+(b) Verify that the acquisition or outsourcing of dedicated information security services is
+approved by [Assignment: organization-defined personnel or roles].
+Discussion: Information security services include the operation of security devices, such as
+firewalls or key management services as well as incident monitoring, analysis, and response.
+Risks assessed can include system, mission or business, security, privacy, or supply chain
+risks.
+EXTERNAL SYSTEM SERVICES | IDENTIFICATION OF FUNCTIONS, PORTS, PROTOCOLS, AND SERVICES
+Require providers of the following external system services to identify the functions, ports,
+protocols, and other services required for the use of such services: [Assignment:
+organization-defined external system services].
+Discussion: Information from external service providers regarding the specific functions,
+ports, protocols, and services used in the provision of such services can be useful when the
+need arises to understand the trade-offs involved in restricting certain functions and services
+or blocking certain ports and protocols
+EXTERNAL SYSTEM SERVICES | ESTABLISH AND MAINTAIN TRUST RELATIONSHIP WITH PROVIDERS
+Establish, document, and maintain trust relationships with external service providers
+based on the following requirements, properties, factors, or conditions: [Assignment:
+organization-defined security and privacy requirements, properties, factors, or conditions
+defining acceptable trust relationships].
+Discussion: Trust relationships between organizations and external service providers reflect
+the degree of confidence that the risk from using external services is at an acceptable level.
+Trust relationships can help organizations gain increased levels of confidence that service
+providers are providing adequate protection for the services rendered and can also be useful
+when conducting incident response or when planning for upgrades or obsolescence. Trust
+relationships can be complicated due to the potentially large number of entities participating
+in the consumer-provider interactions, subordinate relationships and levels of trust, and
+types of interactions between the parties. In some cases, the degree of trust is based on the
+level of control that organizations can exert on external service providers regarding the
+controls necessary for the protection of the service, information, or individual privacy and
+the evidence brought forth as to the effectiveness of the implemented controls. The level of
+control is established by the terms and conditions of the contracts or service-level
+agreements.
+EXTERNAL SYSTEM SERVICES |CONSISTENT INTERESTS OF CONSUMERS AND PROVIDERS
+Take the following actions to verify that the interests of [Assignment: organizationdefined external service providers] are consistent with and reflect organizational interests:
+[Assignment: organization-defined actions].
+Discussion: As organizations increasingly use external service providers, it is possible that
+the interests of the service providers may diverge from organizational interests. In such
+situations, simply having the required technical, management, or operational controls in
+place may not be sufficient if the providers that implement and manage those controls are
+not operating in a manner consistent with the interests of the consuming organizations.
+Actions that organizations take to address such concerns include requiring background
+checks for selected service provider personnel; examining ownership records; employing
+only trustworthy service providers, such as providers with which organizations have had
+successful trust relationships; and conducting routine, periodic, unscheduled visits to service
+provider facilities.
+EXTERNAL SYSTEM SERVICES | PROCESSING, STORAGE, AND SERVICE LOCATION
+Restrict the location of [Selection (one or more): information processing; information or
+data; system services] to [Assignment: organization-defined locations] based on
+[Assignment: organization-defined requirements or conditions].
+Discussion: The location of information processing, information and data storage, or system
+services can have a direct impact on the ability of organizations to successfully execute their
+mission and business functions. The impact occurs when external providers control the
+location of processing, storage, or services. The criteria that external providers use for the
+selection of processing, storage, or service locations may be different from the criteria that
+organizations use. For example, organizations may desire that data or information storage
+locations be restricted to certain locations to help facilitate incident response activities in
+case of information security incidents or breaches. Incident response activities, including
+forensic analyses and after-the-fact investigations, may be adversely affected by the
+governing laws, policies, or protocols in the locations where processing and storage occur
+and/or the locations from which system services emanate.
+EXTERNAL SYSTEM SERVICES | ORGANIZATION-CONTROLLED CRYPTOGRAPHIC KEYS
+Maintain exclusive control of cryptographic keys for encrypted material stored or
+transmitted through an external system.
+Discussion: Maintaining exclusive control of cryptographic keys in an external system
+prevents decryption of organizational data by external system staff. Organizational control
+of cryptographic keys can be implemented by encrypting and decrypting data inside the
+organization as data is sent to and received from the external system or by employing a
+component that permits encryption and decryption functions to be local to the external
+system but allows exclusive organizational access to the encryption keys
+EXTERNAL SYSTEM SERVICES | ORGANIZATION-CONTROLLED INTEGRITY CHECKING
+Provide the capability to check the integrity of information while it resides in the external
+system.
+Discussion: Storage of organizational information in an external system could limit visibility
+into the security status of its data. The ability of the organization to verify and validate the
+integrity of its stored data without transferring it out of the external system provides such
+visibility
+EXTERNAL SYSTEM SERVICES | PROCESSING AND STORAGE LOCATION — U.S. JURISDICTION
+Restrict the geographic location of information processing and data storage to facilities
+located within in the legal jurisdictional boundary of the United States.
+Discussion: The geographic location of information processing and data storage can have a
+direct impact on the ability of organizations to successfully execute their mission and
+business functions. A compromise or breach of high impact information and systems can
+have severe or catastrophic adverse impacts on organizational assets and operations,
+individuals, other organizations, and the Nation. Restricting the processing and storage of
+high-impact information to facilities within the legal jurisdictional boundary of the United
+States provides greater control over such processing and storage.
+DEVELOPER-PROVIDED TRAINING
+Control: Require the developer of the system, system component, or system service to provide
+the following training on the correct use and operation of the implemented security and privacy
+functions, controls, and/or mechanisms: [Assignment: organization-defined training].
+Discussion: Developer-provided training applies to external and internal (in-house) developers.
+Training personnel is essential to ensuring the effectiveness of the controls implemented within
+organizational systems. Types of training include web-based and computer-based training,
+classroom-style training, and hands-on training (including micro-training). Organizations can also
+request training materials from developers to conduct in-house training or offer self-training to
+organizational personnel. Organizations determine the type of training necessary and may
+require different types of training for different security and privacy functions, controls, and
+mechanisms.

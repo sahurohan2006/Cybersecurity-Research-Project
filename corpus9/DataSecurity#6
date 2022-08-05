@@ -1,0 +1,1178 @@
+PR.DS-5: Protections against data leaks are implemented
+INFORMATION FLOW ENFORCEMENT
+Control: Enforce approved authorizations for controlling the flow of information within the
+system and between connected systems based on [Assignment: organization-defined
+information flow control policies].
+Discussion: Information flow control regulates where information can travel within a system and
+between systems (in contrast to who is allowed to access the information) and without regard to
+subsequent accesses to that information. Flow control restrictions include blocking external
+traffic that claims to be from within the organization, keeping export-controlled information
+from being transmitted in the clear to the Internet, restricting web requests that are not from
+the internal web proxy server, and limiting information transfers between organizations based
+on data structures and content. Transferring information between organizations may require an
+agreement specifying how the information flow is enforced (see CA-3). Transferring information
+between systems in different security or privacy domains with different security or privacy
+policies introduces the risk that such transfers violate one or more domain security or privacy
+policies. In such situations, information owners/stewards provide guidance at designated policy
+enforcement points between connected systems. Organizations consider mandating specific
+architectural solutions to enforce specific security and privacy policies. Enforcement includes
+prohibiting information transfers between connected systems (i.e., allowing access only),
+verifying write permissions before accepting information from another security or privacy
+domain or connected system, employing hardware mechanisms to enforce one-way information
+flows, and implementing trustworthy regrading mechanisms to reassign security or privacy
+attributes and labels.
+Organizations commonly employ information flow control policies and enforcement mechanisms
+to control the flow of information between designated sources and destinations within systems
+and between connected systems. Flow control is based on the characteristics of the information
+and/or the information path. Enforcement occurs, for example, in boundary protection devices
+that employ rule sets or establish configuration settings that restrict system services, provide a
+packet-filtering capability based on header information, or provide a message-filtering capability
+based on message content. Organizations also consider the trustworthiness of filtering and/or
+inspection mechanisms (i.e., hardware, firmware, and software components) that are critical to
+information flow enforcement. Control enhancements 3 through 32 primarily address crossdomain solution needs that focus on more advanced filtering techniques, in-depth analysis, and
+stronger flow enforcement mechanisms implemented in cross-domain products, such as highassurance guards. Such capabilities are generally not available in commercial off-the-shelf
+products. Information flow enforcement also applies to control plane traffic (e.g., routing and
+DNS).
+INFORMATION FLOW ENFORCEMENT | OBJECT SECURITY AND PRIVACY ATTRIBUTES
+Use [Assignment: organization-defined security and privacy attributes] associated with
+[Assignment: organization-defined information, source, and destination objects] to enforce
+[Assignment: organization-defined information flow control policies] as a basis for flow
+control decisions.
+Discussion: Information flow enforcement mechanisms compare security and privacy
+attributes associated with information (i.e., data content and structure) and source and
+destination objects and respond appropriately when the enforcement mechanisms
+encounter information flows not explicitly allowed by information flow policies. For
+example, an information object labeled Secret would be allowed to flow to a destination
+object labeled Secret, but an information object labeled Top Secret would not be allowed to
+flow to a destination object labeled Secret. A dataset of personally identifiable information
+may be tagged with restrictions against combining with other types of datasets and, thus,
+would not be allowed to flow to the restricted dataset. Security and privacy attributes can
+also include source and destination addresses employed in traffic filter firewalls. Flow
+enforcement using explicit security or privacy attributes can be used, for example, to control
+the release of certain types of information
+INFORMATION FLOW ENFORCEMENT | PROCESSING DOMAINS
+Use protected processing domains to enforce [Assignment: organization-defined
+information flow control policies] as a basis for flow control decisions.
+Discussion: Protected processing domains within systems are processing spaces that have
+controlled interactions with other processing spaces, enabling control of information flows
+between these spaces and to/from information objects. A protected processing domain can
+be provided, for example, by implementing domain and type enforcement. In domain and
+type enforcement, system processes are assigned to domains, information is identified by
+types, and information flows are controlled based on allowed information accesses (i.e.,
+determined by domain and type), allowed signaling among domains, and allowed process
+transitions to other domains
+INFORMATION FLOW ENFORCEMENT | DYNAMIC INFORMATION FLOW CONTROL
+Enforce [Assignment: organization-defined information flow control policies].
+Discussion: Organizational policies regarding dynamic information flow control include
+allowing or disallowing information flows based on changing conditions or mission or
+operational considerations. Changing conditions include changes in risk tolerance due to
+changes in the immediacy of mission or business needs, changes in the threat environment,
+and detection of potentially harmful or adverse events.
+INFORMATION FLOW ENFORCEMENT | FLOW CONTROL OF ENCRYPTED INFORMATION
+Prevent encrypted information from bypassing [Assignment: organization-defined
+information flow control mechanisms] by [Selection (one or more): decrypting the
+information; blocking the flow of the encrypted information; terminating communications
+sessions attempting to pass encrypted information; [Assignment: organization-defined
+procedure or method]].
+Discussion: Flow control mechanisms include content checking, security policy filters, and
+data type identifiers. The term encryption is extended to cover encoded data not recognized
+by filtering mechanisms.
+INFORMATION FLOW ENFORCEMENT | EMBEDDED DATA TYPES
+Enforce [Assignment: organization-defined limitations] on embedding data types within
+other data types.
+Discussion: Embedding data types within other data types may result in reduced flow
+control effectiveness. Data type embedding includes inserting files as objects within other
+files and using compressed or archived data types that may include multiple embedded data
+types. Limitations on data type embedding consider the levels of embedding and prohibit
+levels of data type embedding that are beyond the capability of the inspection tools.
+INFORMATION FLOW ENFORCEMENT | METADATA
+Enforce information flow control based on [Assignment: organization-defined metadata].
+Discussion: Metadata is information that describes the characteristics of data. Metadata can
+include structural metadata describing data structures or descriptive metadata describing
+data content. Enforcement of allowed information flows based on metadata enables simpler
+and more effective flow control. Organizations consider the trustworthiness of metadata
+regarding data accuracy (i.e., knowledge that the metadata values are correct with respect
+to the data), data integrity (i.e., protecting against unauthorized changes to metadata tags),
+and the binding of metadata to the data payload (i.e., employing sufficiently strong binding
+techniques with appropriate assurance).
+INFORMATION FLOW ENFORCEMENT | ONE-WAY FLOW MECHANISMS
+Enforce one-way information flows through hardware-based flow control mechanisms.
+Discussion: One-way flow mechanisms may also be referred to as a unidirectional network,
+unidirectional security gateway, or data diode. One-way flow mechanisms can be used to
+prevent data from being exported from a higher impact or classified domain or system while
+permitting data from a lower impact or unclassified domain or system to be imported.
+INFORMATION FLOW ENFORCEMENT | SECURITY AND PRIVACY POLICY FILTERS
+(a) Enforce information flow control using [Assignment: organization-defined security or
+privacy policy filters] as a basis for flow control decisions for [Assignment:
+organization-defined information flows]; and
+(b) [Selection (one or more): Block; Strip; Modify; Quarantine] data after a filter
+processing failure in accordance with [Assignment: organization-defined security or
+privacy policy].
+Discussion: Organization-defined security or privacy policy filters can address data
+structures and content. For example, security or privacy policy filters for data structures can
+check for maximum file lengths, maximum field sizes, and data/file types (for structured and
+unstructured data). Security or privacy policy filters for data content can check for specific
+words, enumerated values or data value ranges, and hidden content. Structured data
+permits the interpretation of data content by applications. Unstructured data refers to
+digital information without a data structure or with a data structure that does not facilitate
+the development of rule sets to address the impact or classification level of the information
+conveyed by the data or the flow enforcement decisions. Unstructured data consists of
+bitmap objects that are inherently non-language-based (i.e., image, video, or audio files) and
+textual objects that are based on written or printed languages. Organizations can implement
+more than one security or privacy policy filter to meet information flow control objectives.
+INFORMATION FLOW ENFORCEMENT | HUMAN REVIEWS
+Enforce the use of human reviews for [Assignment: organization-defined information
+flows] under the following conditions: [Assignment: organization-defined conditions].
+Discussion: Organizations define security or privacy policy filters for all situations where
+automated flow control decisions are possible. When a fully automated flow control decision
+is not possible, then a human review may be employed in lieu of or as a complement to
+automated security or privacy policy filtering. Human reviews may also be employed as
+deemed necessary by organizations.
+INFORMATION FLOW ENFORCEMENT | ENABLE AND DISABLE SECURITY OR PRIVACY POLICY FILTERS
+Provide the capability for privileged administrators to enable and disable [Assignment:
+organization-defined security or privacy policy filters] under the following conditions:
+[Assignment: organization-defined conditions].
+Discussion: For example, as allowed by the system authorization, administrators can enable
+security or privacy policy filters to accommodate approved data types. Administrators also
+have the capability to select the filters that are executed on a specific data flow based on the
+type of data that is being transferred, the source and destination security domains, and
+other security or privacy relevant features, as needed.
+INFORMATION FLOW ENFORCEMENT | CONFIGURATION OF SECURITY OR PRIVACY POLICY FILTERS
+Provide the capability for privileged administrators to configure [Assignment:
+organization-defined security or privacy policy filters] to support different security or
+privacy policies.
+Discussion: Documentation contains detailed information for configuring security or privacy
+policy filters. For example, administrators can configure security or privacy policy filters to
+include the list of inappropriate words that security or privacy policy mechanisms check in
+accordance with the definitions provided by organizations.
+INFORMATION FLOW ENFORCEMENT | DATA TYPE IDENTIFIERS
+When transferring information between different security domains, use [Assignment:
+organization-defined data type identifiers] to validate data essential for information flow
+decisions.
+Discussion: Data type identifiers include filenames, file types, file signatures or tokens, and
+multiple internal file signatures or tokens. Systems only allow transfer of data that is
+compliant with data type format specifications. Identification and validation of data types is
+based on defined specifications associated with each allowed data format. The filename and
+number alone are not used for data type identification. Content is validated syntactically and
+semantically against its specification to ensure that it is the proper data type
+INFORMATION FLOW ENFORCEMENT | DECOMPOSITION INTO POLICY-RELEVANT SUBCOMPONENTS
+When transferring information between different security domains, decompose
+information into [Assignment: organization-defined policy-relevant subcomponents] for
+submission to policy enforcement mechanisms.
+Discussion: Decomposing information into policy-relevant subcomponents prior to
+information transfer facilitates policy decisions on source, destination, certificates,
+classification, attachments, and other security- or privacy-related component differentiators.
+Policy enforcement mechanisms apply filtering, inspection, and/or sanitization rules to the
+policy-relevant subcomponents of information to facilitate flow enforcement prior to
+transferring such information to different security domains.
+INFORMATION FLOW ENFORCEMENT | SECURITY OR PRIVACY POLICY FILTER CONSTRAINTS
+When transferring information between different security domains, implement
+[Assignment: organization-defined security or privacy policy filters] requiring fully
+enumerated formats that restrict data structure and content.
+Discussion: Data structure and content restrictions reduce the range of potential malicious
+or unsanctioned content in cross-domain transactions. Security or privacy policy filters that
+restrict data structures include restricting file sizes and field lengths. Data content policy
+filters include encoding formats for character sets, restricting character data fields to only
+contain alpha-numeric characters, prohibiting special characters, and validating schema
+structures.
+INFORMATION FLOW ENFORCEMENT | DETECTION OF UNSANCTIONED INFORMATION
+When transferring information between different security domains, examine the
+information for the presence of [Assignment: organization-defined unsanctioned
+information] and prohibit the transfer of such information in accordance with the
+[Assignment: organization-defined security or privacy policy].
+Discussion: Unsanctioned information includes malicious code, information that is
+inappropriate for release from the source network, or executable code that could disrupt or
+harm the services or systems on the destination network.
+INFORMATION FLOW ENFORCEMENT | DOMAIN AUTHENTICATION
+Uniquely identify and authenticate source and destination points by [Selection (one or
+more): organization; system; application; service; individual] for information transfer.
+Discussion: Attribution is a critical component of a security and privacy concept of
+operations. The ability to identify source and destination points for information flowing
+within systems allows the forensic reconstruction of events and encourages policy
+compliance by attributing policy violations to specific organizations or individuals. Successful
+domain authentication requires that system labels distinguish among systems, organizations,
+and individuals involved in preparing, sending, receiving, or disseminating information.
+Attribution also allows organizations to better maintain the lineage of personally identifiable
+information processing as it flows through systems and can facilitate consent tracking, as
+well as correction, deletion, or access requests from individuals
+INFORMATION FLOW ENFORCEMENT | VALIDATION OF METADATA
+When transferring information between different security domains, implement
+[Assignment: organization-defined security or privacy policy filters] on metadata.
+Discussion: All information (including metadata and the data to which the metadata applies)
+is subject to filtering and inspection. Some organizations distinguish between metadata and
+data payloads (i.e., only the data to which the metadata is bound). Other organizations do
+not make such distinctions and consider metadata and the data to which the metadata
+applies to be part of the payload.
+INFORMATION FLOW ENFORCEMENT | APPROVED SOLUTIONS
+Employ [Assignment: organization-defined solutions in approved configurations] to control
+the flow of [Assignment: organization-defined information] across security domains.
+Discussion: Organizations define approved solutions and configurations in cross-domain
+policies and guidance in accordance with the types of information flows across classification
+boundaries. The National Security Agency (NSA) National Cross Domain Strategy and
+Management Office provides a listing of approved cross-domain solutions. Contact
+ncdsmo@nsa.gov for more information
+INFORMATION FLOW ENFORCEMENT | PHYSICAL OR LOGICAL SEPARATION OF INFORMATION FLOWS
+Separate information flows logically or physically using [Assignment: organization-defined
+mechanisms and/or techniques] to accomplish [Assignment: organization-defined required
+separations by types of information].
+Discussion: Enforcing the separation of information flows associated with defined types of
+data can enhance protection by ensuring that information is not commingled while in transit
+and by enabling flow control by transmission paths that are not otherwise achievable. Types
+of separable information include inbound and outbound communications traffic, service
+requests and responses, and information of differing security impact or classification levels.
+)INFORMATION FLOW ENFORCEMENT | ACCESS ONLY
+Provide access from a single device to computing platforms, applications, or data residing
+in multiple different security domains, while preventing information flow between the
+different security domains.
+Discussion: The system provides a capability for users to access each connected security
+domain without providing any mechanisms to allow users to transfer data or information
+between the different security domains. An example of an access-only solution is a terminal
+that provides a user access to information with different security classifications while
+assuredly keeping the information separate.
+INFORMATION FLOW ENFORCEMENT | MODIFY NON-RELEASABLE INFORMATION
+When transferring information between different security domains, modify non-releasable
+information by implementing [Assignment: organization-defined modification action].
+Discussion: Modifying non-releasable information can help prevent a data spill or attack
+when information is transferred across security domains. Modification actions include
+masking, permutation, alteration, removal, or redaction.
+INFORMATION FLOW ENFORCEMENT | INTERNAL NORMALIZED FORMAT
+When transferring information between different security domains, parse incoming data
+into an internal normalized format and regenerate the data to be consistent with its
+intended specification.
+Discussion: Converting data into normalized forms is one of most of effective mechanisms
+to stop malicious attacks and large classes of data exfiltration.
+INFORMATION FLOW ENFORCEMENT | DATA SANITIZATION
+When transferring information between different security domains, sanitize data to
+minimize [Selection (one or more): delivery of malicious content, command and control of
+malicious code, malicious code augmentation, and steganography encoded data; spillage
+of sensitive information] in accordance with [Assignment: organization-defined policy]].
+Discussion: Data sanitization is the process of irreversibly removing or destroying data
+stored on a memory device (e.g., hard drives, flash memory/solid state drives, mobile
+devices, CDs, and DVDs) or in hard copy form.
+)INFORMATION FLOW ENFORCEMENT | AUDIT FILTERING ACTIONS
+When transferring information between different security domains, record and audit
+content filtering actions and results for the information being filtered.
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined policy. Content
+filtering actions and the results of filtering actions are recorded for individual messages to
+ensure that the correct filter actions were applied. Content filter reports are used to assist in
+troubleshooting actions by, for example, determining why message content was modified
+and/or why it failed the filtering process. Audit events are defined in AU-2. Audit records are
+generated in AU-12.
+INFORMATION FLOW ENFORCEMENT | REDUNDANT/INDEPENDENT FILTERING MECHANISMS
+When transferring information between different security domains, implement content
+filtering solutions that provide redundant and independent filtering mechanisms for each
+data type.
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined policy. Redundant
+and independent content filtering eliminates a single point of failure filtering system.
+Independence is defined as the implementation of a content filter that uses a different code
+base and supporting libraries (e.g., two JPEG filters using different vendors’ JPEG libraries)
+and multiple, independent system processes.
+INFORMATION FLOW ENFORCEMENT | LINEAR FILTER PIPELINES
+When transferring information between different security domains, implement a linear
+content filter pipeline that is enforced with discretionary and mandatory access controls.
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined policy. The use of
+linear content filter pipelines ensures that filter processes are non-bypassable and always
+invoked. In general, the use of parallel filtering architectures for content filtering of a single
+data type introduces bypass and non-invocation issues.
+INFORMATION FLOW ENFORCEMENT | FILTER ORCHESTRATION ENGINES
+When transferring information between different security domains, employ content filter
+orchestration engines to ensure that:
+(a) Content filtering mechanisms successfully complete execution without errors; and
+(b) Content filtering actions occur in the correct order and comply with [Assignment:
+organization-defined policy].
+Discussion: Content filtering is the process of inspecting information as it traverses a crossdomain solution and determines if the information meets a predefined security policy. An
+orchestration engine coordinates the sequencing of activities (manual and automated) in a
+content filtering process. Errors are defined as either anomalous actions or unexpected
+termination of the content filter process. This is not the same as a filter failing content due
+to non-compliance with policy. Content filter reports are a commonly used mechanism to
+ensure that expected filtering actions are completed successfully.
+INFORMATION FLOW ENFORCEMENT | FILTER MECHANISMS USING MULTIPLE PROCESSES
+When transferring information between different security domains, implement content
+filtering mechanisms using multiple processes.
+Discussion: The use of multiple processes to implement content filtering mechanisms
+reduces the likelihood of a single point of failure.
+INFORMATION FLOW ENFORCEMENT | FAILED CONTENT TRANSFER PREVENTION
+When transferring information between different security domains, prevent the transfer
+of failed content to the receiving domain.
+Discussion: Content that failed filtering checks can corrupt the system if transferred to the
+receiving domain.
+INFORMATION FLOW ENFORCEMENT | PROCESS REQUIREMENTS FOR INFORMATION TRANSFER
+When transferring information between different security domains, the process that
+transfers information between filter pipelines:
+(a) Does not filter message content;
+(b) Validates filtering metadata;
+(c) Ensures the content associated with the filtering metadata has successfully completed
+filtering; and
+(d) Transfers the content to the destination filter pipeline.
+Discussion: The processes transferring information between filter pipelines have minimum
+complexity and functionality to provide assurance that the processes operate correctly.
+SEPARATION OF DUTIES
+Control:
+a. Identify and document [Assignment: organization-defined duties of individuals requiring
+separation]; and
+b. Define system access authorizations to support separation of duties.
+Discussion: Separation of duties addresses the potential for abuse of authorized privileges and
+helps to reduce the risk of malevolent activity without collusion. Separation of duties includes
+dividing mission or business functions and support functions among different individuals or roles,
+conducting system support functions with different individuals, and ensuring that security
+personnel who administer access control functions do not also administer audit functions.
+Because separation of duty violations can span systems and application domains, organizations
+consider the entirety of systems and system components when developing policy on separation
+of duties. Separation of duties is enforced through the account management activities in AC-2,
+access control mechanisms in AC-3, and identity management activities in IA-2, IA-4, and IA-12.
+LEAST PRIVILEGE
+Control: Employ the principle of least privilege, allowing only authorized accesses for users (or
+processes acting on behalf of users) that are necessary to accomplish assigned organizational
+tasks.
+Discussion: Organizations employ least privilege for specific duties and systems. The principle of
+least privilege is also applied to system processes, ensuring that the processes have access to
+systems and operate at privilege levels no higher than necessary to accomplish organizational
+missions or business functions. Organizations consider the creation of additional processes, roles,
+and accounts as necessary to achieve least privilege. Organizations apply least privilege to the
+development, implementation, and operation of organizational systems.
+LEAST PRIVILEGE | AUTHORIZE ACCESS TO SECURITY FUNCTIONS
+Authorize access for [Assignment: organization-defined individuals or roles] to:
+(a) [Assignment: organization-defined security functions (deployed in hardware, software,
+and firmware)]; and
+(b) [Assignment: organization-defined security-relevant information].
+Discussion: Security functions include establishing system accounts, configuring access
+authorizations (i.e., permissions, privileges), configuring settings for events to be audited,
+and establishing intrusion detection parameters. Security-relevant information includes
+filtering rules for routers or firewalls, configuration parameters for security services,
+cryptographic key management information, and access control lists. Authorized personnel
+include security administrators, system administrators, system security officers, system
+programmers, and other privileged users
+LEAST PRIVILEGE | NON-PRIVILEGED ACCESS FOR NONSECURITY FUNCTIONS
+Require that users of system accounts (or roles) with access to [Assignment: organizationdefined security functions or security-relevant information] use non-privileged accounts or
+roles, when accessing nonsecurity functions.
+Discussion: Requiring the use of non-privileged accounts when accessing nonsecurity
+functions limits exposure when operating from within privileged accounts or roles. The
+inclusion of roles addresses situations where organizations implement access control
+policies, such as role-based access control, and where a change of role provides the same
+degree of assurance in the change of access authorizations for the user and the processes
+acting on behalf of the user as would be provided by a change between a privileged and nonprivileged account.
+LEAST PRIVILEGE | NETWORK ACCESS TO PRIVILEGED COMMANDS
+Authorize network access to [Assignment: organization-defined privileged commands]
+only for [Assignment: organization-defined compelling operational needs] and document
+the rationale for such access in the security plan for the system.
+Discussion: Network access is any access across a network connection in lieu of local access
+(i.e., user being physically present at the device).
+LEAST PRIVILEGE | SEPARATE PROCESSING DOMAINS
+Provide separate processing domains to enable finer-grained allocation of user privileges.
+Discussion: Providing separate processing domains for finer-grained allocation of user
+privileges includes using virtualization techniques to permit additional user privileges within
+a virtual machine while restricting privileges to other virtual machines or to the underlying
+physical machine, implementing separate physical domains, and employing hardware or
+software domain separation mechanisms
+LEAST PRIVILEGE | PRIVILEGED ACCOUNTS
+Restrict privileged accounts on the system to [Assignment: organization-defined personnel
+or roles].
+Discussion: Privileged accounts, including super user accounts, are typically described as
+system administrator for various types of commercial off-the-shelf operating systems.
+Restricting privileged accounts to specific personnel or roles prevents day-to-day users from
+accessing privileged information or privileged functions. Organizations may differentiate in
+the application of restricting privileged accounts between allowed privileges for local
+accounts and for domain accounts provided that they retain the ability to control system
+configurations for key parameters and as otherwise necessary to sufficiently mitigate risk.
+LEAST PRIVILEGE | PRIVILEGED ACCESS BY NON-ORGANIZATIONAL USERS
+Prohibit privileged access to the system by non-organizational users.
+Discussion: An organizational user is an employee or an individual considered by the
+organization to have the equivalent status of an employee. Organizational users include
+contractors, guest researchers, or individuals detailed from other organizations. A nonorganizational user is a user who is not an organizational user. Policies and procedures for
+granting equivalent status of employees to individuals include a need-to-know, citizenship,
+and the relationship to the organization
+LEAST PRIVILEGE | REVIEW OF USER PRIVILEGES
+(a) Review [Assignment: organization-defined frequency] the privileges assigned to
+[Assignment: organization-defined roles or classes of users] to validate the need for
+such privileges; and
+(b) Reassign or remove privileges, if necessary, to correctly reflect organizational mission
+and business needs.
+Discussion: The need for certain assigned user privileges may change over time to reflect
+changes in organizational mission and business functions, environments of operation,
+technologies, or threats. A periodic review of assigned user privileges is necessary to
+determine if the rationale for assigning such privileges remains valid. If the need cannot be
+revalidated, organizations take appropriate corrective actions
+LEAST PRIVILEGE | PRIVILEGE LEVELS FOR CODE EXECUTION
+Prevent the following software from executing at higher privilege levels than users
+executing the software: [Assignment: organization-defined software].
+Discussion: In certain situations, software applications or programs need to execute with
+elevated privileges to perform required functions. However, depending on the software
+functionality and configuration, if the privileges required for execution are at a higher level
+than the privileges assigned to organizational users invoking such applications or programs,
+those users may indirectly be provided with greater privileges than assigned
+LEAST PRIVILEGE | LOG USE OF PRIVILEGED FUNCTIONS
+Log the execution of privileged functions.
+Discussion: The misuse of privileged functions, either intentionally or unintentionally by
+authorized users or by unauthorized external entities that have compromised system
+accounts, is a serious and ongoing concern and can have significant adverse impacts on
+organizations. Logging and analyzing the use of privileged functions is one way to detect
+such misuse and, in doing so, help mitigate the risk from insider threats and the advanced
+persistent threat
+) LEAST PRIVILEGE | PROHIBIT NON-PRIVILEGED USERS FROM EXECUTING PRIVILEGED FUNCTIONS
+Prevent non-privileged users from executing privileged functions.
+Discussion: Privileged functions include disabling, circumventing, or altering implemented
+security or privacy controls, establishing system accounts, performing system integrity
+checks, and administering cryptographic key management activities. Non-privileged users
+are individuals who do not possess appropriate authorizations. Privileged functions that
+require protection from non-privileged users include circumventing intrusion detection and
+prevention mechanisms or malicious code protection mechanisms. Preventing nonprivileged users from executing privileged functions is enforced by AC-3.
+INFORMATION LEAKAGE
+Control: Protect the system from information leakage due to electromagnetic signals
+emanations.
+Discussion: Information leakage is the intentional or unintentional release of data or information
+to an untrusted environment from electromagnetic signals emanations. The security categories
+or classifications of systems (with respect to confidentiality), organizational security policies, and
+risk tolerance guide the selection of controls employed to protect systems against information
+leakage due to electromagnetic signals emanations.
+INFORMATION LEAKAGE | NATIONAL EMISSIONS POLICIES AND PROCEDURES
+Protect system components, associated data communications, and networks in accordance
+with national Emissions Security policies and procedures based on the security category or
+classification of the information.
+Discussion: Emissions Security (EMSEC) policies include the former TEMPEST policies.
+PERSONNEL SCREENING
+Control:
+a. Screen individuals prior to authorizing access to the system; and
+b. Rescreen individuals in accordance with [Assignment: organization-defined conditions
+requiring rescreening and, where rescreening is so indicated, the frequency of rescreening].
+Discussion: Personnel screening and rescreening activities reflect applicable laws, executive
+orders, directives, regulations, policies, standards, guidelines, and specific criteria established for
+the risk designations of assigned positions. Examples of personnel screening include background
+investigations and agency checks. Organizations may define different rescreening conditions and
+frequencies for personnel accessing systems based on types of information processed, stored, or
+transmitted by the systems.
+PERSONNEL SCREENING | CLASSIFIED INFORMATION
+Verify that individuals accessing a system processing, storing, or transmitting classified
+information are cleared and indoctrinated to the highest classification level of the
+information to which they have access on the system.
+Discussion: Classified information is the most sensitive information that the Federal
+Government processes, stores, or transmits. It is imperative that individuals have the
+requisite security clearances and system access authorizations prior to gaining access to such
+information. Access authorizations are enforced by system access controls (see AC-3) and
+flow controls (see AC-4).
+PERSONNEL SCREENING | FORMAL INDOCTRINATION
+Verify that individuals accessing a system processing, storing, or transmitting types of
+classified information that require formal indoctrination, are formally indoctrinated for all
+the relevant types of information to which they have access on the system.
+Discussion: Types of classified information that require formal indoctrination include Special
+Access Program (SAP), Restricted Data (RD), and Sensitive Compartmented Information (SCI).
+PERSONNEL SCREENING | INFORMATION REQUIRING SPECIAL PROTECTIVE MEASURES
+Verify that individuals accessing a system processing, storing, or transmitting information
+requiring special protection:
+(a) Have valid access authorizations that are demonstrated by assigned official
+government duties; and
+(b) Satisfy [Assignment: organization-defined additional personnel screening criteria].
+Discussion: Organizational information that requires special protection includes controlled
+unclassified information. Personnel security criteria include position sensitivity background
+screening requirements.
+PERSONNEL SCREENING | CITIZENSHIP REQUIREMENTS
+Verify that individuals accessing a system processing, storing, or transmitting [Assignment:
+organization-defined information types] meet [Assignment: organization-defined
+citizenship requirements]
+ACCESS AGREEMENTS
+Control:
+a. Develop and document access agreements for organizational systems;
+b. Review and update the access agreements [Assignment: organization-defined frequency];
+and
+c. Verify that individuals requiring access to organizational information and systems:
+1. Sign appropriate access agreements prior to being granted access; and
+2. Re-sign access agreements to maintain access to organizational systems when access
+agreements have been updated or [Assignment: organization-defined frequency].
+Discussion: Access agreements include nondisclosure agreements, acceptable use agreements,
+rules of behavior, and conflict-of-interest agreements. Signed access agreements include an
+acknowledgement that individuals have read, understand, and agree to abide by the constraints
+associated with organizational systems to which access is authorized. Organizations can use
+electronic signatures to acknowledge access agreements unless specifically prohibited by
+organizational policy.
+ACCESS AGREEMENTS | CLASSIFIED INFORMATION REQUIRING SPECIAL PROTECTION
+Verify that access to classified information requiring special protection is granted only to
+individuals who:
+(a) Have a valid access authorization that is demonstrated by assigned official
+government duties;
+(b) Satisfy associated personnel security criteria; and
+(c) Have read, understood, and signed a nondisclosure agreement.
+Discussion: Classified information that requires special protection includes collateral
+information, Special Access Program (SAP) information, and Sensitive Compartmented
+Information (SCI). Personnel security criteria reflect applicable laws, executive orders,
+directives, regulations, policies, standards, and guidelines.
+ACCESS AGREEMENTS | POST-EMPLOYMENT REQUIREMENTS
+(a) Notify individuals of applicable, legally binding post-employment requirements for
+protection of organizational information; and
+Require individuals to sign an acknowledgment of these requirements, if applicable, as
+part of granting initial access to covered information.
+Discussion: Organizations consult with the Office of the General Counsel regarding matters
+of post-employment requirements on terminated individuals.
+BOUNDARY PROTECTION
+Control:
+a. Monitor and control communications at the external managed interfaces to the system and
+at key internal managed interfaces within the system;
+b. Implement subnetworks for publicly accessible system components that are [Selection:
+physically; logically] separated from internal organizational networks; and
+c. Connect to external networks or systems only through managed interfaces consisting of
+boundary protection devices arranged in accordance with an organizational security and
+privacy architecture.
+Discussion: Managed interfaces include gateways, routers, firewalls, guards, network-based
+malicious code analysis, virtualization systems, or encrypted tunnels implemented within a
+security architecture. Subnetworks that are physically or logically separated from internal
+networks are referred to as demilitarized zones or DMZs. Restricting or prohibiting interfaces
+within organizational systems includes restricting external web traffic to designated web servers
+within managed interfaces, prohibiting external traffic that appears to be spoofing internal
+addresses, and prohibiting internal traffic that appears to be spoofing external addresses. [SP
+800-189] provides additional information on source address validation techniques to prevent
+ingress and egress of traffic with spoofed addresses. Commercial telecommunications services
+are provided by network components and consolidated management systems shared by
+customers. These services may also include third party-provided access lines and other service
+elements. Such services may represent sources of increased risk despite contract security
+provisions. Boundary protection may be implemented as a common control for all or part of an
+organizational network such that the boundary to be protected is greater than a system-specific
+boundary (i.e., an authorization boundary).
+BOUNDARY PROTECTION | ACCESS POINTS
+Limit the number of external network connections to the system.
+Discussion: Limiting the number of external network connections facilitates monitoring of
+inbound and outbound communications traffic. The Trusted Internet Connection [DHS TIC]
+initiative is an example of a federal guideline that requires limits on the number of external
+network connections. Limiting the number of external network connections to the system is
+important during transition periods from older to newer technologies (e.g., transitioning
+from IPv4 to IPv6 network protocols). Such transitions may require implementing the older
+and newer technologies simultaneously during the transition period and thus increase the
+number of access points to the system
+BOUNDARY PROTECTION | EXTERNAL TELECOMMUNICATIONS SERVICES
+(a) Implement a managed interface for each external telecommunication service;
+(b) Establish a traffic flow policy for each managed interface;
+(c) Protect the confidentiality and integrity of the information being transmitted across
+each interface;
+(d) Document each exception to the traffic flow policy with a supporting mission or
+business need and duration of that need;
+(e) Review exceptions to the traffic flow policy [Assignment: organization-defined
+frequency] and remove exceptions that are no longer supported by an explicit mission
+or business need;
+(f) Prevent unauthorized exchange of control plane traffic with external networks;
+(g) Publish information to enable remote networks to detect unauthorized control plane
+traffic from internal networks; and
+(h) Filter unauthorized control plane traffic from external networks.
+Discussion: External telecommunications services can provide data and/or voice
+communications services. Examples of control plane traffic include Border Gateway Protocol
+(BGP) routing, Domain Name System (DNS), and management protocols. See [SP 800-189]
+for additional information on the use of the resource public key infrastructure (RPKI) to
+protect BGP routes and detect unauthorized BGP announcements.
+BOUNDARY PROTECTION | DENY BY DEFAULT — ALLOW BY EXCEPTION
+Deny network communications traffic by default and allow network communications
+traffic by exception [Selection (one or more): at managed interfaces; for [Assignment:
+organization-defined systems]].
+Discussion: Denying by default and allowing by exception applies to inbound and outbound
+network communications traffic. A deny-all, permit-by-exception network communications
+traffic policy ensures that only those system connections that are essential and approved are
+allowed. Deny by default, allow by exception also applies to a system that is connected to an
+external system
+BOUNDARY PROTECTION | SPLIT TUNNELING FOR REMOTE DEVICES
+Prevent split tunneling for remote devices connecting to organizational systems unless the
+split tunnel is securely provisioned using [Assignment: organization-defined safeguards].
+Discussion: Split tunneling is the process of allowing a remote user or device to establish a
+non-remote connection with a system and simultaneously communicate via some other
+connection to a resource in an external network. This method of network access enables a
+user to access remote devices and simultaneously, access uncontrolled networks. Split
+tunneling might be desirable by remote users to communicate with local system resources,
+such as printers or file servers. However, split tunneling can facilitate unauthorized external
+connections, making the system vulnerable to attack and to exfiltration of organizational
+information. Split tunneling can be prevented by disabling configuration settings that allow
+such capability in remote devices and by preventing those configuration settings from being
+configurable by users. Prevention can also be achieved by the detection of split tunneling (or
+of configuration settings that allow split tunneling) in the remote device, and by prohibiting
+the connection if the remote device is using split tunneling. A virtual private network (VPN)
+can be used to securely provision a split tunnel. A securely provisioned VPN includes locking
+connectivity to exclusive, managed, and named environments, or to a specific set of preapproved addresses, without user control
+BOUNDARY PROTECTION | ROUTE TRAFFIC TO AUTHENTICATED PROXY SERVERS
+Route [Assignment: organization-defined internal communications traffic] to [Assignment:
+organization-defined external networks] through authenticated proxy servers at managed
+interfaces.
+Discussion: External networks are networks outside of organizational control. A proxy server
+is a server (i.e., system or application) that acts as an intermediary for clients requesting
+system resources from non-organizational or other organizational servers. System resources
+that may be requested include files, connections, web pages, or services. Client requests
+established through a connection to a proxy server are assessed to manage complexity and
+provide additional protection by limiting direct connectivity. Web content filtering devices
+are one of the most common proxy servers that provide access to the Internet. Proxy servers
+can support the logging of Transmission Control Protocol sessions and the blocking of
+specific Uniform Resource Locators, Internet Protocol addresses, and domain names. Web
+proxies can be configured with organization-defined lists of authorized and unauthorized
+websites. Note that proxy servers may inhibit the use of virtual private networks (VPNs) and
+create the potential for “man-in-the-middle” attacks (depending on the implementation).
+BOUNDARY PROTECTION | RESTRICT THREATENING OUTGOING COMMUNICATIONS TRAFFIC
+(a) Detect and deny outgoing communications traffic posing a threat to external systems;
+and
+(b) Audit the identity of internal users associated with denied communications.
+Discussion: Detecting outgoing communications traffic from internal actions that may pose
+threats to external systems is known as extrusion detection. Extrusion detection is carried
+out within the system at managed interfaces. Extrusion detection includes the analysis of
+incoming and outgoing communications traffic while searching for indications of internal
+threats to the security of external systems. Internal threats to external systems include
+traffic indicative of denial-of-service attacks, traffic with spoofed source addresses, and
+traffic that contains malicious code. Organizations have criteria to determine, update, and
+manage identified threats related to extrusion detection
+BOUNDARY PROTECTION | PREVENT EXFILTRATION
+(a) Prevent the exfiltration of information; and
+(b) Conduct exfiltration tests [Assignment: organization-defined frequency].
+Discussion: Prevention of exfiltration applies to both the intentional and unintentional
+exfiltration of information. Techniques used to prevent the exfiltration of information from
+systems may be implemented at internal endpoints, external boundaries, and across
+managed interfaces and include adherence to protocol formats, monitoring for beaconing
+activity from systems, disconnecting external network interfaces except when explicitly
+needed, employing traffic profile analysis to detect deviations from the volume and types of
+traffic expected, call backs to command and control centers, conducting penetration testing,
+monitoring for steganography, disassembling and reassembling packet headers, and using
+data loss and data leakage prevention tools. Devices that enforce strict adherence to
+protocol formats include deep packet inspection firewalls and Extensible Markup Language
+(XML) gateways. The devices verify adherence to protocol formats and specifications at the
+application layer and identify vulnerabilities that cannot be detected by devices that operate
+at the network or transport layers. The prevention of exfiltration is similar to data loss
+prevention or data leakage prevention and is closely associated with cross-domain solutions
+and system guards that enforce information flow requirements.
+BOUNDARY PROTECTION | RESTRICT INCOMING COMMUNICATIONS TRAFFIC
+Only allow incoming communications from [Assignment: organization-defined authorized
+sources] to be routed to [Assignment: organization-defined authorized destinations].
+Discussion: General source address validation techniques are applied to restrict the use of
+illegal and unallocated source addresses as well as source addresses that should only be
+used within the system. The restriction of incoming communications traffic provides
+determinations that source and destination address pairs represent authorized or allowed
+communications. Determinations can be based on several factors, including the presence of
+such address pairs in the lists of authorized or allowed communications, the absence of such
+address pairs in lists of unauthorized or disallowed pairs, or meeting more general rules for
+authorized or allowed source and destination pairs. Strong authentication of network
+addresses is not possible without the use of explicit security protocols, and thus, addresses
+can often be spoofed. Further, identity-based incoming traffic restriction methods can be
+employed, including router access control lists and firewall rules.
+BOUNDARY PROTECTION | HOST-BASED PROTECTION
+Implement [Assignment: organization-defined host-based boundary protection
+mechanisms] at [Assignment: organization-defined system components].
+Discussion: Host-based boundary protection mechanisms include host-based firewalls.
+System components that employ host-based boundary protection mechanisms include
+servers, workstations, notebook computers, and mobile devices.
+BOUNDARY PROTECTION | ISOLATION OF SECURITY TOOLS, MECHANISMS, AND SUPPORT
+COMPONENTS
+Isolate [Assignment: organization-defined information security tools, mechanisms, and
+support components] from other internal system components by implementing physically
+separate subnetworks with managed interfaces to other components of the system.
+Discussion: Physically separate subnetworks with managed interfaces are useful in isolating
+computer network defenses from critical operational processing networks to prevent
+adversaries from discovering the analysis and forensics techniques employed by
+organizations.
+BOUNDARY PROTECTION | PROTECT AGAINST UNAUTHORIZED PHYSICAL CONNECTIONS
+Protect against unauthorized physical connections at [Assignment: organization-defined
+managed interfaces].
+Discussion: Systems that operate at different security categories or classification levels may
+share common physical and environmental controls, since the systems may share space
+within the same facilities. In practice, it is possible that these separate systems may share
+common equipment rooms, wiring closets, and cable distribution paths. Protection against
+unauthorized physical connections can be achieved by using clearly identified and physically
+separated cable trays, connection frames, and patch panels for each side of managed
+interfaces with physical access controls that enforce limited authorized access to these
+items.
+BOUNDARY PROTECTION | NETWORKED PRIVILEGED ACCESSES
+Route networked, privileged accesses through a dedicated, managed interface for
+purposes of access control and auditing.
+Discussion: Privileged access provides greater accessibility to system functions, including
+security functions. Adversaries attempt to gain privileged access to systems through remote
+access to cause adverse mission or business impacts, such as by exfiltrating information or
+bringing down a critical system capability. Routing networked, privileged access requests
+through a dedicated, managed interface further restricts privileged access for increased
+access control and auditing
+BOUNDARY PROTECTION | PREVENT DISCOVERY OF SYSTEM COMPONENTS
+Prevent the discovery of specific system components that represent a managed interface.
+Discussion: Preventing the discovery of system components representing a managed
+interface helps protect network addresses of those components from discovery through
+common tools and techniques used to identify devices on networks. Network addresses are
+not available for discovery and require prior knowledge for access. Preventing the discovery
+of components and devices can be accomplished by not publishing network addresses, using
+network address translation, or not entering the addresses in domain name systems.
+Another prevention technique is to periodically change network addresses.
+BOUNDARY PROTECTION | AUTOMATED ENFORCEMENT OF PROTOCOL FORMATS
+Enforce adherence to protocol formats.
+Discussion: System components that enforce protocol formats include deep packet
+inspection firewalls and XML gateways. The components verify adherence to protocol
+formats and specifications at the application layer and identify vulnerabilities that cannot be
+detected by devices operating at the network or transport layers.
+BOUNDARY PROTECTION | FAIL SECURE
+Prevent systems from entering unsecure states in the event of an operational failure of a
+boundary protection device.
+Discussion: Fail secure is a condition achieved by employing mechanisms to ensure that in
+the event of operational failures of boundary protection devices at managed interfaces,
+systems do not enter into unsecure states where intended security properties no longer
+hold. Managed interfaces include routers, firewalls, and application gateways that reside on
+protected subnetworks (commonly referred to as demilitarized zones). Failures of boundary
+protection devices cannot lead to or cause information external to the devices to enter the
+devices nor can failures permit unauthorized information releases.
+BOUNDARY PROTECTION | BLOCK COMMUNICATION FROM NON-ORGANIZATIONALLY CONFIGURED
+HOSTS
+Block inbound and outbound communications traffic between [Assignment: organizationdefined communication clients] that are independently configured by end users and
+external service providers.
+Discussion: Communication clients independently configured by end users and external
+service providers include instant messaging clients and video conferencing software and
+applications. Traffic blocking does not apply to communication clients that are configured by
+organizations to perform authorized functions.
+BOUNDARY PROTECTION | DYNAMIC ISOLATION AND SEGREGATION
+Provide the capability to dynamically isolate [Assignment: organization-defined system
+components] from other system components.
+Discussion: The capability to dynamically isolate certain internal system components is
+useful when it is necessary to partition or separate system components of questionable
+origin from components that possess greater trustworthiness. Component isolation reduces
+the attack surface of organizational systems. Isolating selected system components can also
+limit the damage from successful attacks when such attacks occur.
+BOUNDARY PROTECTION | ISOLATION OF SYSTEM COMPONENTS
+Employ boundary protection mechanisms to isolate [Assignment: organization-defined
+system components] supporting [Assignment: organization-defined missions and/or
+business functions].
+Discussion: Organizations can isolate system components that perform different mission or
+business functions. Such isolation limits unauthorized information flows among system
+components and provides the opportunity to deploy greater levels of protection for selected
+system components. Isolating system components with boundary protection mechanisms
+provides the capability for increased protection of individual system components and to
+more effectively control information flows between those components. Isolating system
+components provides enhanced protection that limits the potential harm from hostile cyberattacks and errors. The degree of isolation varies depending upon the mechanisms chosen.
+Boundary protection mechanisms include routers, gateways, and firewalls that separate
+system components into physically separate networks or subnetworks; cross-domain devices
+that separate subnetworks; virtualization techniques; and the encryption of information
+flows among system components using distinct encryption keys.
+BOUNDARY PROTECTION | SEPARATE SUBNETS FOR CONNECTING TO DIFFERENT SECURITY DOMAINS
+Implement separate network addresses to connect to systems in different security
+domains.
+Discussion: The decomposition of systems into subnetworks (i.e., subnets) helps to provide
+the appropriate level of protection for network connections to different security domains
+that contain information with different security categories or classification levels.
+BOUNDARY PROTECTION | DISABLE SENDER FEEDBACK ON PROTOCOL VALIDATION FAILURE
+Disable feedback to senders on protocol format validation failure.
+Discussion: Disabling feedback to senders when there is a failure in protocol validation
+format prevents adversaries from obtaining information that would otherwise be
+unavailable.
+BOUNDARY PROTECTION | PERSONALLY IDENTIFIABLE INFORMATION
+For systems that process personally identifiable information:
+(a) Apply the following processing rules to data elements of personally identifiable
+information: [Assignment: organization-defined processing rules];
+(b) Monitor for permitted processing at the external interfaces to the system and at key
+internal boundaries within the system;
+(c) Document each processing exception; and
+(d) Review and remove exceptions that are no longer supported.
+Discussion: Managing the processing of personally identifiable information is an important
+aspect of protecting an individual’s privacy. Applying, monitoring for, and documenting
+exceptions to processing rules ensure that personally identifiable information is processed
+only in accordance with established privacy requirements.
+BOUNDARY PROTECTION | UNCLASSIFIED NATIONAL SECURITY SYSTEM CONNECTIONS
+Prohibit the direct connection of [Assignment: organization-defined unclassified national
+security system] to an external network without the use of [Assignment: organizationdefined boundary protection device].
+Discussion: A direct connection is a dedicated physical or virtual connection between two or
+more systems. Organizations typically do not have complete control over external networks,
+including the Internet. Boundary protection devices (e.g., firewalls, gateways, and routers)
+mediate communications and information flows between unclassified national security
+systems and external networks.
+BOUNDARY PROTECTION | CLASSIFIED NATIONAL SECURITY SYSTEM CONNECTIONS
+Prohibit the direct connection of a classified national security system to an external
+network without the use of [Assignment: organization-defined boundary protection
+device].
+Discussion: A direct connection is a dedicated physical or virtual connection between two or
+more systems. Organizations typically do not have complete control over external networks,
+including the Internet. Boundary protection devices (e.g., firewalls, gateways, and routers)
+mediate communications and information flows between classified national security systems
+and external networks. In addition, approved boundary protection devices (typically
+managed interface or cross-domain systems) provide information flow enforcement from
+systems to external networks
+BOUNDARY PROTECTION | UNCLASSIFIED NON-NATIONAL SECURITY SYSTEM CONNECTIONS
+Prohibit the direct connection of [Assignment: organization-defined unclassified nonnational security system] to an external network without the use of [Assignment:
+organization-defined boundary protection device].
+Discussion: A direct connection is a dedicated physical or virtual connection between two or
+more systems. Organizations typically do not have complete control over external networks,
+including the Internet. Boundary protection devices (e.g., firewalls, gateways, and routers)
+mediate communications and information flows between unclassified non-national security
+systems and external networks.
+BOUNDARY PROTECTION | CONNECTIONS TO PUBLIC NETWORKS
+Prohibit the direct connection of [Assignment: organization-defined system] to a public
+network.
+Discussion: A direct connection is a dedicated physical or virtual connection between two or
+more systems. A public network is a network accessible to the public, including the Internet
+and organizational extranets with public access.
+) BOUNDARY PROTECTION | SEPARATE SUBNETS TO ISOLATE FUNCTIONS
+Implement [Selection: physically; logically] separate subnetworks to isolate the following
+critical system components and functions: [Assignment: organization-defined critical
+system components and functions].
+Discussion: Separating critical system components and functions from other noncritical
+system components and functions through separate subnetworks may be necessary to
+reduce susceptibility to a catastrophic or debilitating breach or compromise that results in
+system failure. For example, physically separating the command and control function from
+the in-flight entertainment function through separate subnetworks in a commercial aircraft
+provides an increased level of assurance in the trustworthiness of critical system functions.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY
+Control: Protect the [Selection (one or more): confidentiality; integrity] of transmitted
+information.
+Discussion: Protecting the confidentiality and integrity of transmitted information applies to
+internal and external networks as well as any system components that can transmit information,
+including servers, notebook computers, desktop computers, mobile devices, printers, copiers,
+scanners, facsimile machines, and radios. Unprotected communication paths are exposed to the
+possibility of interception and modification. Protecting the confidentiality and integrity of
+information can be accomplished by physical or logical means. Physical protection can be
+achieved by using protected distribution systems. A protected distribution system is a wireline or
+fiber-optics telecommunications system that includes terminals and adequate electromagnetic,
+acoustical, electrical, and physical controls to permit its use for the unencrypted transmission of
+classified information. Logical protection can be achieved by employing encryption techniques.
+Organizations that rely on commercial providers who offer transmission services as commodity
+services rather than as fully dedicated services may find it difficult to obtain the necessary
+assurances regarding the implementation of needed controls for transmission confidentiality and
+integrity. In such situations, organizations determine what types of confidentiality or integrity
+services are available in standard, commercial telecommunications service packages. If it is not
+feasible to obtain the necessary controls and assurances of control effectiveness through
+appropriate contracting vehicles, organizations can implement appropriate compensating
+controls.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | CRYPTOGRAPHIC PROTECTION
+Implement cryptographic mechanisms to [Selection (one or more): prevent unauthorized
+disclosure of information; detect changes to information] during transmission.
+Discussion: Encryption protects information from unauthorized disclosure and modification
+during transmission. Cryptographic mechanisms that protect the confidentiality and integrity
+of information during transmission include TLS and IPSec. Cryptographic mechanisms used to
+protect information integrity include cryptographic hash functions that have applications in
+digital signatures, checksums, and message authentication codes.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | PRE- AND POST-TRANSMISSION HANDLING
+Maintain the [Selection (one or more): confidentiality; integrity] of information during
+preparation for transmission and during reception.
+Discussion: Information can be unintentionally or maliciously disclosed or modified during
+preparation for transmission or during reception, including during aggregation, at protocol
+transformation points, and during packing and unpacking. Such unauthorized disclosures or
+modifications compromise the confidentiality or integrity of the information.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | CRYPTOGRAPHIC PROTECTION FOR MESSAGE
+EXTERNALS
+Implement cryptographic mechanisms to protect message externals unless otherwise
+protected by [Assignment: organization-defined alternative physical controls].
+Discussion: Cryptographic protection for message externals addresses protection from the
+unauthorized disclosure of information. Message externals include message headers and
+routing information. Cryptographic protection prevents the exploitation of message
+externals and applies to internal and external networks or links that may be visible to
+individuals who are not authorized users. Header and routing information is sometimes
+transmitted in clear text (i.e., unencrypted) because the information is not identified by
+organizations as having significant value or because encrypting the information can result in
+lower network performance or higher costs. Alternative physical controls include protected
+distribution systems.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | CONCEAL OR RANDOMIZE COMMUNICATIONS
+Implement cryptographic mechanisms to conceal or randomize communication patterns
+unless otherwise protected by [Assignment: organization-defined alternative physical
+controls].
+Discussion: Concealing or randomizing communication patterns addresses protection from
+unauthorized disclosure of information. Communication patterns include frequency, periods,
+predictability, and amount. Changes to communications patterns can reveal information
+with intelligence value, especially when combined with other available information related
+to the mission and business functions of the organization. Concealing or randomizing
+communications prevents the derivation of intelligence based on communications patterns
+and applies to both internal and external networks or links that may be visible to individuals
+who are not authorized users. Encrypting the links and transmitting in continuous, fixed, or
+random patterns prevents the derivation of intelligence from the system communications
+patterns. Alternative physical controls include protected distribution systems.
+TRANSMISSION CONFIDENTIALITY AND INTEGRITY | PROTECTED DISTRIBUTION SYSTEM
+Implement [Assignment: organization-defined protected distribution system] to [Selection
+(one or more): prevent unauthorized disclosure of information; detect changes to
+information] during transmission.
+Discussion: The purpose of a protected distribution system is to deter, detect, and/or make
+difficult physical access to the communication lines that carry national security information.
+CRYPTOGRAPHIC PROTECTION
+Control:
+a. Determine the [Assignment: organization-defined cryptographic uses]; and
+Implement the following types of cryptography required for each specified cryptographic
+use: [Assignment: organization-defined types of cryptography for each specified
+cryptographic use].
+Discussion: Cryptography can be employed to support a variety of security solutions, including
+the protection of classified information and controlled unclassified information, the provision
+and implementation of digital signatures, and the enforcement of information separation when
+authorized individuals have the necessary clearances but lack the necessary formal access
+approvals. Cryptography can also be used to support random number and hash generation.
+Generally applicable cryptographic standards include FIPS-validated cryptography and NSAapproved cryptography. For example, organizations that need to protect classified information
+may specify the use of NSA-approved cryptography. Organizations that need to provision and
+implement digital signatures may specify the use of FIPS-validated cryptography. Cryptography is
+implemented in accordance with applicable laws, executive orders, directives, regulations,
+policies, standards, and guidelines
+COVERT CHANNEL ANALYSIS
+Control:
+Perform a covert channel analysis to identify those aspects of communications within the
+system that are potential avenues for covert [Selection (one or more): storage; timing]
+channels; and
+b. Estimate the maximum bandwidth of those channels.
+Discussion: Developers are in the best position to identify potential areas within systems that
+might lead to covert channels. Covert channel analysis is a meaningful activity when there is the
+potential for unauthorized information flows across security domains, such as in the case of
+systems that contain export-controlled information and have connections to external networks
+(i.e., networks that are not controlled by organizations). Covert channel analysis is also useful for
+multilevel secure systems, multiple security level systems, and cross-domain systems.
+COVERT CHANNEL ANALYSIS | TEST COVERT CHANNELS FOR EXPLOITABILITY
+Test a subset of the identified covert channels to determine the channels that are
+exploitable
+COVERT CHANNEL ANALYSIS | MAXIMUM BANDWIDTH
+Reduce the maximum bandwidth for identified covert [Selection (one or more): storage;
+timing] channels to [Assignment: organization-defined values].
+Discussion: The complete elimination of covert channels, especially covert timing channels,
+is usually not possible without significant performance impacts.
+COVERT CHANNEL ANALYSIS | MEASURE BANDWIDTH IN OPERATIONAL ENVIRONMENTS
+Measure the bandwidth of [Assignment: organization-defined subset of identified covert
+channels] in the operational environment of the system.
+Discussion: Measuring covert channel bandwidth in specified operational environments
+helps organizations determine how much information can be covertly leaked before such
+leakage adversely affects mission or business functions. Covert channel bandwidth may be
+significantly different when measured in settings that are independent of the specific
+environments of operation, including laboratories or system development environments.
+SYSTEM MONITORING
+Control:
+Monitor the system to detect:
+1. Attacks and indicators of potential attacks in accordance with the following monitoring
+objectives: [Assignment: organization-defined monitoring objectives]; and
+2. Unauthorized local, network, and remote connections;
+b. Identify unauthorized use of the system through the following techniques and methods:
+[Assignment: organization-defined techniques and methods];
+c. Invoke internal monitoring capabilities or deploy monitoring devices:
+1. Strategically within the system to collect organization-determined essential information;
+and
+2. At ad hoc locations within the system to track specific types of transactions of interest
+to the organization;
+d. Analyze detected events and anomalies;
+e. Adjust the level of system monitoring activity when there is a change in risk to organizational
+operations and assets, individuals, other organizations, or the Nation;
+f. Obtain legal opinion regarding system monitoring activities; and
+g. Provide [Assignment: organization-defined system monitoring information] to [Assignment:
+organization-defined personnel or roles] [Selection (one or more): as needed; [Assignment:
+organization-defined frequency]].
+Discussion: System monitoring includes external and internal monitoring. External monitoring
+includes the observation of events occurring at external interfaces to the system. Internal
+monitoring includes the observation of events occurring within the system. Organizations
+monitor systems by observing audit activities in real time or by observing other system aspects
+such as access patterns, characteristics of access, and other actions. The monitoring objectives
+guide and inform the determination of the events. System monitoring capabilities are achieved
+through a variety of tools and techniques, including intrusion detection and prevention systems,
+malicious code protection software, scanning tools, audit record monitoring software, and
+network monitoring software.
+Depending on the security architecture, the distribution and configuration of monitoring devices
+may impact throughput at key internal and external boundaries as well as at other locations
+across a network due to the introduction of network throughput latency. If throughput
+management is needed, such devices are strategically located and deployed as part of an
+established organization-wide security architecture. Strategic locations for monitoring devices
+include selected perimeter locations and near key servers and server farms that support critical
+applications. Monitoring devices are typically employed at the managed interfaces associated
+with controls SC-7 and AC-17. The information collected is a function of the organizational
+monitoring objectives and the capability of systems to support such objectives. Specific types of
+transactions of interest include Hypertext Transfer Protocol (HTTP) traffic that bypasses HTTP
+proxies. System monitoring is an integral part of organizational continuous monitoring and
+incident response programs, and output from system monitoring serves as input to those
+programs. System monitoring requirements, including the need for specific types of system
+monitoring, may be referenced in other controls (e.g., AC-2g, AC-2(7), AC-2(12)(a), AC-17(1), AU13, AU-13(1), AU-13(2), CM-3f, CM-6d, MA-3a, MA-4a, SC-5(3)(b), SC-7a, SC-7(24)(b), SC-18b, SC43b). Adjustments to levels of system monitoring are based on law enforcement information,
+intelligence information, or other sources of information. The legality of system monitoring
+activities is based on applicable laws, executive orders, directives, regulations, policies,
+standards, and guidelines.
+SYSTEM MONITORING | SYSTEM-WIDE INTRUSION DETECTION SYSTEM
+Connect and configure individual intrusion detection tools into a system-wide intrusion
+detection system.
+Discussion: Linking individual intrusion detection tools into a system-wide intrusion
+detection system provides additional coverage and effective detection capabilities. The
+information contained in one intrusion detection tool can be shared widely across the
+organization, making the system-wide detection capability more robust and powerful.
+SYSTEM MONITORING | AUTOMATED TOOLS AND MECHANISMS FOR REAL-TIME ANALYSIS
+Employ automated tools and mechanisms to support near real-time analysis of events.
+Discussion: Automated tools and mechanisms include host-based, network-based,
+transport-based, or storage-based event monitoring tools and mechanisms or security
+information and event management (SIEM) technologies that provide real-time analysis of
+alerts and notifications generated by organizational systems. Automated monitoring
+techniques can create unintended privacy risks because automated controls may connect to
+external or otherwise unrelated systems. The matching of records between these systems
+may create linkages with unintended consequences. Organizations assess and document
+these risks in their privacy impact assessment and make determinations that are in
+alignment with their privacy program plan
+SYSTEM MONITORING | AUTOMATED TOOL AND MECHANISM INTEGRATION
+Employ automated tools and mechanisms to integrate intrusion detection tools and
+mechanisms into access control and flow control mechanisms.
+Discussion: Using automated tools and mechanisms to integrate intrusion detection tools
+and mechanisms into access and flow control mechanisms facilitates a rapid response to
+attacks by enabling the reconfiguration of mechanisms in support of attack isolation and
+elimination.
+SYSTEM MONITORING | INBOUND AND OUTBOUND COMMUNICATIONS TRAFFIC
+(a) Determine criteria for unusual or unauthorized activities or conditions for inbound
+and outbound communications traffic;
+(b) Monitor inbound and outbound communications traffic [Assignment: organizationdefined frequency] for [Assignment: organization-defined unusual or unauthorized
+activities or conditions].
+Discussion: Unusual or unauthorized activities or conditions related to system inbound and
+outbound communications traffic includes internal traffic that indicates the presence of
+malicious code or unauthorized use of legitimate code or credentials within organizational
+systems or propagating among system components, signaling to external systems, and the
+unauthorized exporting of information. Evidence of malicious code or unauthorized use of
+legitimate code or credentials is used to identify potentially compromised systems or system
+components
+SYSTEM MONITORING | SYSTEM-GENERATED ALERTS
+Alert [Assignment: organization-defined personnel or roles] when the following systemgenerated indications of compromise or potential compromise occur: [Assignment:
+organization-defined compromise indicators].
+Discussion: Alerts may be generated from a variety of sources, including audit records or
+inputs from malicious code protection mechanisms, intrusion detection or prevention
+mechanisms, or boundary protection devices such as firewalls, gateways, and routers. Alerts
+can be automated and may be transmitted telephonically, by electronic mail messages, or by
+text messaging. Organizational personnel on the alert notification list can include system
+administrators, mission or business owners, system owners, information owners/stewards,
+senior agency information security officers, senior agency officials for privacy, system
+security officers, or privacy officers. In contrast to alerts generated by the system, alerts
+generated by organizations in SI-4(12) focus on information sources external to the system,
+such as suspicious activity reports and reports on potential insider threats.
+SYSTEM MONITORING | AUTOMATED RESPONSE TO SUSPICIOUS EVENTS
+(a) Notify [Assignment: organization-defined incident response personnel (identified by
+name and/or by role)] of detected suspicious events; and
+(b) Take the following actions upon detection: [Assignment: organization-defined leastdisruptive actions to terminate suspicious events].
+Discussion: Least-disruptive actions include initiating requests for human responses.
+SYSTEM MONITORING | TESTING OF MONITORING TOOLS AND MECHANISMS
+Test intrusion-monitoring tools and mechanisms [Assignment: organization-defined
+frequency].
+Discussion: Testing intrusion-monitoring tools and mechanisms is necessary to ensure that
+the tools and mechanisms are operating correctly and continue to satisfy the monitoring
+objectives of organizations. The frequency and depth of testing depends on the types of
+tools and mechanisms used by organizations and the methods of deployment
+SYSTEM MONITORING | VISIBILITY OF ENCRYPTED COMMUNICATIONS
+Make provisions so that [Assignment: organization-defined encrypted communications
+traffic] is visible to [Assignment: organization-defined system monitoring tools and
+mechanisms].
+Discussion: Organizations balance the need to encrypt communications traffic to protect
+data confidentiality with the need to maintain visibility into such traffic from a monitoring
+perspective. Organizations determine whether the visibility requirement applies to internal
+encrypted traffic, encrypted traffic intended for external destinations, or a subset of the
+traffic types.
+SYSTEM MONITORING | ANALYZE COMMUNICATIONS TRAFFIC ANOMALIES
+Analyze outbound communications traffic at the external interfaces to the system and
+selected [Assignment: organization-defined interior points within the system] to discover
+anomalies.
+Discussion: Organization-defined interior points include subnetworks and subsystems.
+Anomalies within organizational systems include large file transfers, long-time persistent
+connections, attempts to access information from unexpected locations, the use of unusual
+protocols and ports, the use of unmonitored network protocols (e.g., IPv6 usage during IPv4
+transition), and attempted communications with suspected malicious external addresses.
+SYSTEM MONITORING | AUTOMATED ORGANIZATION-GENERATED ALERTS
+Alert [Assignment: organization-defined personnel or roles] using [Assignment:
+organization-defined automated mechanisms] when the following indications of
+inappropriate or unusual activities with security or privacy implications occur:
+[Assignment: organization-defined activities that trigger alerts].
+Discussion: Organizational personnel on the system alert notification list include system
+administrators, mission or business owners, system owners, senior agency information
+security officer, senior agency official for privacy, system security officers, or privacy officers.
+Automated organization-generated alerts are the security alerts generated by organizations
+and transmitted using automated means. The sources for organization-generated alerts are
+focused on other entities such as suspicious activity reports and reports on potential insider
+threats. In contrast to alerts generated by the organization, alerts generated by the system
+in SI-4(5) focus on information sources that are internal to the systems, such as audit
+records
+SYSTEM MONITORING | ANALYZE TRAFFIC AND EVENT PATTERNS
+(a) Analyze communications traffic and event patterns for the system;
+(b) Develop profiles representing common traffic and event patterns; and
+(c) Use the traffic and event profiles in tuning system-monitoring devices.
+Discussion: Identifying and understanding common communications traffic and event
+patterns help organizations provide useful information to system monitoring devices to
+more effectively identify suspicious or anomalous traffic and events when they occur. Such
+information can help reduce the number of false positives and false negatives during system
+monitoring.
+SYSTEM MONITORING | WIRELESS INTRUSION DETECTION
+Employ a wireless intrusion detection system to identify rogue wireless devices and to
+detect attack attempts and potential compromises or breaches to the system.
+Discussion: Wireless signals may radiate beyond organizational facilities. Organizations
+proactively search for unauthorized wireless connections, including the conduct of thorough
+scans for unauthorized wireless access points. Wireless scans are not limited to those areas
+within facilities containing systems but also include areas outside of facilities to verify that
+unauthorized wireless access points are not connected to organizational systems.
+SYSTEM MONITORING | WIRELESS TO WIRELINE COMMUNICATIONS
+Employ an intrusion detection system to monitor wireless communications traffic as the
+traffic passes from wireless to wireline networks.
+Discussion: Wireless networks are inherently less secure than wired networks. For example,
+wireless networks are more susceptible to eavesdroppers or traffic analysis than wireline
+networks. When wireless to wireline communications exist, the wireless network could
+become a port of entry into the wired network. Given the greater facility of unauthorized
+network access via wireless access points compared to unauthorized wired network access
+from within the physical boundaries of the system, additional monitoring of transitioning
+traffic between wireless and wired networks may be necessary to detect malicious activities.
+Employing intrusion detection systems to monitor wireless communications traffic helps to
+ensure that the traffic does not contain malicious code prior to transitioning to the wireline
+network.
+SYSTEM MONITORING | CORRELATE MONITORING INFORMATION
+Correlate information from monitoring tools and mechanisms employed throughout the
+system.
+Discussion: Correlating information from different system monitoring tools and mechanisms
+can provide a more comprehensive view of system activity. Correlating system monitoring
+tools and mechanisms that typically work in isolation—including malicious code protection
+software, host monitoring, and network monitoring—can provide an organization-wide
+monitoring view and may reveal otherwise unseen attack patterns. Understanding the
+capabilities and limitations of diverse monitoring tools and mechanisms and how to
+maximize the use of information generated by those tools and mechanisms can help
+organizations develop, operate, and maintain effective monitoring programs. The correlation
+of monitoring information is especially important during the transition from older to newer
+technologies (e.g., transitioning from IPv4 to IPv6 network protocols).
+SYSTEM MONITORING | INTEGRATED SITUATIONAL AWARENESS
+Correlate information from monitoring physical, cyber, and supply chain activities to
+achieve integrated, organization-wide situational awareness.
+Discussion: Correlating monitoring information from a more diverse set of information
+sources helps to achieve integrated situational awareness. Integrated situational awareness
+from a combination of physical, cyber, and supply chain monitoring activities enhances the
+capability of organizations to more quickly detect sophisticated attacks and investigate the
+methods and techniques employed to carry out such attacks. In contrast to SI-4(16), which
+correlates the various cyber monitoring information, integrated situational awareness is
+intended to correlate monitoring beyond the cyber domain. Correlation of monitoring
+information from multiple activities may help reveal attacks on organizations that are
+operating across multiple attack vectors
+SYSTEM MONITORING | ANALYZE TRAFFIC AND COVERT EXFILTRATION
+Analyze outbound communications traffic at external interfaces to the system and at the
+following interior points to detect covert exfiltration of information: [Assignment:
+organization-defined interior points within the system].
+Discussion: Organization-defined interior points include subnetworks and subsystems.
+Covert means that can be used to exfiltrate information include steganography.
+SYSTEM MONITORING | RISK FOR INDIVIDUALS
+Implement [Assignment: organization-defined additional monitoring] of individuals who
+have been identified by [Assignment: organization-defined sources] as posing an increased
+level of risk.
+Discussion: Indications of increased risk from individuals can be obtained from different
+sources, including personnel records, intelligence agencies, law enforcement organizations,
+and other sources. The monitoring of individuals is coordinated with the management, legal,
+security, privacy, and human resource officials who conduct such monitoring. Monitoring is
+conducted in accordance with applicable laws, executive orders, directives, regulations,
+policies, standards, and guidelines
+SYSTEM MONITORING | PRIVILEGED USERS
+Implement the following additional monitoring of privileged users: [Assignment:
+organization-defined additional monitoring].
+Discussion: Privileged users have access to more sensitive information, including securityrelated information, than the general user population. Access to such information means
+that privileged users can potentially do greater damage to systems and organizations than
+non-privileged users. Therefore, implementing additional monitoring on privileged users
+helps to ensure that organizations can identify malicious activity at the earliest possible time
+and take appropriate actions.
+SYSTEM MONITORING | PROBATIONARY PERIODS
+Implement the following additional monitoring of individuals during [Assignment:
+organization-defined probationary period]: [Assignment: organization-defined additional
+monitoring].
+Discussion: During probationary periods, employees do not have permanent employment
+status within organizations. Without such status or access to information that is resident on
+the system, additional monitoring can help identify any potentially malicious activity or
+inappropriate behavior
+SYSTEM MONITORING | UNAUTHORIZED NETWORK SERVICES
+(a) Detect network services that have not been authorized or approved by [Assignment:
+organization-defined authorization or approval processes]; and
+(b) [Selection (one or more): Audit; Alert [Assignment: organization-defined personnel or
+roles]] when detected.
+Discussion: Unauthorized or unapproved network services include services in serviceoriented architectures that lack organizational verification or validation and may therefore
+be unreliable or serve as malicious rogues for valid services.
+SYSTEM MONITORING | HOST-BASED DEVICES
+Implement the following host-based monitoring mechanisms at [Assignment:
+organization-defined system components]: [Assignment: organization-defined host-based
+monitoring mechanisms].
+Discussion: Host-based monitoring collects information about the host (or system in which it
+resides). System components in which host-based monitoring can be implemented include
+servers, notebook computers, and mobile devices. Organizations may consider employing
+host-based monitoring mechanisms from multiple product developers or vendors.
+SYSTEM MONITORING | INDICATORS OF COMPROMISE
+Discover, collect, and distribute to [Assignment: organization-defined personnel or roles],
+indicators of compromise provided by [Assignment: organization-defined sources].
+Discussion: Indicators of compromise (IOC) are forensic artifacts from intrusions that are
+identified on organizational systems at the host or network level. IOCs provide valuable
+information on systems that have been compromised. IOCs can include the creation of
+registry key values. IOCs for network traffic include Universal Resource Locator or protocol
+elements that indicate malicious code command and control servers. The rapid distribution
+and adoption of IOCs can improve information security by reducing the time that systems
+and organizations are vulnerable to the same exploit or attack. Threat indicators, signatures,
+tactics, techniques, procedures, and other indicators of compromise may be available via
+government and non-government cooperatives, including the Forum of Incident Response
+and Security Teams, the United States Computer Emergency Readiness Team, the Defense
+Industrial Base Cybersecurity Information Sharing Program, and the CERT Coordination
+Center.
+SYSTEM MONITORING | OPTIMIZE NETWORK TRAFFIC ANALYSIS
+Provide visibility into network traffic at external and key internal system interfaces to
+optimize the effectiveness of monitoring devices.
+Discussion: Encrypted traffic, asymmetric routing architectures, capacity and latency
+limitations, and transitioning from older to newer technologies (e.g., IPv4 to IPv6 network
+protocol transition) may result in blind spots for organizations when analyzing network
+traffic. Collecting, decrypting, pre-processing, and distributing only relevant traffic to
+monitoring devices can streamline the efficiency and use of devices and optimize traffic
+analysis.

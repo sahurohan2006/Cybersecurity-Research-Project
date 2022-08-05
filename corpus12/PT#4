@@ -1,0 +1,340 @@
+PR.PT-3: The principle of least functionality is incorporated by configuring systems to provide only essential capabilities
+ACCESS ENFORCEMENT
+Control: Enforce approved authorizations for logical access to information and system resources
+in accordance with applicable access control policies.
+Discussion: Access control policies control access between active entities or subjects (i.e., users
+or processes acting on behalf of users) and passive entities or objects (i.e., devices, files, records,
+domains) in organizational systems. In addition to enforcing authorized access at the system level
+and recognizing that systems can host many applications and services in support of mission and
+business functions, access enforcement mechanisms can also be employed at the application and
+service level to provide increased information security and privacy. In contrast to logical access
+controls that are implemented within the system, physical access controls are addressed by the
+controls in the Physical and Environmental Protection (PE) family.
+ACCESS ENFORCEMENT | DUAL AUTHORIZATION
+Enforce dual authorization for [Assignment: organization-defined privileged commands
+and/or other organization-defined actions].
+Discussion: Dual authorization, also known as two-person control, reduces risk related to
+insider threats. Dual authorization mechanisms require the approval of two authorized
+individuals to execute. To reduce the risk of collusion, organizations consider rotating dual
+authorization duties. Organizations consider the risk associated with implementing dual
+authorization mechanisms when immediate responses are necessary to ensure public and
+environmental safety.
+ACCESS ENFORCEMENT | MANDATORY ACCESS CONTROL
+Enforce [Assignment: organization-defined mandatory access control policy] over the set
+of covered subjects and objects specified in the policy, and where the policy:
+(a) Is uniformly enforced across the covered subjects and objects within the system;
+(b) Specifies that a subject that has been granted access to information is constrained
+from doing any of the following;
+(1) Passing the information to unauthorized subjects or objects;
+(2) Granting its privileges to other subjects;
+(3) Changing one or more security attributes (specified by the policy) on subjects,
+objects, the system, or system components;
+(4) Choosing the security attributes and attribute values (specified by the policy) to
+be associated with newly created or modified objects; and
+(5) Changing the rules governing access control; and
+(c) Specifies that [Assignment: organization-defined subjects] may explicitly be granted
+[Assignment: organization-defined privileges] such that they are not limited by any
+defined subset (or all) of the above constraints.
+Discussion: Mandatory access control is a type of nondiscretionary access control.
+Mandatory access control policies constrain what actions subjects can take with information
+obtained from objects for which they have already been granted access. This prevents the
+subjects from passing the information to unauthorized subjects and objects. Mandatory
+access control policies constrain actions that subjects can take with respect to the
+propagation of access control privileges; that is, a subject with a privilege cannot pass that
+privilege to other subjects. The policy is uniformly enforced over all subjects and objects to
+which the system has control. Otherwise, the access control policy can be circumvented. This
+enforcement is provided by an implementation that meets the reference monitor concept as
+described in AC-25. The policy is bounded by the system (i.e., once the information is passed
+outside of the control of the system, additional means may be required to ensure that the
+constraints on the information remain in effect)
+The trusted subjects described above are granted privileges consistent with the concept of
+least privilege (see AC-6). Trusted subjects are only given the minimum privileges necessary
+for satisfying organizational mission/business needs relative to the above policy. The control
+is most applicable when there is a mandate that establishes a policy regarding access to
+controlled unclassified information or classified information and some users of the system
+are not authorized access to all such information resident in the system. Mandatory access
+control can operate in conjunction with discretionary access control as described in AC-3(4).
+A subject constrained in its operation by mandatory access control policies can still operate
+under the less rigorous constraints of AC-3(4), but mandatory access control policies take
+precedence over the less rigorous constraints of AC-3(4). For example, while a mandatory
+access control policy imposes a constraint that prevents a subject from passing information
+to another subject operating at a different impact or classification level, AC-3(4) permits the
+subject to pass the information to any other subject with the same impact or classification
+level as the subject. Examples of mandatory access control policies include the Bell-LaPadula
+policy to protect confidentiality of information and the Biba policy to protect the integrity of
+information.
+ACCESS ENFORCEMENT | DISCRETIONARY ACCESS CONTROL
+Enforce [Assignment: organization-defined discretionary access control policy] over the set
+of covered subjects and objects specified in the policy, and where the policy specifies that
+a subject that has been granted access to information can do one or more of the following:
+(a) Pass the information to any other subjects or objects;
+Grant its privileges to other subjects;
+(c) Change security attributes on subjects, objects, the system, or the system’s
+components;
+(d) Choose the security attributes to be associated with newly created or revised objects;
+or
+(e) Change the rules governing access control.
+Discussion: When discretionary access control policies are implemented, subjects are not
+constrained with regard to what actions they can take with information for which they have
+already been granted access. Thus, subjects that have been granted access to information
+are not prevented from passing the information to other subjects or objects (i.e., subjects
+have the discretion to pass). Discretionary access control can operate in conjunction with
+mandatory access control as described in AC-3(3) and AC-3(15). A subject that is constrained
+in its operation by mandatory access control policies can still operate under the less rigorous
+constraints of discretionary access control. Therefore, while AC-3(3) imposes constraints that
+prevent a subject from passing information to another subject operating at a different
+impact or classification level, AC-3(4) permits the subject to pass the information to any
+subject at the same impact or classification level. The policy is bounded by the system. Once
+the information is passed outside of system control, additional means may be required to
+ensure that the constraints remain in effect. While traditional definitions of discretionary
+access control require identity-based access control, that limitation is not required for this
+particular use of discretionary access control.
+ACCESS ENFORCEMENT | SECURITY-RELEVANT INFORMATION
+Prevent access to [Assignment: organization-defined security-relevant information] except
+during secure, non-operable system states.
+Discussion: Security-relevant information is information within systems that can potentially
+impact the operation of security functions or the provision of security services in a manner
+that could result in failure to enforce system security and privacy policies or maintain the
+separation of code and data. Security-relevant information includes access control lists,
+filtering rules for routers or firewalls, configuration parameters for security services, and
+cryptographic key management information. Secure, non-operable system states include the
+times in which systems are not performing mission or business-related processing, such as
+when the system is offline for maintenance, boot-up, troubleshooting, or shut down.
+ACCESS ENFORCEMENT | ROLE-BASED ACCESS CONTROL
+Enforce a role-based access control policy over defined subjects and objects and control
+access based upon [Assignment: organization-defined roles and users authorized to
+assume such roles].
+Discussion: Role-based access control (RBAC) is an access control policy that enforces access
+to objects and system functions based on the defined role (i.e., job function) of the subject.
+Organizations can create specific roles based on job functions and the authorizations (i.e.,
+privileges) to perform needed operations on the systems associated with the organizationdefined roles. When users are assigned to specific roles, they inherit the authorizations or
+privileges defined for those roles. RBAC simplifies privilege administration for organizations
+because privileges are not assigned directly to every user (which can be a large number of
+individuals) but are instead acquired through role assignments. RBAC can also increase
+privacy and security risk if individuals assigned to a role are given access to information
+beyond what they need to support organizational missions or business functions. RBAC can
+be implemented as a mandatory or discretionary form of access control. For organizations
+implementing RBAC with mandatory access controls, the requirements in AC-3(3) define the
+scope of the subjects and objects covered by the policy.
+ACCESS ENFORCEMENT | REVOCATION OF ACCESS AUTHORIZATIONS
+Enforce the revocation of access authorizations resulting from changes to the security
+attributes of subjects and objects based on [Assignment: organization-defined rules
+governing the timing of revocations of access authorizations].
+Discussion: Revocation of access rules may differ based on the types of access revoked. For
+example, if a subject (i.e., user or process acting on behalf of a user) is removed from a
+group, access may not be revoked until the next time the object is opened or the next time
+the subject attempts to access the object. Revocation based on changes to security labels
+may take effect immediately. Organizations provide alternative approaches on how to make
+revocations immediate if systems cannot provide such capability and immediate revocation
+is necessary.
+ACCESS ENFORCEMENT | CONTROLLED RELEASE
+Release information outside of the system only if:
+(a) The receiving [Assignment: organization-defined system or system component]
+provides [Assignment: organization-defined controls]; and
+(b) [Assignment: organization-defined controls] are used to validate the appropriateness
+of the information designated for release.
+Discussion: Organizations can only directly protect information when it resides within the
+system. Additional controls may be needed to ensure that organizational information is
+adequately protected once it is transmitted outside of the system. In situations where the
+system is unable to determine the adequacy of the protections provided by external entities,
+as a mitigation measure, organizations procedurally determine whether the external systems
+are providing adequate controls. The means used to determine the adequacy of controls
+provided by external systems include conducting periodic assessments (inspections/tests),
+establishing agreements between the organization and its counterpart organizations, or
+some other process. The means used by external entities to protect the information received
+need not be the same as those used by the organization, but the means employed are
+sufficient to provide consistent adjudication of the security and privacy policy to protect the
+information and individuals’ privacy.
+Controlled release of information requires systems to implement technical or procedural
+means to validate the information prior to releasing it to external systems. For example, if
+the system passes information to a system controlled by another organization, technical
+means are employed to validate that the security and privacy attributes associated with the
+exported information are appropriate for the receiving system. Alternatively, if the system
+passes information to a printer in organization-controlled space, procedural means can be
+employed to ensure that only authorized individuals gain access to the printer.
+ACCESS ENFORCEMENT | AUDITED OVERRIDE OF ACCESS CONTROL MECHANISMS
+Employ an audited override of automated access control mechanisms under [Assignment:
+organization-defined conditions] by [Assignment: organization-defined roles].
+Discussion: In certain situations, such as when there is a threat to human life or an event
+that threatens the organization’s ability to carry out critical missions or business functions,
+an override capability for access control mechanisms may be needed. Override conditions
+are defined by organizations and used only in those limited circumstances. Audit events are
+defined in AU-2. Audit records are generated in AU-12.
+ACCESS ENFORCEMENT | RESTRICT ACCESS TO SPECIFIC INFORMATION TYPES
+Restrict access to data repositories containing [Assignment: organization-defined
+information types].
+Discussion: Restricting access to specific information is intended to provide flexibility
+regarding access control of specific information types within a system. For example, rolebased access could be employed to allow access to only a specific type of personally
+identifiable information within a database rather than allowing access to the database in its
+entirety. Other examples include restricting access to cryptographic keys, authentication
+information, and selected system information.
+ACCESS ENFORCEMENT | ASSERT AND ENFORCE APPLICATION ACCESS
+(a) Require applications to assert, as part of the installation process, the access needed to
+the following system applications and functions: [Assignment: organization-defined
+system applications and functions];
+(b) Provide an enforcement mechanism to prevent unauthorized access; and
+(c) Approve access changes after initial installation of the application.
+Discussion: Asserting and enforcing application access is intended to address applications
+that need to access existing system applications and functions, including user contacts,
+global positioning systems, cameras, keyboards, microphones, networks, phones, or other
+files.
+ACCESS ENFORCEMENT | ATTRIBUTE-BASED ACCESS CONTROL
+Enforce attribute-based access control policy over defined subjects and objects and control
+access based upon [Assignment: organization-defined attributes to assume access
+permissions].
+Discussion: Attribute-based access control is an access control policy that restricts system
+access to authorized users based on specified organizational attributes (e.g., job function,
+identity), action attributes (e.g., read, write, delete), environmental attributes (e.g., time of
+day, location), and resource attributes (e.g., classification of a document). Organizations can
+create rules based on attributes and the authorizations (i.e., privileges) to perform needed
+operations on the systems associated with organization-defined attributes and rules. When
+users are assigned to attributes defined in attribute-based access control policies or rules,
+they can be provisioned to a system with the appropriate privileges or dynamically granted
+access to a protected resource. Attribute-based access control can be implemented as either
+a mandatory or discretionary form of access control. When implemented with mandatory
+access controls, the requirements in AC-3(3) define the scope of the subjects and objects
+covered by the policy.
+ACCESS ENFORCEMENT | INDIVIDUAL ACCESS
+Provide [Assignment: organization-defined mechanisms] to enable individuals to have
+access to the following elements of their personally identifiable information: [Assignment:
+organization-defined elements].
+Discussion: Individual access affords individuals the ability to review personally identifiable
+information about them held within organizational records, regardless of format. Access
+helps individuals to develop an understanding about how their personally identifiable
+information is being processed. It can also help individuals ensure that their data is accurate.
+Access mechanisms can include request forms and application interfaces. For federal
+agencies, [PRIVACT] processes can be located in systems of record notices and on agency
+websites. Access to certain types of records may not be appropriate (e.g., for federal
+agencies, law enforcement records within a system of records may be exempt from
+disclosure under the [PRIVACT]) or may require certain levels of authentication assurance.
+Organizational personnel consult with the senior agency official for privacy and legal counsel
+to determine appropriate mechanisms and access rights or limitations
+ACCESS ENFORCEMENT | DISCRETIONARY AND MANDATORY ACCESS CONTROL
+(a) Enforce [Assignment: organization-defined mandatory access control policy] over the
+set of covered subjects and objects specified in the policy; and
+(b) Enforce [Assignment: organization-defined discretionary access control policy] over
+the set of covered subjects and objects specified in the policy.
+Discussion: Simultaneously implementing a mandatory access control policy and a
+discretionary access control policy can provide additional protection against the
+unauthorized execution of code by users or processes acting on behalf of users. This helps
+prevent a single compromised user or process from compromising the entire system.
+LEAST FUNCTIONALITY
+Control:
+a. Configure the system to provide only [Assignment: organization-defined mission essential
+capabilities]; and
+b. Prohibit or restrict the use of the following functions, ports, protocols, software, and/or
+services: [Assignment: organization-defined prohibited or restricted functions, system ports,
+protocols, software, and/or services]
+Discussion: Systems provide a wide variety of functions and services. Some of the functions and
+services routinely provided by default may not be necessary to support essential organizational
+missions, functions, or operations. Additionally, it is sometimes convenient to provide multiple
+services from a single system component, but doing so increases risk over limiting the services
+provided by that single component. Where feasible, organizations limit component functionality
+to a single function per component. Organizations consider removing unused or unnecessary
+software and disabling unused or unnecessary physical and logical ports and protocols to prevent
+unauthorized connection of components, transfer of information, and tunneling. Organizations
+employ network scanning tools, intrusion detection and prevention systems, and end-point
+protection technologies, such as firewalls and host-based intrusion detection systems, to identify
+and prevent the use of prohibited functions, protocols, ports, and services. Least functionality
+can also be achieved as part of the fundamental design and development of the system (see SA8, SC-2, and SC-3).
+LEAST FUNCTIONALITY | PERIODIC REVIEW
+(a) Review the system [Assignment: organization-defined frequency] to identify
+unnecessary and/or nonsecure functions, ports, protocols, software, and services; and
+(b) Disable or remove [Assignment: organization-defined functions, ports, protocols,
+software, and services within the system deemed to be unnecessary and/or
+nonsecure].
+Discussion: Organizations review functions, ports, protocols, and services provided by
+systems or system components to determine the functions and services that are candidates
+for elimination. Such reviews are especially important during transition periods from older
+technologies to newer technologies (e.g., transition from IPv4 to IPv6). These technology
+transitions may require implementing the older and newer technologies simultaneously
+during the transition period and returning to minimum essential functions, ports, protocols,
+and services at the earliest opportunity. Organizations can either decide the relative security
+of the function, port, protocol, and/or service or base the security decision on the
+assessment of other entities. Unsecure protocols include Bluetooth, FTP, and peer-to-peer
+networking.
+LEAST FUNCTIONALITY | PREVENT PROGRAM EXECUTION
+Prevent program execution in accordance with [Selection (one or more): [Assignment:
+organization-defined policies, rules of behavior, and/or access agreements regarding
+software program usage and restrictions]; rules authorizing the terms and conditions of
+software program usage].
+Discussion: Prevention of program execution addresses organizational policies, rules of
+behavior, and/or access agreements that restrict software usage and the terms and
+conditions imposed by the developer or manufacturer, including software licensing and
+copyrights. Restrictions include prohibiting auto-execute features, restricting roles allowed
+to approve program execution, permitting or prohibiting specific software programs, or
+restricting the number of program instances executed at the same time.
+LEAST FUNCTIONALITY | REGISTRATION COMPLIANCE
+Ensure compliance with [Assignment: organization-defined registration requirements for
+functions, ports, protocols, and services]
+Discussion: Organizations use the registration process to manage, track, and provide
+oversight for systems and implemented functions, ports, protocols, and services.
+LEAST FUNCTIONALITY | UNAUTHORIZED SOFTWARE — DENY-BY-EXCEPTION
+(a) Identify [Assignment: organization-defined software programs not authorized to
+execute on the system];
+(b) Employ an allow-all, deny-by-exception policy to prohibit the execution of
+unauthorized software programs on the system; and
+(c) Review and update the list of unauthorized software programs [Assignment:
+organization-defined frequency].
+Discussion: Unauthorized software programs can be limited to specific versions or from a
+specific source. The concept of prohibiting the execution of unauthorized software may also
+be applied to user actions, system ports and protocols, IP addresses/ranges, websites, and
+MAC addresses.
+LEAST FUNCTIONALITY | AUTHORIZED SOFTWARE — ALLOW-BY-EXCEPTION
+(a) Identify [Assignment: organization-defined software programs authorized to execute
+on the system];
+(b) Employ a deny-all, permit-by-exception policy to allow the execution of authorized
+software programs on the system; and
+(c) Review and update the list of authorized software programs [Assignment:
+organization-defined frequency].
+Discussion: Authorized software programs can be limited to specific versions or from a
+specific source. To facilitate a comprehensive authorized software process and increase the
+strength of protection for attacks that bypass application level authorized software, software
+programs may be decomposed into and monitored at different levels of detail. These levels
+include applications, application programming interfaces, application modules, scripts,
+system processes, system services, kernel functions, registries, drivers, and dynamic link
+libraries. The concept of permitting the execution of authorized software may also be
+applied to user actions, system ports and protocols, IP addresses/ranges, websites, and MAC
+addresses. Organizations consider verifying the integrity of authorized software programs
+using digital signatures, cryptographic checksums, or hash functions. Verification of
+authorized software can occur either prior to execution or at system startup. The
+identification of authorized URLs for websites is addressed in CA-3(5) and SC-7.
+LEAST FUNCTIONALITY | CONFINED ENVIRONMENTS WITH LIMITED PRIVILEGES
+Require that the following user-installed software execute in a confined physical or virtual
+machine environment with limited privileges: [Assignment: organization-defined userinstalled software].
+Discussion: Organizations identify software that may be of concern regarding its origin or
+potential for containing malicious code. For this type of software, user installations occur in
+confined environments of operation to limit or contain damage from malicious code that
+may be executed.
+LEAST FUNCTIONALITY | CODE EXECUTION IN PROTECTED ENVIRONMENTS
+Allow execution of binary or machine-executable code only in confined physical or virtual
+machine environments and with the explicit approval of [Assignment: organizationdefined personnel or roles] when such code is:
+(a) Obtained from sources with limited or no warranty; and/or
+(b) Without the provision of source code.
+Discussion: Code execution in protected environments applies to all sources of binary or
+machine-executable code, including commercial software and firmware and open-source
+software.
+LEAST FUNCTIONALITY | BINARY OR MACHINE EXECUTABLE CODE
+(a) Prohibit the use of binary or machine-executable code from sources with limited or no
+warranty or without the provision of source code; and
+(b) Allow exceptions only for compelling mission or operational requirements and with
+the approval of the authorizing official.
+Discussion: Binary or machine executable code applies to all sources of binary or machineexecutable code, including commercial software and firmware and open-source software.
+Organizations assess software products without accompanying source code or from sources
+with limited or no warranty for potential security impacts. The assessments address the fact
+that software products without the provision of source code may be difficult to review,
+repair, or extend. In addition, there may be no owners to make such repairs on behalf of
+organizations. If open-source software is used, the assessments address the fact that there is
+no warranty, the open-source software could contain back doors or malware, and there may
+be no support available.
+LEAST FUNCTIONALITY | PROHIBITING THE USE OF UNAUTHORIZED HARDWARE
+(a) Identify [Assignment: organization-defined hardware components authorized for
+system use];
+(b) Prohibit the use or connection of unauthorized hardware components;
+(c) Review and update the list of authorized hardware components [Assignment:
+organization-defined frequency].
+Discussion: Hardware components provide the foundation for organizational systems and
+the platform for the execution of authorized software programs. Managing the inventory of
+hardware components and controlling which hardware components are permitted to be
+installed or connected to organizational systems is essential in order to provide adequate
+security.

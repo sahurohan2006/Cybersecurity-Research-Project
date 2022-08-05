@@ -1,0 +1,289 @@
+PR.AC-3: Remote access is managed
+POLICY AND PROCEDURES
+Control:
+a. Develop, document, and disseminate to [Assignment: organization-defined personnel or
+roles]:
+1. [Selection (one or more): Organization-level; Mission/business process-level; Systemlevel] access control policy that:
+(a) Addresses purpose, scope, roles, responsibilities, management commitment,
+coordination among organizational entities, and compliance; and
+(b) Is consistent with applicable laws, executive orders, directives, regulations, policies,
+standards, and guidelines; and
+2. Procedures to facilitate the implementation of the access control policy and the
+associated access controls;
+b. Designate an [Assignment: organization-defined official] to manage the development,
+documentation, and dissemination of the access control policy and procedures; and
+c. Review and update the current access control:
+1. Policy [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events]; and
+2. Procedures [Assignment: organization-defined frequency] and following [Assignment:
+organization-defined events].
+Discussion: Access control policy and procedures address the controls in the AC family that are
+implemented within systems and organizations. The risk management strategy is an important
+factor in establishing such policies and procedures. Policies and procedures contribute to security
+and privacy assurance. Therefore, it is important that security and privacy programs collaborate
+on the development of access control policy and procedures. Security and privacy program
+policies and procedures at the organization level are preferable, in general, and may obviate the
+need for mission- or system-specific policies and procedures. The policy can be included as part
+of the general security and privacy policy or be represented by multiple policies reflecting the
+complex nature of organizations. Procedures can be established for security and privacy
+programs, for mission or business processes, and for systems, if needed. Procedures describe
+how the policies or controls are implemented and can be directed at the individual or role that is
+the object of the procedure. Procedures can be documented in system security and privacy plans
+or in one or more separate documents. Events that may precipitate an update to access control
+policy and procedures include assessment or audit findings, security incidents or breaches, or
+changes in laws, executive orders, directives, regulations, policies, standards, and guidelines.
+Simply restating controls does not constitute an organizational policy or procedure
+REMOTE ACCESS
+Control:
+a. Establish and document usage restrictions, configuration/connection requirements, and
+implementation guidance for each type of remote access allowed; and
+b. Authorize each type of remote access to the system prior to allowing such connections.
+Discussion: Remote access is access to organizational systems (or processes acting on behalf of
+users) that communicate through external networks such as the Internet. Types of remote access
+include dial-up, broadband, and wireless. Organizations use encrypted virtual private networks
+(VPNs) to enhance confidentiality and integrity for remote connections. The use of encrypted
+VPNs provides sufficient assurance to the organization that it can effectively treat such
+connections as internal networks if the cryptographic mechanisms used are implemented in
+accordance with applicable laws, executive orders, directives, regulations, policies, standards,
+and guidelines. Still, VPN connections traverse external networks, and the encrypted VPN does
+not enhance the availability of remote connections. VPNs with encrypted tunnels can also affect
+the ability to adequately monitor network communications traffic for malicious code. Remote
+access controls apply to systems other than public web servers or systems designed for public
+access. Authorization of each remote access type addresses authorization prior to allowing
+remote access without specifying the specific formats for such authorization. While organizations
+may use information exchange and system connection security agreements to manage remote
+access connections to other systems, such agreements are addressed as part of CA-3. Enforcing
+access restrictions for remote access is addressed via AC-3.
+REMOTE ACCESS | MONITORING AND CONTROL
+Employ automated mechanisms to monitor and control remote access methods.
+Discussion: Monitoring and control of remote access methods allows organizations to
+detect attacks and help ensure compliance with remote access policies by auditing the
+connection activities of remote users on a variety of system components, including servers,
+notebook computers, workstations, smart phones, and tablets. Audit logging for remote
+access is enforced by AU-2. Audit events are defined in AU-2a.
+REMOTE ACCESS | PROTECTION OF CONFIDENTIALITY AND INTEGRITY USING ENCRYPTION
+Implement cryptographic mechanisms to protect the confidentiality and integrity of
+remote access sessions.
+Discussion: Virtual private networks can be used to protect the confidentiality and integrity
+of remote access sessions. Transport Layer Security (TLS) is an example of a cryptographic
+protocol that provides end-to-end communications security over networks and is used for
+Internet communications and online transactions
+REMOTE ACCESS | MANAGED ACCESS CONTROL POINTS
+Route remote accesses through authorized and managed network access control points.
+Discussion: Organizations consider the Trusted Internet Connections (TIC) initiative [DHS
+TIC] requirements for external network connections since limiting the number of access
+control points for remote access reduces attack surfaces.
+REMOTE ACCESS | PRIVILEGED COMMANDS AND ACCESS
+(a) Authorize the execution of privileged commands and access to security-relevant
+information via remote access only in a format that provides assessable evidence and
+for the following needs: [Assignment: organization-defined needs]; and
+(b) Document the rationale for remote access in the security plan for the system.
+Discussion: Remote access to systems represents a significant potential vulnerability that
+can be exploited by adversaries. As such, restricting the execution of privileged commands
+and access to security-relevant information via remote access reduces the exposure of the
+organization and the susceptibility to threats by adversaries to the remote access capability
+REMOTE ACCESS | MONITORING FOR UNAUTHORIZED CONNECTIONS
+REMOTE ACCESS | PROTECTION OF MECHANISM INFORMATION
+Protect information about remote access mechanisms from unauthorized use and
+disclosure.
+Discussion: Remote access to organizational information by non-organizational entities can
+increase the risk of unauthorized use and disclosure about remote access mechanisms. The
+organization considers including remote access requirements in the information exchange
+agreements with other organizations, as applicable. Remote access requirements can also be
+included in rules of behavior (see PL-4) and access agreements (see PS-6).
+The speed of system disconnect or disablement varies based on the criticality of
+missions or business functions and the need to eliminate immediate or future remote access
+to systems
+REMOTE ACCESS | AUTHENTICATE REMOTE COMMANDS
+Implement [Assignment: organization-defined mechanisms] to authenticate [Assignment:
+organization-defined remote commands].
+Discussion: Authenticating remote commands protects against unauthorized commands and
+the replay of authorized commands. The ability to authenticate remote commands is
+important for remote systems for which loss, malfunction, misdirection, or exploitation
+would have immediate or serious consequences, such as injury, death, property damage,
+loss of high value assets, failure of mission or business functions, or compromise of classified
+or controlled unclassified information. Authentication mechanisms for remote commands
+ensure that systems accept and execute commands in the order intended, execute only
+authorized commands, and reject unauthorized commands. Cryptographic mechanisms can
+be used, for example, to authenticate remote commands.
+ACCESS CONTROL FOR MOBILE DEVICES
+Control:
+a. Establish configuration requirements, connection requirements, and implementation
+guidance for organization-controlled mobile devices, to include when such devices are
+outside of controlled areas; and
+b. Authorize the connection of mobile devices to organizational systems.
+Discussion: A mobile device is a computing device that has a small form factor such that it can
+easily be carried by a single individual; is designed to operate without a physical connection;
+possesses local, non-removable or removable data storage; and includes a self-contained power
+source. Mobile device functionality may also include voice communication capabilities, on-board
+sensors that allow the device to capture information, and/or built-in features for synchronizing
+local data with remote locations. Examples include smart phones and tablets. Mobile devices are
+typically associated with a single individual. The processing, storage, and transmission capability
+of the mobile device may be comparable to or merely a subset of notebook/desktop systems,
+depending on the nature and intended purpose of the device. Protection and control of mobile
+devices is behavior or policy-based and requires users to take physical action to protect and
+control such devices when outside of controlled areas. Controlled areas are spaces for which
+organizations provide physical or procedural controls to meet the requirements established for
+protecting information and systems.
+Due to the large variety of mobile devices with different characteristics and capabilities,
+organizational restrictions may vary for the different classes or types of such devices. Usage
+restrictions and specific implementation guidance for mobile devices include configuration
+management, device identification and authentication, implementation of mandatory protective
+software, scanning devices for malicious code, updating virus protection software, scanning for
+critical software updates and patches, conducting primary operating system (and possibly other
+resident software) integrity checks, and disabling unnecessary hardware.
+Usage restrictions and authorization to connect may vary among organizational systems. For
+example, the organization may authorize the connection of mobile devices to its network and
+impose a set of usage restrictions, while a system owner may withhold authorization for mobile
+device connection to specific applications or impose additional usage restrictions before allowing
+mobile device connections to a system. Adequate security for mobile devices goes beyond the
+requirements specified in AC-19. Many safeguards for mobile devices are reflected in other
+controls. AC-20 addresses mobile devices that are not organization-controlled.
+ACCESS CONTROL FOR MOBILE DEVICES | RESTRICTIONS FOR CLASSIFIED INFORMATION
+(a) Prohibit the use of unclassified mobile devices in facilities containing systems
+processing, storing, or transmitting classified information unless specifically permitted
+by the authorizing official; and
+(b) Enforce the following restrictions on individuals permitted by the authorizing official
+to use unclassified mobile devices in facilities containing systems processing, storing,
+or transmitting classified information:
+(1) Connection of unclassified mobile devices to classified systems is prohibited;
+(2) Connection of unclassified mobile devices to unclassified systems requires
+approval from the authorizing official;
+(3) Use of internal or external modems or wireless interfaces within the unclassified
+mobile devices is prohibited; and
+(4) Unclassified mobile devices and the information stored on those devices are
+subject to random reviews and inspections by [Assignment: organization-defined
+security officials], and if classified information is found, the incident handling
+policy is followed.
+(c) Restrict the connection of classified mobile devices to classified systems in accordance
+with [Assignment: organization-defined security policies].
+ACCESS CONTROL FOR MOBILE DEVICES | FULL DEVICE OR CONTAINER-BASED ENCRYPTION
+Employ [Selection: full-device encryption; container-based encryption] to protect the
+confidentiality and integrity of information on [Assignment: organization-defined mobile
+devices].
+Discussion: Container-based encryption provides a more fine-grained approach to data and
+information encryption on mobile devices, including encrypting selected data structures
+such as files, records, or fields.
+USE OF EXTERNAL SYSTEMS
+Control:
+a. [Selection (one or more): Establish [Assignment: organization-defined terms and conditions];
+Identify [Assignment: organization-defined controls asserted to be implemented on external
+systems]], consistent with the trust relationships established with other organizations
+owning, operating, and/or maintaining external systems, allowing authorized individuals to:
+1. Access the system from external systems; and
+2. Process, store, or transmit organization-controlled information using external systems;
+or
+b. Prohibit the use of [Assignment: organizationally-defined types of external systems].
+Discussion: External systems are systems that are used by but not part of organizational systems,
+and for which the organization has no direct control over the implementation of required
+controls or the assessment of control effectiveness. External systems include personally owned
+systems, components, or devices; privately owned computing and communications devices in
+commercial or public facilities; systems owned or controlled by nonfederal organizations;
+systems managed by contractors; and federal information systems that are not owned by,
+operated by, or under the direct supervision or authority of the organization. External systems
+also include systems owned or operated by other components within the same organization and
+systems within the organization with different authorization boundaries. Organizations have the
+option to prohibit the use of any type of external system or prohibit the use of specified types of
+external systems, (e.g., prohibit the use of any external system that is not organizationally owned
+or prohibit the use of personally-owned systems).
+For some external systems (i.e., systems operated by other organizations), the trust relationships
+that have been established between those organizations and the originating organization may be
+such that no explicit terms and conditions are required. Systems within these organizations may
+not be considered external. These situations occur when, for example, there are pre-existing
+information exchange agreements (either implicit or explicit) established between organizations
+or components or when such agreements are specified by applicable laws, executive orders,
+directives, regulations, policies, or standards. Authorized individuals include organizational
+personnel, contractors, or other individuals with authorized access to organizational systems and
+over which organizations have the authority to impose specific rules of behavior regarding
+system access. Restrictions that organizations impose on authorized individuals need not be
+uniform, as the restrictions may vary depending on trust relationships between organizations.
+Therefore, organizations may choose to impose different security restrictions on contractors
+than on state, local, or tribal governments.
+External systems used to access public interfaces to organizational systems are outside the scope
+of AC-20. Organizations establish specific terms and conditions for the use of external systems in
+accordance with organizational security policies and procedures. At a minimum, terms and
+conditions address the specific types of applications that can be accessed on organizational
+systems from external systems and the highest security category of information that can be
+processed, stored, or transmitted on external systems. If the terms and conditions with the
+owners of the external systems cannot be established, organizations may impose restrictions on
+organizational personnel using those external systems.
+USE OF EXTERNAL SYSTEMS | LIMITS ON AUTHORIZED USE
+Permit authorized individuals to use an external system to access the system or to process,
+store, or transmit organization-controlled information only after:
+(a) Verification of the implementation of controls on the external system as specified in
+the organization’s security and privacy policies and security and privacy plans; or
+(b) Retention of approved system connection or processing agreements with the
+organizational entity hosting the external system.
+Discussion: Limiting authorized use recognizes circumstances where individuals using
+external systems may need to access organizational systems. Organizations need assurance
+that the external systems contain the necessary controls so as not to compromise, damage,
+or otherwise harm organizational systems. Verification that the required controls have been
+implemented can be achieved by external, independent assessments, attestations, or other
+means, depending on the confidence level required by organizations.
+USE OF EXTERNAL SYSTEMS | PORTABLE STORAGE DEVICES — RESTRICTED USE
+Restrict the use of organization-controlled portable storage devices by authorized
+individuals on external systems using [Assignment: organization-defined restrictions].
+Discussion: Limits on the use of organization-controlled portable storage devices in external
+systems include restrictions on how the devices may be used and under what conditions the
+devices may be used.
+USE OF EXTERNAL SYSTEMS | NON-ORGANIZATIONALLY OWNED SYSTEMS — RESTRICTED USE
+Restrict the use of non-organizationally owned systems or system components to process,
+store, or transmit organizational information using [Assignment: organization-defined
+restrictions].
+Discussion: Non-organizationally owned systems or system components include systems or
+system components owned by other organizations as well as personally owned devices.
+There are potential risks to using non-organizationally owned systems or components. In
+some cases, the risk is sufficiently high as to prohibit such use (see AC-20 b.). In other cases,
+the use of such systems or system components may be allowed but restricted in some way.
+Restrictions include requiring the implementation of approved controls prior to authorizing
+the connection of non-organizationally owned systems and components; limiting access to
+types of information, services, or applications; using virtualization techniques to limit
+processing and storage activities to servers or system components provisioned by the
+organization; and agreeing to the terms and conditions for usage. Organizations consult with
+the Office of the General Counsel regarding legal issues associated with using personally
+owned devices, including requirements for conducting forensic analyses during
+investigations after an incident.
+USE OF EXTERNAL SYSTEMS | NETWORK ACCESSIBLE STORAGE DEVICES — PROHIBITED USE
+Prohibit the use of [Assignment: organization-defined network accessible storage devices]
+in external systems.
+Discussion: Network-accessible storage devices in external systems include online storage
+devices in public, hybrid, or community cloud-based systems.
+USE OF EXTERNAL SYSTEMS | PORTABLE STORAGE DEVICES — PROHIBITED USE
+Prohibit the use of organization-controlled portable storage devices by authorized
+individuals on external systems.
+Discussion: Limits on the use of organization-controlled portable storage devices in external
+systems include a complete prohibition of the use of such devices. Prohibiting such use is
+enforced using technical methods and/or nontechnical (i.e., process-based) methods.
+COLLABORATIVE COMPUTING DEVICES AND APPLICATIONS
+Control:
+a. Prohibit remote activation of collaborative computing devices and applications with the
+following exceptions: [Assignment: organization-defined exceptions where remote activation
+is to be allowed]; and
+b. Provide an explicit indication of use to users physically present at the devices.
+Discussion: Collaborative computing devices and applications include remote meeting devices
+and applications, networked white boards, cameras, and microphones. The explicit indication of
+use includes signals to users when collaborative computing devices and applications are
+activated
+COLLABORATIVE COMPUTING DEVICES | PHYSICAL OR LOGICAL DISCONNECT
+Provide [Selection (one or more): physical; logical] disconnect of collaborative computing
+devices in a manner that supports ease of use.
+Discussion: Failing to disconnect from collaborative computing devices can result in
+subsequent compromises of organizational information. Providing easy methods to
+disconnect from such devices after a collaborative computing session ensures that
+participants carry out the disconnect activity without having to go through complex and
+tedious procedures. Disconnect from collaborative computing devices can be manual or
+automatic
+COLLABORATIVE COMPUTING DEVICES | DISABLING AND REMOVAL IN SECURE WORK AREAS
+Disable or remove collaborative computing devices and applications from [Assignment:
+organization-defined systems or system components] in [Assignment: organization-defined
+secure work areas].
+Discussion: Failing to disable or remove collaborative computing devices and applications
+from systems or system components can result in compromises of information, including
+eavesdropping on conversations. A Sensitive Compartmented Information Facility (SCIF) is
+an example of a secure work area.
+COLLABORATIVE COMPUTING DEVICES | EXPLICITLY INDICATE CURRENT PARTICIPANTS
+Provide an explicit indication of current participants in [Assignment: organization-defined
+online meetings and teleconferences].
+Discussion: Explicitly indicating current participants prevents unauthorized individuals from
+participating in collaborative computing sessions without the explicit knowledge of other
+participants.

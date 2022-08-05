@@ -1,0 +1,411 @@
+ID.SC-4: Suppliers and third-party partners are routinely assessed using audits, test results, or other forms of evaluations to confirm they are meeting their contractual obligations.
+EVENT LOGGING
+Control:
+a. Identify the types of events that the system is capable of logging in support of the audit
+function: [Assignment: organization-defined event types that the system is capable of
+logging];
+b. Coordinate the event logging function with other organizational entities requiring auditrelated information to guide and inform the selection criteria for events to be logged;
+c. Specify the following event types for logging within the system: [Assignment: organizationdefined event types (subset of the event types defined in AU-2a.) along with the frequency of
+(or situation requiring) logging for each identified event type];
+d. Provide a rationale for why the event types selected for logging are deemed to be adequate
+to support after-the-fact investigations of incidents; and
+e. Review and update the event types selected for logging [Assignment: organization-defined
+frequency].
+Discussion: An event is an observable occurrence in a system. The types of events that require
+logging are those events that are significant and relevant to the security of systems and the
+privacy of individuals. Event logging also supports specific monitoring and auditing needs. Event
+types include password changes, failed logons or failed accesses related to systems, security or
+privacy attribute changes, administrative privilege usage, PIV credential usage, data action
+changes, query parameters, or external credential usage. In determining the set of event types
+that require logging, organizations consider the monitoring and auditing appropriate for each of
+the controls to be implemented. For completeness, event logging includes all protocols that are
+operational and supported by the system.
+To balance monitoring and auditing requirements with other system needs, event logging
+requires identifying the subset of event types that are logged at a given point in time. For
+example, organizations may determine that systems need the capability to log every file access
+successful and unsuccessful, but not activate that capability except for specific circumstances due
+to the potential burden on system performance. The types of events that organizations desire to
+be logged may change. Reviewing and updating the set of logged events is necessary to help
+ensure that the events remain relevant and continue to support the needs of the organization.
+Organizations consider how the types of logging events can reveal information about individuals
+that may give rise to privacy risk and how best to mitigate such risks. For example, there is the
+potential to reveal personally identifiable information in the audit trail, especially if the logging
+event is based on patterns or time of usage.
+Event logging requirements, including the need to log specific event types, may be referenced in
+other controls and control enhancements. These include AC-2(4), AC-3(10), AC-6(9), AC-17(1),
+CM-3f, CM-5(1), IA-3(3.b), MA-4(1), MP-4(2), PE-3, PM-21, PT-7, RA-8, SC-7(9), SC-7(15), SI-3(8),
+SI-4(22), SI-7(8), and SI-10(1). Organizations include event types that are required by applicable
+laws, executive orders, directives, policies, regulations, standards, and guidelines. Audit records
+can be generated at various levels, including at the packet level as information traverses the
+network. Selecting the appropriate level of event logging is an important part of a monitoring
+and auditing capability and can identify the root causes of problems. When defining event types,
+organizations consider the logging necessary to cover related event types, such as the steps in
+distributed, transaction-based processes and the actions that occur in service-oriented
+architectures
+AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING
+Control:
+a. Review and analyze system audit records [Assignment: organization-defined frequency] for
+indications of [Assignment: organization-defined inappropriate or unusual activity] and the
+potential impact of the inappropriate or unusual activity;
+b. Report findings to [Assignment: organization-defined personnel or roles]; and
+c. Adjust the level of audit record review, analysis, and reporting within the system when there
+is a change in risk based on law enforcement information, intelligence information, or other
+credible sources of information.
+Discussion: Audit record review, analysis, and reporting covers information security- and privacyrelated logging performed by organizations, including logging that results from the monitoring of
+account usage, remote access, wireless connectivity, mobile device connection, configuration
+settings, system component inventory, use of maintenance tools and non-local maintenance,
+physical access, temperature and humidity, equipment delivery and removal, communications at
+system interfaces, and use of mobile code or Voice over Internet Protocol (VoIP). Findings can be
+reported to organizational entities that include the incident response team, help desk, and
+security or privacy offices. If organizations are prohibited from reviewing and analyzing audit
+records or unable to conduct such activities, the review or analysis may be carried out by other
+organizations granted such authority. The frequency, scope, and/or depth of the audit record
+review, analysis, and reporting may be adjusted to meet organizational needs based on new
+information received.
+Control Enhancements:
+(1) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | AUTOMATED PROCESS INTEGRATION
+Integrate audit record review, analysis, and reporting processes using [Assignment:
+organization-defined automated mechanisms].
+Discussion: Organizational processes that benefit from integrated audit record review,
+analysis, and reporting include incident response, continuous monitoring, contingency
+planning, investigation and response to suspicious activities, and Inspector General audits.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 71
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Related Controls: PM-7.
+(2) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | AUTOMATED SECURITY ALERTS
+[Withdrawn: Incorporated into SI-4.]
+(3) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | CORRELATE AUDIT RECORD REPOSITORIES
+Analyze and correlate audit records across different repositories to gain organization-wide
+situational awareness.
+Discussion: Organization-wide situational awareness includes awareness across all three
+levels of risk management (i.e., organizational level, mission/business process level, and
+information system level) and supports cross-organization awareness.
+Related Controls: AU-12, IR-4.
+(4) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | CENTRAL REVIEW AND ANALYSIS
+Provide and implement the capability to centrally review and analyze audit records from
+multiple components within the system.
+Discussion: Automated mechanisms for centralized reviews and analyses include Security
+Information and Event Management products.
+Related Controls: AU-2, AU-12.
+(5) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | INTEGRATED ANALYSIS OF AUDIT RECORDS
+Integrate analysis of audit records with analysis of [Selection (one or more): vulnerability
+scanning information; performance data; system monitoring information; [Assignment:
+organization-defined data/information collected from other sources]] to further enhance
+the ability to identify inappropriate or unusual activity.
+Discussion: Integrated analysis of audit records does not require vulnerability scanning, the
+generation of performance data, or system monitoring. Rather, integrated analysis requires
+that the analysis of information generated by scanning, monitoring, or other data collection
+activities is integrated with the analysis of audit record information. Security Information
+and Event Management tools can facilitate audit record aggregation or consolidation from
+multiple system components as well as audit record correlation and analysis. The use of
+standardized audit record analysis scripts developed by organizations (with localized script
+adjustments, as necessary) provides more cost-effective approaches for analyzing audit
+record information collected. The correlation of audit record information with vulnerability
+scanning information is important in determining the veracity of vulnerability scans of the
+system and in correlating attack detection events with scanning results. Correlation with
+performance data can uncover denial-of-service attacks or other types of attacks that result
+in the unauthorized use of resources. Correlation with system monitoring information can
+assist in uncovering attacks and in better relating audit information to operational situations.
+Related Controls: AU-12, IR-4.
+(6) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | CORRELATION WITH PHYSICAL MONITORING
+Correlate information from audit records with information obtained from monitoring
+physical access to further enhance the ability to identify suspicious, inappropriate,
+unusual, or malevolent activity.
+Discussion: The correlation of physical audit record information and the audit records from
+systems may assist organizations in identifying suspicious behavior or supporting evidence of
+such behavior. For example, the correlation of an individual’s identity for logical access to
+certain systems with the additional physical security information that the individual was
+present at the facility when the logical access occurred may be useful in investigations.
+Related Controls: None.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 72
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(7) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | PERMITTED ACTIONS
+Specify the permitted actions for each [Selection (one or more): system process; role; user]
+associated with the review, analysis, and reporting of audit record information.
+Discussion: Organizations specify permitted actions for system processes, roles, and users
+associated with the review, analysis, and reporting of audit records through system account
+management activities. Specifying permitted actions on audit record information is a way to
+enforce the principle of least privilege. Permitted actions are enforced by the system and
+include read, write, execute, append, and delete.
+Related Controls: None.
+(8) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | FULL TEXT ANALYSIS OF PRIVILEGED
+COMMANDS
+Perform a full text analysis of logged privileged commands in a physically distinct
+component or subsystem of the system, or other system that is dedicated to that analysis.
+Discussion: Full text analysis of privileged commands requires a distinct environment for the
+analysis of audit record information related to privileged users without compromising such
+information on the system where the users have elevated privileges, including the capability
+to execute privileged commands. Full text analysis refers to analysis that considers the full
+text of privileged commands (i.e., commands and parameters) as opposed to analysis that
+considers only the name of the command. Full text analysis includes the use of pattern
+matching and heuristics.
+Related Controls: AU-3, AU-9, AU-11, AU-12.
+(9) AUDIT RECORD REVIEW, ANALYSIS, AND REPORTING | CORRELATION WITH INFORMATION FROM
+NONTECHNICAL SOURCES
+Correlate information from nontechnical sources with audit record information to enhance
+organization-wide situational awareness.
+Discussion: Nontechnical sources include records that document organizational policy
+violations related to harassment incidents and the improper use of information assets. Such
+information can lead to a directed analytical effort to detect potential malicious insider
+activity. Organizations limit access to information that is available from nontechnical sources
+due to its sensitive nature. Limited access minimizes the potential for inadvertent release of
+privacy-related information to individuals who do not have a need to know. The correlation
+of information from nontechnical sources with audit record information generally occurs
+only when individuals are suspected of being involved in an incident. Organizations obtain
+legal advice prior to initiating such actions
+AUDIT RECORD GENERATION
+Control:
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 78
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+a. Provide audit record generation capability for the event types the system is capable of
+auditing as defined in AU-2a on [Assignment: organization-defined system components];
+b. Allow [Assignment: organization-defined personnel or roles] to select the event types that
+are to be logged by specific components of the system; and
+c. Generate audit records for the event types defined in AU-2c that include the audit record
+content defined in AU-3.
+Discussion: Audit records can be generated from many different system components. The event
+types specified in AU-2d are the event types for which audit logs are to be generated and are a
+subset of all event types for which the system can generate audit records.
+Control Enhancements:
+(1) AUDIT RECORD GENERATION | SYSTEM-WIDE AND TIME-CORRELATED AUDIT TRAIL
+Compile audit records from [Assignment: organization-defined system components] into a
+system-wide (logical or physical) audit trail that is time-correlated to within [Assignment:
+organization-defined level of tolerance for the relationship between time stamps of
+individual records in the audit trail].
+Discussion: Audit trails are time-correlated if the time stamps in the individual audit records
+can be reliably related to the time stamps in other audit records to achieve a time ordering
+of the records within organizational tolerances.
+Related Controls: AU-8, SC-45.
+(2) AUDIT RECORD GENERATION | STANDARDIZED FORMATS
+Produce a system-wide (logical or physical) audit trail composed of audit records in a
+standardized format.
+Discussion: Audit records that follow common standards promote interoperability and
+information exchange between devices and systems. Promoting interoperability and
+information exchange facilitates the production of event information that can be readily
+analyzed and correlated. If logging mechanisms do not conform to standardized formats,
+systems may convert individual audit records into standardized formats when compiling
+system-wide audit trails.
+Related Controls: None.
+(3) AUDIT RECORD GENERATION | CHANGES BY AUTHORIZED INDIVIDUALS
+Provide and implement the capability for [Assignment: organization-defined individuals or
+roles] to change the logging to be performed on [Assignment: organization-defined system
+components] based on [Assignment: organization-defined selectable event criteria] within
+[Assignment: organization-defined time thresholds].
+Discussion: Permitting authorized individuals to make changes to system logging enables
+organizations to extend or limit logging as necessary to meet organizational requirements.
+Logging that is limited to conserve system resources may be extended (either temporarily or
+permanently) to address certain threat situations. In addition, logging may be limited to a
+specific set of event types to facilitate audit reduction, analysis, and reporting. Organizations
+can establish time thresholds in which logging actions are changed (e.g., near real-time,
+within minutes, or within hours).
+Related Controls: AC-3.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 79
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(4) AUDIT RECORD GENERATION | QUERY PARAMETER AUDITS OF PERSONALLY IDENTIFIABLE
+INFORMATION
+Provide and implement the capability for auditing the parameters of user query events for
+data sets containing personally identifiable information.
+Discussion: Query parameters are explicit criteria that an individual or automated system
+submits to a system to retrieve data. Auditing of query parameters for datasets that contain
+personally identifiable information augments the capability of an organization to track and
+understand the access, usage, or sharing of personally identifiable information by authorized
+personnel.
+CROSS-ORGANIZATIONAL AUDIT LOGGING
+Control: Employ [Assignment: organization-defined methods] for coordinating [Assignment:
+organization-defined audit information] among external organizations when audit information is
+transmitted across organizational boundaries.
+Discussion: When organizations use systems or services of external organizations, the audit
+logging capability necessitates a coordinated, cross-organization approach. For example,
+maintaining the identity of individuals who request specific services across organizational
+boundaries may often be difficult, and doing so may prove to have significant performance and
+privacy ramifications. Therefore, it is often the case that cross-organizational audit logging simply
+captures the identity of individuals who issue requests at the initial system, and subsequent
+systems record that the requests originated from authorized individuals. Organizations consider
+including processes for coordinating audit information requirements and protection of audit
+information in information exchange agreements.
+Control Enhancements:
+(1) CROSS-ORGANIZATIONAL AUDIT LOGGING | IDENTITY PRESERVATION
+Preserve the identity of individuals in cross-organizational audit trails.
+Discussion: Identity preservation is applied when there is a need to be able to trace actions
+that are performed across organizational boundaries to a specific individual.
+Related Controls: IA-2, IA-4, IA-5, IA-8.
+(2) CROSS-ORGANIZATIONAL AUDIT LOGGING | SHARING OF AUDIT INFORMATION
+Provide cross-organizational audit information to [Assignment: organization-defined
+organizations] based on [Assignment: organization-defined cross-organizational sharing
+agreements].
+Discussion: Due to the distributed nature of the audit information, cross-organization
+sharing of audit information may be essential for effective analysis of the auditing being
+performed. For example, the audit records of one organization may not provide sufficient
+information to determine the appropriate or inappropriate use of organizational information
+resources by individuals in other organizations. In some instances, only individuals’ home
+organizations have the appropriate knowledge to make such determinations, thus requiring
+the sharing of audit information among organizations.
+Related Controls: IR-4, SI-4.
+(3) CROSS-ORGANIZATIONAL AUDITING | DISASSOCIABILITY
+Implement [Assignment: organization-defined measures] to disassociate individuals from
+audit information transmitted across organizational boundaries.
+Discussion: Preserving identities in audit trails could have privacy ramifications, such as
+enabling the tracking and profiling of individuals, but may not be operationally necessary.
+These risks could be further amplified when transmitting information across organizational
+boundaries. Implementing privacy-enhancing cryptographic techniques can disassociate
+individuals from audit information and reduce privacy risk while maintaining accountability.
+EXTERNAL PERSONNEL SECURITY
+Control:
+a. Establish personnel security requirements, including security roles and responsibilities for
+external providers;
+b. Require external providers to comply with personnel security policies and procedures
+established by the organization;
+c. Document personnel security requirements;
+d. Require external providers to notify [Assignment: organization-defined personnel or roles] of
+any personnel transfers or terminations of external personnel who possess organizational
+credentials and/or badges, or who have system privileges within [Assignment: organizationdefined time period]; and
+e. Monitor provider compliance with personnel security requirements.
+Discussion: External provider refers to organizations other than the organization operating or
+acquiring the system. External providers include service bureaus, contractors, and other
+organizations that provide system development, information technology services, testing or
+assessment services, outsourced applications, and network/security management. Organizations
+explicitly include personnel security requirements in acquisition-related documents. External
+providers may have personnel working at organizational facilities with credentials, badges, or
+system privileges issued by organizations. Notifications of external personnel changes ensure the
+appropriate termination of privileges and credentials. Organizations define the transfers and
+terminations deemed reportable by security-related characteristics that include functions, roles,
+and the nature of credentials or privileges associated with transferred or terminated individuals.
+EXTERNAL SYSTEM SERVICES
+Control:
+a. Require that providers of external system services comply with organizational security and
+privacy requirements and employ the following controls: [Assignment: organization-defined
+controls];
+b. Define and document organizational oversight and user roles and responsibilities with regard
+to external system services; and
+c. Employ the following processes, methods, and techniques to monitor control compliance by
+external service providers on an ongoing basis: [Assignment: organization-defined processes,
+methods, and techniques].
+Discussion: External system services are provided by an external provider, and the organization
+has no direct control over the implementation of the required controls or the assessment of
+control effectiveness. Organizations establish relationships with external service providers in a
+variety of ways, including through business partnerships, contracts, interagency agreements,
+lines of business arrangements, licensing agreements, joint ventures, and supply chain
+exchanges. The responsibility for managing risks from the use of external system services
+remains with authorizing officials. For services external to organizations, a chain of trust requires
+that organizations establish and retain a certain level of confidence that each provider in the
+consumer-provider relationship provides adequate protection for the services rendered. The
+extent and nature of this chain of trust vary based on relationships between organizations and
+the external providers. Organizations document the basis for the trust relationships so that the
+relationships can be monitored. External system services documentation includes government,
+service providers, end user security roles and responsibilities, and service-level agreements.
+Service-level agreements define the expectations of performance for implemented controls,
+describe measurable outcomes, and identify remedies and response requirements for identified
+instances of noncompliance
+Control Enhancements:
+(1) EXTERNAL SYSTEM SERVICES | RISK ASSESSMENTS AND ORGANIZATIONAL APPROVALS
+(a) Conduct an organizational assessment of risk prior to the acquisition or outsourcing of
+information security services; and
+(b) Verify that the acquisition or outsourcing of dedicated information security services is
+approved by [Assignment: organization-defined personnel or roles].
+Discussion: Information security services include the operation of security devices, such as
+firewalls or key management services as well as incident monitoring, analysis, and response.
+Risks assessed can include system, mission or business, security, privacy, or supply chain
+risks.
+Related Controls: CA-6, RA-3, RA-8.
+(2) EXTERNAL SYSTEM SERVICES | IDENTIFICATION OF FUNCTIONS, PORTS, PROTOCOLS, AND SERVICES
+Require providers of the following external system services to identify the functions, ports,
+protocols, and other services required for the use of such services: [Assignment:
+organization-defined external system services].
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 272
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: Information from external service providers regarding the specific functions,
+ports, protocols, and services used in the provision of such services can be useful when the
+need arises to understand the trade-offs involved in restricting certain functions and services
+or blocking certain ports and protocols.
+Related Controls: CM-6, CM-7.
+(3) EXTERNAL SYSTEM SERVICES | ESTABLISH AND MAINTAIN TRUST RELATIONSHIP WITH PROVIDERS
+Establish, document, and maintain trust relationships with external service providers
+based on the following requirements, properties, factors, or conditions: [Assignment:
+organization-defined security and privacy requirements, properties, factors, or conditions
+defining acceptable trust relationships].
+Discussion: Trust relationships between organizations and external service providers reflect
+the degree of confidence that the risk from using external services is at an acceptable level.
+Trust relationships can help organizations gain increased levels of confidence that service
+providers are providing adequate protection for the services rendered and can also be useful
+when conducting incident response or when planning for upgrades or obsolescence. Trust
+relationships can be complicated due to the potentially large number of entities participating
+in the consumer-provider interactions, subordinate relationships and levels of trust, and
+types of interactions between the parties. In some cases, the degree of trust is based on the
+level of control that organizations can exert on external service providers regarding the
+controls necessary for the protection of the service, information, or individual privacy and
+the evidence brought forth as to the effectiveness of the implemented controls. The level of
+control is established by the terms and conditions of the contracts or service-level
+agreements.
+Related Controls: SR-2.
+(4) EXTERNAL SYSTEM SERVICES |CONSISTENT INTERESTS OF CONSUMERS AND PROVIDERS
+Take the following actions to verify that the interests of [Assignment: organizationdefined external service providers] are consistent with and reflect organizational interests:
+[Assignment: organization-defined actions].
+Discussion: As organizations increasingly use external service providers, it is possible that
+the interests of the service providers may diverge from organizational interests. In such
+situations, simply having the required technical, management, or operational controls in
+place may not be sufficient if the providers that implement and manage those controls are
+not operating in a manner consistent with the interests of the consuming organizations.
+Actions that organizations take to address such concerns include requiring background
+checks for selected service provider personnel; examining ownership records; employing
+only trustworthy service providers, such as providers with which organizations have had
+successful trust relationships; and conducting routine, periodic, unscheduled visits to service
+provider facilities.
+Related Controls: None.
+(5) EXTERNAL SYSTEM SERVICES | PROCESSING, STORAGE, AND SERVICE LOCATION
+Restrict the location of [Selection (one or more): information processing; information or
+data; system services] to [Assignment: organization-defined locations] based on
+[Assignment: organization-defined requirements or conditions].
+Discussion: The location of information processing, information and data storage, or system
+services can have a direct impact on the ability of organizations to successfully execute their
+mission and business functions. The impact occurs when external providers control the
+location of processing, storage, or services. The criteria that external providers use for the
+selection of processing, storage, or service locations may be different from the criteria that
+organizations use. For example, organizations may desire that data or information storage
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 273
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+locations be restricted to certain locations to help facilitate incident response activities in
+case of information security incidents or breaches. Incident response activities, including
+forensic analyses and after-the-fact investigations, may be adversely affected by the
+governing laws, policies, or protocols in the locations where processing and storage occur
+and/or the locations from which system services emanate.
+Related Controls: SA-5, SR-4.
+(6) EXTERNAL SYSTEM SERVICES | ORGANIZATION-CONTROLLED CRYPTOGRAPHIC KEYS
+Maintain exclusive control of cryptographic keys for encrypted material stored or
+transmitted through an external system.
+Discussion: Maintaining exclusive control of cryptographic keys in an external system
+prevents decryption of organizational data by external system staff. Organizational control
+of cryptographic keys can be implemented by encrypting and decrypting data inside the
+organization as data is sent to and received from the external system or by employing a
+component that permits encryption and decryption functions to be local to the external
+system but allows exclusive organizational access to the encryption keys.
+Related Controls: SC-12, SC-13, SI-4.
+(7) EXTERNAL SYSTEM SERVICES | ORGANIZATION-CONTROLLED INTEGRITY CHECKING
+Provide the capability to check the integrity of information while it resides in the external
+system.
+Discussion: Storage of organizational information in an external system could limit visibility
+into the security status of its data. The ability of the organization to verify and validate the
+integrity of its stored data without transferring it out of the external system provides such
+visibility.
+Related Controls: SI-7.
+(8) EXTERNAL SYSTEM SERVICES | PROCESSING AND STORAGE LOCATION — U.S. JURISDICTION
+Restrict the geographic location of information processing and data storage to facilities
+located within in the legal jurisdictional boundary of the United States.
+Discussion: The geographic location of information processing and data storage can have a
+direct impact on the ability of organizations to successfully execute their mission and
+business functions. A compromise or breach of high impact information and systems can
+have severe or catastrophic adverse impacts on organizational assets and operations,
+individuals, other organizations, and the Nation. Restricting the processing and storage of
+high-impact information to facilities within the legal jurisdictional boundary of the United
+States provides greater control over such processing and storage.

@@ -1,0 +1,227 @@
+ID.RA-4: Potential business impacts and likelihoods are identified
+SECURITY CATEGORIZATION
+Control:
+a. Categorize the system and information it processes, stores, and transmits;
+b. Document the security categorization results, including supporting rationale, in the security
+plan for the system; and
+c. Verify that the authorizing official or authorizing official designated representative reviews
+and approves the security categorization decision.
+Discussion: Security categories describe the potential adverse impacts or negative consequences
+to organizational operations, organizational assets, and individuals if organizational information
+and systems are compromised through a loss of confidentiality, integrity, or availability. Security
+categorization is also a type of asset loss characterization in systems security engineering
+processes that is carried out throughout the system development life cycle. Organizations can
+use privacy risk assessments or privacy impact assessments to better understand the potential
+adverse effects on individuals. [CNSSI 1253] provides additional guidance on categorization for
+national security systems.
+Organizations conduct the security categorization process as an organization-wide activity with
+the direct involvement of chief information officers, senior agency information security officers,
+senior agency officials for privacy, system owners, mission and business owners, and information
+owners or stewards. Organizations consider the potential adverse impacts to other organizations
+and, in accordance with [USA PATRIOT] and Homeland Security Presidential Directives, potential
+national-level adverse impacts.
+Security categorization processes facilitate the development of inventories of information assets
+and, along with CM-8, mappings to specific system components where information is processed,
+stored, or transmitted. The security categorization process is revisited throughout the system
+development life cycle to ensure that the security categories remain accurate and relevant.
+SECURITY CATEGORIZATION | IMPACT-LEVEL PRIORITIZATION
+Conduct an impact-level prioritization of organizational systems to obtain additional
+granularity on system impact levels.
+Discussion: Organizations apply the “high-water mark” concept to each system categorized
+in accordance with [FIPS 199], resulting in systems designated as low impact, moderate
+impact, or high impact. Organizations that desire additional granularity in the system impact
+designations for risk-based decision-making, can further partition the systems into subcategories of the initial system categorization. For example, an impact-level prioritization on
+a moderate-impact system can produce three new sub-categories: low-moderate systems,
+moderate-moderate systems, and high-moderate systems. Impact-level prioritization and
+the resulting sub-categories of the system give organizations an opportunity to focus their
+investments related to security control selection and the tailoring of control baselines in
+responding to identified risks. Impact-level prioritization can also be used to determine
+those systems that may be of heightened interest or value to adversaries or represent a
+critical loss to the federal enterprise, sometimes described as high value assets. For such
+high value assets, organizations may be more focused on complexity, aggregation, and
+information exchanges. Systems with high value assets can be prioritized by partitioning
+high-impact systems into low-high systems, moderate-high systems, and high-high systems.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 240
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Alternatively, organizations can apply the guidance in [CNSSI 1253] for security objectiverelated categorization.
+RISK ASSESSMENT
+Control:
+a. Conduct a risk assessment, including:
+1. Identifying threats to and vulnerabilities in the system;
+2. Determining the likelihood and magnitude of harm from unauthorized access, use,
+disclosure, disruption, modification, or destruction of the system, the information it
+processes, stores, or transmits, and any related information; and
+3. Determining the likelihood and impact of adverse effects on individuals arising from the
+processing of personally identifiable information;
+b. Integrate risk assessment results and risk management decisions from the organization and
+mission or business process perspectives with system-level risk assessments;
+c. Document risk assessment results in [Selection: security and privacy plans; risk assessment
+report; [Assignment: organization-defined document]];
+d. Review risk assessment results [Assignment: organization-defined frequency];
+e. Disseminate risk assessment results to [Assignment: organization-defined personnel or
+roles]; and
+f. Update the risk assessment [Assignment: organization-defined frequency] or when there are
+significant changes to the system, its environment of operation, or other conditions that may
+impact the security or privacy state of the system.
+Discussion: Risk assessments consider threats, vulnerabilities, likelihood, and impact to
+organizational operations and assets, individuals, other organizations, and the Nation. Risk
+assessments also consider risk from external parties, including contractors who operate systems
+on behalf of the organization, individuals who access organizational systems, service providers,
+and outsourcing entities.
+Organizations can conduct risk assessments at all three levels in the risk management hierarchy
+(i.e., organization level, mission/business process level, or information system level) and at any
+stage in the system development life cycle. Risk assessments can also be conducted at various
+steps in the Risk Management Framework, including preparation, categorization, control
+selection, control implementation, control assessment, authorization, and control monitoring.
+Risk assessment is an ongoing activity carried out throughout the system development life cycle.
+Risk assessments can also address information related to the system, including system design,
+the intended use of the system, testing results, and supply chain-related information or artifacts.
+Risk assessments can play an important role in control selection processes, particularly during
+the application of tailoring guidance and in the earliest phases of capability determination
+(1) RISK ASSESSMENT | SUPPLY CHAIN RISK ASSESSMENT
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 241
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+(a) Assess supply chain risks associated with [Assignment: organization-defined systems,
+system components, and system services]; and
+(b) Update the supply chain risk assessment [Assignment: organization-defined
+frequency], when there are significant changes to the relevant supply chain, or when
+changes to the system, environments of operation, or other conditions may
+necessitate a change in the supply chain.
+Discussion: Supply chain-related events include disruption, use of defective components,
+insertion of counterfeits, theft, malicious development practices, improper delivery
+practices, and insertion of malicious code. These events can have a significant impact on the
+confidentiality, integrity, or availability of a system and its information and, therefore, can
+also adversely impact organizational operations (including mission, functions, image, or
+reputation), organizational assets, individuals, other organizations, and the Nation. The
+supply chain-related events may be unintentional or malicious and can occur at any point
+during the system life cycle. An analysis of supply chain risk can help an organization identify
+systems or components for which additional supply chain risk mitigations are required.
+Related Controls: RA-2, RA-9, PM-17, PM-30, SR-2.
+(2) RISK ASSESSMENT | USE OF ALL-SOURCE INTELLIGENCE
+Use all-source intelligence to assist in the analysis of risk.
+Discussion: Organizations employ all-source intelligence to inform engineering, acquisition,
+and risk management decisions. All-source intelligence consists of information derived from
+all available sources, including publicly available or open-source information, measurement
+and signature intelligence, human intelligence, signals intelligence, and imagery intelligence.
+All-source intelligence is used to analyze the risk of vulnerabilities (both intentional and
+unintentional) from development, manufacturing, and delivery processes, people, and the
+environment. The risk analysis may be performed on suppliers at multiple tiers in the supply
+chain sufficient to manage risks. Organizations may develop agreements to share all-source
+intelligence information or resulting decisions with other organizations, as appropriate.
+Related Controls: None.
+(3) RISK ASSESSMENT | DYNAMIC THREAT AWARENESS
+Determine the current cyber threat environment on an ongoing basis using [Assignment:
+organization-defined means].
+Discussion: The threat awareness information that is gathered feeds into the organization’s
+information security operations to ensure that procedures are updated in response to the
+changing threat environment. For example, at higher threat levels, organizations may
+change the privilege or authentication thresholds required to perform certain operations.
+Related Controls: AT-2.
+(4) RISK ASSESSMENT | PREDICTIVE CYBER ANALYTICS
+Employ the following advanced automation and analytics capabilities to predict and
+identify risks to [Assignment: organization-defined systems or system components]:
+[Assignment: organization-defined advanced automation and analytics capabilities].
+Discussion: A properly resourced Security Operations Center (SOC) or Computer Incident
+Response Team (CIRT) may be overwhelmed by the volume of information generated by the
+proliferation of security tools and appliances unless it employs advanced automation and
+analytics to analyze the data. Advanced automation and analytics capabilities are typically
+supported by artificial intelligence concepts, including machine learning. Examples include
+Automated Threat Discovery and Response (which includes broad-based collection, contextbased analysis, and adaptive response capabilities), automated workflow operations, and
+machine assisted decision tools. Note, however, that sophisticated adversaries may be able
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 242
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+to extract information related to analytic parameters and retrain the machine learning to
+classify malicious activity as benign. Accordingly, machine learning is augmented by human
+monitoring to ensure that sophisticated adversaries are not able to conceal their activities
+CRITICALITY ANALYSIS
+Control: Identify critical system components and functions by performing a criticality analysis for
+[Assignment: organization-defined systems, system components, or system services] at
+[Assignment: organization-defined decision points in the system development life cycle].
+Discussion: Not all system components, functions, or services necessarily require significant
+protections. For example, criticality analysis is a key tenet of supply chain risk management and
+informs the prioritization of protection activities. The identification of critical system components
+and functions considers applicable laws, executive orders, regulations, directives, policies,
+standards, system functionality requirements, system and component interfaces, and system and
+component dependencies. Systems engineers conduct a functional decomposition of a system to
+identify mission-critical functions and components. The functional decomposition includes the
+identification of organizational missions supported by the system, decomposition into the
+specific functions to perform those missions, and traceability to the hardware, software, and
+firmware components that implement those functions, including when the functions are shared
+by many components within and external to the system.
+The operational environment of a system or a system component may impact the criticality,
+including the connections to and dependencies on cyber-physical systems, devices, system-ofsystems, and outsourced IT services. System components that allow unmediated access to critical
+system components or functions are considered critical due to the inherent vulnerabilities that
+such components create. Component and function criticality are assessed in terms of the impact
+of a component or function failure on the organizational missions that are supported by the
+system that contains the components and functions.
+Criticality analysis is performed when an architecture or design is being developed, modified, or
+upgraded. If such analysis is performed early in the system development life cycle, organizations
+may be able to modify the system design to reduce the critical nature of these components and
+functions, such as by adding redundancy or alternate paths into the system design. Criticality
+analysis can also influence the protection measures required by development contractors. In
+addition to criticality analysis for systems, system components, and system services, criticality
+analysis of information is an important consideration. Such analysis is conducted as part of
+security categorization in RA-2.
+RISK MANAGEMENT STRATEGY
+Control:
+a. Develops a comprehensive strategy to manage:
+1. Security risk to organizational operations and assets, individuals, other organizations,
+and the Nation associated with the operation and use of organizational systems; and
+2. Privacy risk to individuals resulting from the authorized processing of personally
+identifiable information;
+b. Implement the risk management strategy consistently across the organization; and
+c. Review and update the risk management strategy [Assignment: organization-defined
+frequency] or as required, to address organizational changes.
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 208
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+Discussion: An organization-wide risk management strategy includes an expression of the
+security and privacy risk tolerance for the organization, security and privacy risk mitigation
+strategies, acceptable risk assessment methodologies, a process for evaluating security and
+privacy risk across the organization with respect to the organization’s risk tolerance, and
+approaches for monitoring risk over time. The senior accountable official for risk management
+(agency head or designated official) aligns information security management processes with
+strategic, operational, and budgetary planning processes. The risk executive function, led by the
+senior accountable official for risk management, can facilitate consistent application of the risk
+management strategy organization-wide. The risk management strategy can be informed by
+security and privacy risk-related inputs from other sources, both internal and external to the
+organization, to ensure that the strategy is broad-based and comprehensive. The supply chain
+risk management strategy described in PM-30 can also provide useful inputs to the organizationwide risk management strategy.
+MISSION AND BUSINESS PROCESS DEFINITION
+Control:
+a. Define organizational mission and business processes with consideration for information
+security and privacy and the resulting risk to organizational operations, organizational assets,
+individuals, other organizations, and the Nation; and
+b. Determine information protection and personally identifiable information processing needs
+arising from the defined mission and business processes; and
+NIST SP 800-53, REV. 5 SECURITY AND PRIVACY CONTROLS FOR INFORMATION SYSTEMS AND ORGANIZATIONS
+_________________________________________________________________________________________________
+CHAPTER THREE PAGE 209
+This publication is available free of charge from: https://doi.org/10.6028/NIST.SP.800-53r5
+c. Review and revise the mission and business processes [Assignment: organization-defined
+frequency].
+Discussion: Protection needs are technology-independent capabilities that are required to
+counter threats to organizations, individuals, systems, and the Nation through the compromise
+of information (i.e., loss of confidentiality, integrity, availability, or privacy). Information
+protection and personally identifiable information processing needs are derived from the mission
+and business needs defined by organizational stakeholders, the mission and business processes
+designed to meet those needs, and the organizational risk management strategy. Information
+protection and personally identifiable information processing needs determine the required
+controls for the organization and the systems. Inherent to defining protection and personally
+identifiable information processing needs is an understanding of the adverse impact that could
+result if a compromise or breach of information occurs. The categorization process is used to
+make such potential impact determinations. Privacy risks to individuals can arise from the
+compromise of personally identifiable information, but they can also arise as unintended
+consequences or a byproduct of the processing of personally identifiable information at any
+stage of the information life cycle. Privacy risk assessments are used to prioritize the risks that
+are created for individuals from system processing of personally identifiable information. These
+risk assessments enable the selection of the required privacy controls for the organization and
+systems. Mission and business process definitions and the associated protection requirements
+are documented in accordance with organizational policies and procedures.
